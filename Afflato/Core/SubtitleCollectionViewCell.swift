@@ -27,6 +27,8 @@ public class SubtitleCollectionViewCell: UICollectionViewCell {
     var accessoryViewTrailingMargin : NSLayoutConstraint?
     let minimumCellHeight : CGFloat = 44
     
+    var contentViewWidth : NSLayoutConstraint?
+    
     public var separatorIsVisible : Bool = true {
         didSet {
             separator.isHidden = !separatorIsVisible
@@ -55,17 +57,24 @@ public class SubtitleCollectionViewCell: UICollectionViewCell {
             accessoryView.removeFromSuperview()
         }
         
+        if let contentViewWidth = contentViewWidth  {
+            contentView.removeConstraint(contentViewWidth)
+        }
+        
+        contentViewWidth = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: desiredSize.width)
+        contentView.addConstraint(contentViewWidth!)
+        
         accessoryView.frame = CGRect(x: bounds.size.width - accessoryViewSize - padding.right, y: (bounds.size.height - accessoryViewSize) / 2, width: accessoryViewSize, height: accessoryViewSize)
         accessoryView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(accessoryView)
+        contentView.addSubview(accessoryView)
         
         accessoryViewWidth = NSLayoutConstraint(item: accessoryView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: accessoryViewSize)
-        addConstraint(accessoryViewWidth!)
+        contentView.addConstraint(accessoryViewWidth!)
         
-        addConstraint(NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: accessoryView, attribute: .centerY, multiplier: 1, constant: 0))
-        accessoryViewTrailingMargin = NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: accessoryView, attribute: .trailing, multiplier: 1, constant: padding.right)
-        addConstraint(accessoryViewTrailingMargin!)
-        addConstraint(NSLayoutConstraint(item: accessoryView, attribute: .height, relatedBy: .equal, toItem: accessoryView, attribute: .width, multiplier: 1, constant: 1))
+        contentView.addConstraint(NSLayoutConstraint(item: contentView, attribute: .centerY, relatedBy: .equal, toItem: accessoryView, attribute: .centerY, multiplier: 1, constant: 0))
+        accessoryViewTrailingMargin = NSLayoutConstraint(item: contentView, attribute: .trailing, relatedBy: .equal, toItem: accessoryView, attribute: .trailing, multiplier: 1, constant: padding.right)
+        contentView.addConstraint(accessoryViewTrailingMargin!)
+        contentView.addConstraint(NSLayoutConstraint(item: accessoryView, attribute: .height, relatedBy: .equal, toItem: accessoryView, attribute: .width, multiplier: 1, constant: 1))
         
         if titleLabel.superview != nil {
             titleLabel.removeFromSuperview()
@@ -74,7 +83,7 @@ public class SubtitleCollectionViewCell: UICollectionViewCell {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.backgroundColor = .clear
         titleLabel.numberOfLines = 0
-        addSubview(titleLabel)
+        contentView.addSubview(titleLabel)
         
         if subtitleLabel.superview != nil {
             subtitleLabel.removeFromSuperview()
@@ -84,30 +93,30 @@ public class SubtitleCollectionViewCell: UICollectionViewCell {
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         subtitleLabel.backgroundColor = .clear
         subtitleLabel.numberOfLines = 0
-        addSubview(subtitleLabel)
+        contentView.addSubview(subtitleLabel)
         
-        addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .top, multiplier: 1, constant: -padding.top))
-        addConstraint(NSLayoutConstraint(item: subtitleLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 0)) // TODO: add a padding
+        contentView.addConstraint(NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .top, multiplier: 1, constant: -padding.top))
+        contentView.addConstraint(NSLayoutConstraint(item: subtitleLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 0)) // TODO: add a padding
         titleTrailingMargin = NSLayoutConstraint(item: titleLabel, attribute: .trailing, relatedBy: .equal, toItem: accessoryView, attribute: .leading, multiplier: 1, constant: -padding.right)
-        addConstraint(titleTrailingMargin!)
+        contentView.addConstraint(titleTrailingMargin!)
         
-        titleLeadingMargin = NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: titleLabel, attribute: .leading, multiplier: 1, constant: -padding.left)
-        addConstraint(titleLeadingMargin!)
+        titleLeadingMargin = NSLayoutConstraint(item: contentView, attribute: .leading, relatedBy: .equal, toItem: titleLabel, attribute: .leading, multiplier: 1, constant: -padding.left)
+        contentView.addConstraint(titleLeadingMargin!)
         
         titleHeight = NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 12)
         titleHeight?.priority = 750
-        addConstraint(titleHeight!)
+        contentView.addConstraint(titleHeight!)
         
-        addConstraint(NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: subtitleLabel, attribute: .bottom, multiplier: 1, constant: padding.bottom))
+        contentView.addConstraint(NSLayoutConstraint(item: contentView, attribute: .bottom, relatedBy: .equal, toItem: subtitleLabel, attribute: .bottom, multiplier: 1, constant: padding.bottom))
         subtitleTrailingMargin = NSLayoutConstraint(item: subtitleLabel, attribute: .trailing, relatedBy: .equal, toItem: accessoryView, attribute: .leading, multiplier: 1, constant: -padding.right)
-        addConstraint(subtitleTrailingMargin!)
+        contentView.addConstraint(subtitleTrailingMargin!)
         
         subtitleLeadingMargin = NSLayoutConstraint(item: titleLabel, attribute: .leading, relatedBy: .equal, toItem: subtitleLabel, attribute: .leading, multiplier: 1, constant: 0)
-        addConstraint(subtitleLeadingMargin!)
+        contentView.addConstraint(subtitleLeadingMargin!)
         
         subtitleHeight = NSLayoutConstraint(item: subtitleLabel, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0)
         subtitleHeight?.priority = 750
-        addConstraint(subtitleHeight!)
+        contentView.addConstraint(subtitleHeight!)
         
         if separator.superview != nil {
             separator.removeFromSuperview()
@@ -115,7 +124,7 @@ public class SubtitleCollectionViewCell: UICollectionViewCell {
         separator.frame = CGRect(x: padding.left, y: bounds.size.height - 1.0 / UIScreen.main.scale, width: bounds.size.width - padding.left, height: 1.0 / UIScreen.main.scale)
         separator.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
         separator.backgroundColor = .defaultTableSelected
-        addSubview(separator)
+        contentView.addSubview(separator)
         
         let accessoryImageView = UIImageView(frame: accessoryView.bounds)
         accessoryImageView.tintColor = tintColor
@@ -133,7 +142,7 @@ public class SubtitleCollectionViewCell: UICollectionViewCell {
         subtitleLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
         
         if #available(iOS 10, *) { } else {
-            // Only for iOS 8 and 9
+            // Needed only on iOS 9
             NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
         }
     }
@@ -162,6 +171,35 @@ public class SubtitleCollectionViewCell: UICollectionViewCell {
             accessoryViewWidth?.constant = 0
             accessoryViewTrailingMargin?.constant = 0
         }
+        
+        // Calculate subtitle height
+        guard let subtitleHeight = subtitleHeight else { return }
+        guard let accessoryViewWidth = accessoryViewWidth else { return }
+        guard let subtitleLeadingMargin = subtitleLeadingMargin else { return }
+        let width : CGFloat = desiredSize.width - padding.left - padding.right - accessoryViewWidth.constant - subtitleLeadingMargin.constant
+        
+        subtitleLabel.preferredMaxLayoutWidth = width
+        
+        let expectedHeight = subtitleLabel.sizeThatFits(CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)).height
+        subtitleHeight.priority = 750
+        subtitleHeight.constant = ceil(expectedHeight)
+
+        // Calculate title height
+        guard let titleHeight = titleHeight else { return }
+        guard let titleLeadingMargin = titleLeadingMargin else { return }
+        let titleWidth : CGFloat = desiredSize.width - padding.left - padding.right - accessoryViewWidth.constant - titleLeadingMargin.constant
+        
+        let expectedTitleHeight = titleLabel.sizeThatFits(CGSize(width: titleWidth, height: CGFloat.greatestFiniteMagnitude)).height
+        titleHeight.priority = 750
+        
+        titleLabel.preferredMaxLayoutWidth = titleWidth
+        
+        // Minimum cell height is 44
+        if subtitleLabel.text == nil {
+            titleHeight.constant = max(ceil(expectedTitleHeight), minimumCellHeight)
+        } else {
+            titleHeight.constant = ceil(expectedTitleHeight)
+        }
     }
     
     deinit {
@@ -187,41 +225,14 @@ public class SubtitleCollectionViewCell: UICollectionViewCell {
     var title : String? {
         didSet {
             titleLabel.text = title
-            
-            // Calculate title height
-            guard let titleHeight = titleHeight else { return }
-            guard let accessoryViewWidth = accessoryViewWidth else { return }
-            guard let titleLeadingMargin = titleLeadingMargin else { return }
-            let width : CGFloat = bounds.size.width - padding.left - padding.right - accessoryViewWidth.constant - titleLeadingMargin.constant
-            
-            let expectedHeight = titleLabel.sizeThatFits(CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)).height
-            titleHeight.priority = 750
-            // Minimum cell height is 44
-            if subtitleLabel.text == nil {
-                titleHeight.constant = max(ceil(expectedHeight), minimumCellHeight)
-            } else {
-                titleHeight.constant = ceil(expectedHeight)
-            }
-            
-            setNeedsLayout()
+            layoutIfNeeded()
         }
     }
     
     var subtitle: String? {
         didSet {
             subtitleLabel.text = subtitle
-            
-            // Calculate title height
-            guard let subtitleHeight = subtitleHeight else { return }
-            guard let accessoryViewWidth = accessoryViewWidth else { return }
-            guard let subtitleLeadingMargin = subtitleLeadingMargin else { return }
-            let width : CGFloat = bounds.size.width - padding.left - padding.right - accessoryViewWidth.constant - subtitleLeadingMargin.constant
-            
-            let expectedHeight = subtitleLabel.sizeThatFits(CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)).height
-            subtitleHeight.priority = 750
-            subtitleHeight.constant = floor(expectedHeight + 1)
-            
-            setNeedsLayout()
+            layoutIfNeeded()
         }
     }
     
@@ -231,5 +242,32 @@ public class SubtitleCollectionViewCell: UICollectionViewCell {
         subtitleLabel.text = nil
         titleHeight?.constant = 12
         subtitleHeight?.constant = 0
+    }
+    
+    //forces the system to do one layout pass
+    var isHeightCalculated: Bool = false
+    
+    var desiredSize = CGSize(width: 320, height: 100) {
+        didSet {
+            // Limiting the cell width
+            contentViewWidth?.constant = desiredSize.width
+        }
+    }
+
+    override public func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        //Exhibit A - We need to cache our calculation to prevent a crash.
+        if !isHeightCalculated {
+            setNeedsLayout()
+            layoutIfNeeded()
+        
+            let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+            var newFrame = layoutAttributes.frame
+            newFrame.size.width = CGFloat(floorf(Float(size.width)))
+            
+            newFrame.size.height = CGFloat(ceilf(Float(size.height)))
+            layoutAttributes.frame = newFrame
+            isHeightCalculated = true
+        }
+        return layoutAttributes
     }
 }

@@ -86,7 +86,9 @@ public class TableController : UIViewController, UICollectionViewDataSource, UIC
         
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 0
-        layout.itemSize = CGSize(width: view.bounds.width, height: view.bounds.height)
+        // layout.itemSize = CGSize(width: view.bounds.width, height: view.bounds.height)
+        layout.estimatedItemSize = CGSize(width: view.bounds.width, height: 44)
+        
         collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "imageCell")
         
         collectionView.setCollectionViewLayout(layout, animated: false)
@@ -134,7 +136,7 @@ public class TableController : UIViewController, UICollectionViewDataSource, UIC
         cell.title = item.title
         cell.subtitle = item.subtitle
         cell.image = item.image
-        
+        cell.desiredSize = CGSize(width: collectionView.bounds.size.width, height: 300)
         if indexPath.section % 2 == 0 {
             cell.accessoryViewIsVisible = true
         }
@@ -162,28 +164,28 @@ public class TableController : UIViewController, UICollectionViewDataSource, UIC
         return item
     }
     
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var width = collectionView.bounds.size.width
-        if let nextSize = nextSize {
-            width = nextSize.width
-        }
-        var size  = CGSize(width: 10, height: 0)
-        guard let item = item(indexPath) else { return size}
-        
-        let cell = ImageCollectionViewCell(frame: CGRect(x: 0, y: 0, width: width, height: 100))
-        cell.image = item.image
-        // FIXME: At the moment is important to use this order
-        cell.subtitle = item.subtitle
-        cell.title = item.title
-        
-        if indexPath.section % 2 == 0 {
-            cell.accessoryViewIsVisible = true
-        }
-        
-        size = cell.systemLayoutSizeFitting(UILayoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriorityDefaultLow, verticalFittingPriority: UILayoutPriorityDefaultLow)
-        
-        return CGSize(width: width, height: size.height)
-    }
+//    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        var width = collectionView.bounds.size.width
+//        if let nextSize = nextSize {
+//            width = nextSize.width
+//        }
+//        var size  = CGSize(width: 10, height: 0)
+//        guard let item = item(indexPath) else { return size}
+//        
+//        let cell = ImageCollectionViewCell(frame: CGRect(x: 0, y: 0, width: width, height: 100))
+//        cell.image = item.image
+//        // FIXME: At the moment is important to use this order
+//        cell.subtitle = item.subtitle
+//        cell.title = item.title
+//        
+//        if indexPath.section % 2 == 0 {
+//            cell.accessoryViewIsVisible = true
+//        }
+//        
+//        size = cell.systemLayoutSizeFitting(UILayoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriorityDefaultLow, verticalFittingPriority: UILayoutPriorityDefaultLow)
+//        
+//        return CGSize(width: width, height: size.height)
+//    }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let item = item(indexPath) else { return }
