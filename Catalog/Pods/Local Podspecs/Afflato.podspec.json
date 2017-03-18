@@ -1,0 +1,49 @@
+{
+  "name": "Afflato",
+  "version": "0.1.0",
+  "summary": "An event tracking tool for mobile apps.",
+  "homepage": "https://afflato.macteo.it",
+  "license": "MIT",
+  "authors": [
+    {
+      "Matteo Gavagnin": "m@macteo.it"
+    }
+  ],
+  "social_media_url": "https://twitter.com/macteo",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/macteo/afflato.git",
+    "tag": "v0.1.0"
+  },
+  "requires_arc": true,
+  "default_subspecs": "Core",
+  "xcconfig": {
+    "OTHER_SWIFT_FLAGS": "$(inherited) -DAFFLATO_AS_COCOAPOD"
+  },
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Afflato/Core/**/*.swift",
+      "resources": [
+        "Afflato/Core/**/*.xcassets",
+        "Afflato/Core/*.storyboard"
+      ],
+      "dependencies": {
+        "FontAwesome.swift": [
+
+        ]
+      }
+    },
+    {
+      "name": "Debatable",
+      "dependencies": {
+        "Afflato/Core": [
+
+        ]
+      },
+      "source_files": "Afflato/Debatable/**/*.swift"
+    }
+  ]
+}

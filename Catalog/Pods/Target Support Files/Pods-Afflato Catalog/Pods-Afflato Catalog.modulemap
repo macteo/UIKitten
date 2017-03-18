@@ -1,0 +1,6 @@
+framework module Pods_Afflato_Catalog {
+  umbrella header "Pods-Afflato Catalog-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Afflato {
+  umbrella header "Afflato-umbrella.h"
+
+  export *
+  module * { export * }
+}
