@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BC7E35252A3CF94BF1C1A0A /* Pods_UIKitten_Catalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABA2EF7C0F0EEA346132766 /* Pods_UIKitten_Catalog.framework */; };
+		950B98531E7858CC00450F4F /* GroupedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B98521E7858CC00450F4F /* GroupedViewController.swift */; };
+		9520134A1E7FC8F0001A36C5 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952013491E7FC8F0001A36C5 /* ListController.swift */; };
+		959C83461E806D8C00EF4DC3 /* TextFieldsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C83451E806D8C00EF4DC3 /* TextFieldsTableController.swift */; };
+		95E084C41E76A098001DB6BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084C31E76A098001DB6BA /* AppDelegate.swift */; };
+		95E084C61E76A098001DB6BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084C51E76A098001DB6BA /* ViewController.swift */; };
+		95E084C91E76A098001DB6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E084C71E76A098001DB6BA /* Main.storyboard */; };
+		95E084CB1E76A098001DB6BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95E084CA1E76A098001DB6BA /* Assets.xcassets */; };
+		95E084CE1E76A098001DB6BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E084CC1E76A098001DB6BA /* LaunchScreen.storyboard */; };
+		95F2394B1E780CD000EC4F4C /* ButtonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F2394A1E780CD000EC4F4C /* ButtonsTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3ABA2EF7C0F0EEA346132766 /* Pods_UIKitten_Catalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitten_Catalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60ACA440772D8EBE3713E7B1 /* Pods-UIKitten Catalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitten Catalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitten Catalog/Pods-UIKitten Catalog.release.xcconfig"; sourceTree = "<group>"; };
+		950B98521E7858CC00450F4F /* GroupedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedViewController.swift; sourceTree = "<group>"; };
+		952013491E7FC8F0001A36C5 /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		959C83451E806D8C00EF4DC3 /* TextFieldsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsTableController.swift; sourceTree = "<group>"; };
+		95D835291E76EFA40048869E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		95E084C01E76A098001DB6BA /* UIKitten Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKitten Catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95E084C31E76A098001DB6BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95E084C51E76A098001DB6BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95E084C81E76A098001DB6BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95E084CA1E76A098001DB6BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95E084CD1E76A098001DB6BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95E084CF1E76A098001DB6BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95F2394A1E780CD000EC4F4C /* ButtonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsTableViewController.swift; sourceTree = "<group>"; };
+		9EAAC008751E22DA576B2E4F /* Pods-UIKitten Catalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitten Catalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitten Catalog/Pods-UIKitten Catalog.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95E084BD1E76A098001DB6BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC7E35252A3CF94BF1C1A0A /* Pods_UIKitten_Catalog.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6225D13E828BCB6B3309E898 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95D835291E76EFA40048869E /* MapKit.framework */,
+				3ABA2EF7C0F0EEA346132766 /* Pods_UIKitten_Catalog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		874011731CBE89FC16329252 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EAAC008751E22DA576B2E4F /* Pods-UIKitten Catalog.debug.xcconfig */,
+				60ACA440772D8EBE3713E7B1 /* Pods-UIKitten Catalog.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		95E084B71E76A098001DB6BA = {
+			isa = PBXGroup;
+			children = (
+				95E084C21E76A098001DB6BA /* UIKitten Catalog */,
+				95E084C11E76A098001DB6BA /* Products */,
+				874011731CBE89FC16329252 /* Pods */,
+				6225D13E828BCB6B3309E898 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		95E084C11E76A098001DB6BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95E084C01E76A098001DB6BA /* UIKitten Catalog.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95E084C21E76A098001DB6BA /* UIKitten Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				95E084C31E76A098001DB6BA /* AppDelegate.swift */,
+				95E084C51E76A098001DB6BA /* ViewController.swift */,
+				950B98521E7858CC00450F4F /* GroupedViewController.swift */,
+				95F2394A1E780CD000EC4F4C /* ButtonsTableViewController.swift */,
+				952013491E7FC8F0001A36C5 /* ListController.swift */,
+				959C83451E806D8C00EF4DC3 /* TextFieldsTableController.swift */,
+				95E084C71E76A098001DB6BA /* Main.storyboard */,
+				95E084CA1E76A098001DB6BA /* Assets.xcassets */,
+				95E084CC1E76A098001DB6BA /* LaunchScreen.storyboard */,
+				95E084CF1E76A098001DB6BA /* Info.plist */,
+			);
+			path = "UIKitten Catalog";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95E084BF1E76A098001DB6BA /* UIKitten Catalog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95E084D21E76A098001DB6BA /* Build configuration list for PBXNativeTarget "UIKitten Catalog" */;
+			buildPhases = (
+				16972BC99096D9250FBFC71A /* [CP] Check Pods Manifest.lock */,
+				95E084BC1E76A098001DB6BA /* Sources */,
+				95E084BD1E76A098001DB6BA /* Frameworks */,
+				95E084BE1E76A098001DB6BA /* Resources */,
+				FC977829C3FFBE8BD90BC8D5 /* [CP] Embed Pods Frameworks */,
+				B1973ACD612F3A91CA50C57C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIKitten Catalog";
+			productName = "Afflato Catalog";
+			productReference = 95E084C01E76A098001DB6BA /* UIKitten Catalog.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95E084B81E76A098001DB6BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Dolomate;
+				TargetAttributes = {
+					95E084BF1E76A098001DB6BA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9S76YAVG8A;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 95E084BB1E76A098001DB6BA /* Build configuration list for PBXProject "UIKitten Catalog" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95E084B71E76A098001DB6BA;
+			productRefGroup = 95E084C11E76A098001DB6BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95E084BF1E76A098001DB6BA /* UIKitten Catalog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95E084BE1E76A098001DB6BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95E084CE1E76A098001DB6BA /* LaunchScreen.storyboard in Resources */,
+				95E084CB1E76A098001DB6BA /* Assets.xcassets in Resources */,
+				95E084C91E76A098001DB6BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16972BC99096D9250FBFC71A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B1973ACD612F3A91CA50C57C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIKitten Catalog/Pods-UIKitten Catalog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC977829C3FFBE8BD90BC8D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIKitten Catalog/Pods-UIKitten Catalog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95E084BC1E76A098001DB6BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F2394B1E780CD000EC4F4C /* ButtonsTableViewController.swift in Sources */,
+				9520134A1E7FC8F0001A36C5 /* ListController.swift in Sources */,
+				959C83461E806D8C00EF4DC3 /* TextFieldsTableController.swift in Sources */,
+				95E084C61E76A098001DB6BA /* ViewController.swift in Sources */,
+				95E084C41E76A098001DB6BA /* AppDelegate.swift in Sources */,
+				950B98531E7858CC00450F4F /* GroupedViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		95E084C71E76A098001DB6BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95E084C81E76A098001DB6BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		95E084CC1E76A098001DB6BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95E084CD1E76A098001DB6BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95E084D01E76A098001DB6BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95E084D11E76A098001DB6BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95E084D31E76A098001DB6BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EAAC008751E22DA576B2E4F /* Pods-UIKitten Catalog.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9S76YAVG8A;
+				INFOPLIST_FILE = "$(SRCROOT)/UIKitten Catalog/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dolomate.uikitten.catalog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		95E084D41E76A098001DB6BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60ACA440772D8EBE3713E7B1 /* Pods-UIKitten Catalog.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9S76YAVG8A;
+				INFOPLIST_FILE = "$(SRCROOT)/UIKitten Catalog/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dolomate.uikitten.catalog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95E084BB1E76A098001DB6BA /* Build configuration list for PBXProject "UIKitten Catalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95E084D01E76A098001DB6BA /* Debug */,
+				95E084D11E76A098001DB6BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95E084D21E76A098001DB6BA /* Build configuration list for PBXNativeTarget "UIKitten Catalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95E084D31E76A098001DB6BA /* Debug */,
+				95E084D41E76A098001DB6BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95E084B81E76A098001DB6BA /* Project object */;
+}

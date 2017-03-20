@@ -1,0 +1,49 @@
+{
+  "name": "UIKitten",
+  "version": "0.1.0",
+  "summary": "Bootstrap your mobile app",
+  "homepage": "https://uikitten.macteo.it",
+  "license": "MIT",
+  "authors": [
+    {
+      "Matteo Gavagnin": "m@macteo.it"
+    }
+  ],
+  "social_media_url": "https://twitter.com/macteo",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/macteo/uikitten.git",
+    "tag": "v0.1.0"
+  },
+  "requires_arc": true,
+  "default_subspecs": "Core",
+  "xcconfig": {
+    "OTHER_SWIFT_FLAGS": "$(inherited) -DUIKITTEN_AS_COCOAPOD"
+  },
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "UIKitten/Core/**/*.swift",
+      "resources": [
+        "UIKitten/Core/**/*.xcassets",
+        "UIKitten/Core/*.storyboard"
+      ],
+      "dependencies": {
+        "FontAwesome.swift": [
+
+        ]
+      }
+    },
+    {
+      "name": "Debatable",
+      "dependencies": {
+        "UIKitten/Core": [
+
+        ]
+      },
+      "source_files": "UIKitten/Debatable/**/*.swift"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+framework module Pods_UIKitten_Catalog {
+  umbrella header "Pods-UIKitten Catalog-umbrella.h"
+
+  export *
+  module * { export * }
+}

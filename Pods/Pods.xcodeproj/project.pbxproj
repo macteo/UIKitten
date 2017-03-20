@@ -8,21 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		0C03CB07A1BF399CDE7CBB68DBAEE6B5 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = F42506C7C75E4B10CFB210B4292DA4E3 /* FontAwesome.otf */; };
+		128FE050434D5A93DD6C3893A7DB0DA3 /* Pods-UIKitten-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07616FFA3F833B61C52345D2B7060242 /* Pods-UIKitten-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15064BE99B3392B5C279A026601D7DE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C23E16390F6F5920E271EBFB6A30A8 /* UIKit.framework */; };
 		1859113A28D674DBA366EF81366330C0 /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F271F74D70350F46EA5346707A2474 /* FontAwesomeView.swift */; };
+		2DD5FA33561A64078F6E052D336ED628 /* Pods-UIKitten-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51537A9353893DCF24CD1298CD9DB064 /* Pods-UIKitten-dummy.m */; };
 		37B85F555A38364C44DB54684713A900 /* FontAwesome.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB8DF1487534236349AFF43A3A406F9 /* FontAwesome.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F04977B095ED19541487AF7760409D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32431FA5524F12225B1B779AF3E4A6D /* Foundation.framework */; };
 		5C0B36CA70286C8DD0002A8E94CC4553 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF705D905E5FDD09B9A5803E70860E0 /* FontAwesome.swift */; };
 		6AF5B52CE8521B567A3F704308E51AD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32431FA5524F12225B1B779AF3E4A6D /* Foundation.framework */; };
-		7DE3E62D329F26A90F380826B7460AA4 /* FontAwesome.swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7C071F62C8FAC7D68588C1094DB87339 /* FontAwesome.swift.bundle */; };
-		9329CF8C5B954D9E2F41996BB9A8BBEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32431FA5524F12225B1B779AF3E4A6D /* Foundation.framework */; };
+		7DE3E62D329F26A90F380826B7460AA4 /* FontAwesome.swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B213DCCA82D33EF8D3DF5B1EB5EFA427 /* FontAwesome.swift.bundle */; };
 		BED5EC9770C0ADD3B9A60A028F99F432 /* FontAwesome.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D620B3758E51423C055C8C9AD9688B6E /* FontAwesome.swift-dummy.m */; };
 		C2BB6143A772EDE7F6C338C2349EC210 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282E317D90744761F406E685BC46589A /* CoreText.framework */; };
 		C2BF28F2B3085B993F1D424DF9A6ABBB /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4184554D61F2FA3FA20364271C01D37F /* Enum.swift */; };
-		D2499E3097DBA21BA2ACB0AFE9E0C18A /* Pods-Afflato-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 829B23BABBD770A8A0DAD844D16D0843 /* Pods-Afflato-dummy.m */; };
-		FF2ADB196A5273D63BD5A0EE604FEB81 /* Pods-Afflato-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5614A7D7549D1BD12ADCBD1B70532AF9 /* Pods-Afflato-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A7350C23C3FDE95D8D3126A9B2B04EB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C74D47B051BF84CA30E0723F127F42AD;
+			remoteInfo = FontAwesome.swift;
+		};
 		E94380D2D52F1407587989E526482389 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -30,42 +37,35 @@
 			remoteGlobalIDString = 77979430716929ED71E6E262A9F9A184;
 			remoteInfo = "FontAwesome.swift-FontAwesome.swift";
 		};
-		FA929E9EA3D32B28B82D75BA543DB88A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C74D47B051BF84CA30E0723F127F42AD;
-			remoteInfo = FontAwesome.swift;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04E89DB6C82FE4747EBA5943216FD4F3 /* Pods-Afflato-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Afflato-acknowledgements.markdown"; sourceTree = "<group>"; };
+		07616FFA3F833B61C52345D2B7060242 /* Pods-UIKitten-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UIKitten-umbrella.h"; sourceTree = "<group>"; };
 		1CB88546B17539E9552BBAE1D30FF268 /* FontAwesome.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-prefix.pch"; sourceTree = "<group>"; };
 		2467CEBEFCAA0D1255221F83DFC075EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27C23E16390F6F5920E271EBFB6A30A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		282E317D90744761F406E685BC46589A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		352CEBA8E3A66224B02AAC08EBE895B5 /* Pods-UIKitten-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UIKitten-acknowledgements.plist"; sourceTree = "<group>"; };
 		3577B1FCECC6A9CE495B87F864B16912 /* FontAwesome.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FontAwesome.swift.modulemap; sourceTree = "<group>"; };
-		36406C0FAF7A4B7BDF2E696CA1686B31 /* Pods-Afflato.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Afflato.release.xcconfig"; sourceTree = "<group>"; };
+		3678D54791A2505FE6FEC14A8A12D755 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		392BF2CA83CDEE77FA61F1542F62A73C /* Pods_UIKitten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UIKitten.framework; path = "Pods-UIKitten.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB8DF1487534236349AFF43A3A406F9 /* FontAwesome.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-umbrella.h"; sourceTree = "<group>"; };
-		3E3F7F84DC28EC3A231E28CCCE00BBBD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4184554D61F2FA3FA20364271C01D37F /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = FontAwesome/Enum.swift; sourceTree = "<group>"; };
-		4E8A6730608525CB865876D9014EC80E /* Pods_Afflato.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Afflato.framework; path = "Pods-Afflato.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5614A7D7549D1BD12ADCBD1B70532AF9 /* Pods-Afflato-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Afflato-umbrella.h"; sourceTree = "<group>"; };
-		6DCA1C51672499A330E6C0262EA56CC8 /* Pods-Afflato-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Afflato-acknowledgements.plist"; sourceTree = "<group>"; };
-		7C071F62C8FAC7D68588C1094DB87339 /* FontAwesome.swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FontAwesome.swift.bundle; path = FontAwesome.swift.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		829B23BABBD770A8A0DAD844D16D0843 /* Pods-Afflato-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Afflato-dummy.m"; sourceTree = "<group>"; };
-		8E64CF6A471D994A8E4A1525B85F3FF9 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FontAwesome_swift.framework; path = FontAwesome.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8ECD28E94F95A0487F2A16FCDE35BAEB /* Pods-Afflato.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Afflato.debug.xcconfig"; sourceTree = "<group>"; };
+		51537A9353893DCF24CD1298CD9DB064 /* Pods-UIKitten-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIKitten-dummy.m"; sourceTree = "<group>"; };
+		786CAF106F4F8688FD6C9E01B2C54067 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FontAwesome_swift.framework; path = FontAwesome.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F271F74D70350F46EA5346707A2474 /* FontAwesomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesomeView.swift; path = FontAwesome/FontAwesomeView.swift; sourceTree = "<group>"; };
+		9342D038B4B46C492271DFDAB230BC59 /* Pods-UIKitten.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIKitten.release.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A567A35C61EC99A3DA20FD54A49C9827 /* Pods-UIKitten-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UIKitten-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AB71D36ABA097264025943270C038AAE /* Pods-UIKitten-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitten-resources.sh"; sourceTree = "<group>"; };
+		AEEFE6FAF3930BB44B8A6643EE23132D /* Pods-UIKitten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIKitten.debug.xcconfig"; sourceTree = "<group>"; };
+		B213DCCA82D33EF8D3DF5B1EB5EFA427 /* FontAwesome.swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FontAwesome.swift.bundle; path = FontAwesome.swift.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B290F07C4B25314616107EC9A0E3D4BC /* ResourceBundle-FontAwesome.swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FontAwesome.swift-Info.plist"; sourceTree = "<group>"; };
 		B32431FA5524F12225B1B779AF3E4A6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CCF705D905E5FDD09B9A5803E70860E0 /* FontAwesome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesome.swift; path = FontAwesome/FontAwesome.swift; sourceTree = "<group>"; };
+		CE5E1840A0BB2B74CCCAD28342D6DBF3 /* Pods-UIKitten.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-UIKitten.modulemap"; sourceTree = "<group>"; };
 		D620B3758E51423C055C8C9AD9688B6E /* FontAwesome.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontAwesome.swift-dummy.m"; sourceTree = "<group>"; };
 		E751643369496E4CD4EDF66244DD1BD9 /* FontAwesome.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontAwesome.swift.xcconfig; sourceTree = "<group>"; };
-		F0B98FA75DBCB1A8B8A8F53577C4DC30 /* Pods-Afflato-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Afflato-resources.sh"; sourceTree = "<group>"; };
-		F3D12295EB0C81969F65EA812493B704 /* Pods-Afflato.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Afflato.modulemap"; sourceTree = "<group>"; };
 		F42506C7C75E4B10CFB210B4292DA4E3 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome.otf; path = FontAwesome/FontAwesome.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,14 +77,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		556BFEC3C54B464F0046DE0E0249DF00 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9329CF8C5B954D9E2F41996BB9A8BBEA /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8671EA16A50DECFF230B583F4EB0A658 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,6 +84,14 @@
 				C2BB6143A772EDE7F6C338C2349EC210 /* CoreText.framework in Frameworks */,
 				6AF5B52CE8521B567A3F704308E51AD9 /* Foundation.framework in Frameworks */,
 				15064BE99B3392B5C279A026601D7DE9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A646DD364D7E422648218DA79F2772E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F04977B095ED19541487AF7760409D9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,16 +116,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		51F24EF945FC6A569B2CE4DBB95DE846 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7C071F62C8FAC7D68588C1094DB87339 /* FontAwesome.swift.bundle */,
-				8E64CF6A471D994A8E4A1525B85F3FF9 /* FontAwesome_swift.framework */,
-				4E8A6730608525CB865876D9014EC80E /* Pods_Afflato.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5B6E7B87EA48D2553333F40ADC53BB7A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,22 +137,14 @@
 			path = FontAwesome.swift;
 			sourceTree = "<group>";
 		};
-		7B1D8AB918390395E220E52D21E3CDA8 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F306EA868C1284A49B3B0E7E376BE398 /* Pods-Afflato */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
 				5B6E7B87EA48D2553333F40ADC53BB7A /* Pods */,
-				51F24EF945FC6A569B2CE4DBB95DE846 /* Products */,
-				7B1D8AB918390395E220E52D21E3CDA8 /* Targets Support Files */,
+				F65D4D786B9B62879215F41E1F84E2E4 /* Products */,
+				8CFE711BEFEAFE5785025450B9EFFAF1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +163,14 @@
 			path = "../Target Support Files/FontAwesome.swift";
 			sourceTree = "<group>";
 		};
+		8CFE711BEFEAFE5785025450B9EFFAF1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2C43BFB653CA3E9C9F28E6845E85E7C /* Pods-UIKitten */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		B47A97F8EF9B33C309C9D42ADA6ED48C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,21 +179,31 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		F306EA868C1284A49B3B0E7E376BE398 /* Pods-Afflato */ = {
+		E2C43BFB653CA3E9C9F28E6845E85E7C /* Pods-UIKitten */ = {
 			isa = PBXGroup;
 			children = (
-				3E3F7F84DC28EC3A231E28CCCE00BBBD /* Info.plist */,
-				F3D12295EB0C81969F65EA812493B704 /* Pods-Afflato.modulemap */,
-				04E89DB6C82FE4747EBA5943216FD4F3 /* Pods-Afflato-acknowledgements.markdown */,
-				6DCA1C51672499A330E6C0262EA56CC8 /* Pods-Afflato-acknowledgements.plist */,
-				829B23BABBD770A8A0DAD844D16D0843 /* Pods-Afflato-dummy.m */,
-				F0B98FA75DBCB1A8B8A8F53577C4DC30 /* Pods-Afflato-resources.sh */,
-				5614A7D7549D1BD12ADCBD1B70532AF9 /* Pods-Afflato-umbrella.h */,
-				8ECD28E94F95A0487F2A16FCDE35BAEB /* Pods-Afflato.debug.xcconfig */,
-				36406C0FAF7A4B7BDF2E696CA1686B31 /* Pods-Afflato.release.xcconfig */,
+				3678D54791A2505FE6FEC14A8A12D755 /* Info.plist */,
+				CE5E1840A0BB2B74CCCAD28342D6DBF3 /* Pods-UIKitten.modulemap */,
+				A567A35C61EC99A3DA20FD54A49C9827 /* Pods-UIKitten-acknowledgements.markdown */,
+				352CEBA8E3A66224B02AAC08EBE895B5 /* Pods-UIKitten-acknowledgements.plist */,
+				51537A9353893DCF24CD1298CD9DB064 /* Pods-UIKitten-dummy.m */,
+				AB71D36ABA097264025943270C038AAE /* Pods-UIKitten-resources.sh */,
+				07616FFA3F833B61C52345D2B7060242 /* Pods-UIKitten-umbrella.h */,
+				AEEFE6FAF3930BB44B8A6643EE23132D /* Pods-UIKitten.debug.xcconfig */,
+				9342D038B4B46C492271DFDAB230BC59 /* Pods-UIKitten.release.xcconfig */,
 			);
-			name = "Pods-Afflato";
-			path = "Target Support Files/Pods-Afflato";
+			name = "Pods-UIKitten";
+			path = "Target Support Files/Pods-UIKitten";
+			sourceTree = "<group>";
+		};
+		F65D4D786B9B62879215F41E1F84E2E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B213DCCA82D33EF8D3DF5B1EB5EFA427 /* FontAwesome.swift.bundle */,
+				786CAF106F4F8688FD6C9E01B2C54067 /* FontAwesome_swift.framework */,
+				392BF2CA83CDEE77FA61F1542F62A73C /* Pods_UIKitten.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,35 +217,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA1B06D9F94C5253F2EB8025EC819871 /* Headers */ = {
+		6BC27EFFB8C95F4A989944AFB04BC983 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF2ADB196A5273D63BD5A0EE604FEB81 /* Pods-Afflato-umbrella.h in Headers */,
+				128FE050434D5A93DD6C3893A7DB0DA3 /* Pods-UIKitten-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3247695D22C181FD45E2F2F5B6EFA862 /* Pods-Afflato */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1F8C3538DF3EEE75CBF38F2E7846057F /* Build configuration list for PBXNativeTarget "Pods-Afflato" */;
-			buildPhases = (
-				352090CFF71E942708792B71301AA39C /* Sources */,
-				556BFEC3C54B464F0046DE0E0249DF00 /* Frameworks */,
-				AA1B06D9F94C5253F2EB8025EC819871 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				45361AD116CFA2363D9E59DDF9EF9D54 /* PBXTargetDependency */,
-			);
-			name = "Pods-Afflato";
-			productName = "Pods-Afflato";
-			productReference = 4E8A6730608525CB865876D9014EC80E /* Pods_Afflato.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		77979430716929ED71E6E262A9F9A184 /* FontAwesome.swift-FontAwesome.swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05DE0A0286203DCFAEEB530E5341C739 /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */;
@@ -260,7 +242,7 @@
 			);
 			name = "FontAwesome.swift-FontAwesome.swift";
 			productName = "FontAwesome.swift-FontAwesome.swift";
-			productReference = 7C071F62C8FAC7D68588C1094DB87339 /* FontAwesome.swift.bundle */;
+			productReference = B213DCCA82D33EF8D3DF5B1EB5EFA427 /* FontAwesome.swift.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		C74D47B051BF84CA30E0723F127F42AD /* FontAwesome.swift */ = {
@@ -279,7 +261,25 @@
 			);
 			name = FontAwesome.swift;
 			productName = FontAwesome.swift;
-			productReference = 8E64CF6A471D994A8E4A1525B85F3FF9 /* FontAwesome_swift.framework */;
+			productReference = 786CAF106F4F8688FD6C9E01B2C54067 /* FontAwesome_swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DCC65EABFD92486B6EBD14BA9738A145 /* Pods-UIKitten */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CD7FDA256B8A441B2A3181FE6D1EC84 /* Build configuration list for PBXNativeTarget "Pods-UIKitten" */;
+			buildPhases = (
+				6EC136EED35D9B215323AEA83AA1A0AC /* Sources */,
+				A646DD364D7E422648218DA79F2772E0 /* Frameworks */,
+				6BC27EFFB8C95F4A989944AFB04BC983 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				970066EAC5002DB00E22516382A5020C /* PBXTargetDependency */,
+			);
+			name = "Pods-UIKitten";
+			productName = "Pods-UIKitten";
+			productReference = 392BF2CA83CDEE77FA61F1542F62A73C /* Pods_UIKitten.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -299,13 +299,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 51F24EF945FC6A569B2CE4DBB95DE846 /* Products */;
+			productRefGroup = F65D4D786B9B62879215F41E1F84E2E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C74D47B051BF84CA30E0723F127F42AD /* FontAwesome.swift */,
 				77979430716929ED71E6E262A9F9A184 /* FontAwesome.swift-FontAwesome.swift */,
-				3247695D22C181FD45E2F2F5B6EFA862 /* Pods-Afflato */,
+				DCC65EABFD92486B6EBD14BA9738A145 /* Pods-UIKitten */,
 			);
 		};
 /* End PBXProject section */
@@ -330,18 +330,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		352090CFF71E942708792B71301AA39C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D2499E3097DBA21BA2ACB0AFE9E0C18A /* Pods-Afflato-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6D577A16310B802EF8BE2A9513E14BFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EC136EED35D9B215323AEA83AA1A0AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD5FA33561A64078F6E052D336ED628 /* Pods-UIKitten-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,11 +359,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		45361AD116CFA2363D9E59DDF9EF9D54 /* PBXTargetDependency */ = {
+		970066EAC5002DB00E22516382A5020C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FontAwesome.swift;
 			target = C74D47B051BF84CA30E0723F127F42AD /* FontAwesome.swift */;
-			targetProxy = FA929E9EA3D32B28B82D75BA543DB88A /* PBXContainerItemProxy */;
+			targetProxy = A7350C23C3FDE95D8D3126A9B2B04EB1 /* PBXContainerItemProxy */;
 		};
 		FD8376A9A7ABA0F3076D1132CBD52C61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -418,42 +418,6 @@
 			};
 			name = Debug;
 		};
-		122FD25589080D3BF3CFECCB60DD3DBE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36406C0FAF7A4B7BDF2E696CA1686B31 /* Pods-Afflato.release.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Afflato/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Afflato/Pods-Afflato.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Afflato;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		14E2B2BD964F7A954D43C0C2677DD4EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E751643369496E4CD4EDF66244DD1BD9 /* FontAwesome.swift.xcconfig */;
@@ -470,6 +434,79 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
+		};
+		3437630DA107807757BDA2E8A31F7D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9342D038B4B46C492271DFDAB230BC59 /* Pods-UIKitten.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-UIKitten/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UIKitten/Pods-UIKitten.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_UIKitten;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		392E68ACC8173B3E7B070A44BA7FED98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEEFE6FAF3930BB44B8A6643EE23132D /* Pods-UIKitten.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-UIKitten/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UIKitten/Pods-UIKitten.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_UIKitten;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -561,43 +598,6 @@
 			};
 			name = Debug;
 		};
-		90778C1BBC145E590649EF712A948738 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ECD28E94F95A0487F2A16FCDE35BAEB /* Pods-Afflato.debug.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Afflato/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Afflato/Pods-Afflato.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Afflato;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		DBF6C0C2A08CFE695F9D052E1063D984 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E751643369496E4CD4EDF66244DD1BD9 /* FontAwesome.swift.xcconfig */;
@@ -644,11 +644,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1F8C3538DF3EEE75CBF38F2E7846057F /* Build configuration list for PBXNativeTarget "Pods-Afflato" */ = {
+		1CD7FDA256B8A441B2A3181FE6D1EC84 /* Build configuration list for PBXNativeTarget "Pods-UIKitten" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				90778C1BBC145E590649EF712A948738 /* Debug */,
-				122FD25589080D3BF3CFECCB60DD3DBE /* Release */,
+				392E68ACC8173B3E7B070A44BA7FED98 /* Debug */,
+				3437630DA107807757BDA2E8A31F7D4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

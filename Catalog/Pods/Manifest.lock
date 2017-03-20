@@ -1,21 +1,21 @@
 PODS:
-  - Afflato (0.1.0):
-    - Afflato/Core (= 0.1.0)
-  - Afflato/Core (0.1.0):
-    - FontAwesome.swift
   - FontAwesome.swift (1.0.0)
+  - UIKitten (0.1.0):
+    - UIKitten/Core (= 0.1.0)
+  - UIKitten/Core (0.1.0):
+    - FontAwesome.swift
 
 DEPENDENCIES:
-  - Afflato (from `../`)
+  - UIKitten (from `../`)
 
 EXTERNAL SOURCES:
-  Afflato:
+  UIKitten:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Afflato: '099bc0248d9e5c37d88bbace712803a7be44baf2'
   FontAwesome.swift: 2d32a3d62195343c2004b7c9043294ed2948553a
+  UIKitten: 575da34d0410a1412267f76a216f323ad7b31284
 
-PODFILE CHECKSUM: 194ec0a8fe2289061dda0b16e8d622e22c8dac2b
+PODFILE CHECKSUM: d27407d99daf7e61708a2d8ec454f4933ea0203e
 
 COCOAPODS: 1.2.0
