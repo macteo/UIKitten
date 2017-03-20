@@ -4,7 +4,7 @@ Bootstrap your iOS app.
 
 [![License MIT](https://img.shields.io/cocoapods/l/UIKitten.svg)](https://raw.githubusercontent.com/macteo/uikitten/master/LICENSE) [![Version](https://img.shields.io/cocoapods/v/UIKitten.svg)](https://cocoapods.org/?q=marklight) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![travis-ci](https://travis-ci.org/macteo/UIKitten.svg?branch=master)](https://travis-ci.org/macteo/UIKitten) [![codecov.io](https://codecov.io/github/macteo/UIKitten/coverage.svg?branch=master)](https://codecov.io/github/macteo/UIKitten?branch=master) ![Swift 3](https://img.shields.io/badge/language-Swift%203-EB7943.svg) ![iOS 9+](https://img.shields.io/badge/iOS-9+-EB7943.svg)
 
-![UIKitten Logo](https://raw.githubusercontent.com/macteo/UIKitten/develop/Assets/logo/uikitten-1024.png)
+![UIKitten Logo](https://raw.githubusercontent.com/macteo/UIKitten/develop/Assets/logo/uikitten-1024%402x.png?token=AAj41DnApg0tGOJNY08NAe0u8CODao0Iks5Y2W2uwA%3D%3D)
 
 ## Goal
 
