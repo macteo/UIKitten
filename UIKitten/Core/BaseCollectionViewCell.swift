@@ -75,6 +75,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         accessibilityIdentifier = "BaseCollectionViewCell"
         
         contentViewWidth = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: desiredSize.width)
+        contentViewWidth?.priority = 750
         contentView.addConstraint(contentViewWidth!)
         
         accessoryView.frame = CGRect(x: bounds.size.width - accessoryViewSize - padding.right, y: (bounds.size.height - accessoryViewSize) / 2, width: accessoryViewSize, height: accessoryViewSize)
@@ -206,7 +207,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     //forces the system to do one layout pass
     var isHeightCalculated: Bool = false
     
-    var desiredSize = CGSize(width: 320, height: 100) {
+    var desiredSize = CGSize(width: 2048, height: 100) {
         didSet {
             // Limiting the cell width
             contentViewWidth?.constant = desiredSize.width
