@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8C2A0F3BAB9A2DA4D8B72DB8 /* Pods_Afflato_Catalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C582114EFABC5540A482176 /* Pods_Afflato_Catalog.framework */; };
 		950B98531E7858CC00450F4F /* GroupedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B98521E7858CC00450F4F /* GroupedViewController.swift */; };
+		9520134A1E7FC8F0001A36C5 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952013491E7FC8F0001A36C5 /* ListController.swift */; };
 		95E084C41E76A098001DB6BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084C31E76A098001DB6BA /* AppDelegate.swift */; };
 		95E084C61E76A098001DB6BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084C51E76A098001DB6BA /* ViewController.swift */; };
 		95E084C91E76A098001DB6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E084C71E76A098001DB6BA /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		1D8089AEC0D6C85D6117565F /* Pods-Afflato Catalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afflato Catalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Afflato Catalog/Pods-Afflato Catalog.release.xcconfig"; sourceTree = "<group>"; };
 		950B98521E7858CC00450F4F /* GroupedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedViewController.swift; sourceTree = "<group>"; };
+		952013491E7FC8F0001A36C5 /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		95D835291E76EFA40048869E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		95E084C01E76A098001DB6BA /* Afflato Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Afflato Catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E084C31E76A098001DB6BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				95E084C51E76A098001DB6BA /* ViewController.swift */,
 				950B98521E7858CC00450F4F /* GroupedViewController.swift */,
 				95F2394A1E780CD000EC4F4C /* ButtonsTableViewController.swift */,
+				952013491E7FC8F0001A36C5 /* ListController.swift */,
 				95E084C71E76A098001DB6BA /* Main.storyboard */,
 				95E084CA1E76A098001DB6BA /* Assets.xcassets */,
 				95E084CC1E76A098001DB6BA /* LaunchScreen.storyboard */,
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95F2394B1E780CD000EC4F4C /* ButtonsTableViewController.swift in Sources */,
+				9520134A1E7FC8F0001A36C5 /* ListController.swift in Sources */,
 				95E084C61E76A098001DB6BA /* ViewController.swift in Sources */,
 				95E084C41E76A098001DB6BA /* AppDelegate.swift in Sources */,
 				950B98531E7858CC00450F4F /* GroupedViewController.swift in Sources */,

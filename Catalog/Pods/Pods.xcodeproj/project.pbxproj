@@ -7,46 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		027F4B2220540C55A2A550128D03C636 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2CEEE6428CBB48B45204E611D9FE /* Validation.swift */; };
-		04C3170B43F97B8224A232BD7ED3E50F /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65481613F1CB081B1683668FC43EDE2F /* Style.swift */; };
-		07FF7BECB01E8FFA8F7B69521ED120F3 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C512F1C67DBE1EF6506F713A98254 /* Button.swift */; };
-		085E5764AAF0320499B223A17C9BAF31 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4184554D61F2FA3FA20364271C01D37F /* Enum.swift */; };
-		09DB2EBCA223BDBDAD070998D23C2A4C /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A09B02AE94931AC0C9CB379ABA7E8 /* PasswordField.swift */; };
-		0BE6AF77470B78E98CC7DD493EF20980 /* FontAwesome.swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DB034FBEC670FB7AC51E744439B3DAB /* FontAwesome.swift.bundle */; };
-		10702641AE4975F911613EEB519B51B6 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB18A173E0D2070B61A31930EA1042A /* Size.swift */; };
+		04DD0D42CC1C8F389F0A049B0E23F2A1 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C7499F7A190C957C77B6E43EF783F /* UIColor+RGB.swift */; };
+		07CE8210C431A16EFAAD62D9AFC6B830 /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B780CCE01BEC56A97470E9FC46852F /* FontAwesome_swift.framework */; };
+		08866F54B672D148AC519B4FEF3CCAFC /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F271F74D70350F46EA5346707A2474 /* FontAwesomeView.swift */; };
+		0BB0C0AE46F9BC5280580B9379B4AF40 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38083557ABACB5612D23F2643D617D2 /* TableController.swift */; };
+		1249B7560EB66E06B8C42ADFEBB10A5B /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E79D30FEEE4379540468FFABE203EE /* ListItem.swift */; };
 		1263F67EAC15E8606DC85922A6F0B3DE /* Pods-Afflato Catalog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E61E1BCABB236243C78C35B2D09229C /* Pods-Afflato Catalog-dummy.m */; };
 		12CCB6E12B072B919466828C69E7237A /* Pods-Afflato Catalog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B361E462217A6D63975216810D1D7428 /* Pods-Afflato Catalog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		141AE98C72190F09317E304BC6FFC9CE /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = F42506C7C75E4B10CFB210B4292DA4E3 /* FontAwesome.otf */; };
-		1E343E595666C08ACA218DD2ECD0B5D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD9EF289669DF2D371DF393F22D53A /* Foundation.framework */; };
-		1EF633B65D0B5C16585DED266E03A2D9 /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F271F74D70350F46EA5346707A2474 /* FontAwesomeView.swift */; };
-		2FC000F6CB7824BFDF198BD2D09BD9FB /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341DE32913304476E75772D6222AEA1 /* UIColor+RGB.swift */; };
-		32BEB46E3D8E5FEE9061804433EF1D90 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF705D905E5FDD09B9A5803E70860E0 /* FontAwesome.swift */; };
-		36D7F2C155979359FCF12A543EF30837 /* SubtitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E745DED7D5356480267792FF79B1DF5 /* SubtitleCollectionViewCell.swift */; };
+		1BDD40C84D060CA157F542E00C767228 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E8B5FA40926011661A7E722CE933D /* Button.swift */; };
 		39F2F3C33B65F2D062923F31E019C5E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD9EF289669DF2D371DF393F22D53A /* Foundation.framework */; };
-		3A953A6075254A462D5355F517859F1A /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1646A8A47F41A2805AB91A85820B17A3 /* UIView+Border.swift */; };
-		510AB175E9627333F10CFB0F3C43A05A /* UsernameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29335BBDE3157096CD1FCDB0BF7949BB /* UsernameField.swift */; };
-		598EBD567898D080407E8F6D930648C0 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FD36753C99A253E74601A0134FD3E4 /* ImageCollectionViewCell.swift */; };
-		5A81005BB7AB21BC15C282022DD9D1A3 /* FontAwesome.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB8DF1487534236349AFF43A3A406F9 /* FontAwesome.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		634CC99727FBDAC92428C080E9EDAA2E /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B1003E524E9E345F2EA5E53DACEBD7 /* TextField.swift */; };
-		722DA2C207EB5A70489A45554EF57D51 /* FontAwesome.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D620B3758E51423C055C8C9AD9688B6E /* FontAwesome.swift-dummy.m */; };
-		7966246B6213AC2CA37300C1FC613FDC /* ImagePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1246FEA61BFD9107CE9D2DB902A8FE0 /* ImagePosition.swift */; };
-		8290ED5C57246113273AFACD0DBF5621 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B554EF1E852E13FED0CFE14CFC7AED6 /* Align.swift */; };
-		85DDA818803B67A483B843AA5C761171 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873D7F8974D7ECB52C618D1146ACC59F /* CoreText.framework */; };
-		8701F712A864F0D424B5EA75D2B717C2 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C84B4CD6C8AF0D3CA6D26F19C1C290 /* TextFieldType.swift */; };
-		936867418AFC15BF0B330E174404C49D /* Afflato-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70BA9762236EC54F1D1B0982DD72E95D /* Afflato-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BF34D5B603538069C227D7C6DD96C9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD10C1BABCE827F1B6172FF53FE0477 /* UIKit.framework */; };
-		AE3EF07379A724D6119570E2568F00A2 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0E829484FE1817D097E93E2B35525 /* EmailField.swift */; };
-		AE620EE998C0CEA553C9B1F201452D2B /* Button+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53524F1C4F6625311D5CB3BF6ADC9D2C /* Button+Icon.swift */; };
-		AEB07FAB38FAB053ADB9BB66ADFE204E /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B780CCE01BEC56A97470E9FC46852F /* FontAwesome_swift.framework */; };
-		B16D544B12587C95CFC9DA9A23BC6207 /* Afflato-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DD4BEAEA3BA6F7FE576C93B6BA4006 /* Afflato-dummy.m */; };
-		C2B56B1E2AF4EC3B145E91D8A522B381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD9EF289669DF2D371DF393F22D53A /* Foundation.framework */; };
-		CB630B09CE46AAB8AED2153798175D7B /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427EA0E3ED55991F72323DE0F937375A /* ButtonType.swift */; };
-		D7E3434274BBFF18EF29CE2055D09C4C /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C701B699425CE22F05D1E4798FEBB /* TitleCollectionViewCell.swift */; };
-		DB0267B1C464AFDE78EF434E296621AD /* UIButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E9434D357608180792013C5176A1C2 /* UIButton+Color.swift */; };
-		E4DA123FD759CDB905B65F2F235EA593 /* Afflato.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 465D3B7895747112FE86DA8B9A0A551B /* Afflato.xcassets */; };
-		F03D10CC322BE9080F31F1846AC3C523 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD36C389BAB29CEE12BAB88FE5DAB96 /* TableController.swift */; };
-		F14E957690A88CE99E4E546D8BD13844 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B188112B7615D412690B69E0A289CF57 /* Colors.swift */; };
-		F43C2201CC47D77492938CDFEFC99B88 /* GroupedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B5C5A52DA93916913BC7EC4EFCEC1 /* GroupedButtons.swift */; };
+		3DD3B205C23591D5D644B8A9F1A4AF08 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5ED5FCE725F025C6A069AEEC956 /* TextFieldType.swift */; };
+		43520D7CEBB18B8955B280C160001A16 /* FontAwesome.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D620B3758E51423C055C8C9AD9688B6E /* FontAwesome.swift-dummy.m */; };
+		454CF46088E989D1D0943D9575E86404 /* ThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF7E75C5F333480249F74966E7A9AC /* ThumbnailCollectionViewCell.swift */; };
+		47D14B6606D1A8E223C941AF32614758 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DBDC1A86ADBE125CF1FB993001694D /* Colors.swift */; };
+		5516E005BBCB5E2EEF36E84BC6442283 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC5E1FDFCB11FC9D82994C5CBD5DEA2 /* Size.swift */; };
+		558BAE37047212CC867C37022BE822CF /* Afflato.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 465D3B7895747112FE86DA8B9A0A551B /* Afflato.xcassets */; };
+		7348EF8EBF4261F94438DE331665CB5D /* FontAwesome.swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DB034FBEC670FB7AC51E744439B3DAB /* FontAwesome.swift.bundle */; };
+		77B7CE57F0670A51DA8F889979F8F074 /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46241D93B6B4F0814A605E2D9B9E5866 /* ButtonType.swift */; };
+		83B550702174A75F1114F5A3C53B325B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4184554D61F2FA3FA20364271C01D37F /* Enum.swift */; };
+		86224EA2CD0A304B3797FDBB63D1658E /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD78897EFBDF165B96689DD00B3DEB5 /* Style.swift */; };
+		8C8D2DC263DDBEADD1C85DDC3702452F /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A96DA28BB6395C3379E51AA923A46 /* EmailField.swift */; };
+		8EEE8F1CB27C226008769321061D7BE8 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = F42506C7C75E4B10CFB210B4292DA4E3 /* FontAwesome.otf */; };
+		A98808D161B650EAE5644641F64B7776 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873D7F8974D7ECB52C618D1146ACC59F /* CoreText.framework */; };
+		ACD17BB89B19133B3B98988CFBD593B5 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF705D905E5FDD09B9A5803E70860E0 /* FontAwesome.swift */; };
+		B2AC5FB368BFA8AEC053E4CEB689D384 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250913E21D45261556AF0E971DEF95B /* PasswordField.swift */; };
+		B327C44F801C10F6672CD1CD57E4F16C /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACA9757100ADAFDC348900DA3916FE5 /* UIView+Border.swift */; };
+		B56961DD4F8307933D51A964A99B62E3 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48D0F8FA5968A1AA48711D7626BDF87 /* Align.swift */; };
+		B5F537EC441E4C2337DA85472C944F16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD9EF289669DF2D371DF393F22D53A /* Foundation.framework */; };
+		B9EE334DE39514BFE50B3E5F5936ED0D /* Button+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D40102D52018EACA22E729BD532AD8 /* Button+Icon.swift */; };
+		BA23750007134B52BC808BC1D0E0FE26 /* SubtitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560B6390A3642CFABC35A78A40BF028 /* SubtitleCollectionViewCell.swift */; };
+		C8E55588711F7025804D5728136D1F80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD10C1BABCE827F1B6172FF53FE0477 /* UIKit.framework */; };
+		CC95AB72D9BD171447DCD35243833025 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B31CE3AEE399DB4D695DFD6FD944E /* Validation.swift */; };
+		CF982F90F7D1BD7AE013D5DF36B40E57 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94122D04C68BA68AA1B63007910A026B /* TextField.swift */; };
+		D8875EB6C5F11D1B96C3CA3A5F45474D /* UsernameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61762D662489B1BAD271BAB3651FC /* UsernameField.swift */; };
+		DE5403BE8FE657A61CCBD70759039B50 /* Afflato-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DD4BEAEA3BA6F7FE576C93B6BA4006 /* Afflato-dummy.m */; };
+		DECA0F53C50E758D2B3578030F168588 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93C910700FCCFBA9A0FB4A4AC8D5440 /* BaseCollectionViewCell.swift */; };
+		DF8A30A865B8208BBA975ADD96C8CCBB /* GroupedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178D8C6A8BC0CB790458964730FBA71E /* GroupedButtons.swift */; };
+		DFD9F0A5A699B13905C270C878C968A3 /* Afflato-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70BA9762236EC54F1D1B0982DD72E95D /* Afflato-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E03319ECA03186E281B428B5AB71294E /* UIButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69A2547042B0C62AF4C68F6252D65B8 /* UIButton+Color.swift */; };
+		E11D47C86CF326391BCC17E862E25E59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD9EF289669DF2D371DF393F22D53A /* Foundation.framework */; };
+		E7D96580C221D1BE6840C29E0F6FD9FB /* ImagePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890806F7FEE9F412EEFA818731A8A234 /* ImagePosition.swift */; };
+		F14AA865F73A5044C6D924D9F07E79A4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C2817F23A61222232252375A2F82A0 /* Item.swift */; };
+		F1F277F19B532345BEA5347534B7C0BA /* FontAwesome.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB8DF1487534236349AFF43A3A406F9 /* FontAwesome.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,95 +56,106 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D4C48CBE2AC76C6B44BB9E9E339030AD;
+			remoteGlobalIDString = 23A1D1539737EA89F64C88A0C23BB4CB;
 			remoteInfo = FontAwesome.swift;
 		};
-		810EAE3206D5A3ABC0311757D74A211C /* PBXContainerItemProxy */ = {
+		77C9EB7C7166991009F75898FA195DCF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D4C48CBE2AC76C6B44BB9E9E339030AD;
+			remoteGlobalIDString = 23A1D1539737EA89F64C88A0C23BB4CB;
 			remoteInfo = FontAwesome.swift;
+		};
+		90EFB974816B27DD90E92F2612A03722 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82CEE0ACC13C17B390A74D1E5D5577A5;
+			remoteInfo = "FontAwesome.swift-FontAwesome.swift";
 		};
 		9BAECFBB4742AC5E4C1D5824CEA65434 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CACD82F77B1605488230F585382ABE83;
+			remoteGlobalIDString = 7DCF0A4605F056F12BEE5A18BBCD71EA;
 			remoteInfo = Afflato;
-		};
-		F4D82D202D968A3A42753252F971720D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F6BA99855DA5A4B159EF41A4E2D8AB4F;
-			remoteInfo = "FontAwesome.swift-FontAwesome.swift";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		082C701B699425CE22F05D1E4798FEBB /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		0967FB9A6DC28729D206D70F116FFBF1 /* Pods-Afflato Catalog-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Afflato Catalog-acknowledgements.plist"; sourceTree = "<group>"; };
-		0B554EF1E852E13FED0CFE14CFC7AED6 /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Align.swift; sourceTree = "<group>"; };
 		0E9178D4980761DD52210AFDC2A61085 /* Pods-Afflato Catalog-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Afflato Catalog-resources.sh"; sourceTree = "<group>"; };
-		11B0E829484FE1817D097E93E2B35525 /* EmailField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
-		1646A8A47F41A2805AB91A85820B17A3 /* UIView+Border.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
-		193C512F1C67DBE1EF6506F713A98254 /* Button.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		178D8C6A8BC0CB790458964730FBA71E /* GroupedButtons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GroupedButtons.swift; sourceTree = "<group>"; };
 		1A12297187059949E525BC50E5654DF2 /* Pods-Afflato Catalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Afflato Catalog.debug.xcconfig"; sourceTree = "<group>"; };
 		1CB88546B17539E9552BBAE1D30FF268 /* FontAwesome.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-prefix.pch"; sourceTree = "<group>"; };
 		20F259AADBDE80421E98CC955AEFF8B0 /* Afflato.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Afflato.modulemap; sourceTree = "<group>"; };
 		2467CEBEFCAA0D1255221F83DFC075EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29335BBDE3157096CD1FCDB0BF7949BB /* UsernameField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsernameField.swift; sourceTree = "<group>"; };
 		341D7879FD47EA12E021EB10D56FC1BC /* Pods-Afflato Catalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Afflato Catalog.release.xcconfig"; sourceTree = "<group>"; };
+		3560B6390A3642CFABC35A78A40BF028 /* SubtitleCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubtitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		3577B1FCECC6A9CE495B87F864B16912 /* FontAwesome.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FontAwesome.swift.modulemap; sourceTree = "<group>"; };
 		36BB21B810E2016518CD2F5D8FF7B6F3 /* Afflato.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Afflato.framework; path = Afflato.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FD9EF289669DF2D371DF393F22D53A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3CB8DF1487534236349AFF43A3A406F9 /* FontAwesome.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-umbrella.h"; sourceTree = "<group>"; };
-		415A09B02AE94931AC0C9CB379ABA7E8 /* PasswordField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		4184554D61F2FA3FA20364271C01D37F /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = FontAwesome/Enum.swift; sourceTree = "<group>"; };
-		427EA0E3ED55991F72323DE0F937375A /* ButtonType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
+		43B1C5ED5FCE725F025C6A069AEEC956 /* TextFieldType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
+		46241D93B6B4F0814A605E2D9B9E5866 /* ButtonType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
 		465D3B7895747112FE86DA8B9A0A551B /* Afflato.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Afflato.xcassets; sourceTree = "<group>"; };
-		4CCE2CEEE6428CBB48B45204E611D9FE /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		53524F1C4F6625311D5CB3BF6ADC9D2C /* Button+Icon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Button+Icon.swift"; sourceTree = "<group>"; };
+		4BD78897EFBDF165B96689DD00B3DEB5 /* Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		59DBDC1A86ADBE125CF1FB993001694D /* Colors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5E61E1BCABB236243C78C35B2D09229C /* Pods-Afflato Catalog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Afflato Catalog-dummy.m"; sourceTree = "<group>"; };
-		65481613F1CB081B1683668FC43EDE2F /* Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		5F5B31CE3AEE399DB4D695DFD6FD944E /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		61D40102D52018EACA22E729BD532AD8 /* Button+Icon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Button+Icon.swift"; sourceTree = "<group>"; };
 		66F282F8BAA1F4DF97E2F0DB26DB8438 /* Afflato-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Afflato-prefix.pch"; sourceTree = "<group>"; };
 		6FD10C1BABCE827F1B6172FF53FE0477 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		70BA9762236EC54F1D1B0982DD72E95D /* Afflato-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Afflato-umbrella.h"; sourceTree = "<group>"; };
-		72C84B4CD6C8AF0D3CA6D26F19C1C290 /* TextFieldType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
-		73FD36753C99A253E74601A0134FD3E4 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		7AB18A173E0D2070B61A31930EA1042A /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		81C2817F23A61222232252375A2F82A0 /* Item.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		873D7F8974D7ECB52C618D1146ACC59F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		890806F7FEE9F412EEFA818731A8A234 /* ImagePosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImagePosition.swift; sourceTree = "<group>"; };
 		8DB034FBEC670FB7AC51E744439B3DAB /* FontAwesome.swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FontAwesome.swift.bundle; path = FontAwesome.swift.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E745DED7D5356480267792FF79B1DF5 /* SubtitleCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubtitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		90F61762D662489B1BAD271BAB3651FC /* UsernameField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsernameField.swift; sourceTree = "<group>"; };
 		91F271F74D70350F46EA5346707A2474 /* FontAwesomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesomeView.swift; path = FontAwesome/FontAwesomeView.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9BD36C389BAB29CEE12BAB88FE5DAB96 /* TableController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
-		A1246FEA61BFD9107CE9D2DB902A8FE0 /* ImagePosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImagePosition.swift; sourceTree = "<group>"; };
-		A4B1003E524E9E345F2EA5E53DACEBD7 /* TextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		94122D04C68BA68AA1B63007910A026B /* TextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		A57A96DA28BB6395C3379E51AA923A46 /* EmailField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		A69A2547042B0C62AF4C68F6252D65B8 /* UIButton+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Color.swift"; sourceTree = "<group>"; };
+		AAFF7E75C5F333480249F74966E7A9AC /* ThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD675ED4AB6F61CE275686821BAA97CA /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FontAwesome_swift.framework; path = FontAwesome.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1281082721D7DF1655DC7D2FA926EA7 /* Pods-Afflato Catalog-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Afflato Catalog-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B188112B7615D412690B69E0A289CF57 /* Colors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B290F07C4B25314616107EC9A0E3D4BC /* ResourceBundle-FontAwesome.swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FontAwesome.swift-Info.plist"; sourceTree = "<group>"; };
+		B2E79D30FEEE4379540468FFABE203EE /* ListItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		B361E462217A6D63975216810D1D7428 /* Pods-Afflato Catalog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Afflato Catalog-umbrella.h"; sourceTree = "<group>"; };
+		B93C910700FCCFBA9A0FB4A4AC8D5440 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9DD4BEAEA3BA6F7FE576C93B6BA4006 /* Afflato-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Afflato-dummy.m"; sourceTree = "<group>"; };
+		BB6C7499F7A190C957C77B6E43EF783F /* UIColor+RGB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
 		BD4547A438A7059E5D273B95FBA581F5 /* Pods-Afflato Catalog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Afflato Catalog.modulemap"; sourceTree = "<group>"; };
+		C250913E21D45261556AF0E971DEF95B /* PasswordField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		C2714F20B85BA2E55AC1C1945BA95701 /* Pods-Afflato Catalog-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Afflato Catalog-frameworks.sh"; sourceTree = "<group>"; };
 		C2B780CCE01BEC56A97470E9FC46852F /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66B13BCFD905A213450BC29C20C23BB /* Afflato.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Afflato.xcconfig; sourceTree = "<group>"; };
+		CACA9757100ADAFDC348900DA3916FE5 /* UIView+Border.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		CC2B71F20D740D9C57C44753E0EBCBA5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCF705D905E5FDD09B9A5803E70860E0 /* FontAwesome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesome.swift; path = FontAwesome/FontAwesome.swift; sourceTree = "<group>"; };
 		D620B3758E51423C055C8C9AD9688B6E /* FontAwesome.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontAwesome.swift-dummy.m"; sourceTree = "<group>"; };
-		E0E9434D357608180792013C5176A1C2 /* UIButton+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Color.swift"; sourceTree = "<group>"; };
+		DA4E8B5FA40926011661A7E722CE933D /* Button.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		DCC5E1FDFCB11FC9D82994C5CBD5DEA2 /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		E46E4FBF01CBF1AE5159C386BD40A2F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E74A34A3F49AC511C3A3964A07922F8A /* Pods_Afflato_Catalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Afflato_Catalog.framework; path = "Pods-Afflato Catalog.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E751643369496E4CD4EDF66244DD1BD9 /* FontAwesome.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontAwesome.swift.xcconfig; sourceTree = "<group>"; };
-		F341DE32913304476E75772D6222AEA1 /* UIColor+RGB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
+		F38083557ABACB5612D23F2643D617D2 /* TableController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		F42506C7C75E4B10CFB210B4292DA4E3 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome.otf; path = FontAwesome/FontAwesome.otf; sourceTree = "<group>"; };
-		F83B5C5A52DA93916913BC7EC4EFCEC1 /* GroupedButtons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GroupedButtons.swift; sourceTree = "<group>"; };
+		F48D0F8FA5968A1AA48711D7626BDF87 /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Align.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		02945E63B9BCBD7A058EA5AB7E6880CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CE8210C431A16EFAAD62D9AFC6B830 /* FontAwesome_swift.framework in Frameworks */,
+				B5F537EC441E4C2337DA85472C944F16 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		12C028F4FE3FA2424523FC818367B36B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,35 +164,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13C47BDA0334F28E74DC659EB30F2F4F /* Frameworks */ = {
+		B59BEFDAFEC4823E235F834DAAE08F6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		495E5AE1D25857BD0BB91DACD30BD18E /* Frameworks */ = {
+		E9B967097B04D8777C7E97035B7CEFD0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEB07FAB38FAB053ADB9BB66ADFE204E /* FontAwesome_swift.framework in Frameworks */,
-				1E343E595666C08ACA218DD2ECD0B5D8 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9E706056905B76FD61E69D7FD5CC6777 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				85DDA818803B67A483B843AA5C761171 /* CoreText.framework in Frameworks */,
-				C2B56B1E2AF4EC3B145E91D8A522B381 /* Foundation.framework in Frameworks */,
-				9BF34D5B603538069C227D7C6DD96C9B /* UIKit.framework in Frameworks */,
+				A98808D161B650EAE5644641F64B7776 /* CoreText.framework in Frameworks */,
+				E11D47C86CF326391BCC17E862E25E59 /* Foundation.framework in Frameworks */,
+				C8E55588711F7025804D5728136D1F80 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		017588DD42A70A6AB0F5A876EDFC4A4C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F48D0F8FA5968A1AA48711D7626BDF87 /* Align.swift */,
+				B93C910700FCCFBA9A0FB4A4AC8D5440 /* BaseCollectionViewCell.swift */,
+				DA4E8B5FA40926011661A7E722CE933D /* Button.swift */,
+				61D40102D52018EACA22E729BD532AD8 /* Button+Icon.swift */,
+				46241D93B6B4F0814A605E2D9B9E5866 /* ButtonType.swift */,
+				59DBDC1A86ADBE125CF1FB993001694D /* Colors.swift */,
+				A57A96DA28BB6395C3379E51AA923A46 /* EmailField.swift */,
+				178D8C6A8BC0CB790458964730FBA71E /* GroupedButtons.swift */,
+				890806F7FEE9F412EEFA818731A8A234 /* ImagePosition.swift */,
+				81C2817F23A61222232252375A2F82A0 /* Item.swift */,
+				B2E79D30FEEE4379540468FFABE203EE /* ListItem.swift */,
+				C250913E21D45261556AF0E971DEF95B /* PasswordField.swift */,
+				DCC5E1FDFCB11FC9D82994C5CBD5DEA2 /* Size.swift */,
+				4BD78897EFBDF165B96689DD00B3DEB5 /* Style.swift */,
+				3560B6390A3642CFABC35A78A40BF028 /* SubtitleCollectionViewCell.swift */,
+				F38083557ABACB5612D23F2643D617D2 /* TableController.swift */,
+				94122D04C68BA68AA1B63007910A026B /* TextField.swift */,
+				43B1C5ED5FCE725F025C6A069AEEC956 /* TextFieldType.swift */,
+				AAFF7E75C5F333480249F74966E7A9AC /* ThumbnailCollectionViewCell.swift */,
+				A69A2547042B0C62AF4C68F6252D65B8 /* UIButton+Color.swift */,
+				BB6C7499F7A190C957C77B6E43EF783F /* UIColor+RGB.swift */,
+				CACA9757100ADAFDC348900DA3916FE5 /* UIView+Border.swift */,
+				90F61762D662489B1BAD271BAB3651FC /* UsernameField.swift */,
+				5F5B31CE3AEE399DB4D695DFD6FD944E /* Validation.swift */,
+			);
+			name = Core;
+			path = Core;
+			sourceTree = "<group>";
+		};
 		251DCB1772A14370DC80E3129D813089 /* Afflato */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,42 +251,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		6A02CB58FDEC393FD3C88156A9C526BA /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				0B554EF1E852E13FED0CFE14CFC7AED6 /* Align.swift */,
-				193C512F1C67DBE1EF6506F713A98254 /* Button.swift */,
-				53524F1C4F6625311D5CB3BF6ADC9D2C /* Button+Icon.swift */,
-				427EA0E3ED55991F72323DE0F937375A /* ButtonType.swift */,
-				B188112B7615D412690B69E0A289CF57 /* Colors.swift */,
-				11B0E829484FE1817D097E93E2B35525 /* EmailField.swift */,
-				F83B5C5A52DA93916913BC7EC4EFCEC1 /* GroupedButtons.swift */,
-				73FD36753C99A253E74601A0134FD3E4 /* ImageCollectionViewCell.swift */,
-				A1246FEA61BFD9107CE9D2DB902A8FE0 /* ImagePosition.swift */,
-				415A09B02AE94931AC0C9CB379ABA7E8 /* PasswordField.swift */,
-				7AB18A173E0D2070B61A31930EA1042A /* Size.swift */,
-				65481613F1CB081B1683668FC43EDE2F /* Style.swift */,
-				8E745DED7D5356480267792FF79B1DF5 /* SubtitleCollectionViewCell.swift */,
-				9BD36C389BAB29CEE12BAB88FE5DAB96 /* TableController.swift */,
-				A4B1003E524E9E345F2EA5E53DACEBD7 /* TextField.swift */,
-				72C84B4CD6C8AF0D3CA6D26F19C1C290 /* TextFieldType.swift */,
-				082C701B699425CE22F05D1E4798FEBB /* TitleCollectionViewCell.swift */,
-				E0E9434D357608180792013C5176A1C2 /* UIButton+Color.swift */,
-				F341DE32913304476E75772D6222AEA1 /* UIColor+RGB.swift */,
-				1646A8A47F41A2805AB91A85820B17A3 /* UIView+Border.swift */,
-				29335BBDE3157096CD1FCDB0BF7949BB /* UsernameField.swift */,
-				4CCE2CEEE6428CBB48B45204E611D9FE /* Validation.swift */,
-			);
-			name = Core;
-			path = Core;
-			sourceTree = "<group>";
-		};
 		6EDAF536055E5C82FD0355E663C9A156 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
 				EDEA71384923F97A961B367C14D84ECE /* Afflato */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7065122AEAFCBB9BBE9455ED92E005D6 /* Afflato */ = {
+			isa = PBXGroup;
+			children = (
+				017588DD42A70A6AB0F5A876EDFC4A4C /* Core */,
+			);
+			name = Afflato;
+			path = Afflato;
 			sourceTree = "<group>";
 		};
 		760E66E44B92CFACC56E6F26E621F306 /* Resources */ = {
@@ -355,7 +370,7 @@
 		CC4AC21CC520D279350F1A2F0E3696ED /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				EB2EDA99A0E7FD7D920369BAC5767E00 /* Afflato */,
+				7065122AEAFCBB9BBE9455ED92E005D6 /* Afflato */,
 				760E66E44B92CFACC56E6F26E621F306 /* Resources */,
 			);
 			name = Core;
@@ -379,15 +394,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EB2EDA99A0E7FD7D920369BAC5767E00 /* Afflato */ = {
-			isa = PBXGroup;
-			children = (
-				6A02CB58FDEC393FD3C88156A9C526BA /* Core */,
-			);
-			name = Afflato;
-			path = Afflato;
-			sourceTree = "<group>";
-		};
 		EDEA71384923F97A961B367C14D84ECE /* Afflato */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,11 +407,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3C8B4775EC1F9D6CA3BFDE4C43DC4BC7 /* Headers */ = {
+		03BB8C356F31FFF3777787C01D9101D5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				936867418AFC15BF0B330E174404C49D /* Afflato-umbrella.h in Headers */,
+				DFD9F0A5A699B13905C270C878C968A3 /* Afflato-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,17 +423,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD4200D897E7341E219C7C7A625B627B /* Headers */ = {
+		A6FBE142226249B2A0FEE9F8D9E72B88 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A81005BB7AB21BC15C282022DD9D1A3 /* FontAwesome.swift-umbrella.h in Headers */,
+				F1F277F19B532345BEA5347534B7C0BA /* FontAwesome.swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		23A1D1539737EA89F64C88A0C23BB4CB /* FontAwesome.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B3B9FD0CC5C7C25440292C4B3EB2318 /* Build configuration list for PBXNativeTarget "FontAwesome.swift" */;
+			buildPhases = (
+				C27C65E9F106FFC8595DE8E8633DFD5E /* Sources */,
+				E9B967097B04D8777C7E97035B7CEFD0 /* Frameworks */,
+				7501323B93D290074FD85A2D29E681C8 /* Resources */,
+				A6FBE142226249B2A0FEE9F8D9E72B88 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86FED724964330086FB367D96E4154B5 /* PBXTargetDependency */,
+			);
+			name = FontAwesome.swift;
+			productName = FontAwesome.swift;
+			productReference = AD675ED4AB6F61CE275686821BAA97CA /* FontAwesome_swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		4A97A5BBE45003CFAE6FE276559CD352 /* Pods-Afflato Catalog */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 510DADA1E48DC05554A3CB18CD2D03FD /* Build configuration list for PBXNativeTarget "Pods-Afflato Catalog" */;
@@ -447,51 +472,32 @@
 			productReference = E74A34A3F49AC511C3A3964A07922F8A /* Pods_Afflato_Catalog.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CACD82F77B1605488230F585382ABE83 /* Afflato */ = {
+		7DCF0A4605F056F12BEE5A18BBCD71EA /* Afflato */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58EE28F7514AAB52C094EDC8D76AA5D4 /* Build configuration list for PBXNativeTarget "Afflato" */;
+			buildConfigurationList = 757CDC1F2806D2E6D97E641BB328CEB6 /* Build configuration list for PBXNativeTarget "Afflato" */;
 			buildPhases = (
-				F44C355DDC561B6E37F111239A955475 /* Sources */,
-				495E5AE1D25857BD0BB91DACD30BD18E /* Frameworks */,
-				AA5C75E03EA623F906482374C60DD9BE /* Resources */,
-				3C8B4775EC1F9D6CA3BFDE4C43DC4BC7 /* Headers */,
+				C4307A71D02CE426D12A58BDB75CACD9 /* Sources */,
+				02945E63B9BCBD7A058EA5AB7E6880CD /* Frameworks */,
+				5BDE8C0AA34B3688374A2E82DBEE80FC /* Resources */,
+				03BB8C356F31FFF3777787C01D9101D5 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9BAB0836A2711E3EE93F97BD8B4D95A9 /* PBXTargetDependency */,
+				4A8394090964602262DDFB475F00443D /* PBXTargetDependency */,
 			);
 			name = Afflato;
 			productName = Afflato;
 			productReference = 36BB21B810E2016518CD2F5D8FF7B6F3 /* Afflato.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D4C48CBE2AC76C6B44BB9E9E339030AD /* FontAwesome.swift */ = {
+		82CEE0ACC13C17B390A74D1E5D5577A5 /* FontAwesome.swift-FontAwesome.swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B0FC915078C0DA1C17D1109D7CA1E77 /* Build configuration list for PBXNativeTarget "FontAwesome.swift" */;
+			buildConfigurationList = 2341F597DEBD4A7983E7949AD60085EB /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */;
 			buildPhases = (
-				4200C0909A9D7FCA6045DD88389434D9 /* Sources */,
-				9E706056905B76FD61E69D7FD5CC6777 /* Frameworks */,
-				EB794BE1476E373A2ACE65BEBF20A1D8 /* Resources */,
-				FD4200D897E7341E219C7C7A625B627B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D14FEA104603A5374B10F8CB28DC3D70 /* PBXTargetDependency */,
-			);
-			name = FontAwesome.swift;
-			productName = FontAwesome.swift;
-			productReference = AD675ED4AB6F61CE275686821BAA97CA /* FontAwesome_swift.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F6BA99855DA5A4B159EF41A4E2D8AB4F /* FontAwesome.swift-FontAwesome.swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE49F22F0041CF31B8BF231CCAC6FA3F /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */;
-			buildPhases = (
-				30391CF943E6002509A2B5E8FDC5340C /* Sources */,
-				13C47BDA0334F28E74DC659EB30F2F4F /* Frameworks */,
-				C6F85A4F13AD7BD04069295217518DAB /* Resources */,
+				32222A4BDFD72699D8EADC347B40395B /* Sources */,
+				B59BEFDAFEC4823E235F834DAAE08F6F /* Frameworks */,
+				7E415A9DECC1024C7E9D73AD8DD04D5E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -523,36 +529,36 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CACD82F77B1605488230F585382ABE83 /* Afflato */,
-				D4C48CBE2AC76C6B44BB9E9E339030AD /* FontAwesome.swift */,
-				F6BA99855DA5A4B159EF41A4E2D8AB4F /* FontAwesome.swift-FontAwesome.swift */,
+				7DCF0A4605F056F12BEE5A18BBCD71EA /* Afflato */,
+				23A1D1539737EA89F64C88A0C23BB4CB /* FontAwesome.swift */,
+				82CEE0ACC13C17B390A74D1E5D5577A5 /* FontAwesome.swift-FontAwesome.swift */,
 				4A97A5BBE45003CFAE6FE276559CD352 /* Pods-Afflato Catalog */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AA5C75E03EA623F906482374C60DD9BE /* Resources */ = {
+		5BDE8C0AA34B3688374A2E82DBEE80FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4DA123FD759CDB905B65F2F235EA593 /* Afflato.xcassets in Resources */,
+				558BAE37047212CC867C37022BE822CF /* Afflato.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6F85A4F13AD7BD04069295217518DAB /* Resources */ = {
+		7501323B93D290074FD85A2D29E681C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				141AE98C72190F09317E304BC6FFC9CE /* FontAwesome.otf in Resources */,
+				7348EF8EBF4261F94438DE331665CB5D /* FontAwesome.swift.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB794BE1476E373A2ACE65BEBF20A1D8 /* Resources */ = {
+		7E415A9DECC1024C7E9D73AD8DD04D5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BE6AF77470B78E98CC7DD493EF20980 /* FontAwesome.swift.bundle in Resources */,
+				8EEE8F1CB27C226008769321061D7BE8 /* FontAwesome.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,51 +573,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		30391CF943E6002509A2B5E8FDC5340C /* Sources */ = {
+		32222A4BDFD72699D8EADC347B40395B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4200C0909A9D7FCA6045DD88389434D9 /* Sources */ = {
+		C27C65E9F106FFC8595DE8E8633DFD5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				085E5764AAF0320499B223A17C9BAF31 /* Enum.swift in Sources */,
-				32BEB46E3D8E5FEE9061804433EF1D90 /* FontAwesome.swift in Sources */,
-				722DA2C207EB5A70489A45554EF57D51 /* FontAwesome.swift-dummy.m in Sources */,
-				1EF633B65D0B5C16585DED266E03A2D9 /* FontAwesomeView.swift in Sources */,
+				83B550702174A75F1114F5A3C53B325B /* Enum.swift in Sources */,
+				ACD17BB89B19133B3B98988CFBD593B5 /* FontAwesome.swift in Sources */,
+				43520D7CEBB18B8955B280C160001A16 /* FontAwesome.swift-dummy.m in Sources */,
+				08866F54B672D148AC519B4FEF3CCAFC /* FontAwesomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F44C355DDC561B6E37F111239A955475 /* Sources */ = {
+		C4307A71D02CE426D12A58BDB75CACD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B16D544B12587C95CFC9DA9A23BC6207 /* Afflato-dummy.m in Sources */,
-				8290ED5C57246113273AFACD0DBF5621 /* Align.swift in Sources */,
-				AE620EE998C0CEA553C9B1F201452D2B /* Button+Icon.swift in Sources */,
-				07FF7BECB01E8FFA8F7B69521ED120F3 /* Button.swift in Sources */,
-				CB630B09CE46AAB8AED2153798175D7B /* ButtonType.swift in Sources */,
-				F14E957690A88CE99E4E546D8BD13844 /* Colors.swift in Sources */,
-				AE3EF07379A724D6119570E2568F00A2 /* EmailField.swift in Sources */,
-				F43C2201CC47D77492938CDFEFC99B88 /* GroupedButtons.swift in Sources */,
-				598EBD567898D080407E8F6D930648C0 /* ImageCollectionViewCell.swift in Sources */,
-				7966246B6213AC2CA37300C1FC613FDC /* ImagePosition.swift in Sources */,
-				09DB2EBCA223BDBDAD070998D23C2A4C /* PasswordField.swift in Sources */,
-				10702641AE4975F911613EEB519B51B6 /* Size.swift in Sources */,
-				04C3170B43F97B8224A232BD7ED3E50F /* Style.swift in Sources */,
-				36D7F2C155979359FCF12A543EF30837 /* SubtitleCollectionViewCell.swift in Sources */,
-				F03D10CC322BE9080F31F1846AC3C523 /* TableController.swift in Sources */,
-				634CC99727FBDAC92428C080E9EDAA2E /* TextField.swift in Sources */,
-				8701F712A864F0D424B5EA75D2B717C2 /* TextFieldType.swift in Sources */,
-				D7E3434274BBFF18EF29CE2055D09C4C /* TitleCollectionViewCell.swift in Sources */,
-				DB0267B1C464AFDE78EF434E296621AD /* UIButton+Color.swift in Sources */,
-				2FC000F6CB7824BFDF198BD2D09BD9FB /* UIColor+RGB.swift in Sources */,
-				3A953A6075254A462D5355F517859F1A /* UIView+Border.swift in Sources */,
-				510AB175E9627333F10CFB0F3C43A05A /* UsernameField.swift in Sources */,
-				027F4B2220540C55A2A550128D03C636 /* Validation.swift in Sources */,
+				DE5403BE8FE657A61CCBD70759039B50 /* Afflato-dummy.m in Sources */,
+				B56961DD4F8307933D51A964A99B62E3 /* Align.swift in Sources */,
+				DECA0F53C50E758D2B3578030F168588 /* BaseCollectionViewCell.swift in Sources */,
+				B9EE334DE39514BFE50B3E5F5936ED0D /* Button+Icon.swift in Sources */,
+				1BDD40C84D060CA157F542E00C767228 /* Button.swift in Sources */,
+				77B7CE57F0670A51DA8F889979F8F074 /* ButtonType.swift in Sources */,
+				47D14B6606D1A8E223C941AF32614758 /* Colors.swift in Sources */,
+				8C8D2DC263DDBEADD1C85DDC3702452F /* EmailField.swift in Sources */,
+				DF8A30A865B8208BBA975ADD96C8CCBB /* GroupedButtons.swift in Sources */,
+				E7D96580C221D1BE6840C29E0F6FD9FB /* ImagePosition.swift in Sources */,
+				F14AA865F73A5044C6D924D9F07E79A4 /* Item.swift in Sources */,
+				1249B7560EB66E06B8C42ADFEBB10A5B /* ListItem.swift in Sources */,
+				B2AC5FB368BFA8AEC053E4CEB689D384 /* PasswordField.swift in Sources */,
+				5516E005BBCB5E2EEF36E84BC6442283 /* Size.swift in Sources */,
+				86224EA2CD0A304B3797FDBB63D1658E /* Style.swift in Sources */,
+				BA23750007134B52BC808BC1D0E0FE26 /* SubtitleCollectionViewCell.swift in Sources */,
+				0BB0C0AE46F9BC5280580B9379B4AF40 /* TableController.swift in Sources */,
+				CF982F90F7D1BD7AE013D5DF36B40E57 /* TextField.swift in Sources */,
+				3DD3B205C23591D5D644B8A9F1A4AF08 /* TextFieldType.swift in Sources */,
+				454CF46088E989D1D0943D9575E86404 /* ThumbnailCollectionViewCell.swift in Sources */,
+				E03319ECA03186E281B428B5AB71294E /* UIButton+Color.swift in Sources */,
+				04DD0D42CC1C8F389F0A049B0E23F2A1 /* UIColor+RGB.swift in Sources */,
+				B327C44F801C10F6672CD1CD57E4F16C /* UIView+Border.swift in Sources */,
+				D8875EB6C5F11D1B96C3CA3A5F45474D /* UsernameField.swift in Sources */,
+				CC95AB72D9BD171447DCD35243833025 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,31 +629,48 @@
 		307B7BB2F9640EEDB49F44A054616191 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Afflato;
-			target = CACD82F77B1605488230F585382ABE83 /* Afflato */;
+			target = 7DCF0A4605F056F12BEE5A18BBCD71EA /* Afflato */;
 			targetProxy = 9BAECFBB4742AC5E4C1D5824CEA65434 /* PBXContainerItemProxy */;
+		};
+		4A8394090964602262DDFB475F00443D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FontAwesome.swift;
+			target = 23A1D1539737EA89F64C88A0C23BB4CB /* FontAwesome.swift */;
+			targetProxy = 77C9EB7C7166991009F75898FA195DCF /* PBXContainerItemProxy */;
 		};
 		6727F30EDFAB7C8794E265E72E4DA73F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FontAwesome.swift;
-			target = D4C48CBE2AC76C6B44BB9E9E339030AD /* FontAwesome.swift */;
+			target = 23A1D1539737EA89F64C88A0C23BB4CB /* FontAwesome.swift */;
 			targetProxy = 0A868F886A3EA78C492AC752AE62AE83 /* PBXContainerItemProxy */;
 		};
-		9BAB0836A2711E3EE93F97BD8B4D95A9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FontAwesome.swift;
-			target = D4C48CBE2AC76C6B44BB9E9E339030AD /* FontAwesome.swift */;
-			targetProxy = 810EAE3206D5A3ABC0311757D74A211C /* PBXContainerItemProxy */;
-		};
-		D14FEA104603A5374B10F8CB28DC3D70 /* PBXTargetDependency */ = {
+		86FED724964330086FB367D96E4154B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "FontAwesome.swift-FontAwesome.swift";
-			target = F6BA99855DA5A4B159EF41A4E2D8AB4F /* FontAwesome.swift-FontAwesome.swift */;
-			targetProxy = F4D82D202D968A3A42753252F971720D /* PBXContainerItemProxy */;
+			target = 82CEE0ACC13C17B390A74D1E5D5577A5 /* FontAwesome.swift-FontAwesome.swift */;
+			targetProxy = 90EFB974816B27DD90E92F2612A03722 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		14860A0BF81C3FEA80405D929B8BFB5B /* Release */ = {
+		015A0B73ADD3201F4F772F997A798314 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E751643369496E4CD4EDF66244DD1BD9 /* FontAwesome.swift.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FontAwesome.swift";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/ResourceBundle-FontAwesome.swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = FontAwesome.swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		363DBF373C0B9485A5C4AD2E95330115 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E751643369496E4CD4EDF66244DD1BD9 /* FontAwesome.swift.xcconfig */;
 			buildSettings = {
@@ -653,7 +678,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -666,48 +691,17 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = FontAwesome_swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
-		};
-		43EB5A06188303163B620652D6639490 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C66B13BCFD905A213450BC29C20C23BB /* Afflato.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Afflato/Afflato-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Afflato/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Afflato/Afflato.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Afflato;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
+			name = Debug;
 		};
 		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -753,20 +747,67 @@
 			};
 			name = Debug;
 		};
-		626959E8E3D84DEB1F646D385264A077 /* Release */ = {
+		5A7625CE3D143826840B666E9B80825C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E751643369496E4CD4EDF66244DD1BD9 /* FontAwesome.swift.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FontAwesome.swift";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/ResourceBundle-FontAwesome.swift-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesome.swift/FontAwesome.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = FontAwesome.swift;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FontAwesome_swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		63A30C884FCCA7C4A3EA1344B682C222 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C66B13BCFD905A213450BC29C20C23BB /* Afflato.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Afflato/Afflato-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Afflato/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Afflato/Afflato.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Afflato;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -804,39 +845,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		A24F9D49B90F5281E655E3C75D29EDAB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E751643369496E4CD4EDF66244DD1BD9 /* FontAwesome.swift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FontAwesome.swift/FontAwesome.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FontAwesome_swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -914,7 +922,24 @@
 			};
 			name = Debug;
 		};
-		D35019ACA03146D5B0AE8514385AA0D9 /* Debug */ = {
+		D6DE0D84A69CB5489773288E19A33E8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E751643369496E4CD4EDF66244DD1BD9 /* FontAwesome.swift.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FontAwesome.swift";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/ResourceBundle-FontAwesome.swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = FontAwesome.swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		DFE5ACDF83706F543075F7E313488996 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C66B13BCFD905A213450BC29C20C23BB /* Afflato.xcconfig */;
 			buildSettings = {
@@ -947,26 +972,18 @@
 			};
 			name = Debug;
 		};
-		E1A0A739D5470661BFB2B6FD87C8E05C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E751643369496E4CD4EDF66244DD1BD9 /* FontAwesome.swift.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FontAwesome.swift";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/ResourceBundle-FontAwesome.swift-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = FontAwesome.swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2341F597DEBD4A7983E7949AD60085EB /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6DE0D84A69CB5489773288E19A33E8D /* Debug */,
+				015A0B73ADD3201F4F772F997A798314 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -976,11 +993,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B0FC915078C0DA1C17D1109D7CA1E77 /* Build configuration list for PBXNativeTarget "FontAwesome.swift" */ = {
+		3B3B9FD0CC5C7C25440292C4B3EB2318 /* Build configuration list for PBXNativeTarget "FontAwesome.swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A24F9D49B90F5281E655E3C75D29EDAB /* Debug */,
-				14860A0BF81C3FEA80405D929B8BFB5B /* Release */,
+				363DBF373C0B9485A5C4AD2E95330115 /* Debug */,
+				5A7625CE3D143826840B666E9B80825C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -994,20 +1011,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58EE28F7514AAB52C094EDC8D76AA5D4 /* Build configuration list for PBXNativeTarget "Afflato" */ = {
+		757CDC1F2806D2E6D97E641BB328CEB6 /* Build configuration list for PBXNativeTarget "Afflato" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D35019ACA03146D5B0AE8514385AA0D9 /* Debug */,
-				43EB5A06188303163B620652D6639490 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DE49F22F0041CF31B8BF231CCAC6FA3F /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1A0A739D5470661BFB2B6FD87C8E05C /* Debug */,
-				626959E8E3D84DEB1F646D385264A077 /* Release */,
+				DFE5ACDF83706F543075F7E313488996 /* Debug */,
+				63A30C884FCCA7C4A3EA1344B682C222 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
