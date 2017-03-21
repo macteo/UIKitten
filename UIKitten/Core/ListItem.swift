@@ -7,10 +7,10 @@
 //
 
 public protocol ListItem {
-    var title: String? { get }
-    var subtitle: String? { get }
-    var image: UIImage? { get }
-    var imageUrl : URL? { get }
-    var action : ((_ cell : BaseCollectionViewCell?, _ selected: Bool) -> Void)? { get }
-    var view : UIView? { get }
+    func itemTitle() -> String?
+    func itemSubtitle() -> String?
+    func itemImage() -> UIImage?
+    func itemImageUrl() -> URL?
+    func itemAction() -> ((_ cell : BaseCollectionViewCell?, _ selected: Bool) -> Void)? // TODO: use a generic cell
+    func itemView() -> UIView?
 }

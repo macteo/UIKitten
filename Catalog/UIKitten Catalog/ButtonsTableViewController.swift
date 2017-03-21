@@ -61,7 +61,7 @@ class ButtonsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // FIXME: this won't work for multiline buttons
         guard let button = button(indexPath: indexPath) else { return 0 }
-        return button.bounds.size.height + 8
+        return button.bounds.size.height
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,15 +71,16 @@ class ButtonsTableViewController: UITableViewController {
             subview.removeFromSuperview()
         }
         cell.contentView.addSubview(button)
-        cell.addConstraint(NSLayoutConstraint(item: cell.contentView, attribute: .top, relatedBy: .equal, toItem: button, attribute: .top, multiplier: 1, constant: -4))
-        cell.addConstraint(NSLayoutConstraint(item: cell.contentView, attribute: .leading, relatedBy: .equal, toItem: button, attribute: .leading, multiplier: 1, constant: -20))
-        cell.addConstraint(NSLayoutConstraint(item: cell.contentView, attribute: .trailing, relatedBy: .greaterThanOrEqual, toItem: button, attribute: .trailing, multiplier: 1, constant: 20))
+        button.configureAlignConstraints()
+        // cell.addConstraint(NSLayoutConstraint(item: cell.contentView, attribute: .top, relatedBy: .equal, toItem: button, attribute: .top, multiplier: 1, constant: -4))
+        // cell.addConstraint(NSLayoutConstraint(item: cell.contentView, attribute: .leading, relatedBy: .equal, toItem: button, attribute: .leading, multiplier: 1, constant: -20))
+        // cell.addConstraint(NSLayoutConstraint(item: cell.contentView, attribute: .trailing, relatedBy: .greaterThanOrEqual, toItem: button, attribute: .trailing, multiplier: 1, constant: 20))
         return cell
     }
     
     func button(indexPath: IndexPath) -> Button? {
         let button = Button(frame: CGRect(x: 20, y: 4, width: 100, height: 20))
-        
+        button.multiline = true
         switch indexPath.section {
         case 0:
             button.type = types[indexPath.row]
@@ -101,8 +102,8 @@ class ButtonsTableViewController: UITableViewController {
         default:
             break
         }
-        
-        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layoutIfNeeded()
+        // button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }

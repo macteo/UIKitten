@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Button: UIButton {
+public class Button: UIButton, Alignable {
 
     var bottomBorder : UIView?
     let glassEffect = UIBlurEffect(style: .light)
@@ -271,7 +271,7 @@ public class Button: UIButton {
         }
     }
     
-    public var padding : Int = 0 {
+    public var padding : Int = 4 {
         didSet {
             layoutIfNeeded()
         }
@@ -416,24 +416,27 @@ public class Button: UIButton {
         
         bottomBorderWidth = style.cornerRadius(height: frame.size.height)
         
-        guard let view = superview else { return }
-        
-        // TODO: convert to autolayout as this doesn't work to autoresize cells
+        guard let superview = superview else { return }
+
         if align.contains(.top) {
             frame.origin.y = CGFloat(padding)
         } else if align.contains(.bottom) {
-            frame.origin.y = view.bounds.size.height - bounds.size.height - CGFloat(padding)
+            frame.origin.y = superview.bounds.size.height - bounds.size.height - CGFloat(padding)
         } else if align.contains(.middle) {
-            frame.origin.y = (view.bounds.size.height - bounds.size.height) / 2
+            frame.origin.y = (superview.bounds.size.height - bounds.size.height) / 2
+        } else {
+            frame.origin.y = CGFloat(padding)
         }
+        
         if align.contains(.left) {
             frame.origin.x = CGFloat(padding)
         } else if align.contains(.right) {
-            frame.origin.x = view.bounds.size.width - bounds.size.width - CGFloat(padding)
+            frame.origin.x = superview.bounds.size.width - bounds.size.width - CGFloat(padding)
         } else if align.contains(.center) {
-            frame.origin.x = (view.bounds.size.width - bounds.size.width) / 2
+            frame.origin.x = (superview.bounds.size.width - bounds.size.width) / 2
+        } else {
+            frame.origin.x = CGFloat(padding)
         }
-        
     }
     
     public var image : UIImage? {

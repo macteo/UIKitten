@@ -18,3 +18,8 @@ public struct Align: OptionSet {
     public static let center   = Align(rawValue: 1 << 4)
     public static let right    = Align(rawValue: 1 << 5)
 }
+
+public protocol Alignable {
+    var align : Align { get set }
+    var padding : Int { get set }
+}

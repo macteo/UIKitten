@@ -13,7 +13,9 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
     var selectedCellIndex : IndexPath?
     
     internal func redraw(cell: BaseCollectionViewCell) {
+        /*
         guard let _ = collectionView?.indexPath(for: cell) else { return }
+        
         layout.invalidateLayout()
         
         collectionView?.performBatchUpdates({
@@ -21,6 +23,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         }, completion: { (completed) in
             
         })
+         */
     }
 
     let layout = UICollectionViewFlowLayout()
@@ -105,13 +108,14 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
     }
     
     func populate(cell: ThumbnailCollectionViewCell, item: ListItem, indexPath: IndexPath, collectionView: UICollectionView) -> ThumbnailCollectionViewCell {
-        cell.title = item.title
-        cell.subtitle = item.subtitle
-        cell.thumbnail = item.image
+        cell.title = item.itemTitle()
+        cell.subtitle = item.itemSubtitle()
+        cell.thumbnail = item.itemImage()
         cell.desiredSize = CGSize(width: collectionView.bounds.size.width, height: 44)
         
-        if let itemView = item.view {
+        if let itemView = item.itemView() {
             cell.mainView.addSubview(itemView)
+            itemView.configureAlignConstraints()
         }
         
         cell.delegate = self
@@ -153,7 +157,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedCellIndex = indexPath
         guard let item = item(indexPath) else { return }
-        if let action = item.action {
+        if let action = item.itemAction() {
             guard let cell = collectionView.cellForItem(at: indexPath) as? BaseCollectionViewCell else {
                 action(nil, true)
                 return
@@ -166,7 +170,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
     public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         selectedCellIndex = nil
         guard let item = item(indexPath) else { return }
-        if let action = item.action {
+        if let action = item.itemAction() {
             guard let cell = collectionView.cellForItem(at: indexPath) as? BaseCollectionViewCell else {
                 action(nil, false)
                 return

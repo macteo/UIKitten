@@ -202,12 +202,17 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         delegate = nil
         isHeightCalculated = false
+        
+        // TODO: remove the added views
+        // for subview in mainView.subviews {
+        //     subview.removeFromSuperview()
+        // }
     }
     
     //forces the system to do one layout pass
     var isHeightCalculated: Bool = false
     
-    var desiredSize = CGSize(width: 2048, height: 100) {
+    var desiredSize = CGSize(width: 2048, height: 320) {
         didSet {
             // Limiting the cell width
             contentViewWidth?.constant = desiredSize.width
