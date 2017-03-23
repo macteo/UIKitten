@@ -105,27 +105,45 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let item = item(indexPath) else { return CGSize(width: 0, height: 0) }
         
-        var cell = ThumbnailCollectionViewCell(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: 100))
-        
+        var cell : ThumbnailCollectionViewCell?
+
         var width = collectionView.bounds.size.width
         if let nextSize = nextSize {
             width = nextSize.width
         }
-
+        
+        
         var previousContainer : UIView?
-        if let container = item.itemView()?.superview {
-            previousContainer = container
-        }
-        
-        cell = populate(cell: cell, item: item, indexPath: indexPath, width: width)
-        let size = cell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriorityDefaultLow, verticalFittingPriority: UILayoutPriorityDefaultLow)
-        
-        if let container = previousContainer {
-            if let itemView = item.itemView() {
-                container.addSubview(itemView)
-                itemView.configureAlignConstraints()
+        var cellIsAlreadyVisible = false
+        if let existingCell = collectionView.cellForItem(at: indexPath) as? ThumbnailCollectionViewCell {
+            cellIsAlreadyVisible = true
+            cell = existingCell
+        } else {
+            cell = ThumbnailCollectionViewCell(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: 100))
+            
+            if let container = item.itemView()?.superview {
+                previousContainer = container
             }
         }
+        
+        var tempCell = cell!
+        
+        if cellIsAlreadyVisible == false {
+            tempCell = populate(cell: tempCell, item: item, indexPath: indexPath, width: width)
+        } else {
+            tempCell.desiredSize = CGSize(width: width, height: 44)
+        }
+        
+        let size = tempCell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriorityDefaultLow, verticalFittingPriority: UILayoutPriorityDefaultLow)
+        if cellIsAlreadyVisible == false {
+            if let container = previousContainer {
+                if let itemView = item.itemView() {
+                    container.addSubview(itemView)
+                    itemView.configureAlignConstraints()
+                }
+            }
+        }
+        
         return size
     }
     

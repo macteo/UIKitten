@@ -24,13 +24,15 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     var containedView : UIView? {
         willSet {
             if newValue == nil {
-                containedView?.removeFromSuperview()
+                
             }
         }
         didSet {
             if let containedView = containedView {
                 mainView.addSubview(containedView)
                 containedView.configureAlignConstraints()
+            } else {
+                oldValue?.removeFromSuperview()
             }
         }
     }
