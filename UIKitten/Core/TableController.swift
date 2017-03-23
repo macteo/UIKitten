@@ -93,7 +93,11 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         guard let item = item(indexPath) else { return UICollectionViewCell() }
         
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ThumbnailCollectionViewCell
-        cell = populate(cell: cell, item: item, indexPath: indexPath, collectionView: collectionView)
+        var width = collectionView.bounds.size.width
+        if let nextSize = nextSize {
+            width = nextSize.width
+        }
+        cell = populate(cell: cell, item: item, indexPath: indexPath, width: width)
 
         return cell
     }
@@ -102,21 +106,22 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         guard let item = item(indexPath) else { return CGSize(width: 0, height: 0) }
         
         var cell = ThumbnailCollectionViewCell(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: 100))
-        cell = populate(cell: cell, item: item, indexPath: indexPath, collectionView: collectionView)
+        
+        var width = collectionView.bounds.size.width
+        if let nextSize = nextSize {
+            width = nextSize.width
+        }
+
+        cell = populate(cell: cell, item: item, indexPath: indexPath, width: width)
         let size = cell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriorityDefaultLow, verticalFittingPriority: UILayoutPriorityDefaultLow)
         return size
     }
     
-    func populate(cell: ThumbnailCollectionViewCell, item: ListItem, indexPath: IndexPath, collectionView: UICollectionView) -> ThumbnailCollectionViewCell {
+    func populate(cell: ThumbnailCollectionViewCell, item: ListItem, indexPath: IndexPath, width: CGFloat) -> ThumbnailCollectionViewCell {
         cell.title = item.itemTitle()
         cell.subtitle = item.itemSubtitle()
         cell.thumbnail = item.itemImage()
-        cell.desiredSize = CGSize(width: collectionView.bounds.size.width, height: 44)
-        
-        if let itemView = item.itemView() {
-            cell.mainView.addSubview(itemView)
-            itemView.configureAlignConstraints()
-        }
+        cell.desiredSize = CGSize(width: width, height: 44)
         
         cell.delegate = self
         
@@ -130,6 +135,12 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         if indexPath.section % 2 == 0 {
             cell.accessoryViewIsVisible = true
         }
+        
+        if let itemView = item.itemView() {
+            cell.mainView.addSubview(itemView)
+            itemView.configureAlignConstraints()
+        }
+        cell.layoutIfNeeded()
         
         return cell
     }

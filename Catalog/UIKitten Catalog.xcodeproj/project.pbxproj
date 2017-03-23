@@ -18,7 +18,6 @@
 		95E084C91E76A098001DB6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E084C71E76A098001DB6BA /* Main.storyboard */; };
 		95E084CB1E76A098001DB6BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95E084CA1E76A098001DB6BA /* Assets.xcassets */; };
 		95E084CE1E76A098001DB6BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E084CC1E76A098001DB6BA /* LaunchScreen.storyboard */; };
-		95F2394B1E780CD000EC4F4C /* ButtonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F2394A1E780CD000EC4F4C /* ButtonsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		95E084CA1E76A098001DB6BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95E084CD1E76A098001DB6BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E084CF1E76A098001DB6BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95F2394A1E780CD000EC4F4C /* ButtonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsTableViewController.swift; sourceTree = "<group>"; };
 		9EAAC008751E22DA576B2E4F /* Pods-UIKitten Catalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitten Catalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitten Catalog/Pods-UIKitten Catalog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,14 +93,13 @@
 				95E084C31E76A098001DB6BA /* AppDelegate.swift */,
 				95E084C51E76A098001DB6BA /* ViewController.swift */,
 				950B98521E7858CC00450F4F /* GroupedViewController.swift */,
-				95F2394A1E780CD000EC4F4C /* ButtonsTableViewController.swift */,
 				952013491E7FC8F0001A36C5 /* ListController.swift */,
 				9555655A1E812F2000AE456F /* ButtonsController.swift */,
 				959C83451E806D8C00EF4DC3 /* TextFieldsTableController.swift */,
 				955565541E810D3E00AE456F /* CellsViewController.swift */,
 				95E084C71E76A098001DB6BA /* Main.storyboard */,
-				95E084CA1E76A098001DB6BA /* Assets.xcassets */,
 				95E084CC1E76A098001DB6BA /* LaunchScreen.storyboard */,
+				95E084CA1E76A098001DB6BA /* Assets.xcassets */,
 				95E084CF1E76A098001DB6BA /* Info.plist */,
 			);
 			path = "UIKitten Catalog";
@@ -232,7 +229,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95F2394B1E780CD000EC4F4C /* ButtonsTableViewController.swift in Sources */,
 				9520134A1E7FC8F0001A36C5 /* ListController.swift in Sources */,
 				959C83461E806D8C00EF4DC3 /* TextFieldsTableController.swift in Sources */,
 				95E084C61E76A098001DB6BA /* ViewController.swift in Sources */,

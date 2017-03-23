@@ -56,30 +56,3 @@ extension UIView {
         }
     }
 }
-
-extension UIView : ListItem {
-    public func itemTitle() -> String? {
-        return nil
-    }
-    
-    public func itemSubtitle() -> String? {
-        return nil
-    }
-    
-    
-    public func itemImage() -> UIImage? {
-        return nil
-    }
-    
-    public func itemImageUrl() -> URL? {
-        return nil
-    }
-    
-    public func itemAction() -> ((_ cell : BaseCollectionViewCell?, _ selected: Bool) -> Void)? {
-        return nil
-    }
-    
-    public func itemView() -> UIView? {
-        return self
-    }
-}

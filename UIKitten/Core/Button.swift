@@ -319,6 +319,7 @@ public class Button: UIButton, Alignable {
     public override func layoutIfNeeded() {
         super.layoutIfNeeded()
         
+        // TODO: move those in a separate method?
         if style == .glass {
             if glassBackground == nil {
                 glassBackground = UIVisualEffectView(effect: glassEffect)
@@ -341,8 +342,6 @@ public class Button: UIButton, Alignable {
             bottomBorder?.removeFromSuperview()
             bottomBorder = nil
         }
-        
-        // TODO: convert to autolayout
         
         if align.contains(.top) {
             if align.contains(.left) {

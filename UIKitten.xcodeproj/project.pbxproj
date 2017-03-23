@@ -34,6 +34,9 @@
 		95D8352D1E7707360048869E /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8352C1E7707360048869E /* TableController.swift */; };
 		95E084D61E76BC84001DB6BA /* Button+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084D51E76BC84001DB6BA /* Button+Icon.swift */; };
 		95E084D81E76E910001DB6BA /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084D71E76E910001DB6BA /* Align.swift */; };
+		95FD128D1E83945600CF0FE7 /* UIView+ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD128C1E83945600CF0FE7 /* UIView+ListItem.swift */; };
+		95FD128F1E8399EB00CF0FE7 /* UIController+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD128E1E8399EB00CF0FE7 /* UIController+Rotation.swift */; };
+		95FD12911E839AB100CF0FE7 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD12901E839AB100CF0FE7 /* Print.swift */; };
 		B66B70BEB874222EE1A29874 /* Pods_UIKitten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B771B48E9331E5AD62EC9D57 /* Pods_UIKitten.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,9 @@
 		95D8352C1E7707360048869E /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		95E084D51E76BC84001DB6BA /* Button+Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Button+Icon.swift"; sourceTree = "<group>"; };
 		95E084D71E76E910001DB6BA /* Align.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Align.swift; sourceTree = "<group>"; };
+		95FD128C1E83945600CF0FE7 /* UIView+ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ListItem.swift"; sourceTree = "<group>"; };
+		95FD128E1E8399EB00CF0FE7 /* UIController+Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIController+Rotation.swift"; sourceTree = "<group>"; };
+		95FD12901E839AB100CF0FE7 /* Print.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
 		B771B48E9331E5AD62EC9D57 /* Pods_UIKitten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A6C8107F1BA5CD4ECF7F1F /* Pods-Afflato.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afflato.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Afflato/Pods-Afflato.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,10 +201,13 @@
 		9582B1641E716C66001C7268 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				95FD12901E839AB100CF0FE7 /* Print.swift */,
+				95FD128E1E8399EB00CF0FE7 /* UIController+Rotation.swift */,
 				9505F78B1E719B0C004D2476 /* UIButton+Color.swift */,
 				9582B1681E716D5B001C7268 /* UIColor+RGB.swift */,
 				9582B1661E716D1E001C7268 /* UIView+Border.swift */,
 				955565581E8120AB00AE456F /* UIView+Align.swift */,
+				95FD128C1E83945600CF0FE7 /* UIView+ListItem.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -367,11 +376,13 @@
 				955E71691E79734500369EFE /* UsernameField.swift in Sources */,
 				9582B1671E716D1E001C7268 /* UIView+Border.swift in Sources */,
 				952013451E7FC6B3001A36C5 /* ListItem.swift in Sources */,
+				95FD128F1E8399EB00CF0FE7 /* UIController+Rotation.swift in Sources */,
 				95ADDB0B1E7C522A0003717E /* SubtitleCollectionViewCell.swift in Sources */,
 				952013481E7FC733001A36C5 /* Item.swift in Sources */,
 				955565591E8120AB00AE456F /* UIView+Align.swift in Sources */,
 				9505F78E1E71A428004D2476 /* Colors.swift in Sources */,
 				955E71651E79731400369EFE /* Validation.swift in Sources */,
+				95FD128D1E83945600CF0FE7 /* UIView+ListItem.swift in Sources */,
 				95494E681E73424D00D6AF3B /* EmailField.swift in Sources */,
 				952013421E7FC640001A36C5 /* ThumbnailCollectionViewCell.swift in Sources */,
 				9582B16C1E717261001C7268 /* Button.swift in Sources */,
@@ -383,6 +394,7 @@
 				95C52E761E72A123001B87DC /* Size.swift in Sources */,
 				95C52E721E72A0F9001B87DC /* ButtonType.swift in Sources */,
 				9520134C1E7FCDD4001A36C5 /* BaseCollectionViewCell.swift in Sources */,
+				95FD12911E839AB100CF0FE7 /* Print.swift in Sources */,
 				9582B1691E716D5B001C7268 /* UIColor+RGB.swift in Sources */,
 				9505F78C1E719B0C004D2476 /* UIButton+Color.swift in Sources */,
 				95C52E741E72A111001B87DC /* Style.swift in Sources */,
