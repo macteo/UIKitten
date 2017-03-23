@@ -21,6 +21,20 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     var accessoryViewTrailingMargin : NSLayoutConstraint?
     let minimumCellHeight : CGFloat = 44
     
+    var containedView : UIView? {
+        willSet {
+            if newValue == nil {
+                containedView?.removeFromSuperview()
+            }
+        }
+        didSet {
+            if let containedView = containedView {
+                mainView.addSubview(containedView)
+                containedView.configureAlignConstraints()
+            }
+        }
+    }
+    
     var delegate : BaseCollectionViewCellDelegate?
     
     var contentViewWidth : NSLayoutConstraint?
@@ -31,7 +45,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     var footerFixedHeightConstraint : NSLayoutConstraint?
     var footerHeight : CGFloat = 0
     
-    public var footerIsVisible : Bool = true {
+    public var footerIsVisible : Bool = false {
         didSet {
             footerFixedHeightConstraint?.isActive = !footerIsVisible
             delegate?.redraw(cell: self)
@@ -162,11 +176,11 @@ open class BaseCollectionViewCell: UICollectionViewCell {
                 if self.isSelected {
                     self.backgroundColor = .defaultTableSelected
                     self.separator.backgroundColor = .clear
-                    self.footerIsVisible = true
+                    // self.footerIsVisible = true
                 } else {
                     self.backgroundColor = .white
                     self.separator.backgroundColor = .defaultTableSelected
-                    self.footerIsVisible = false
+                    // self.footerIsVisible = false
                 }
             })
         }
@@ -202,11 +216,8 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         delegate = nil
         isHeightCalculated = false
-        
-        // TODO: remove the added views
-        // for subview in mainView.subviews {
-        //     subview.removeFromSuperview()
-        // }
+        containedView = nil
+        layoutIfNeeded()
     }
     
     //forces the system to do one layout pass

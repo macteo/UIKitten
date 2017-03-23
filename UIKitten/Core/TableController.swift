@@ -112,8 +112,20 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
             width = nextSize.width
         }
 
+        var previousContainer : UIView?
+        if let container = item.itemView()?.superview {
+            previousContainer = container
+        }
+        
         cell = populate(cell: cell, item: item, indexPath: indexPath, width: width)
         let size = cell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriorityDefaultLow, verticalFittingPriority: UILayoutPriorityDefaultLow)
+        
+        if let container = previousContainer {
+            if let itemView = item.itemView() {
+                container.addSubview(itemView)
+                itemView.configureAlignConstraints()
+            }
+        }
         return size
     }
     
@@ -135,11 +147,8 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         if indexPath.section % 2 == 0 {
             cell.accessoryViewIsVisible = true
         }
-        
-        if let itemView = item.itemView() {
-            cell.mainView.addSubview(itemView)
-            itemView.configureAlignConstraints()
-        }
+
+        cell.containedView = item.itemView()
         cell.layoutIfNeeded()
         
         return cell
