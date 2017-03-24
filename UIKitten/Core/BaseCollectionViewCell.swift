@@ -22,17 +22,14 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     let minimumCellHeight : CGFloat = 44
     
     var containedView : UIView? {
-        willSet {
-            if newValue == nil {
-                
-            }
-        }
         didSet {
             if let containedView = containedView {
-                mainView.addSubview(containedView)
-                containedView.configureAlignConstraints()
+                    mainView.addSubview(containedView)
+                    containedView.configureAlignConstraints()
             } else {
-                oldValue?.removeFromSuperview()
+                if oldValue?.superview == mainView {
+                    oldValue?.removeFromSuperview()
+                }
             }
         }
     }
