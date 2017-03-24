@@ -13,21 +13,24 @@ protocol BaseCollectionViewCellDelegate {
 }
 
 open class BaseCollectionViewCell: UICollectionViewCell {
+    // FIXME: top padding shouldn't be applied on customView if mainView height is zero
+    // FIXME: disclosureIndicator centering if off on some cases
     let padding = UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10)
     let separator = UIView()
     let accessoryView = UIView()
     let accessoryViewSize : CGFloat = 20
     var accessoryViewWidth : NSLayoutConstraint?
     var accessoryViewTrailingMargin : NSLayoutConstraint?
+    var accessoryViewCenterYConstraint : NSLayoutConstraint?
     let minimumCellHeight : CGFloat = 44
     
     var containedView : UIView? {
         didSet {
             if let containedView = containedView {
-                    mainView.addSubview(containedView)
+                    customView.addSubview(containedView)
                     containedView.configureAlignConstraints()
             } else {
-                if oldValue?.superview == mainView {
+                if oldValue?.superview == customView {
                     oldValue?.removeFromSuperview()
                 }
             }
@@ -43,7 +46,9 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     let footerView = UIView()
     var footerFixedHeightConstraint : NSLayoutConstraint?
     var footerHeight : CGFloat = 0
-    
+
+    let customView = UIView()
+
     public var footerIsVisible : Bool = false {
         didSet {
             footerFixedHeightConstraint?.isActive = !footerIsVisible
@@ -86,6 +91,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         footerView.accessibilityIdentifier = "CellFooter"
         contentView.accessibilityIdentifier = "CellContentView"
         accessibilityIdentifier = "BaseCollectionViewCell"
+        customView.accessibilityIdentifier = "CellCustomView"
         
         contentViewWidth = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: desiredSize.width)
         contentViewWidth?.priority = 750
@@ -132,12 +138,25 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         mainView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(mainView)
         
-        contentView.addConstraint(NSLayoutConstraint(item: contentView, attribute: .leading, relatedBy: .equal, toItem: mainView, attribute: .leading, multiplier: 1, constant: 0))
-        contentView.addConstraint(NSLayoutConstraint(item: mainView, attribute: .trailing, relatedBy: .equal, toItem: accessoryView, attribute: .leading, multiplier: 1, constant: 0))
-        contentView.addConstraint(NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .equal, toItem: mainView, attribute: .top, multiplier: 1, constant: 0))
+        contentView.addConstraint(NSLayoutConstraint(item: contentView, attribute: .leading, relatedBy: .equal, toItem: mainView, attribute: .leading, multiplier: 1, constant: -padding.left))
+        contentView.addConstraint(NSLayoutConstraint(item: mainView, attribute: .trailing, relatedBy: .equal, toItem: accessoryView, attribute: .leading, multiplier: 1, constant: padding.right))
+        contentView.addConstraint(NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .equal, toItem: mainView, attribute: .top, multiplier: 1, constant: -padding.top))
         
-        contentView.addConstraint(NSLayoutConstraint(item: mainView, attribute: .centerY, relatedBy: .equal, toItem: accessoryView, attribute: .centerY, multiplier: 1, constant: 0))
+        accessoryViewCenterYConstraint = NSLayoutConstraint(item: mainView, attribute: .centerY, relatedBy: .equal, toItem: accessoryView, attribute: .centerY, multiplier: 1, constant: 0)
+        contentView.addConstraint(accessoryViewCenterYConstraint!)
         
+        if customView.superview != nil {
+            customView.removeFromSuperview()
+        }
+        
+        customView.frame = CGRect(x: 0, y: minimumCellHeight, width: bounds.size.width, height: 0)
+        customView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(customView)
+        
+        contentView.addConstraint(NSLayoutConstraint(item: customView, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: 0))
+        contentView.addConstraint(NSLayoutConstraint(item: customView, attribute: .trailing, relatedBy: .equal, toItem: accessoryView, attribute: .leading, multiplier: 1, constant: 0))
+        contentView.addConstraint(NSLayoutConstraint(item: customView, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: 0))
+        contentView.addConstraint(NSLayoutConstraint(item: customView, attribute: .top, relatedBy: .equal, toItem: mainView, attribute: .bottom, multiplier: 1, constant: 0))
         
         if footerView.superview != nil {
             footerView.removeFromSuperview()
@@ -150,7 +169,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         contentView.addConstraint(NSLayoutConstraint(item: footerView, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: 0))
         contentView.addConstraint(NSLayoutConstraint(item: footerView, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: 0))
         contentView.addConstraint(NSLayoutConstraint(item: footerView, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: 0))
-        contentView.addConstraint(NSLayoutConstraint(item: footerView, attribute: .top, relatedBy: .equal, toItem: mainView, attribute: .bottom, multiplier: 1, constant: 0))
+        contentView.addConstraint(NSLayoutConstraint(item: footerView, attribute: .top, relatedBy: .equal, toItem: customView, attribute: .bottom, multiplier: 1, constant: 0))
         
         if footerFixedHeightConstraint != nil {
             contentView.removeConstraint(footerFixedHeightConstraint!)
@@ -195,6 +214,8 @@ open class BaseCollectionViewCell: UICollectionViewCell {
             accessoryViewWidth?.constant = 0
             accessoryViewTrailingMargin?.constant = 0
         }
+        
+        accessoryViewCenterYConstraint?.constant = -(mainView.bounds.height + customView.bounds.height) / 2
         
         isHeightCalculated = false
     }

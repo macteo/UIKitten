@@ -51,19 +51,19 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         titleLabel.accessibilityIdentifier = "CellTitleLabel"
         mainView.addSubview(subtitleLabel)
         
-        mainView.addConstraint(NSLayoutConstraint(item: mainView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .top, multiplier: 1, constant: -padding.top))
-        mainView.addConstraint(NSLayoutConstraint(item: subtitleLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 0)) // TODO: add a padding
-        mainView.addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .trailing, relatedBy: .equal, toItem: mainView, attribute: .trailing, multiplier: 1, constant: -padding.right))
+        mainView.addConstraint(NSLayoutConstraint(item: mainView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .top, multiplier: 1, constant: 0))
+        mainView.addConstraint(NSLayoutConstraint(item: subtitleLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 0))
+        mainView.addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .trailing, relatedBy: .equal, toItem: mainView, attribute: .trailing, multiplier: 1, constant: 0))
         
-        titleLeadingMargin = NSLayoutConstraint(item: mainView, attribute: .leading, relatedBy: .equal, toItem: titleLabel, attribute: .leading, multiplier: 1, constant: -padding.left)
+        titleLeadingMargin = NSLayoutConstraint(item: mainView, attribute: .leading, relatedBy: .equal, toItem: titleLabel, attribute: .leading, multiplier: 1, constant: 0)
         mainView.addConstraint(titleLeadingMargin!)
         
         titleHeight = NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 12)
         titleHeight?.priority = 750
         mainView.addConstraint(titleHeight!)
         
-        mainView.addConstraint(NSLayoutConstraint(item: mainView, attribute: .bottom, relatedBy: .equal, toItem: subtitleLabel, attribute: .bottom, multiplier: 1, constant: padding.bottom))
-        mainView.addConstraint(NSLayoutConstraint(item: subtitleLabel, attribute: .trailing, relatedBy: .equal, toItem: mainView, attribute: .trailing, multiplier: 1, constant: -padding.right))
+        mainView.addConstraint(NSLayoutConstraint(item: mainView, attribute: .bottom, relatedBy: .equal, toItem: subtitleLabel, attribute: .bottom, multiplier: 1, constant: 0))
+        mainView.addConstraint(NSLayoutConstraint(item: subtitleLabel, attribute: .trailing, relatedBy: .equal, toItem: mainView, attribute: .trailing, multiplier: 1, constant: 0))
         
         subtitleLeadingMargin = NSLayoutConstraint(item: titleLabel, attribute: .leading, relatedBy: .equal, toItem: subtitleLabel, attribute: .leading, multiplier: 1, constant: 0)
         mainView.addConstraint(subtitleLeadingMargin!)
@@ -100,14 +100,8 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         let expectedTitleHeight = titleLabel.sizeThatFits(CGSize(width: titleWidth, height: CGFloat.greatestFiniteMagnitude)).height
         titleHeight.priority = 750
         
-        titleLabel.preferredMaxLayoutWidth = titleWidth
-        
-        // Minimum cell height is 44
-        if subtitleLabel.text == nil {
-            titleHeight.constant = max(ceil(expectedTitleHeight), minimumCellHeight)
-        } else {
-            titleHeight.constant = ceil(expectedTitleHeight)
-        }
+        titleLabel.preferredMaxLayoutWidth = titleWidth        
+        titleHeight.constant = ceil(expectedTitleHeight)
     }
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
