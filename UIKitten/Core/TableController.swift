@@ -49,7 +49,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         layout.minimumLineSpacing = 0
         layout.itemSize = CGSize(width: view.bounds.width, height: view.bounds.height)
         
-        collectionView.register(ThumbnailCollectionViewCell.self, forCellWithReuseIdentifier: "imageCell")
+        collectionView.register(SubtitleCollectionViewCell.self, forCellWithReuseIdentifier: "imageCell")
         
         collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.allowsSelection = true
@@ -92,7 +92,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         
         guard let item = item(indexPath) else { return UICollectionViewCell() }
         
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ThumbnailCollectionViewCell
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! SubtitleCollectionViewCell
         var width = collectionView.bounds.size.width
         if let nextSize = nextSize {
             width = nextSize.width
@@ -105,7 +105,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let item = item(indexPath) else { return CGSize(width: 0, height: 0) }
         
-        var cell : ThumbnailCollectionViewCell?
+        var cell : SubtitleCollectionViewCell?
 
         var width = collectionView.bounds.size.width
         if let nextSize = nextSize {
@@ -115,11 +115,11 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         
         var previousContainer : UIView?
         var cellIsAlreadyVisible = false
-        if let existingCell = collectionView.cellForItem(at: indexPath) as? ThumbnailCollectionViewCell {
+        if let existingCell = collectionView.cellForItem(at: indexPath) as? SubtitleCollectionViewCell {
             cellIsAlreadyVisible = true
             cell = existingCell
         } else {
-            cell = ThumbnailCollectionViewCell(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: 100))
+            cell = SubtitleCollectionViewCell(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: 100))
             
             if let container = item.itemView()?.superview {
                 previousContainer = container
@@ -147,7 +147,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         return size
     }
     
-    func populate(cell: ThumbnailCollectionViewCell, item: ListItem, indexPath: IndexPath, width: CGFloat) -> ThumbnailCollectionViewCell {
+    func populate(cell: SubtitleCollectionViewCell, item: ListItem, indexPath: IndexPath, width: CGFloat) -> SubtitleCollectionViewCell {
         cell.title = item.itemTitle()
         cell.subtitle = item.itemSubtitle()
         cell.thumbnail = item.itemImage()

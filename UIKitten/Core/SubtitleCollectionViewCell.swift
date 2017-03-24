@@ -27,6 +27,33 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         commonInit()
     }
     
+    let thumbnailView = UIImageView()
+    let thumbnailDefaultSize : CGFloat = 38 // Cell height - 4 top - 4 bottom
+    
+    var thumbnail : UIImage? {
+        didSet {
+            thumbnailView.image = thumbnail
+            if let _ = thumbnail  {
+                thumbnailViewSize = thumbnailDefaultSize
+            } else {
+                thumbnailViewSize = 0
+            }
+            layoutIfNeeded()
+        }
+    }
+    
+    var thumbnailViewSize : CGFloat = 0
+    var thumbnailViewWidth : NSLayoutConstraint?
+    var thumbnailViewLeadingMargin : NSLayoutConstraint?
+    var thumbnailViewVerticalAlign : NSLayoutConstraint?
+    
+    public var thumbnailAlign : Align = .middle {
+        didSet {
+            layoutIfNeeded()
+        }
+    }
+
+    
     override func commonInit() {
         super.commonInit()
         
@@ -55,9 +82,6 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         mainView.addConstraint(NSLayoutConstraint(item: subtitleLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 0))
         mainView.addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .trailing, relatedBy: .equal, toItem: mainView, attribute: .trailing, multiplier: 1, constant: 0))
         
-        titleLeadingMargin = NSLayoutConstraint(item: mainView, attribute: .leading, relatedBy: .equal, toItem: titleLabel, attribute: .leading, multiplier: 1, constant: 0)
-        mainView.addConstraint(titleLeadingMargin!)
-        
         titleHeight = NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 12)
         titleHeight?.priority = 750
         mainView.addConstraint(titleHeight!)
@@ -75,16 +99,74 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         // TODO: support cell size like buttons
         titleLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
         subtitleLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
+        
+        if thumbnailView.superview != nil {
+            thumbnailView.removeFromSuperview()
+        }
+        
+        thumbnailView.frame = CGRect(x: padding.left, y: padding.top, width: thumbnailViewSize, height: thumbnailViewSize)
+        thumbnailView.translatesAutoresizingMaskIntoConstraints = false
+        thumbnailView.accessibilityIdentifier = "CellThumbnailView"
+        mainView.addSubview(thumbnailView)
+        
+        thumbnailViewWidth = NSLayoutConstraint(item: thumbnailView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: thumbnailViewSize)
+        mainView.addConstraint(thumbnailViewWidth!)
+        
+        thumbnailViewLeadingMargin = NSLayoutConstraint(item: mainView, attribute: .leading, relatedBy: .equal, toItem: thumbnailView, attribute: .leading, multiplier: 1, constant: -padding.left)
+        mainView.addConstraint(thumbnailViewLeadingMargin!)
+        mainView.addConstraint(NSLayoutConstraint(item: thumbnailView, attribute: .height, relatedBy: .equal, toItem: thumbnailView, attribute: .width, multiplier: 1, constant: 1))
+        
+        
+        titleLeadingMargin = NSLayoutConstraint(item: thumbnailView, attribute: .trailing, relatedBy: .equal, toItem: titleLabel, attribute: .leading, multiplier: 1, constant: -padding.left)
+        mainView.addConstraint(titleLeadingMargin!)
+        
+        let emptyOrangeView = UIView(frame: CGRect(x: 0, y: 0, width: contentView.bounds.size.width, height: 10))
+        emptyOrangeView.backgroundColor = .orange
+        emptyOrangeView.translatesAutoresizingMaskIntoConstraints = false
+        
+        footerView.addSubview(emptyOrangeView)
+        
+        footerView.addConstraint(NSLayoutConstraint(item: footerView, attribute: .top, relatedBy: .equal, toItem: emptyOrangeView, attribute: .top, multiplier: 1, constant: 0))
+        footerView.addConstraint(NSLayoutConstraint(item: footerView, attribute: .bottom, relatedBy: .equal, toItem: emptyOrangeView, attribute: .bottom, multiplier: 1, constant: 0))
+        footerView.addConstraint(NSLayoutConstraint(item: footerView, attribute: .leading, relatedBy: .equal, toItem: emptyOrangeView, attribute: .leading, multiplier: 1, constant: 0))
+        footerView.addConstraint(NSLayoutConstraint(item: footerView, attribute: .trailing, relatedBy: .equal, toItem: emptyOrangeView, attribute: .trailing, multiplier: 1, constant: 0))
+        let emptyHeight = NSLayoutConstraint(item: emptyOrangeView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
+        emptyHeight.priority = 650
+        footerView.addConstraint(emptyHeight)
     }
 
     public override func layoutIfNeeded() {
         super.layoutIfNeeded()
+        
+        if (thumbnailViewVerticalAlign != nil) {
+            mainView.removeConstraint(thumbnailViewVerticalAlign!)
+            thumbnailViewVerticalAlign = nil
+        }
+        
+        if thumbnailAlign == .middle {
+            thumbnailViewVerticalAlign = NSLayoutConstraint(item: mainView, attribute: .centerY, relatedBy: .equal, toItem: thumbnailView, attribute: .centerY, multiplier: 1, constant: 0)
+        } else {
+            thumbnailViewVerticalAlign = NSLayoutConstraint(item: thumbnailView, attribute: .top, relatedBy: .equal, toItem: mainView, attribute: .top, multiplier: 1, constant: padding.top)
+        }
+        
+        mainView.addConstraint(thumbnailViewVerticalAlign!)
+        
+        thumbnailViewWidth?.constant = thumbnailViewSize
+        
+        if thumbnailViewSize != 0 {
+            titleLeadingMargin?.constant = -padding.left
+        } else {
+            titleLeadingMargin?.constant = 0
+        }
 
         // Calculate subtitle height
         guard let subtitleHeight = subtitleHeight else { return }
         guard let accessoryViewWidth = accessoryViewWidth else { return }
-        guard let subtitleLeadingMargin = subtitleLeadingMargin else { return }
-        let width : CGFloat = desiredSize.width - padding.left - padding.right - accessoryViewWidth.constant - subtitleLeadingMargin.constant
+        guard let titleLeadingMargin = titleLeadingMargin else { return }
+        guard let thumbnailViewLeadingMargin = thumbnailViewLeadingMargin else { return }
+        guard let thumbnailViewWidth = thumbnailViewWidth else { return }
+        
+        let width : CGFloat = floor(desiredSize.width - padding.left - padding.right - accessoryViewWidth.constant + titleLeadingMargin.constant + thumbnailViewLeadingMargin.constant - thumbnailViewWidth.constant)
         
         subtitleLabel.preferredMaxLayoutWidth = width
         
@@ -94,8 +176,8 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
 
         // Calculate title height
         guard let titleHeight = titleHeight else { return }
-        guard let titleLeadingMargin = titleLeadingMargin else { return }
-        let titleWidth : CGFloat = desiredSize.width - padding.left - padding.right - accessoryViewWidth.constant - titleLeadingMargin.constant
+        
+        let titleWidth : CGFloat = floor(desiredSize.width - padding.left - padding.right - accessoryViewWidth.constant + titleLeadingMargin.constant + thumbnailViewLeadingMargin.constant - thumbnailViewWidth.constant)
         
         let expectedTitleHeight = titleLabel.sizeThatFits(CGSize(width: titleWidth, height: CGFloat.greatestFiniteMagnitude)).height
         titleHeight.priority = 750

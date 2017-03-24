@@ -78,6 +78,6 @@ class ButtonsController: TableController {
         
         */
 
-        items = [sizes, types, alignment, lines, styles, actions]
+        items = [types, sizes, alignment, lines, styles, actions]
     }
 }
