@@ -20,19 +20,65 @@ public class Button: UIButton, Alignable {
     
     @IBInspectable public var multiline : Bool = true {
         didSet {
-            layoutIfNeeded()
+            updateTitleValues()
         }
+    }
+    
+    func updateTitleValues() {
+        if let _ = titleLabel?.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
+            titleLabel?.font = UIFont.preferredFont(forTextStyle: size.textStyle)
+        }
+        
+        if multiline {
+            titleLabel?.numberOfLines = 0
+        } else {
+            titleLabel?.numberOfLines = 1
+        }
+        
+        updateFrameToFitTitle()
+    }
+    
+    public override func setImage(_ image: UIImage?, for state: UIControlState) {
+        super.setImage(image, for: state)
+        updateFrameToFitTitle()
     }
     
     @IBInspectable public var fitTitle : Bool = true {
         didSet {
-            layoutIfNeeded()
+            updateTitleValues()
         }
     }
     
     public var type : ButtonType = .normal {
         didSet {
-            layoutIfNeeded()
+            if glassBackground != nil {
+                setBackgroundColor(type.backgroundColor.withAlphaComponent(0.5), forState: .normal)
+            } else {
+                setBackgroundColor(type.backgroundColor, forState: .normal)
+            }
+            
+            setTitleColor(type.titleColor, for: .normal)
+            
+            if let darkerTitleColor = type.titleColor.darker(value: 0.1) {
+                setTitleColor(darkerTitleColor, for: .selected)
+                setTitleColor(darkerTitleColor, for: .highlighted)
+            }
+            
+            if let lighterTitleColor = type.titleColor.lighter(value: 0.2) {
+                setTitleColor(lighterTitleColor, for: .disabled)
+            }
+            
+            if let darkerBackgroundColor = type.backgroundColor.darker(value: 0.1) {
+                setBackgroundColor(darkerBackgroundColor, forState: .highlighted)
+                setBackgroundColor(darkerBackgroundColor, forState: .selected)
+            }
+            
+            if let lighterBackgroundColor = type.backgroundColor.lighter(value: 0.2) {
+                setBackgroundColor(lighterBackgroundColor, forState: .disabled)
+            }
+            
+            layer.borderColor = type.borderColor.cgColor
+            layer.borderWidth = type.borderWidth
         }
     }
     
@@ -45,7 +91,33 @@ public class Button: UIButton, Alignable {
     
     public var style : Style = .normal {
         didSet {
-            layoutIfNeeded()
+            if style == .glass {
+                if glassBackground == nil {
+                    glassBackground = UIVisualEffectView(effect: glassEffect)
+                    guard let glassBackground = glassBackground else { return }
+                    glassBackground.frame = bounds
+                    glassBackground.isUserInteractionEnabled = false
+                    glassBackground.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                    glassBackground.backgroundColor = .clear
+                    addSubview(glassBackground)
+                    sendSubview(toBack: glassBackground)
+                }
+            } else {
+                glassBackground?.removeFromSuperview()
+                glassBackground = nil
+            }
+            
+            if style == .dropShadow {
+                addBottomBorder()
+            } else {
+                bottomBorder?.removeFromSuperview()
+                bottomBorder = nil
+            }
+            
+            cornerRadius = style.cornerRadius(height: frame.size.height)
+            bottomBorder?.isHidden = !style.shadowIsVisible
+            
+            bottomBorderWidth = style.cornerRadius(height: frame.size.height)
         }
     }
     
@@ -58,7 +130,7 @@ public class Button: UIButton, Alignable {
     
     public var size : Size = .normal {
         didSet {
-            layoutIfNeeded()
+            updateFrameToFitTitle()
         }
     }
     
@@ -233,12 +305,16 @@ public class Button: UIButton, Alignable {
     }
     
     func commonInit() {
+        type = .normal
+        align = [.top, .left]
+        style = .normal
+        size = .normal
+        multiline = true
+        
         if originalFrame == nil {
             originalFrame = frame
         }
         titleLabel?.textAlignment = .center
-
-        layoutIfNeeded()
         
         if #available(iOS 10, *) { } else {
             // Only for iOS 8 and 9
@@ -260,89 +336,22 @@ public class Button: UIButton, Alignable {
         if let textStyle = titleLabel?.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
              titleLabel?.font = UIFont.preferredFont(forTextStyle: textStyle)
         }
-        layoutIfNeeded()
+    }
+    
+    public override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        updateAlignAndPadding()
     }
     
     public var action : ((Void) -> Void)?
     
     public var align : Align = [.top, .left] {
         didSet {
-            layoutIfNeeded()
+            updateAlignAndPadding()
         }
     }
     
-    public var padding : Int = 4 {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    
-    public func tap(_ action: @escaping (Void) -> Void) -> Button {
-        self.action = action
-        return self
-    }
-    
-    func touchUpInside(_ button: UIButton) {
-        if let action = action {
-            action()
-        }
-    }
-    
-    public func add(to view: UIView) -> Button {
-        view.addSubview(self)
-        layoutIfNeeded()
-        return self
-    }
-    
-    public func align(_ align: Align) -> Button {
-        self.align = align
-        return self
-    }
-    
-    public func padding(_ padding: Int) -> Button {
-        self.padding = padding
-        return self
-    }
-    
-    func addBottomBorder() {
-        if bottomBorder == nil {
-            bottomBorder = UIView(frame: CGRect(x: 0, y: 0, width: 4, height: 4))
-            guard let bottomBorder = bottomBorder else { return }
-            bottomBorder.frame = CGRect(x: -bottomBorderWidth, y: -bottomBorderWidth, width: frame.size.width + bottomBorderWidth * 2, height: frame.size.height + bottomBorderWidth)
-            bottomBorder.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            bottomBorder.backgroundColor = .clear
-            bottomBorder.isUserInteractionEnabled = false
-            addSubview(bottomBorder)
-        }
-    }
-    
-    public override func layoutIfNeeded() {
-        super.layoutIfNeeded()
-        
-        // TODO: move those in a separate method?
-        if style == .glass {
-            if glassBackground == nil {
-                glassBackground = UIVisualEffectView(effect: glassEffect)
-                guard let glassBackground = glassBackground else { return }
-                glassBackground.frame = bounds
-                glassBackground.isUserInteractionEnabled = false
-                glassBackground.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                glassBackground.backgroundColor = .clear
-                addSubview(glassBackground)
-                sendSubview(toBack: glassBackground)
-            }
-        } else {
-            glassBackground?.removeFromSuperview()
-            glassBackground = nil
-        }
-        
-        if style == .dropShadow {
-            addBottomBorder()
-        } else {
-            bottomBorder?.removeFromSuperview()
-            bottomBorder = nil
-        }
-        
+    func updateAlignAndPadding() {
         if align.contains(.top) {
             if align.contains(.left) {
                 autoresizingMask = [.flexibleBottomMargin, .flexibleRightMargin]
@@ -368,55 +377,8 @@ public class Button: UIButton, Alignable {
                 autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin, .flexibleLeftMargin, .flexibleRightMargin]
             }
         }
-        
-        if glassBackground != nil {
-            setBackgroundColor(type.backgroundColor.withAlphaComponent(0.5), forState: .normal)
-        } else {
-            setBackgroundColor(type.backgroundColor, forState: .normal)
-        }
-        
-        setTitleColor(type.titleColor, for: .normal)
-        
-        if let darkerTitleColor = type.titleColor.darker(value: 0.1) {
-            setTitleColor(darkerTitleColor, for: .selected)
-            setTitleColor(darkerTitleColor, for: .highlighted)
-        }
-        
-        if let lighterTitleColor = type.titleColor.lighter(value: 0.2) {
-            setTitleColor(lighterTitleColor, for: .disabled)
-        }
-        
-        if let darkerBackgroundColor = type.backgroundColor.darker(value: 0.1) {
-            setBackgroundColor(darkerBackgroundColor, forState: .highlighted)
-            setBackgroundColor(darkerBackgroundColor, forState: .selected)
-        }
-        
-        if let lighterBackgroundColor = type.backgroundColor.lighter(value: 0.2) {
-            setBackgroundColor(lighterBackgroundColor, forState: .disabled)
-        }
-        
-        layer.borderColor = type.borderColor.cgColor
-        layer.borderWidth = type.borderWidth
-        
-        cornerRadius = style.cornerRadius(height: frame.size.height)
-        bottomBorder?.isHidden = !style.shadowIsVisible
-        
-        if let _ = titleLabel?.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
-            titleLabel?.font = UIFont.preferredFont(forTextStyle: size.textStyle)
-        }
-        
-        if multiline {
-            titleLabel?.numberOfLines = 0
-        } else {
-            titleLabel?.numberOfLines = 1
-        }
-        
-        updateFrameToFitTitle()
-        
-        bottomBorderWidth = style.cornerRadius(height: frame.size.height)
-        
         guard let superview = superview else { return }
-
+        
         if align.contains(.top) {
             frame.origin.y = CGFloat(padding)
         } else if align.contains(.bottom) {
@@ -435,6 +397,51 @@ public class Button: UIButton, Alignable {
             frame.origin.x = (superview.bounds.size.width - bounds.size.width) / 2
         } else {
             frame.origin.x = CGFloat(padding)
+        }
+    }
+    
+    public var padding : Int = 4 {
+        didSet {
+            updateAlignAndPadding()
+        }
+    }
+    
+    public func tap(_ action: @escaping (Void) -> Void) -> Button {
+        self.action = action
+        return self
+    }
+    
+    func touchUpInside(_ button: UIButton) {
+        if let action = action {
+            action()
+        }
+    }
+    
+    public func add(to view: UIView) -> Button {
+        view.addSubview(self)
+        updateAlignAndPadding()
+        return self
+    }
+    
+    public func align(_ align: Align) -> Button {
+        self.align = align
+        return self
+    }
+    
+    public func padding(_ padding: Int) -> Button {
+        self.padding = padding
+        return self
+    }
+    
+    func addBottomBorder() {
+        if bottomBorder == nil {
+            bottomBorder = UIView(frame: CGRect(x: 0, y: 0, width: 4, height: 4))
+            guard let bottomBorder = bottomBorder else { return }
+            bottomBorder.frame = CGRect(x: -bottomBorderWidth, y: -bottomBorderWidth, width: frame.size.width + bottomBorderWidth * 2, height: frame.size.height + bottomBorderWidth)
+            bottomBorder.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            bottomBorder.backgroundColor = .clear
+            bottomBorder.isUserInteractionEnabled = false
+            addSubview(bottomBorder)
         }
     }
     

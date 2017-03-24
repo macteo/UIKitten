@@ -10,9 +10,10 @@
 		6BC7E35252A3CF94BF1C1A0A /* Pods_UIKitten_Catalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABA2EF7C0F0EEA346132766 /* Pods_UIKitten_Catalog.framework */; };
 		950B98531E7858CC00450F4F /* GroupedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B98521E7858CC00450F4F /* GroupedViewController.swift */; };
 		9520134A1E7FC8F0001A36C5 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952013491E7FC8F0001A36C5 /* ListController.swift */; };
+		9542134F1E857DBB005365CE /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542134E1E857DBB005365CE /* OverviewViewController.swift */; };
 		955565551E810D3E00AE456F /* CellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955565541E810D3E00AE456F /* CellsViewController.swift */; };
 		9555655B1E812F2000AE456F /* ButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9555655A1E812F2000AE456F /* ButtonsController.swift */; };
-		959C83461E806D8C00EF4DC3 /* TextFieldsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C83451E806D8C00EF4DC3 /* TextFieldsTableController.swift */; };
+		959C83461E806D8C00EF4DC3 /* TextFieldsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C83451E806D8C00EF4DC3 /* TextFieldsController.swift */; };
 		95E084C41E76A098001DB6BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084C31E76A098001DB6BA /* AppDelegate.swift */; };
 		95E084C61E76A098001DB6BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084C51E76A098001DB6BA /* ViewController.swift */; };
 		95E084C91E76A098001DB6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E084C71E76A098001DB6BA /* Main.storyboard */; };
@@ -25,9 +26,10 @@
 		60ACA440772D8EBE3713E7B1 /* Pods-UIKitten Catalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitten Catalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitten Catalog/Pods-UIKitten Catalog.release.xcconfig"; sourceTree = "<group>"; };
 		950B98521E7858CC00450F4F /* GroupedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedViewController.swift; sourceTree = "<group>"; };
 		952013491E7FC8F0001A36C5 /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		9542134E1E857DBB005365CE /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		955565541E810D3E00AE456F /* CellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellsViewController.swift; sourceTree = "<group>"; };
 		9555655A1E812F2000AE456F /* ButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsController.swift; sourceTree = "<group>"; };
-		959C83451E806D8C00EF4DC3 /* TextFieldsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsTableController.swift; sourceTree = "<group>"; };
+		959C83451E806D8C00EF4DC3 /* TextFieldsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsController.swift; sourceTree = "<group>"; };
 		95D835291E76EFA40048869E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		95E084C01E76A098001DB6BA /* UIKitten Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKitten Catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E084C31E76A098001DB6BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +97,8 @@
 				950B98521E7858CC00450F4F /* GroupedViewController.swift */,
 				952013491E7FC8F0001A36C5 /* ListController.swift */,
 				9555655A1E812F2000AE456F /* ButtonsController.swift */,
-				959C83451E806D8C00EF4DC3 /* TextFieldsTableController.swift */,
+				959C83451E806D8C00EF4DC3 /* TextFieldsController.swift */,
+				9542134E1E857DBB005365CE /* OverviewViewController.swift */,
 				955565541E810D3E00AE456F /* CellsViewController.swift */,
 				95E084C71E76A098001DB6BA /* Main.storyboard */,
 				95E084CC1E76A098001DB6BA /* LaunchScreen.storyboard */,
@@ -230,10 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9520134A1E7FC8F0001A36C5 /* ListController.swift in Sources */,
-				959C83461E806D8C00EF4DC3 /* TextFieldsTableController.swift in Sources */,
+				959C83461E806D8C00EF4DC3 /* TextFieldsController.swift in Sources */,
 				95E084C61E76A098001DB6BA /* ViewController.swift in Sources */,
 				955565551E810D3E00AE456F /* CellsViewController.swift in Sources */,
 				9555655B1E812F2000AE456F /* ButtonsController.swift in Sources */,
+				9542134F1E857DBB005365CE /* OverviewViewController.swift in Sources */,
 				95E084C41E76A098001DB6BA /* AppDelegate.swift in Sources */,
 				950B98531E7858CC00450F4F /* GroupedViewController.swift in Sources */,
 			);

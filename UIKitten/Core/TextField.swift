@@ -8,17 +8,38 @@
 
 import UIKit
 
-public class TextField: UITextField {
+public class TextField: UITextField, Alignable {
+    
     let imagePadding = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 0)
     
     var validations : [Validation]?
     var validationType : TextFieldType?
     
+    public var padding : Int = 4 {
+        didSet {
+            
+        }
+    }
+
+    public func align(_ align: Align) -> TextField {
+        self.align = align
+        return self
+    }
+
     var leftImage : UIImage? {
         didSet {
             if leftImage != nil {
                 leftViewMode = .always
+                let leftContainer = UIView(frame: CGRect(x: 0, y: 0, width: imageSize.width + imagePadding.right, height: imageSize.height))
+                leftContainer.backgroundColor = .clear
+                let leftImageView = UIImageView(frame: CGRect(x: imagePadding.left, y: 0, width: imageSize.width, height: imageSize.height))
+                leftImageView.image = leftImage
+                leftImageView.contentMode = .scaleAspectFit
+                leftImageView.tintColor = currentType.borderColor
+                leftContainer.addSubview(leftImageView)
+                leftView = leftContainer
             } else {
+                leftView = nil
                 leftViewMode = .never
             }
         }
@@ -28,7 +49,16 @@ public class TextField: UITextField {
         didSet {
             if rightImage != nil {
                 rightViewMode = .always
+                let rightContainer = UIView(frame: CGRect(x: 0, y: 0, width: imageSize.width + imagePadding.left, height: imageSize.height))
+                rightContainer.backgroundColor = .clear
+                let rightImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
+                rightImageView.image = rightImage
+                rightImageView.contentMode = .scaleAspectFit
+                rightImageView.tintColor = currentType.borderColor
+                rightContainer.addSubview(rightImageView)
+                rightView = rightContainer
             } else {
+                rightView = nil
                 rightViewMode = .never
             }
         }
@@ -40,7 +70,7 @@ public class TextField: UITextField {
     
     public var style : Style = .normal {
         didSet {
-            layoutIfNeeded()
+            updateBorder()
         }
     }
     
@@ -51,9 +81,9 @@ public class TextField: UITextField {
         }
     }
     
-    public var size : Size = .large {
+    public var size : Size = .normal {
         didSet {
-            layoutIfNeeded()
+            updateBorder()
         }
     }
     
@@ -74,7 +104,9 @@ public class TextField: UITextField {
     }
     
     public override func textRect(forBounds bounds: CGRect) -> CGRect {
-        return super.textRect(forBounds: bounds).insetBy(dx: size.inset(style: style), dy: 0)
+        let defaultRect = super.textRect(forBounds: bounds)
+        let inset = size.inset(style: style)
+        return defaultRect.insetBy(dx: inset, dy: 0)
     }
     
     public override func editingRect(forBounds bounds: CGRect) -> CGRect {
@@ -82,18 +114,24 @@ public class TextField: UITextField {
     }
     
     public override func becomeFirstResponder() -> Bool {
-        defer { layoutIfNeeded() }
+        defer { updateBorder() }
         return super.becomeFirstResponder()
     }
     
     public override func resignFirstResponder() -> Bool {
-        defer { layoutIfNeeded() }
+        defer { updateBorder() }
         return super.resignFirstResponder()
     }
     
     public override var isSelected: Bool {
         didSet {
-            layoutIfNeeded()
+            updateBorder()
+        }
+    }
+    
+    public var align : Align = [.top, .left] {
+        didSet {
+            // TODO: eventually support alignment when adding it as subview
         }
     }
 
@@ -111,7 +149,7 @@ public class TextField: UITextField {
         backgroundColor = .white
         borderStyle = .none
         
-        layoutIfNeeded()
+        updateBorder()
         
         NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
         
@@ -132,9 +170,7 @@ public class TextField: UITextField {
         }
     }
     
-    public override func layoutIfNeeded() {
-        super.layoutIfNeeded()
-        
+    var currentType : TextFieldType {
         var type = TextFieldType.normal
         
         if isEditing {
@@ -145,15 +181,19 @@ public class TextField: UITextField {
             type = validationType
         }
         
+        return type
+    }
+    
+    func updateBorder() {
         let borderColorAnimation = CABasicAnimation(keyPath: "borderColor")
         borderColorAnimation.fromValue = layer.borderColor
-        borderColorAnimation.toValue = type.borderColor.cgColor
-        layer.borderColor = type.borderColor.cgColor
+        borderColorAnimation.toValue = currentType.borderColor.cgColor
+        layer.borderColor = currentType.borderColor.cgColor
         
         let borderWidthAnimation = CABasicAnimation(keyPath: "borderWidth")
         borderWidthAnimation.fromValue = layer.borderWidth
-        borderWidthAnimation.toValue = type.borderWidth
-        layer.borderWidth = type.borderWidth
+        borderWidthAnimation.toValue = currentType.borderWidth
+        layer.borderWidth = currentType.borderWidth
         
         let cornerRadiusAnimation = CABasicAnimation(keyPath: "cornerRadius")
         cornerRadiusAnimation.fromValue = layer.cornerRadius
@@ -167,39 +207,13 @@ public class TextField: UITextField {
         
         layer.add(borderAnimationGroup, forKey: "border width and color, corner radius")
         
-        textColor = type.titleColor
-        tintColor = type.borderColor
+        textColor = currentType.titleColor
+        tintColor = currentType.borderColor
         
         if let _ = font?.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
             font = UIFont.preferredFont(forTextStyle: size.textStyle)
         }
         frame.size.height = size.height
-
-        if (leftImage != nil) {
-            let leftContainer = UIView(frame: CGRect(x: 0, y: 0, width: imageSize.width + imagePadding.right, height: imageSize.height))
-            leftContainer.backgroundColor = .clear
-            let leftImageView = UIImageView(frame: CGRect(x: imagePadding.left, y: 0, width: imageSize.width, height: imageSize.height))
-            leftImageView.image = leftImage
-            leftImageView.contentMode = .scaleAspectFit
-            leftImageView.tintColor = type.borderColor
-            leftContainer.addSubview(leftImageView)
-            leftView = leftContainer
-        } else {
-            leftView = nil
-        }
-        
-        if (rightImage != nil) {
-            let rightContainer = UIView(frame: CGRect(x: 0, y: 0, width: imageSize.width + imagePadding.left, height: imageSize.height))
-            rightContainer.backgroundColor = .clear
-            let rightImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
-            rightImageView.image = rightImage
-            rightImageView.contentMode = .scaleAspectFit
-            rightImageView.tintColor = type.borderColor
-            rightContainer.addSubview(rightImageView)
-            rightView = rightContainer
-        } else {
-            rightView = nil
-        }
     }
     
     @objc func onEditingChange(field: UITextField) {
@@ -216,7 +230,8 @@ public class TextField: UITextField {
         } else {
             validationType = nil
         }
-        layoutIfNeeded()
+        
+        updateBorder()
     }
     
     var validationMessages : [String]? {

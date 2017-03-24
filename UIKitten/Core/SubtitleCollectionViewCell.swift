@@ -53,7 +53,6 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         }
     }
 
-    
     override func commonInit() {
         super.commonInit()
         

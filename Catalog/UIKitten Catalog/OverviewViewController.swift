@@ -1,15 +1,15 @@
 //
-//  TextFieldsTableController.swift
+//  OverviewViewController.swift
 //  UIKitten Catalog
 //
-//  Created by Matteo Gavagnin on 20/03/2017.
+//  Created by Matteo Gavagnin on 24/03/2017.
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
 import UIKitten
 
-class TextFieldsTableController: TableController {
-
+class OverviewViewController: TableController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

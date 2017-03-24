@@ -13,6 +13,7 @@ protocol BaseCollectionViewCellDelegate {
 }
 
 open class BaseCollectionViewCell: UICollectionViewCell {
+    
     public var padding = UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10) {
         didSet {
             layoutIfNeeded()
