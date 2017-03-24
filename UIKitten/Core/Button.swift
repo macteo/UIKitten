@@ -115,7 +115,7 @@ public class Button: UIButton, Alignable {
             heightConstraint?.constant = frame.size.height
         } else {
             heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: frame.size.height)
-            heightConstraint?.priority = 1000
+            heightConstraint?.priority = 750
             addConstraint(heightConstraint!)
         }
         
@@ -226,7 +226,7 @@ public class Button: UIButton, Alignable {
             heightConstraint?.constant = intrinsicSize.height
         } else {
             heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: intrinsicSize.height)
-            heightConstraint?.priority = 1000
+            heightConstraint?.priority = 750
             addConstraint(heightConstraint!)
         }
         return intrinsicSize
