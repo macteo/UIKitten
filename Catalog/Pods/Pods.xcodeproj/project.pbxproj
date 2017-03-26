@@ -7,51 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05DC2ED9DC382298EAA522DB60A652A9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7C8B93414C63127968C20A127438A /* Colors.swift */; };
-		099773ABC105F10B2684EBB6BDC6A55F /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6840A80DA985A394FAE3A9B9D7C082C5 /* Print.swift */; };
+		010A7ECA363EDF541CCB4A96706C6026 /* UsernameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9246DF082EBF98F0F85A61493A88708 /* UsernameField.swift */; };
 		0C03CB07A1BF399CDE7CBB68DBAEE6B5 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = F42506C7C75E4B10CFB210B4292DA4E3 /* FontAwesome.otf */; };
-		10519A5C153E9D0CD7C6C412440ECBC2 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A7E329ACA25B4B1281F3E2C95FB690 /* ListItem.swift */; };
 		10ED8170E7EF0BA1535A609DB0D04768 /* UIKitten-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7E362DCC012A3DFF6093E5FC8D94E /* UIKitten-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11CB64A5F6DE480231D85C7521664B6A /* GroupedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75271A11F7DC7F0D86C1334E651500 /* GroupedButtons.swift */; };
 		12900D472852F9FA460719210C1DE027 /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B780CCE01BEC56A97470E9FC46852F /* FontAwesome_swift.framework */; };
 		15064BE99B3392B5C279A026601D7DE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD10C1BABCE827F1B6172FF53FE0477 /* UIKit.framework */; };
+		15428661651EA2808176355D7363A8A5 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08750CEF5C88EA886AEB016DC23370CB /* UIView+Border.swift */; };
+		156E45409E34791837D9A3E5B2DF127F /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD7E4FA43ED401E568ED938B0A8D6B /* ButtonType.swift */; };
 		1859113A28D674DBA366EF81366330C0 /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F271F74D70350F46EA5346707A2474 /* FontAwesomeView.swift */; };
-		1D7A4E0A2633A2C7BC2356C6516BC03D /* UsernameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5B9C35295D0D31DA2CE1B5B95DA3 /* UsernameField.swift */; };
-		253E59DD300F707F7C5B0EFD2DA1EEEF /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FF6DEAB50B57C8AE3D469AF44044C /* TextFieldType.swift */; };
+		27D0064A52F5E3FA3BF9EE4BBE7FB67A /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64623E683AEFE969817FFFA403A844A3 /* UIColor+RGB.swift */; };
 		29F1BA144EFA4371F43A89F0EC16A413 /* Pods-UIKitten Catalog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F6F83904BB11728495F4C8E6A8428274 /* Pods-UIKitten Catalog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C845E2406F166CC30AD6CB4657FB313 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A9E62B2CEC7F1ABCB7F193B5B0D64 /* TextField.swift */; };
+		33660A7CB5CD90248BB6E93B1CF61DEB /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816A3881B72F50A89E13DB3AD124A74 /* ListItem.swift */; };
+		34B8AF4EB4077133FD8D2074A4D58DD3 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F4D301AEE60C61623E00D77C0ADF3 /* TextFieldType.swift */; };
 		37B85F555A38364C44DB54684713A900 /* FontAwesome.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB8DF1487534236349AFF43A3A406F9 /* FontAwesome.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		394CE75A2EA55261ED1335DFC9EB6699 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B8576BD936FC5119F52C2CFFE71264 /* Align.swift */; };
-		49891B5E8A440F7A028733C633C316DA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF495974E613416ED322C250EDBA04 /* Item.swift */; };
-		4CB3C70FBF084E215AEEFE0D0AB5F306 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE883EBFB2DA272404FA188A2059E9F6 /* Size.swift */; };
-		5B9ED562E65C7E8F42091311D4EF4344 /* Button+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28CA284D0ECB1B356264609ECF4528D /* Button+Icon.swift */; };
+		3C7053ACAD11044269E3368E5846934F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2672D743B60FB4F440A96DD7D6754763 /* Item.swift */; };
+		4BFFA7E84F1EFB3ED5F5061D09312580 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8904C1D5B036156BA5E186AABDFF1 /* Validation.swift */; };
+		55C269524CC4C555E828D4279166BE96 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7FD377C88AF671FB813F2BB0D1DAD /* Align.swift */; };
 		5C0B36CA70286C8DD0002A8E94CC4553 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF705D905E5FDD09B9A5803E70860E0 /* FontAwesome.swift */; };
+		5C794CD4B93BE6829EBC91B1FBCB8566 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1C931DE817E5A46EDCC399AEFCA4E /* ImageView.swift */; };
+		647D178E4D0D84F3CD2DB3BECECA8FBF /* Button+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09405D1E0A27E473E747BA76371CC515 /* Button+Icon.swift */; };
+		64B6DF535B25287084CE2D16B9EF32C2 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB082E8A16A9AE7B2AC297B9CBD4FF9 /* Print.swift */; };
+		65F87CE7148673A398176366FD25215E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E3A888FBC125C6DCE25336A9892B5 /* Colors.swift */; };
+		69B6A4718AFD488469305F010EC6C5E8 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6AA422E1AE4D4C1EA1F31332C9FC10 /* PasswordField.swift */; };
+		69D9CF36C4F00E419763E19C26EB9EC8 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B70AFB426FCD55D8A9FC6FCED82CCD /* EmailField.swift */; };
 		6AF5B52CE8521B567A3F704308E51AD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD9EF289669DF2D371DF393F22D53A /* Foundation.framework */; };
 		6D2E08CCD083CF4017C807BD5EB777D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD9EF289669DF2D371DF393F22D53A /* Foundation.framework */; };
 		70585654165EDB9FCCF1D64D4CEB845E /* UIKitten.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0DF3CAB23D0E0F39E5775A96A47883 /* UIKitten.xcassets */; };
-		72BFF10684C23F0840917DF2E04087AA /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4240FCDB33E531B5FF933ED93003BC8C /* UIView+Border.swift */; };
-		76698BDF5B22483372AA70F4C25841AB /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6377C1FC3A5425E169B0959E0CC731DD /* PasswordField.swift */; };
-		7A4076E2736A0AF831A766E506813493 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D299103B516BF40B7B73D77C26A244 /* Style.swift */; };
+		7A4C872608E51E4B4FAC9D8786441C52 /* UIView+Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF3257888D89DC951F515513E77BCD /* UIView+Align.swift */; };
 		7DE3E62D329F26A90F380826B7460AA4 /* FontAwesome.swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 80D44725B4E6A3AA83F7D2BD0A529660 /* FontAwesome.swift.bundle */; };
-		8AA09AAC5A5D75F243A7509D54097017 /* UIKitten-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FADFAA52E1A9888A68D0A46CA6CB534D /* UIKitten-dummy.m */; };
-		945DA523D419535D612271EF62289EE8 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D05032865DFE10A07FA1E29B2255 /* Button.swift */; };
-		99292C8574F6E6441A5304DC95712A4D /* UIView+Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = C145FABD655CE10206B751564B0687EA /* UIView+Align.swift */; };
-		99876CF9AF56F61697475973B3E4EB6A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7610009E7F9C69A5B7BCF3C0C47002E2 /* TextField.swift */; };
-		A139FA5B3459989FA1116263FB91CE8F /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0070363B1FEF3BEC41C358B789A831 /* UIColor+RGB.swift */; };
-		A4FFC8EA94A1A286C90519FF9BA3FDA7 /* UIController+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB37288DDFDA77CA384BBC9ADA80D016 /* UIController+Rotation.swift */; };
+		A77F6FB685A77D742D797D2333E6C5A3 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D876BF854F43C50B470C98A0E81A35 /* Button.swift */; };
 		AB927DAA3A51C7A167FC337C2CBCEAD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD9EF289669DF2D371DF393F22D53A /* Foundation.framework */; };
-		B144CE9972DB2DAE5E903A3231280223 /* GroupedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF3B1026D46C9B27E13FFD5FAEBE907 /* GroupedButtons.swift */; };
-		B6732979E86D123D1E98E7C058DA3C98 /* SubtitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF04F45D6701B40DBCF771FC8EAE8E72 /* SubtitleCollectionViewCell.swift */; };
-		B6F6BAE0A114D0BC34D81AAC92C5A81E /* UIButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A836B6A96020BAEC410516546F2AD2 /* UIButton+Color.swift */; };
-		B825E096A7E2E33450DA697A09EB72EE /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE28EDC6463A332B45C80FB54F814CB /* BaseCollectionViewCell.swift */; };
+		B4A05AAA08A88282A944FA27743D7605 /* ImagePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498700370DA97B1A6D62C5BB17D35A1 /* ImagePosition.swift */; };
+		B89A3AE38406CFB9377B81011A466FB1 /* UIController+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3044296F67219D48DAE91D71E2278B /* UIController+Rotation.swift */; };
 		BED5EC9770C0ADD3B9A60A028F99F432 /* FontAwesome.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D620B3758E51423C055C8C9AD9688B6E /* FontAwesome.swift-dummy.m */; };
+		C25F15949474587FED2E5F1793E6D442 /* UIButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019CA5F933F49DE7B26488CFAAE4B80 /* UIButton+Color.swift */; };
 		C2BB6143A772EDE7F6C338C2349EC210 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873D7F8974D7ECB52C618D1146ACC59F /* CoreText.framework */; };
 		C2BF28F2B3085B993F1D424DF9A6ABBB /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4184554D61F2FA3FA20364271C01D37F /* Enum.swift */; };
-		C68FD2A8EB315E20ADDACF7B5498A57A /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0501B58164EF2F588F57B7CBE608B1EE /* EmailField.swift */; };
-		CD119B8A5A784C575F5FD52D81BFF91F /* ImagePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C7D5E70FFD2D10FC905A407050DEFA /* ImagePosition.swift */; };
+		C943FA0A5FE408A41AE918EB9EF8FCBE /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C4B67A2D2F75C17B69D3449A3B0F67 /* BaseCollectionViewCell.swift */; };
+		CC1C789BFE9ECAFA8AAE76C6ACA4C69E /* SubtitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E37E6D063CB4C102D9F9C4109B11C /* SubtitleCollectionViewCell.swift */; };
+		CE731270DBAD86490B13A7E9DACCDC5B /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916967DF51875DEDDC80DD400BFE3D52 /* Style.swift */; };
+		CF9232C3CFFFFCF67029C28A7A88ACAC /* UIView+ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5DBFE8D6B36E25ED5796B9AF72F30 /* UIView+ListItem.swift */; };
+		D51DBC338756986C0EB125BA945A99B1 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49937C7C106FD0CB55C036B8D8F9752D /* Size.swift */; };
 		D92F1CAB0704D9BFA27400454B6AECED /* Pods-UIKitten Catalog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C72F53C4E95DB36E0F5E3A79207FA6F /* Pods-UIKitten Catalog-dummy.m */; };
-		E32B0C0FDC9A03BC962889E28391DE76 /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7864839F7EE302D777343CDE36EF9CF5 /* ButtonType.swift */; };
-		E9D0BD9CEDBDF66CC58C04CEDDE1598F /* UIView+ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4D923D3DCA473C80507F2701FFF24 /* UIView+ListItem.swift */; };
-		EA1F4B65C54F12E304E18D3C8028EFB0 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56748081501964CB49E1AE975029ED /* Validation.swift */; };
-		FB7FA016C5EE93BFE7BFF2E285049F2C /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D31E1F4CCA8486B6F083246A998AB /* TableController.swift */; };
+		E976AB4AD0149A4913E2C19FBE561473 /* UIKitten-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FADFAA52E1A9888A68D0A46CA6CB534D /* UIKitten-dummy.m */; };
+		ED1918FB8F92970F004F7EB8153027AC /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D827BD35483D292D47029D1727464D0 /* TableController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,70 +87,71 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		019B5B9C35295D0D31DA2CE1B5B95DA3 /* UsernameField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsernameField.swift; sourceTree = "<group>"; };
-		04D299103B516BF40B7B73D77C26A244 /* Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		0501B58164EF2F588F57B7CBE608B1EE /* EmailField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
-		06B8576BD936FC5119F52C2CFFE71264 /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Align.swift; sourceTree = "<group>"; };
-		117FF6DEAB50B57C8AE3D469AF44044C /* TextFieldType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
+		039A9E62B2CEC7F1ABCB7F193B5B0D64 /* TextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		0498700370DA97B1A6D62C5BB17D35A1 /* ImagePosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImagePosition.swift; sourceTree = "<group>"; };
+		08750CEF5C88EA886AEB016DC23370CB /* UIView+Border.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
+		09405D1E0A27E473E747BA76371CC515 /* Button+Icon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Button+Icon.swift"; sourceTree = "<group>"; };
 		148CDF412AFD6096135B4100B43136FE /* Pods-UIKitten Catalog-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitten Catalog-frameworks.sh"; sourceTree = "<group>"; };
+		1816A3881B72F50A89E13DB3AD124A74 /* ListItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		1B6AA422E1AE4D4C1EA1F31332C9FC10 /* PasswordField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		1CB88546B17539E9552BBAE1D30FF268 /* FontAwesome.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-prefix.pch"; sourceTree = "<group>"; };
-		1CF3B1026D46C9B27E13FFD5FAEBE907 /* GroupedButtons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GroupedButtons.swift; sourceTree = "<group>"; };
-		209D31E1F4CCA8486B6F083246A998AB /* TableController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
+		20D876BF854F43C50B470C98A0E81A35 /* Button.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		2467CEBEFCAA0D1255221F83DFC075EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2672D743B60FB4F440A96DD7D6754763 /* Item.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		26B70AFB426FCD55D8A9FC6FCED82CCD /* EmailField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
 		3577B1FCECC6A9CE495B87F864B16912 /* FontAwesome.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FontAwesome.swift.modulemap; sourceTree = "<group>"; };
 		372F8FB44E85A7D9996AB56DC423A40F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37FD9EF289669DF2D371DF393F22D53A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3CB8DF1487534236349AFF43A3A406F9 /* FontAwesome.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-umbrella.h"; sourceTree = "<group>"; };
+		3CC8904C1D5B036156BA5E186AABDFF1 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		3D827BD35483D292D47029D1727464D0 /* TableController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		4184554D61F2FA3FA20364271C01D37F /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = FontAwesome/Enum.swift; sourceTree = "<group>"; };
-		4240FCDB33E531B5FF933ED93003BC8C /* UIView+Border.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
-		43E4D923D3DCA473C80507F2701FFF24 /* UIView+ListItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+ListItem.swift"; sourceTree = "<group>"; };
+		492E3A888FBC125C6DCE25336A9892B5 /* Colors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		49937C7C106FD0CB55C036B8D8F9752D /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		4D3A6FCA8664F516FD6CA61F76568B69 /* UIKitten.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = UIKitten.modulemap; sourceTree = "<group>"; };
 		507EAA898EDC9A45D1A3D5D6732E79E4 /* Pods-UIKitten Catalog-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UIKitten Catalog-acknowledgements.plist"; sourceTree = "<group>"; };
 		54D7E362DCC012A3DFF6093E5FC8D94E /* UIKitten-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIKitten-umbrella.h"; sourceTree = "<group>"; };
 		54F135FA706B1BD8DAFF6BD5785280A8 /* Pods-UIKitten Catalog-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UIKitten Catalog-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6377C1FC3A5425E169B0959E0CC731DD /* PasswordField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
-		6840A80DA985A394FAE3A9B9D7C082C5 /* Print.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
-		6BDF495974E613416ED322C250EDBA04 /* Item.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		5E2E37E6D063CB4C102D9F9C4109B11C /* SubtitleCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubtitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		64623E683AEFE969817FFFA403A844A3 /* UIColor+RGB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
 		6C4D2FC07D13E32F6D7BEDBE5C364A9C /* Pods-UIKitten Catalog-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitten Catalog-resources.sh"; sourceTree = "<group>"; };
+		6FB082E8A16A9AE7B2AC297B9CBD4FF9 /* Print.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
 		6FD10C1BABCE827F1B6172FF53FE0477 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		7610009E7F9C69A5B7BCF3C0C47002E2 /* TextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		7864839F7EE302D777343CDE36EF9CF5 /* ButtonType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
 		7C72F53C4E95DB36E0F5E3A79207FA6F /* Pods-UIKitten Catalog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIKitten Catalog-dummy.m"; sourceTree = "<group>"; };
+		7DC1C931DE817E5A46EDCC399AEFCA4E /* ImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		7E75271A11F7DC7F0D86C1334E651500 /* GroupedButtons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GroupedButtons.swift; sourceTree = "<group>"; };
 		80D44725B4E6A3AA83F7D2BD0A529660 /* FontAwesome.swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FontAwesome.swift.bundle; path = FontAwesome.swift.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		82A7E329ACA25B4B1281F3E2C95FB690 /* ListItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		873D7F8974D7ECB52C618D1146ACC59F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		88B2CECD990D03A94A55C0641D6D831A /* Pods-UIKitten Catalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIKitten Catalog.release.xcconfig"; sourceTree = "<group>"; };
 		8ED488E6E597079786ED1CEFDA7E58E3 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FontAwesome_swift.framework; path = FontAwesome.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		909EC2D9E4BF9936C061CD7FCDE9B40B /* UIKitten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIKitten.framework; path = UIKitten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		916967DF51875DEDDC80DD400BFE3D52 /* Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		91F271F74D70350F46EA5346707A2474 /* FontAwesomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesomeView.swift; path = FontAwesome/FontAwesomeView.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93A836B6A96020BAEC410516546F2AD2 /* UIButton+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Color.swift"; sourceTree = "<group>"; };
+		94AD7E4FA43ED401E568ED938B0A8D6B /* ButtonType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
+		97C4B67A2D2F75C17B69D3449A3B0F67 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C45C34394CEBC0B79C42D4EDD511722 /* UIKitten-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIKitten-prefix.pch"; sourceTree = "<group>"; };
 		A32263AB50F9C9E1C24E82E4F0AD4A22 /* Pods-UIKitten Catalog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-UIKitten Catalog.modulemap"; sourceTree = "<group>"; };
-		AB56748081501964CB49E1AE975029ED /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		AC06E5E8799BCBCC72B9EA58DA3DEAD6 /* UIKitten.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIKitten.xcconfig; sourceTree = "<group>"; };
-		B0C7D5E70FFD2D10FC905A407050DEFA /* ImagePosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImagePosition.swift; sourceTree = "<group>"; };
-		B28CA284D0ECB1B356264609ECF4528D /* Button+Icon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Button+Icon.swift"; sourceTree = "<group>"; };
+		B1B5DBFE8D6B36E25ED5796B9AF72F30 /* UIView+ListItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+ListItem.swift"; sourceTree = "<group>"; };
 		B290F07C4B25314616107EC9A0E3D4BC /* ResourceBundle-FontAwesome.swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FontAwesome.swift-Info.plist"; sourceTree = "<group>"; };
+		BB3044296F67219D48DAE91D71E2278B /* UIController+Rotation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIController+Rotation.swift"; sourceTree = "<group>"; };
 		BD0DF3CAB23D0E0F39E5775A96A47883 /* UIKitten.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = UIKitten.xcassets; sourceTree = "<group>"; };
-		BE0070363B1FEF3BEC41C358B789A831 /* UIColor+RGB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
-		C145FABD655CE10206B751564B0687EA /* UIView+Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Align.swift"; sourceTree = "<group>"; };
 		C2B780CCE01BEC56A97470E9FC46852F /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB37288DDFDA77CA384BBC9ADA80D016 /* UIController+Rotation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIController+Rotation.swift"; sourceTree = "<group>"; };
 		CC7748FEF0F63A3E647192BF1F5D0FBB /* Pods_UIKitten_Catalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UIKitten_Catalog.framework; path = "Pods-UIKitten Catalog.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF705D905E5FDD09B9A5803E70860E0 /* FontAwesome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesome.swift; path = FontAwesome/FontAwesome.swift; sourceTree = "<group>"; };
 		D0BD26FDE1A1F6363D0AFF02E8E50879 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D620B3758E51423C055C8C9AD9688B6E /* FontAwesome.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontAwesome.swift-dummy.m"; sourceTree = "<group>"; };
-		DAE28EDC6463A332B45C80FB54F814CB /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		DE883EBFB2DA272404FA188A2059E9F6 /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
-		DF04F45D6701B40DBCF771FC8EAE8E72 /* SubtitleCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubtitleCollectionViewCell.swift; sourceTree = "<group>"; };
-		DFD7C8B93414C63127968C20A127438A /* Colors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E5DF3257888D89DC951F515513E77BCD /* UIView+Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Align.swift"; sourceTree = "<group>"; };
 		E751643369496E4CD4EDF66244DD1BD9 /* FontAwesome.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontAwesome.swift.xcconfig; sourceTree = "<group>"; };
+		E8E7FD377C88AF671FB813F2BB0D1DAD /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Align.swift; sourceTree = "<group>"; };
+		F019CA5F933F49DE7B26488CFAAE4B80 /* UIButton+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Color.swift"; sourceTree = "<group>"; };
 		F42506C7C75E4B10CFB210B4292DA4E3 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome.otf; path = FontAwesome/FontAwesome.otf; sourceTree = "<group>"; };
-		F4F3D05032865DFE10A07FA1E29B2255 /* Button.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		F57D8D52390C771B0C3D3BEB7D980DFD /* Pods-UIKitten Catalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIKitten Catalog.debug.xcconfig"; sourceTree = "<group>"; };
 		F6F83904BB11728495F4C8E6A8428274 /* Pods-UIKitten Catalog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UIKitten Catalog-umbrella.h"; sourceTree = "<group>"; };
+		F9246DF082EBF98F0F85A61493A88708 /* UsernameField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsernameField.swift; sourceTree = "<group>"; };
 		FADFAA52E1A9888A68D0A46CA6CB534D /* UIKitten-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIKitten-dummy.m"; sourceTree = "<group>"; };
+		FD6F4D301AEE60C61623E00D77C0ADF3 /* TextFieldType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,10 +231,55 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		39A66B1C05988DCFFF7605E2B9A5CED1 /* UIKitten */ = {
+			isa = PBXGroup;
+			children = (
+				5A03C358E8630BFAFCB9DA80D7FAD2D7 /* Core */,
+			);
+			name = UIKitten;
+			path = UIKitten;
+			sourceTree = "<group>";
+		};
 		44F4DFDC573159414A6CC67DEFA29A42 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				BD0DF3CAB23D0E0F39E5775A96A47883 /* UIKitten.xcassets */,
+			);
+			name = Core;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5A03C358E8630BFAFCB9DA80D7FAD2D7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E8E7FD377C88AF671FB813F2BB0D1DAD /* Align.swift */,
+				97C4B67A2D2F75C17B69D3449A3B0F67 /* BaseCollectionViewCell.swift */,
+				20D876BF854F43C50B470C98A0E81A35 /* Button.swift */,
+				09405D1E0A27E473E747BA76371CC515 /* Button+Icon.swift */,
+				94AD7E4FA43ED401E568ED938B0A8D6B /* ButtonType.swift */,
+				492E3A888FBC125C6DCE25336A9892B5 /* Colors.swift */,
+				26B70AFB426FCD55D8A9FC6FCED82CCD /* EmailField.swift */,
+				7E75271A11F7DC7F0D86C1334E651500 /* GroupedButtons.swift */,
+				0498700370DA97B1A6D62C5BB17D35A1 /* ImagePosition.swift */,
+				7DC1C931DE817E5A46EDCC399AEFCA4E /* ImageView.swift */,
+				2672D743B60FB4F440A96DD7D6754763 /* Item.swift */,
+				1816A3881B72F50A89E13DB3AD124A74 /* ListItem.swift */,
+				1B6AA422E1AE4D4C1EA1F31332C9FC10 /* PasswordField.swift */,
+				6FB082E8A16A9AE7B2AC297B9CBD4FF9 /* Print.swift */,
+				49937C7C106FD0CB55C036B8D8F9752D /* Size.swift */,
+				916967DF51875DEDDC80DD400BFE3D52 /* Style.swift */,
+				5E2E37E6D063CB4C102D9F9C4109B11C /* SubtitleCollectionViewCell.swift */,
+				3D827BD35483D292D47029D1727464D0 /* TableController.swift */,
+				039A9E62B2CEC7F1ABCB7F193B5B0D64 /* TextField.swift */,
+				FD6F4D301AEE60C61623E00D77C0ADF3 /* TextFieldType.swift */,
+				F019CA5F933F49DE7B26488CFAAE4B80 /* UIButton+Color.swift */,
+				64623E683AEFE969817FFFA403A844A3 /* UIColor+RGB.swift */,
+				BB3044296F67219D48DAE91D71E2278B /* UIController+Rotation.swift */,
+				E5DF3257888D89DC951F515513E77BCD /* UIView+Align.swift */,
+				08750CEF5C88EA886AEB016DC23370CB /* UIView+Border.swift */,
+				B1B5DBFE8D6B36E25ED5796B9AF72F30 /* UIView+ListItem.swift */,
+				F9246DF082EBF98F0F85A61493A88708 /* UsernameField.swift */,
+				3CC8904C1D5B036156BA5E186AABDFF1 /* Validation.swift */,
 			);
 			name = Core;
 			path = Core;
@@ -280,41 +327,6 @@
 				78C8734D2E36EF2CF3A752784C704731 /* Products */,
 				38C4810092A05B65A6513B4DF82DCE4A /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		7EF28BAC223373656353F2C5932E2EB7 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				06B8576BD936FC5119F52C2CFFE71264 /* Align.swift */,
-				DAE28EDC6463A332B45C80FB54F814CB /* BaseCollectionViewCell.swift */,
-				F4F3D05032865DFE10A07FA1E29B2255 /* Button.swift */,
-				B28CA284D0ECB1B356264609ECF4528D /* Button+Icon.swift */,
-				7864839F7EE302D777343CDE36EF9CF5 /* ButtonType.swift */,
-				DFD7C8B93414C63127968C20A127438A /* Colors.swift */,
-				0501B58164EF2F588F57B7CBE608B1EE /* EmailField.swift */,
-				1CF3B1026D46C9B27E13FFD5FAEBE907 /* GroupedButtons.swift */,
-				B0C7D5E70FFD2D10FC905A407050DEFA /* ImagePosition.swift */,
-				6BDF495974E613416ED322C250EDBA04 /* Item.swift */,
-				82A7E329ACA25B4B1281F3E2C95FB690 /* ListItem.swift */,
-				6377C1FC3A5425E169B0959E0CC731DD /* PasswordField.swift */,
-				6840A80DA985A394FAE3A9B9D7C082C5 /* Print.swift */,
-				DE883EBFB2DA272404FA188A2059E9F6 /* Size.swift */,
-				04D299103B516BF40B7B73D77C26A244 /* Style.swift */,
-				DF04F45D6701B40DBCF771FC8EAE8E72 /* SubtitleCollectionViewCell.swift */,
-				209D31E1F4CCA8486B6F083246A998AB /* TableController.swift */,
-				7610009E7F9C69A5B7BCF3C0C47002E2 /* TextField.swift */,
-				117FF6DEAB50B57C8AE3D469AF44044C /* TextFieldType.swift */,
-				93A836B6A96020BAEC410516546F2AD2 /* UIButton+Color.swift */,
-				BE0070363B1FEF3BEC41C358B789A831 /* UIColor+RGB.swift */,
-				CB37288DDFDA77CA384BBC9ADA80D016 /* UIController+Rotation.swift */,
-				C145FABD655CE10206B751564B0687EA /* UIView+Align.swift */,
-				4240FCDB33E531B5FF933ED93003BC8C /* UIView+Border.swift */,
-				43E4D923D3DCA473C80507F2701FFF24 /* UIView+ListItem.swift */,
-				019B5B9C35295D0D31DA2CE1B5B95DA3 /* UsernameField.swift */,
-				AB56748081501964CB49E1AE975029ED /* Validation.swift */,
-			);
-			name = Core;
-			path = Core;
 			sourceTree = "<group>";
 		};
 		8939657E4748A6AE30B61C5403FE350B /* iOS */ = {
@@ -386,20 +398,11 @@
 			path = "Target Support Files/Pods-UIKitten Catalog";
 			sourceTree = "<group>";
 		};
-		D39F8A5B8DA7D8EBDF36D2EC7A02AE7B /* UIKitten */ = {
-			isa = PBXGroup;
-			children = (
-				7EF28BAC223373656353F2C5932E2EB7 /* Core */,
-			);
-			name = UIKitten;
-			path = UIKitten;
-			sourceTree = "<group>";
-		};
 		E0F5341B25C68C04F3CB25E27F30D938 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				B410B8B1D62E77F3B26D8ED33CB02B5E /* Resources */,
-				D39F8A5B8DA7D8EBDF36D2EC7A02AE7B /* UIKitten */,
+				39A66B1C05988DCFFF7605E2B9A5CED1 /* UIKitten */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -466,7 +469,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9DB6BB7573C33A3CF4F9BAED5C53942 /* Build configuration list for PBXNativeTarget "UIKitten" */;
 			buildPhases = (
-				21E866360C657D4A8CEBB3BA078B1FCC /* Sources */,
+				50BBB2A95369743CBDCD79EF5B64A8E2 /* Sources */,
 				3CDA529AD8DBB69164FC70BA4E1A7755 /* Frameworks */,
 				269D825D4115870FC906B807872A51D0 /* Resources */,
 				609A7BA42A12F1D2AC25E4056F4E8957 /* Headers */,
@@ -574,38 +577,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		21E866360C657D4A8CEBB3BA078B1FCC /* Sources */ = {
+		50BBB2A95369743CBDCD79EF5B64A8E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				394CE75A2EA55261ED1335DFC9EB6699 /* Align.swift in Sources */,
-				B825E096A7E2E33450DA697A09EB72EE /* BaseCollectionViewCell.swift in Sources */,
-				5B9ED562E65C7E8F42091311D4EF4344 /* Button+Icon.swift in Sources */,
-				945DA523D419535D612271EF62289EE8 /* Button.swift in Sources */,
-				E32B0C0FDC9A03BC962889E28391DE76 /* ButtonType.swift in Sources */,
-				05DC2ED9DC382298EAA522DB60A652A9 /* Colors.swift in Sources */,
-				C68FD2A8EB315E20ADDACF7B5498A57A /* EmailField.swift in Sources */,
-				B144CE9972DB2DAE5E903A3231280223 /* GroupedButtons.swift in Sources */,
-				CD119B8A5A784C575F5FD52D81BFF91F /* ImagePosition.swift in Sources */,
-				49891B5E8A440F7A028733C633C316DA /* Item.swift in Sources */,
-				10519A5C153E9D0CD7C6C412440ECBC2 /* ListItem.swift in Sources */,
-				76698BDF5B22483372AA70F4C25841AB /* PasswordField.swift in Sources */,
-				099773ABC105F10B2684EBB6BDC6A55F /* Print.swift in Sources */,
-				4CB3C70FBF084E215AEEFE0D0AB5F306 /* Size.swift in Sources */,
-				7A4076E2736A0AF831A766E506813493 /* Style.swift in Sources */,
-				B6732979E86D123D1E98E7C058DA3C98 /* SubtitleCollectionViewCell.swift in Sources */,
-				FB7FA016C5EE93BFE7BFF2E285049F2C /* TableController.swift in Sources */,
-				99876CF9AF56F61697475973B3E4EB6A /* TextField.swift in Sources */,
-				253E59DD300F707F7C5B0EFD2DA1EEEF /* TextFieldType.swift in Sources */,
-				B6F6BAE0A114D0BC34D81AAC92C5A81E /* UIButton+Color.swift in Sources */,
-				A139FA5B3459989FA1116263FB91CE8F /* UIColor+RGB.swift in Sources */,
-				A4FFC8EA94A1A286C90519FF9BA3FDA7 /* UIController+Rotation.swift in Sources */,
-				8AA09AAC5A5D75F243A7509D54097017 /* UIKitten-dummy.m in Sources */,
-				99292C8574F6E6441A5304DC95712A4D /* UIView+Align.swift in Sources */,
-				72BFF10684C23F0840917DF2E04087AA /* UIView+Border.swift in Sources */,
-				E9D0BD9CEDBDF66CC58C04CEDDE1598F /* UIView+ListItem.swift in Sources */,
-				1D7A4E0A2633A2C7BC2356C6516BC03D /* UsernameField.swift in Sources */,
-				EA1F4B65C54F12E304E18D3C8028EFB0 /* Validation.swift in Sources */,
+				55C269524CC4C555E828D4279166BE96 /* Align.swift in Sources */,
+				C943FA0A5FE408A41AE918EB9EF8FCBE /* BaseCollectionViewCell.swift in Sources */,
+				647D178E4D0D84F3CD2DB3BECECA8FBF /* Button+Icon.swift in Sources */,
+				A77F6FB685A77D742D797D2333E6C5A3 /* Button.swift in Sources */,
+				156E45409E34791837D9A3E5B2DF127F /* ButtonType.swift in Sources */,
+				65F87CE7148673A398176366FD25215E /* Colors.swift in Sources */,
+				69D9CF36C4F00E419763E19C26EB9EC8 /* EmailField.swift in Sources */,
+				11CB64A5F6DE480231D85C7521664B6A /* GroupedButtons.swift in Sources */,
+				B4A05AAA08A88282A944FA27743D7605 /* ImagePosition.swift in Sources */,
+				5C794CD4B93BE6829EBC91B1FBCB8566 /* ImageView.swift in Sources */,
+				3C7053ACAD11044269E3368E5846934F /* Item.swift in Sources */,
+				33660A7CB5CD90248BB6E93B1CF61DEB /* ListItem.swift in Sources */,
+				69B6A4718AFD488469305F010EC6C5E8 /* PasswordField.swift in Sources */,
+				64B6DF535B25287084CE2D16B9EF32C2 /* Print.swift in Sources */,
+				D51DBC338756986C0EB125BA945A99B1 /* Size.swift in Sources */,
+				CE731270DBAD86490B13A7E9DACCDC5B /* Style.swift in Sources */,
+				CC1C789BFE9ECAFA8AAE76C6ACA4C69E /* SubtitleCollectionViewCell.swift in Sources */,
+				ED1918FB8F92970F004F7EB8153027AC /* TableController.swift in Sources */,
+				2C845E2406F166CC30AD6CB4657FB313 /* TextField.swift in Sources */,
+				34B8AF4EB4077133FD8D2074A4D58DD3 /* TextFieldType.swift in Sources */,
+				C25F15949474587FED2E5F1793E6D442 /* UIButton+Color.swift in Sources */,
+				27D0064A52F5E3FA3BF9EE4BBE7FB67A /* UIColor+RGB.swift in Sources */,
+				B89A3AE38406CFB9377B81011A466FB1 /* UIController+Rotation.swift in Sources */,
+				E976AB4AD0149A4913E2C19FBE561473 /* UIKitten-dummy.m in Sources */,
+				7A4C872608E51E4B4FAC9D8786441C52 /* UIView+Align.swift in Sources */,
+				15428661651EA2808176355D7363A8A5 /* UIView+Border.swift in Sources */,
+				CF9232C3CFFFFCF67029C28A7A88ACAC /* UIView+ListItem.swift in Sources */,
+				010A7ECA363EDF541CCB4A96706C6026 /* UsernameField.swift in Sources */,
+				4BFFA7E84F1EFB3ED5F5061D09312580 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9505F78C1E719B0C004D2476 /* UIButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9505F78B1E719B0C004D2476 /* UIButton+Color.swift */; };
 		9505F78E1E71A428004D2476 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9505F78D1E71A428004D2476 /* Colors.swift */; };
+		951858E21E87E29F002788E6 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951858E11E87E29F002788E6 /* ImageView.swift */; };
 		952013451E7FC6B3001A36C5 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952013441E7FC6B3001A36C5 /* ListItem.swift */; };
 		952013481E7FC733001A36C5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952013471E7FC733001A36C5 /* Item.swift */; };
 		9520134C1E7FCDD4001A36C5 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9520134B1E7FCDD4001A36C5 /* BaseCollectionViewCell.swift */; };
@@ -47,6 +48,7 @@
 		6F2C8B15BFFC4F0EE8DDFBD8 /* Pods-UIKitten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitten/Pods-UIKitten.debug.xcconfig"; sourceTree = "<group>"; };
 		9505F78B1E719B0C004D2476 /* UIButton+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Color.swift"; sourceTree = "<group>"; };
 		9505F78D1E71A428004D2476 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		951858E11E87E29F002788E6 /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		952013441E7FC6B3001A36C5 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		952013471E7FC733001A36C5 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9520134B1E7FCDD4001A36C5 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 			name = Theme;
 			sourceTree = "<group>";
 		};
+		951858E01E87E284002788E6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				951858E11E87E29F002788E6 /* ImageView.swift */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		952013431E7FC6A5001A36C5 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 		9582B1621E716C40001C7268 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				951858E01E87E284002788E6 /* Images */,
 				9582B16A1E7171F4001C7268 /* Text Fields */,
 				9582B1651E716C75001C7268 /* Buttons */,
 				9582B1631E716C5D001C7268 /* Cells */,
@@ -380,6 +391,7 @@
 				9505F78E1E71A428004D2476 /* Colors.swift in Sources */,
 				955E71651E79731400369EFE /* Validation.swift in Sources */,
 				95FD128D1E83945600CF0FE7 /* UIView+ListItem.swift in Sources */,
+				951858E21E87E29F002788E6 /* ImageView.swift in Sources */,
 				95494E681E73424D00D6AF3B /* EmailField.swift in Sources */,
 				9582B16C1E717261001C7268 /* Button.swift in Sources */,
 				9556578C1E72BC5600D28D73 /* TextFieldType.swift in Sources */,

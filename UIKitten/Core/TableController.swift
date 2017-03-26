@@ -119,7 +119,8 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
             cellIsAlreadyVisible = true
             cell = existingCell
         } else {
-            cell = SubtitleCollectionViewCell(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: 100))
+            // TODO: use float max
+            cell = SubtitleCollectionViewCell(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: 2048))
             
             if let container = item.itemView()?.superview {
                 previousContainer = container
