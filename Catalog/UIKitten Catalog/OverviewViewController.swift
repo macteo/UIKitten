@@ -26,8 +26,8 @@ class OverviewViewController: TableController {
                 cell, selected in
                 cell?.footerIsVisible = selected
             })],
-            [Button(icon: .arrowRight, title: "Right").imagePosition(.right).padding(10).align([.middle, .right]).type(.primary),
-             Button(icon: .arrowLeft, title: "Left").padding(10).align([.middle, .left]).type(.warning),
+            [Button(icon: .arrowRight, title: "Right").imagePosition(.right).align([.middle, .right]).type(.primary),
+             Button(icon: .arrowLeft, title: "Left").align([.middle, .left]).type(.warning),
              Button(icon: .arrowUp, title: "Up").align([.middle, .center]).style(.rounded).type(.danger),
              Button(icon: .arrowDown).align([.middle, .center]).style(.dropShadow).type(.info),
              Button(icon: .birthdayCake, title: "This is a\nbirthday cake.").align([.middle, .center]).type(.success)],

@@ -337,74 +337,11 @@ public class Button: UIButton, Alignable {
              titleLabel?.font = UIFont.preferredFont(forTextStyle: textStyle)
         }
     }
-    
-    public override func didMoveToSuperview() {
-        super.didMoveToSuperview()
-        updateAlignAndPadding()
-    }
-    
+        
     public var action : ((Void) -> Void)?
     
-    public var align : Align = [.top, .left] {
-        didSet {
-            updateAlignAndPadding()
-        }
-    }
-    
-    func updateAlignAndPadding() {
-        if align.contains(.top) {
-            if align.contains(.left) {
-                autoresizingMask = [.flexibleBottomMargin, .flexibleRightMargin]
-            } else if align.contains(.right) {
-                autoresizingMask = [.flexibleBottomMargin, .flexibleLeftMargin]
-            } else if align.contains(.center) {
-                autoresizingMask = [.flexibleBottomMargin, .flexibleLeftMargin, .flexibleRightMargin]
-            }
-        } else if align.contains(.bottom) {
-            if align.contains(.left) {
-                autoresizingMask = [.flexibleTopMargin, .flexibleRightMargin]
-            } else if align.contains(.right) {
-                autoresizingMask = [.flexibleTopMargin, .flexibleLeftMargin]
-            } else if align.contains(.center) {
-                autoresizingMask = [.flexibleTopMargin, .flexibleLeftMargin, .flexibleRightMargin]
-            }
-        } else if align.contains(.middle) {
-            if align.contains(.left) {
-                autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin, .flexibleRightMargin]
-            } else if align.contains(.right) {
-                autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin, .flexibleLeftMargin]
-            } else if align.contains(.center) {
-                autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin, .flexibleLeftMargin, .flexibleRightMargin]
-            }
-        }
-        guard let superview = superview else { return }
-        
-        if align.contains(.top) {
-            frame.origin.y = CGFloat(padding)
-        } else if align.contains(.bottom) {
-            frame.origin.y = superview.bounds.size.height - bounds.size.height - CGFloat(padding)
-        } else if align.contains(.middle) {
-            frame.origin.y = (superview.bounds.size.height - bounds.size.height) / 2
-        } else {
-            frame.origin.y = CGFloat(padding)
-        }
-        
-        if align.contains(.left) {
-            frame.origin.x = CGFloat(padding)
-        } else if align.contains(.right) {
-            frame.origin.x = superview.bounds.size.width - bounds.size.width - CGFloat(padding)
-        } else if align.contains(.center) {
-            frame.origin.x = (superview.bounds.size.width - bounds.size.width) / 2
-        } else {
-            frame.origin.x = CGFloat(padding)
-        }
-    }
-    
-    public var padding : Int = 4 {
-        didSet {
-            updateAlignAndPadding()
-        }
-    }
+    public var align : Align = [.top, .left]
+    public var padding : Int = 0
     
     public func tap(_ action: @escaping (Void) -> Void) -> Button {
         self.action = action
@@ -419,7 +356,6 @@ public class Button: UIButton, Alignable {
     
     public func add(to view: UIView) -> Button {
         view.addSubview(self)
-        updateAlignAndPadding()
         return self
     }
     

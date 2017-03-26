@@ -14,7 +14,7 @@ protocol BaseCollectionViewCellDelegate {
 
 open class BaseCollectionViewCell: UICollectionViewCell {
     
-    public var padding = UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10) {
+    public var padding = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4) {
         didSet {
             // Changing padding at runtime is a good idea?
         }

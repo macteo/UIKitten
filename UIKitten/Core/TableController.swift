@@ -154,17 +154,18 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         cell.thumbnail = item.itemImage()
         cell.delegate = self
         
+        if let _ = item.itemAction() {
+            cell.accessoryViewIsVisible = true
+        } else {
+            cell.accessoryViewIsVisible = false
+        }
+        
         if indexPath == selectedCellIndex {
             cell.isSelected = true
         } else {
             cell.isSelected = false
         }
-        
-        // TODO: show accessory view if an action is present in the Item
-        if indexPath.section % 2 == 0 {
-            cell.accessoryViewIsVisible = true
-        }
-        
+                
         cell.desiredSize = CGSize(width: width, height: 44)
 
         cell.containedView = item.itemView()
