@@ -92,6 +92,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     
     func commonInit() {
         tintColor = .tableGray
+        
         if accessoryView.superview != nil {
             accessoryView.removeFromSuperview()
         }
@@ -195,6 +196,8 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         
         footerFixedHeightConstraint?.isActive = !footerIsVisible
         
+        accessoryViewIsVisible = false
+        
         if #available(iOS 10, *) { } else {
             // Needed only on iOS 9
             NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
@@ -234,6 +237,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         delegate = nil
         isHeightCalculated = false
         containedView = nil
+        accessoryViewIsVisible = false
     }
     
     //forces the system to do one layout pass

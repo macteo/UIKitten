@@ -151,8 +151,6 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         cell.title = item.itemTitle()
         cell.subtitle = item.itemSubtitle()
         cell.thumbnail = item.itemImage()
-        cell.desiredSize = CGSize(width: width, height: 44)
-        
         cell.delegate = self
         
         if indexPath == selectedCellIndex {
@@ -165,6 +163,8 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         if indexPath.section % 2 == 0 {
             cell.accessoryViewIsVisible = true
         }
+        
+        cell.desiredSize = CGSize(width: width, height: 44)
 
         cell.containedView = item.itemView()
         cell.layoutIfNeeded()
