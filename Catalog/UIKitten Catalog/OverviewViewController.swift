@@ -18,8 +18,8 @@ class OverviewViewController: TableController {
 
         let imageView = ImageView(image: #imageLiteral(resourceName: "tableImage"))
         
-        // let imageView = ImageView(frame: CGRect(x: 0, y: 0, width: 160, height: 300))
-        imageView.image = #imageLiteral(resourceName: "tableImage")
+        // Height is nil as it doesn't have an intrinsic size
+        let barView = BarChart(frame: CGRect(x: 0, y: 0, width: 260, height: 120))
         
         items = [
             [Item(title: "Image title with subtitle", subtitle: "This is so amazing I'm not even able to understand how it works. Wonderful!", image: #imageLiteral(resourceName: "tableImage"), action: {
@@ -31,7 +31,8 @@ class OverviewViewController: TableController {
              Button(icon: .arrowUp, title: "Up").align([.middle, .center]).style(.rounded).type(.danger),
              Button(icon: .arrowDown).align([.middle, .center]).style(.dropShadow).type(.info),
              Button(icon: .birthdayCake, title: "This is a\nbirthday cake.").align([.middle, .center]).type(.success)],
-            [imageView]
+            [imageView],
+            [barView]
         ]
     }
 }

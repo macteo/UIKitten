@@ -4,4 +4,6 @@ use_frameworks!
 
 target 'UIKitten Catalog' do
   pod 'UIKitten', path: '../'
+  pod 'UIKitten/Charts', path: '../'  
+  pod 'UIKitten/Fontawesome', path: '../'    
 end

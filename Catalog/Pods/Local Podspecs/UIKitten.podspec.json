@@ -37,13 +37,28 @@
       }
     },
     {
-      "name": "Debatable",
+      "name": "Charts",
       "dependencies": {
         "UIKitten/Core": [
 
+        ],
+        "Charts": [
+
         ]
       },
-      "source_files": "UIKitten/Debatable/**/*.swift"
+      "source_files": "UIKitten/Charts/**/*.swift"
+    },
+    {
+      "name": "Fontawesome",
+      "dependencies": {
+        "UIKitten/Core": [
+
+        ],
+        "FontAwesome.swift": [
+
+        ]
+      },
+      "source_files": "UIKitten/Fontawesome/**/*.swift"
     }
   ]
 }

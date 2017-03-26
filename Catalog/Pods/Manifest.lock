@@ -1,21 +1,33 @@
 PODS:
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
   - FontAwesome.swift (1.0.0)
   - UIKitten (0.1.0):
     - UIKitten/Core (= 0.1.0)
+  - UIKitten/Charts (0.1.0):
+    - Charts
+    - UIKitten/Core
   - UIKitten/Core (0.1.0):
     - FontAwesome.swift
+  - UIKitten/Fontawesome (0.1.0):
+    - FontAwesome.swift
+    - UIKitten/Core
 
 DEPENDENCIES:
   - UIKitten (from `../`)
+  - UIKitten/Charts (from `../`)
+  - UIKitten/Fontawesome (from `../`)
 
 EXTERNAL SOURCES:
   UIKitten:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   FontAwesome.swift: 2d32a3d62195343c2004b7c9043294ed2948553a
-  UIKitten: 575da34d0410a1412267f76a216f323ad7b31284
+  UIKitten: d70ec90aeec33e7a8b48a0b0f8b412573883ad6e
 
-PODFILE CHECKSUM: d27407d99daf7e61708a2d8ec454f4933ea0203e
+PODFILE CHECKSUM: 187c550437d99dcecdecadc4172d831a51c6443a
 
 COCOAPODS: 1.2.0
