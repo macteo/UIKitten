@@ -38,18 +38,39 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
             } else {
                 thumbnailViewSize = 0
             }
-            layoutIfNeeded()
         }
     }
     
-    var thumbnailViewSize : CGFloat = 0
+    var thumbnailViewSize : CGFloat = 0 {
+        didSet {
+            thumbnailViewWidth?.constant = thumbnailViewSize
+            
+            if thumbnailViewSize != 0 {
+                titleLeadingMargin?.constant = -padding.left
+            } else {
+                titleLeadingMargin?.constant = 0
+            }
+        }
+    }
+
     var thumbnailViewWidth : NSLayoutConstraint?
     var thumbnailViewLeadingMargin : NSLayoutConstraint?
     var thumbnailViewVerticalAlign : NSLayoutConstraint?
     
     public var thumbnailAlign : Align = .middle {
         didSet {
-            layoutIfNeeded()
+            if (thumbnailViewVerticalAlign != nil) {
+                mainView.removeConstraint(thumbnailViewVerticalAlign!)
+                thumbnailViewVerticalAlign = nil
+            }
+            
+            if thumbnailAlign == .middle {
+                thumbnailViewVerticalAlign = NSLayoutConstraint(item: mainView, attribute: .centerY, relatedBy: .equal, toItem: thumbnailView, attribute: .centerY, multiplier: 1, constant: 0)
+            } else {
+                thumbnailViewVerticalAlign = NSLayoutConstraint(item: thumbnailView, attribute: .top, relatedBy: .equal, toItem: mainView, attribute: .top, multiplier: 1, constant: padding.top)
+            }
+            
+            mainView.addConstraint(thumbnailViewVerticalAlign!)
         }
     }
 
@@ -115,7 +136,6 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         mainView.addConstraint(thumbnailViewLeadingMargin!)
         mainView.addConstraint(NSLayoutConstraint(item: thumbnailView, attribute: .height, relatedBy: .equal, toItem: thumbnailView, attribute: .width, multiplier: 1, constant: 1))
         
-        
         titleLeadingMargin = NSLayoutConstraint(item: thumbnailView, attribute: .trailing, relatedBy: .equal, toItem: titleLabel, attribute: .leading, multiplier: 1, constant: -padding.left)
         mainView.addConstraint(titleLeadingMargin!)
         
@@ -132,32 +152,18 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         let emptyHeight = NSLayoutConstraint(item: emptyOrangeView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
         emptyHeight.priority = 650
         footerView.addConstraint(emptyHeight)
+        
+        thumbnailViewSize = 0
+        thumbnailAlign = .middle
     }
 
     public override func layoutIfNeeded() {
         super.layoutIfNeeded()
+        adaptTitleAndSubtitleHeight()
+    }
+    
+    func adaptTitleAndSubtitleHeight() {
         
-        if (thumbnailViewVerticalAlign != nil) {
-            mainView.removeConstraint(thumbnailViewVerticalAlign!)
-            thumbnailViewVerticalAlign = nil
-        }
-        
-        if thumbnailAlign == .middle {
-            thumbnailViewVerticalAlign = NSLayoutConstraint(item: mainView, attribute: .centerY, relatedBy: .equal, toItem: thumbnailView, attribute: .centerY, multiplier: 1, constant: 0)
-        } else {
-            thumbnailViewVerticalAlign = NSLayoutConstraint(item: thumbnailView, attribute: .top, relatedBy: .equal, toItem: mainView, attribute: .top, multiplier: 1, constant: padding.top)
-        }
-        
-        mainView.addConstraint(thumbnailViewVerticalAlign!)
-        
-        thumbnailViewWidth?.constant = thumbnailViewSize
-        
-        if thumbnailViewSize != 0 {
-            titleLeadingMargin?.constant = -padding.left
-        } else {
-            titleLeadingMargin?.constant = 0
-        }
-
         // Calculate subtitle height
         guard let subtitleHeight = subtitleHeight else { return }
         guard let accessoryViewWidth = accessoryViewWidth else { return }
@@ -172,7 +178,7 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         let expectedHeight = subtitleLabel.sizeThatFits(CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)).height
         subtitleHeight.priority = 750
         subtitleHeight.constant = ceil(expectedHeight)
-
+        
         // Calculate title height
         guard let titleHeight = titleHeight else { return }
         
@@ -181,9 +187,10 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         let expectedTitleHeight = titleLabel.sizeThatFits(CGSize(width: titleWidth, height: CGFloat.greatestFiniteMagnitude)).height
         titleHeight.priority = 750
         
-        titleLabel.preferredMaxLayoutWidth = titleWidth        
+        titleLabel.preferredMaxLayoutWidth = titleWidth
         titleHeight.constant = ceil(expectedTitleHeight)
     }
+
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         if let titleStyle = titleLabel.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
@@ -194,20 +201,20 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
             subtitleLabel.font = UIFont.preferredFont(forTextStyle: subtitleStyle)
         }
         
-        layoutIfNeeded()
+        adaptTitleAndSubtitleHeight()
     }
     
     var title : String? {
         didSet {
             titleLabel.text = title
-            layoutIfNeeded()
+            adaptTitleAndSubtitleHeight()
         }
     }
     
     var subtitle: String? {
         didSet {
             subtitleLabel.text = subtitle
-            layoutIfNeeded()
+            adaptTitleAndSubtitleHeight()
         }
     }
     

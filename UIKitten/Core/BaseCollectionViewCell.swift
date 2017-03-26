@@ -16,7 +16,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     
     public var padding = UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10) {
         didSet {
-            layoutIfNeeded()
+            // Changing padding at runtime is a good idea?
         }
     }
     
@@ -68,7 +68,15 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     
     public var accessoryViewIsVisible : Bool = false {
         didSet {
-            layoutIfNeeded()
+            if accessoryViewIsVisible {
+                accessoryViewWidth?.constant = accessoryViewSize
+                accessoryViewTrailingMargin?.constant = padding.right
+            } else {
+                accessoryViewWidth?.constant = 0
+                accessoryViewTrailingMargin?.constant = padding.right
+            }
+            
+            accessoryViewCenterYConstraint?.constant = (mainView.bounds.height + customView.bounds.height + padding.top + padding.bottom) / 2
         }
     }
     
@@ -209,22 +217,6 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    open override func layoutIfNeeded() {
-        super.layoutIfNeeded()
-        
-        if accessoryViewIsVisible {
-            accessoryViewWidth?.constant = accessoryViewSize
-            accessoryViewTrailingMargin?.constant = padding.right
-        } else {
-            accessoryViewWidth?.constant = 0
-            accessoryViewTrailingMargin?.constant = padding.right
-        }
-        
-        accessoryViewCenterYConstraint?.constant = (mainView.bounds.height + customView.bounds.height + padding.top + padding.bottom) / 2
-        
-        isHeightCalculated = false
-    }
-    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -234,7 +226,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     }
     
     open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        layoutIfNeeded()
+        
     }
     
     override open func prepareForReuse() {
@@ -242,7 +234,6 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         delegate = nil
         isHeightCalculated = false
         containedView = nil
-        layoutIfNeeded()
     }
     
     //forces the system to do one layout pass
