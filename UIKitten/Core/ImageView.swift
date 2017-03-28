@@ -9,6 +9,8 @@
 import UIKit
 
 open class ImageView: UIImageView, Alignable {
+    public var width: Width?
+    public var height: Height?
 
     // Alignable protocol
     public var padding : Int = 0

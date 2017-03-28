@@ -20,8 +20,10 @@ class OverviewViewController: TableController {
         
         // Height is nil as it doesn't have an intrinsic size
         let barView = BarChart(frame: CGRect(x: 0, y: 0, width: 260, height: 120))
+        let bubbleView = BubbleChart(frame: CGRect(x: 0, y: 0, width: 260, height: 120))
         
         items = [
+            [bubbleView],
             [Item(title: "Image title with subtitle", subtitle: "This is so amazing I'm not even able to understand how it works. Wonderful!", image: #imageLiteral(resourceName: "tableImage"), action: {
                 cell, selected in
                 cell?.footerIsVisible = selected

@@ -17,6 +17,7 @@
 		95494E6A1E73447400D6AF3B /* UIKitten.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95494E691E73447400D6AF3B /* UIKitten.xcassets */; };
 		955565591E8120AB00AE456F /* UIView+Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955565581E8120AB00AE456F /* UIView+Align.swift */; };
 		9556578C1E72BC5600D28D73 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9556578B1E72BC5600D28D73 /* TextFieldType.swift */; };
+		955A35A51E8A92B700A574A5 /* BubbleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A35A41E8A92B700A574A5 /* BubbleChart.swift */; };
 		955E71631E7972EC00369EFE /* ImagePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E71621E7972EC00369EFE /* ImagePosition.swift */; };
 		955E71651E79731400369EFE /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E71641E79731400369EFE /* Validation.swift */; };
 		955E71671E79732E00369EFE /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E71661E79732E00369EFE /* PasswordField.swift */; };
@@ -57,6 +58,7 @@
 		95494E691E73447400D6AF3B /* UIKitten.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UIKitten.xcassets; sourceTree = "<group>"; };
 		955565581E8120AB00AE456F /* UIView+Align.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Align.swift"; sourceTree = "<group>"; };
 		9556578B1E72BC5600D28D73 /* TextFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
+		955A35A41E8A92B700A574A5 /* BubbleChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BubbleChart.swift; path = UIKitten/Charts/BubbleChart.swift; sourceTree = SOURCE_ROOT; };
 		955E71621E7972EC00369EFE /* ImagePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePosition.swift; sourceTree = "<group>"; };
 		955E71641E79731400369EFE /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		955E71661E79732E00369EFE /* PasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				95E988711E8803E600DAAD21 /* BarChart.swift */,
+				955A35A41E8A92B700A574A5 /* BubbleChart.swift */,
 			);
 			name = Charts;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				9505F78E1E71A428004D2476 /* Colors.swift in Sources */,
 				955E71651E79731400369EFE /* Validation.swift in Sources */,
 				95FD128D1E83945600CF0FE7 /* UIView+ListItem.swift in Sources */,
+				955A35A51E8A92B700A574A5 /* BubbleChart.swift in Sources */,
 				951858E21E87E29F002788E6 /* ImageView.swift in Sources */,
 				95494E681E73424D00D6AF3B /* EmailField.swift in Sources */,
 				9582B16C1E717261001C7268 /* Button.swift in Sources */,

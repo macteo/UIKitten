@@ -1,14 +1,15 @@
 //
-//  BarChart.swift
+//  BubbleChart.swift
 //  UIKitten
 //
-//  Created by Matteo Gavagnin on 26/03/2017.
+//  Created by Matteo Gavagnin on 28/03/2017.
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
 import Charts
 
-public class BarChart : BarChartView, Alignable {
+public class BubbleChart : BubbleChartView, Alignable {
+
     // Alignable protocol
     public var width: Width? = .container(ratio: 1)
     public var height: Height? = .width(ratio: 0.5)
@@ -24,35 +25,36 @@ public class BarChart : BarChartView, Alignable {
         super.init(coder: aDecoder)
         commonInit()
     }
-
+    
     func commonInit() {
-        setViewPortOffsets(left: 0, top: 0, right: 0, bottom: 0)
         backgroundColor = .clear
-        fitBars = false
         xAxis.enabled = false
         leftAxis.enabled = false
         rightAxis.enabled = false
-        // rightAxis.spaceTop = 0
-        // rightAxis.spaceBottom = 0
+
+        setScaleEnabled(false)
         pinchZoomEnabled = false
         doubleTapToZoomEnabled = false
         dragEnabled = false
         legend.enabled = false
+        maxVisibleCount = 100
         chartDescription?.enabled = false
         
-        let dataSet = BarChartDataSet(values: [BarChartDataEntry(x: 0, y: 1), BarChartDataEntry(x: 1, y: 0.2), BarChartDataEntry(x: 2, y: 1.2), BarChartDataEntry(x: 3, y: 2)], label: "")
-        let data = BarChartData(dataSet: dataSet)
-        data.barWidth = 1.0
-        data.setValueTextColor(.clear)
+        xAxis.spaceMin = 1.5
+        xAxis.spaceMax = 1.5
+        leftAxis.spaceTop = 1.5
+        leftAxis.spaceBottom = 1.5
+        
+        
+        let dataSet = BubbleChartDataSet(values: [BubbleChartDataEntry(x: 0, y: 1, size: 1), BubbleChartDataEntry(x: 1, y: 0, size: 2), BubbleChartDataEntry(x: 3, y: 2, size: 3)], label: "Test")
+        dataSet.setColor(UIColor.red.withAlphaComponent(0.5))
+        dataSet.visible = true
+        dataSet.drawValuesEnabled = false
+        
+        let data = BubbleChartData(dataSet: dataSet)
+        data.setValueTextColor(.black)
         
         self.data = data
+        zoomOut()
     }
-    
-    // TODO: Use some kind of proportion to return the data information
-    public override var intrinsicContentSize: CGSize {
-        let _ = super.intrinsicContentSize
-        
-        return CGSize(width: bounds.size.width, height: bounds.size.width / 2)
-    }
-
 }
