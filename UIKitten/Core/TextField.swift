@@ -9,7 +9,10 @@
 import UIKit
 
 public class TextField: UITextField, Alignable {
-    
+
+    public var width: Width? = .container(ratio: 0.8)
+    public var height: Height?
+
     let imagePadding = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 0)
     
     var validations : [Validation]?

@@ -10,6 +10,9 @@ import UIKit
 
 public class Button: UIButton, Alignable {
 
+    public var width: Width?
+    public var height: Height?
+    
     var bottomBorder : UIView?
     let glassEffect = UIBlurEffect(style: .light)
     var glassBackground : UIVisualEffectView?

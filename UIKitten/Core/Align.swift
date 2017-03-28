@@ -20,6 +20,20 @@ public struct Align: OptionSet {
 }
 
 public protocol Alignable {
-    var align : Align { get set }
-    var padding : Int { get set }
+    var align : Align { get }
+    var padding : Int { get }
+    var width : Width? { get }
+    var height : Height? { get }
+}
+
+public enum Width {
+    case absolute(points: CGFloat)
+    case container(ratio: CGFloat)
+    case height(ratio: CGFloat)
+}
+
+public enum Height {
+    case absolute(points: CGFloat)
+    case container(ratio: CGFloat)
+    case width(ratio: CGFloat)
 }

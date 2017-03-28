@@ -17,6 +17,7 @@
 		95494E6A1E73447400D6AF3B /* UIKitten.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95494E691E73447400D6AF3B /* UIKitten.xcassets */; };
 		955565591E8120AB00AE456F /* UIView+Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955565581E8120AB00AE456F /* UIView+Align.swift */; };
 		9556578C1E72BC5600D28D73 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9556578B1E72BC5600D28D73 /* TextFieldType.swift */; };
+		955A35A51E8A92B700A574A5 /* BubbleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A35A41E8A92B700A574A5 /* BubbleChart.swift */; };
 		955E71631E7972EC00369EFE /* ImagePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E71621E7972EC00369EFE /* ImagePosition.swift */; };
 		955E71651E79731400369EFE /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E71641E79731400369EFE /* Validation.swift */; };
 		955E71671E79732E00369EFE /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E71661E79732E00369EFE /* PasswordField.swift */; };
@@ -34,6 +35,7 @@
 		95D8352D1E7707360048869E /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8352C1E7707360048869E /* TableController.swift */; };
 		95E084D61E76BC84001DB6BA /* Button+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084D51E76BC84001DB6BA /* Button+Icon.swift */; };
 		95E084D81E76E910001DB6BA /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084D71E76E910001DB6BA /* Align.swift */; };
+		95E988721E8803E600DAAD21 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E988711E8803E600DAAD21 /* BarChart.swift */; };
 		95FD128D1E83945600CF0FE7 /* UIView+ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD128C1E83945600CF0FE7 /* UIView+ListItem.swift */; };
 		95FD128F1E8399EB00CF0FE7 /* UIController+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD128E1E8399EB00CF0FE7 /* UIController+Rotation.swift */; };
 		95FD12911E839AB100CF0FE7 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD12901E839AB100CF0FE7 /* Print.swift */; };
@@ -56,6 +58,7 @@
 		95494E691E73447400D6AF3B /* UIKitten.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UIKitten.xcassets; sourceTree = "<group>"; };
 		955565581E8120AB00AE456F /* UIView+Align.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Align.swift"; sourceTree = "<group>"; };
 		9556578B1E72BC5600D28D73 /* TextFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
+		955A35A41E8A92B700A574A5 /* BubbleChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BubbleChart.swift; path = UIKitten/Charts/BubbleChart.swift; sourceTree = SOURCE_ROOT; };
 		955E71621E7972EC00369EFE /* ImagePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePosition.swift; sourceTree = "<group>"; };
 		955E71641E79731400369EFE /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		955E71661E79732E00369EFE /* PasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
@@ -73,8 +76,9 @@
 		95C52E731E72A111001B87DC /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		95C52E751E72A123001B87DC /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		95D8352C1E7707360048869E /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
-		95E084D51E76BC84001DB6BA /* Button+Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Button+Icon.swift"; sourceTree = "<group>"; };
+		95E084D51E76BC84001DB6BA /* Button+Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Button+Icon.swift"; path = "../Fontawesome/Button+Icon.swift"; sourceTree = "<group>"; };
 		95E084D71E76E910001DB6BA /* Align.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Align.swift; sourceTree = "<group>"; };
+		95E988711E8803E600DAAD21 /* BarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarChart.swift; path = UIKitten/Charts/BarChart.swift; sourceTree = SOURCE_ROOT; };
 		95FD128C1E83945600CF0FE7 /* UIView+ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ListItem.swift"; sourceTree = "<group>"; };
 		95FD128E1E8399EB00CF0FE7 /* UIController+Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIController+Rotation.swift"; sourceTree = "<group>"; };
 		95FD12901E839AB100CF0FE7 /* Print.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 		9582B1621E716C40001C7268 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				95E988701E8803CE00DAAD21 /* Charts */,
 				951858E01E87E284002788E6 /* Images */,
 				9582B16A1E7171F4001C7268 /* Text Fields */,
 				9582B1651E716C75001C7268 /* Buttons */,
@@ -248,6 +253,15 @@
 				95D8352C1E7707360048869E /* TableController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		95E988701E8803CE00DAAD21 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				95E988711E8803E600DAAD21 /* BarChart.swift */,
+				955A35A41E8A92B700A574A5 /* BubbleChart.swift */,
+			);
+			name = Charts;
 			sourceTree = "<group>";
 		};
 		CD0E486EBCD58C4921BC19A1 /* Frameworks */ = {
@@ -391,9 +405,11 @@
 				9505F78E1E71A428004D2476 /* Colors.swift in Sources */,
 				955E71651E79731400369EFE /* Validation.swift in Sources */,
 				95FD128D1E83945600CF0FE7 /* UIView+ListItem.swift in Sources */,
+				955A35A51E8A92B700A574A5 /* BubbleChart.swift in Sources */,
 				951858E21E87E29F002788E6 /* ImageView.swift in Sources */,
 				95494E681E73424D00D6AF3B /* EmailField.swift in Sources */,
 				9582B16C1E717261001C7268 /* Button.swift in Sources */,
+				95E988721E8803E600DAAD21 /* BarChart.swift in Sources */,
 				9556578C1E72BC5600D28D73 /* TextFieldType.swift in Sources */,
 				955E716B1E7973D500369EFE /* GroupedButtons.swift in Sources */,
 				955E71671E79732E00369EFE /* PasswordField.swift in Sources */,

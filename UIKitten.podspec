@@ -19,8 +19,15 @@ Pod::Spec.new do |s|
     core.dependency      'FontAwesome.swift'
   end
 
-  s.subspec 'Debatable' do |debatable|
-    debatable.dependency     'UIKitten/Core'
-    debatable.source_files = 'UIKitten/Debatable/**/*.swift'
+  s.subspec 'Charts' do |charts|
+    charts.dependency     'UIKitten/Core'
+    charts.dependency     'Charts'	
+    charts.source_files = 'UIKitten/Charts/**/*.swift'
+  end
+
+  s.subspec 'Fontawesome' do |fontawesome|
+    fontawesome.dependency     'UIKitten/Core'
+    fontawesome.source_files = 'UIKitten/Fontawesome/**/*.swift'	
+	fontawesome.dependency     'FontAwesome.swift'	
   end
 end
