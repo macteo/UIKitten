@@ -14,22 +14,26 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
     
     internal func redraw(cell: BaseCollectionViewCell) {
         /*
-        guard let _ = collectionView?.indexPath(for: cell) else { return }
-        
-        layout.invalidateLayout()
-        
-        collectionView?.performBatchUpdates({
-            
-        }, completion: { (completed) in
-            
-        })
+         guard let _ = collectionView?.indexPath(for: cell) else { return }
+         
+         layout.invalidateLayout()
+         
+         collectionView?.performBatchUpdates({
+         
+         }, completion: { (completed) in
+         
+         })
          */
     }
-
+    
     let layout = UICollectionViewFlowLayout()
     var collectionView : UICollectionView?
     
-    public var items : [[ListItem]]?
+    public var items : [[ListItem]]? {
+        didSet {
+            collectionView?.reloadData()
+        }
+    }
     
     var nextSize : CGSize?
     var nextSizeWidthOffset : CGFloat?
@@ -39,7 +43,6 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         guard let collectionView = collectionView else { return }
-        collectionView.frame = view.bounds
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -47,7 +50,6 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 0
-        layout.itemSize = CGSize(width: view.bounds.width, height: view.bounds.height)
         
         collectionView.register(SubtitleCollectionViewCell.self, forCellWithReuseIdentifier: "imageCell")
         
@@ -58,9 +60,14 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         view.addSubview(collectionView)
         
         if #available(iOS 10, *) { } else {
-            // Only for iOS 8 and 9
+            // Only for iOS and 9
             NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
         }
+    }
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        layout.itemSize = CGSize(width: view.bounds.width, height: view.bounds.height)
     }
     
     deinit {
@@ -98,7 +105,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
             width = nextSize.width
         }
         cell = populate(cell: cell, item: item, indexPath: indexPath, width: width)
-
+        
         return cell
     }
     
@@ -106,12 +113,11 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         guard let item = item(indexPath) else { return CGSize(width: 0, height: 0) }
         
         var cell : SubtitleCollectionViewCell?
-
+        
         var width = collectionView.bounds.size.width
         if let nextSize = nextSize {
             width = nextSize.width
         }
-        
         
         var previousContainer : UIView?
         var cellIsAlreadyVisible = false
@@ -136,6 +142,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         }
         
         let size = tempCell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriorityDefaultLow, verticalFittingPriority: UILayoutPriorityDefaultLow)
+        // TODO: remove those lines if possible
         if cellIsAlreadyVisible == false {
             if let container = previousContainer {
                 if let itemView = item.itemView() {
@@ -165,9 +172,9 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         } else {
             cell.isSelected = false
         }
-                
+        
         cell.desiredSize = CGSize(width: width, height: 44)
-
+        
         if var itemView = item.itemView() as? Alignable {
             if itemView.align == nil {
                 itemView.align = [.top, .left]

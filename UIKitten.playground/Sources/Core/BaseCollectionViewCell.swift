@@ -1,0 +1,1 @@
+../../../UIKitten/Core/BaseCollectionViewCell.swift

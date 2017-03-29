@@ -11,6 +11,10 @@ import PlaygroundSupport
 
 let table = TableController()
 
+//#-hidden-code
+table.view.frame = CGRect(x: 0, y: 0, width: 320, height: 320)
+//#-end-hidden-code
+
 //#-editable-code
 
 let button = Button(title: "Hello World")
@@ -18,22 +22,20 @@ button.padding = 10
 button.type = .success
 button.align = [.right]
 
-table.items = [[button]]
+let danger = Button(title: "Danger")
+danger.padding = 0
+danger.type = .danger
+danger.align = [.right]
+
+let item = Item(title: "Awesome cell", subtitle: "With great subtitle, very long and complex.", view: button, action: { (cell, selected) in
+})
+
+table.items = [[item, danger]]
 
 //#-end-editable-code
 
 //#-hidden-code
-let navController = UINavigationController(rootViewController: table)
-let window = UIWindow()
-window.rootViewController = navController
-
-table.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
-
-window.makeKeyAndVisible()
-
-window.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-
-PlaygroundPage.current.liveView = window
+PlaygroundPage.current.liveView = table
 
 //#-end-hidden-code
 //: [Next](@next)
