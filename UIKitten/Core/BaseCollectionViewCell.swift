@@ -158,7 +158,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         separatorLeadingMargin = NSLayoutConstraint(item: separator, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: separatorInset.left)
         contentView.addConstraint(separatorLeadingMargin!)
         
-        separatorTrailingMargin = NSLayoutConstraint(item: separator, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: separatorInset.left)
+        separatorTrailingMargin = NSLayoutConstraint(item: separator, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -separatorInset.right)
         contentView.addConstraint(separatorTrailingMargin!)
         
         contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: separatorInset.bottom))
