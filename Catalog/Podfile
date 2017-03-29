@@ -6,5 +6,5 @@ inhibit_all_warnings!
 target 'UIKitten Catalog' do
   pod 'UIKitten', path: '../'
   pod 'UIKitten/Charts', path: '../'  
-  pod 'UIKitten/Fontawesome', path: '../'    
+  pod 'UIKitten/Icons', path: '../'    
 end

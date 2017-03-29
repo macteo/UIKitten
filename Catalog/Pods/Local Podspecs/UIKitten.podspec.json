@@ -19,9 +19,6 @@
   },
   "requires_arc": true,
   "default_subspecs": "Core",
-  "xcconfig": {
-    "OTHER_SWIFT_FLAGS": "$(inherited) -DUIKITTEN_AS_COCOAPOD"
-  },
   "subspecs": [
     {
       "name": "Core",
@@ -49,7 +46,7 @@
       "source_files": "UIKitten/Charts/**/*.swift"
     },
     {
-      "name": "Fontawesome",
+      "name": "Icons",
       "dependencies": {
         "UIKitten/Core": [
 
@@ -58,7 +55,7 @@
 
         ]
       },
-      "source_files": "UIKitten/Fontawesome/**/*.swift"
+      "source_files": "UIKitten/Icons/**/*.swift"
     }
   ]
 }
