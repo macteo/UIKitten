@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015E37B412D108590EF48BD812265991 /* UsernameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E329DFE65C406ED42A4A4BAA9C23A /* UsernameField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0168E72FA05A0FE0A88CECC7C1D08AAB /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CB8276BB6AA152D7E3C0C298696E5E /* FontAwesome.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		02626F8B4C92ADDC3D7A07FDFDBA5839 /* Charts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0641C74B73BFFDC7CFB8F398E2DD4768 /* Charts-dummy.m */; };
+		02C68F0A34EB6512AE12232B26B6BC54 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F8DAAADDD95D2D399B880061F21358 /* Item.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		02E0F9601B95DBAB4CB0320BB0529F45 /* PieRadarHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8296F20E422A914B77B9289246303D76 /* PieRadarHighlighter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		03D5997031A369D1E82FE9E26492BAE4 /* BarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F396C08F300AD79C8D08917EF2A9AB0 /* BarChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		06ABDFECC211935322E23DA558B8D727 /* ScatterChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6EF60A2AECB3B7EF24DD6F8BD3F29 /* ScatterChartData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		06C4B4F162B16261FC0B10950597AE84 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D12EC02CFC1B1841D50AC4F54054AF7 /* Transformer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		07832B8D65AC8983DE6CD9156B64A94E /* UIController+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767CD83BAF39D55A5EA10238F0DD56B /* UIController+Rotation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		082B28C23275CEFBF6ECD2C5D5F8C480 /* MoveViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACF39720E6B564295C5ADD6B897A39 /* MoveViewJob.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0898DB02EBEE4AE636B13EFCBBCAD5F8 /* HorizontalBarHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E811F41074A44273CC139EABB9DAB /* HorizontalBarHighlighter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0A176BD06C530539256E21EE7FCF237A /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0020ADB559456D7259E32B56DD63F /* ListItem.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0AA1365B85E18852FE45AA1AC619206D /* BarChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44881BCEA9844DF9415A3E368184F2A /* BarChartDataEntry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0AC2CF2032F0B6805510AAA470F43200 /* PieRadarChartViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF469C11DCA27C4D6D429442531F0F4 /* PieRadarChartViewBase.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0C03CB07A1BF399CDE7CBB68DBAEE6B5 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E562B030251CCDDC2E0CD755D9F6EDC /* FontAwesome.otf */; };
@@ -24,28 +28,32 @@
 		116CD868B9798798A024EA2C4EC70633 /* BubbleChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548BEABFDF4E256047B1ECFC3E01A1C3 /* BubbleChartData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		117776107F9BC4C7DFCDDE6FB832B859 /* ZoomViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C631A0247584E348B6304CC0CF6A14 /* ZoomViewJob.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		15064BE99B3392B5C279A026601D7DE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B02D7CBEE6A2393AB99884718C43024 /* UIKit.framework */; };
-		17394908156737D73A468055D82E2E43 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648BB0AEF3DD80757FD88E467D041AD /* Print.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		17D1582C7A5B2ABF085A3C5966EA97EA /* DefaultValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90350876CB811F442883E0C656F66C77 /* DefaultValueFormatter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		17EDD8AA2B18AAD69F12E4EA2869D992 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C64B5417C35C3EE999810995F1F28 /* UIView+Border.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		182DD20F10DFE95492B11DC4A885AA3F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98402F2C1B79B4A15B3FA750EC67406 /* Validation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		18B21DB00021F26D73F0C1EE716B8E49 /* LegendEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782187E8AE10496FAEFCFB14AA618175 /* LegendEntry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		18CC9FDE068B6632BAA8BD972039F8AF /* ScatterChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481BB277C0ABBC5C37958F9E4FDB613 /* ScatterChartRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		19EAD37C8BC1EFEE2AB6DCC53C3EAC02 /* ImagePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8B688087818A3A1439923FE994D3E /* ImagePosition.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1B0576F34B86782E9A7208E361BC3A6D /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15BBC1C92C593E195E0BE729958DEB /* EmailField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1B21D50533FA11BFDAC2FAEA5F34757D /* BubbleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1334C7DEDFAF6EB8AE4A71ABD01B57 /* BubbleChartView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1BD79885A34E70EE3FB1237524F04852 /* UIView+ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4129C1659B8640BFCF7C6F882114068 /* UIView+ListItem.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1FC0A1AE67D44C6642BDA70DE83DC319 /* IBubbleChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A040900E7DD038A0370E0E06E4405D2 /* IBubbleChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		21D6DC87161D7D49C6D2EB8A8995A1DB /* YAxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE51DA81645CD1A2F45436F65216812 /* YAxisRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		23B469F4DF981B43265A36B9FDC37386 /* RadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B7F5387B18C88F52F67DB17CF3B91 /* RadarChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		24E38AE8E4C55EA651015A4639D23473 /* CandleStickChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E177E3FDD730B4384941906157733E /* CandleStickChartView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		259484693C00DA0E72FAAE25E53690A4 /* ChevronUpShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B72CA12B499493A2C7657DF5A4560 /* ChevronUpShapeRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2758BD9C88FFBB9F0A2FC2B86EDD193F /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743BC3C9988541206C60278F6D654C4 /* BarChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2774EF9ED1C67CD02EA6502B5DCEE65A /* TransformerHorizontalBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC151E4B8F452CFFC62547DBEC968E47 /* TransformerHorizontalBarChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		27DF224BC863E4494FBB69BF644E9EBB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6609BA1B39C881E3F6C99529B0B3F2E /* Colors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2912C76DBD952457D64EC142506E562F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CFC48F98CC356B44985B4927DCC80E /* ImageView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		295E3D6AF4E99E1C10C0B096573A9B4E /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BA36CE5C9AB0A5700157D0D84733BE /* Range.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		29991D9D0DF34E2E04C372998AC01F9B /* IRadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983D89D99590E335D97969FA819600FE /* IRadarChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2AEDFCAC84712B96AEC4B6E4919673A3 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98402F2C1B79B4A15B3FA750EC67406 /* Validation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2C28EACF0BFC4BD01FCB4AF291E1C908 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A103882B5FCEE406A183BBF58DEF6A /* Platform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2D84D6639DBB652A874BEC1801687782 /* CombinedHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127EEFFC81FDBA45401B1092576F9E6 /* CombinedHighlighter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2F4B8932109342243585A6CF1C31EF53 /* UIKitten-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89B474B736975B0A35A9F0636B72AD00 /* UIKitten-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F5F78E9F12A3DC512F96753BD58FE17 /* BarLineScatterCandleBubbleChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6018D871D0066B050919ADE731B85D11 /* BarLineScatterCandleBubbleChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2F83B8D40628183BA3790F0FEC76B6A3 /* GroupedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7941460D183CC8C09947C4DE2ECD3 /* GroupedButtons.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		32AD9BE293B71493F6CEB4DE1B6405DA /* UIKitten.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9846C14B0C771FFAA7BC4C37299C56D8 /* UIKitten.xcassets */; };
-		3322932009D32321F1CFAA9F40FFAB8F /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22440DFF143DA0A3FB3C733AC986C15C /* TableController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		351EE5329C34E6A1395EE176232CB975 /* ILineRadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA798766450179C4C0C34C9151E229 /* ILineRadarChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		368FEF44691AE5BF7F1AA2003D0176BA /* UIView+Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28357C1803FB14D784E0D016AAFF9F0B /* UIView+Align.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		37B85F555A38364C44DB54684713A900 /* FontAwesome.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA5600E63D6315FD23FED08FDFF3F1A1 /* FontAwesome.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39C893D4E59E34DC83952BB99A6D60EF /* ChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D71B31D031F78E070185A6F0FCFAF32 /* ChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3A810BF78046798746C56A9FC58A3BF7 /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2103C02D99FFB6C90A7C8C549103F1B /* Legend.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -53,102 +61,98 @@
 		3D40915A123A994E02973636A10670EC /* PieHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F13E2179902270DDB19A9BD5A0DE2D /* PieHighlighter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3EDE9B725F530C0AEDCAA09EAED6B0C1 /* BarLineChartViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546E960B5868120AAE6FC4ACFBBBF026 /* BarLineChartViewBase.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3EF494C3585C4CF7F3549502BD894064 /* IMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568CEE2C24FD70F4ABB958561F2F8C39 /* IMarker.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3F008287779112A3FDB611D03FD15104 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E20413E4F1BFA699DAD6691651E60BD /* UIColor+RGB.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		446F57A91B6BBFAC17E6637DC0DA60AD /* IShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D2931DD2FAD933B947B7A00FC6228 /* IShapeRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		45F268966E70F28D200F6FFAAC4AA886 /* BarChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF89D3BD3A09E9217091E2CB8122878 /* BarChartData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		49708C92C466B2FE63A891B936697B3C /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FE42EBECEB1541E4F720B458934962 /* BarChartView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4B55C42CF9088B02A13769362A2C872D /* AnimatedViewPortJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA8433A5EAE4F704486A9E49B8586F /* AnimatedViewPortJob.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4F2248C6E895F067DCF23EE6C29EB970 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45935DD75DD03AF2815B0D7F52262632 /* BarChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4FB9AB6957E8EAC12315C36C8F647267 /* XAxisRendererHorizontalBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C450A7B2B12D738342F46BDFEA50EE /* XAxisRendererHorizontalBarChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		515B2A80DDA595569EC6FE6BBC9A359A /* GroupedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7941460D183CC8C09947C4DE2ECD3 /* GroupedButtons.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		52084D33B30B3688E64445C412BB5D62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE921A5B36077F24CC3CF8B427CC41BD /* Foundation.framework */; };
 		5297E48021F558F856701BCD3D5C74A3 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC83585083BB63C9B0954F1EC5FAF7E /* LineChartView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		53CD502F710387EA8278DEC4205C396E /* ChartBaseDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62B76ED3F0DA59A1177881963181580 /* ChartBaseDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5576BA91D4AC373C9A1A57EE92D8ED63 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14764A187F6545347F5D6C82EEE1676B /* Align.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5587EFE360778E650A8AC720135B99D1 /* RadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035ADADDFFF59F5E29576E0D4AD108E1 /* RadarChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		55B22D291CF830C46E48F585806746D0 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0020ADB559456D7259E32B56DD63F /* ListItem.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5644C6216CB03514C86A0D0A682A150F /* ICandleChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEEA7B6C20CB125B3612B4D67F271E /* ICandleChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5694CBA6797B63D75A40B021745A6531 /* CircleShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A6DD91A0A17350AA02F70BEDDF910 /* CircleShapeRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		587B950D984B1A368AABAD7369309070 /* Pods-UIKitten Catalog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C72F53C4E95DB36E0F5E3A79207FA6F /* Pods-UIKitten Catalog-dummy.m */; };
-		5962C194F073CE54D637D7E6CDB24D7A /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1091F51F7B0A0FF5A6314C379CCB32 /* PasswordField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5A95E58D6C9EBA736372AC5C359E3CD6 /* LineScatterCandleRadarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D125F835D5D4957B5440AE32D84E58A /* LineScatterCandleRadarRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5B32830D01CED9505831ABF82BDD7EB9 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C674917B1C224E260E55E5287656858 /* PieChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5ED1C61E715ABCC8B46CDD7C8E3007EE /* XAxisRendererRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24EF3766FFB425C226EDC6433A84D0E /* XAxisRendererRadarChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		61163FF50571FD3ADD6AEB616D94828B /* UIView+Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28357C1803FB14D784E0D016AAFF9F0B /* UIView+Align.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		620035C7D60B55AED4CC3EA486085EBA /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22440DFF143DA0A3FB3C733AC986C15C /* TableController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		62C32311F98F4C507C202C2FD60D68B3 /* ChartViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D352C5AC0366FBC2B57D6B098BD6 /* ChartViewBase.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		63795E6633541CE3ED9A107447A56CD2 /* Button+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E23F1D376EA166413EBA720E5A664 /* Button+Icon.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		64A1747B643E06FE6B28DB73083E6C1D /* ViewPortJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744CEC3FB7F86620D331648220E0504F /* ViewPortJob.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		64A4C04E2170B5D02EE8FA87739A570B /* LineChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D477CE29827F4AA7F5D7BAE4746875 /* LineChartRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		64BE467400BD505D143791031B357CCE /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F1D894E07E664BFCD8170D7755C42C /* Size.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		650370C2BD6FF9149B56E9CDBA7433A7 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15BBC1C92C593E195E0BE729958DEB /* EmailField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		67B1B7D1376CB32A183446405F54A27E /* DataApproximator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19652E8ABF81D3FAB0F13B6DA027D3 /* DataApproximator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6AF5B52CE8521B567A3F704308E51AD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE921A5B36077F24CC3CF8B427CC41BD /* Foundation.framework */; };
-		6F137BA5B868231EAE5A2E4662872590 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBFA372C3A46B3C28D1E783CF64037 /* Button.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6D50A07F81FF3D9A1F2FB281AC686847 /* SubtitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995AF170018E6E9ECC45095B450B36F7 /* SubtitleCollectionViewCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6F89C390142BFD90AFF3A47661928412 /* ChartLimitLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E610161097096C083EE46C6D4B74063 /* ChartLimitLine.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7153ED86EF1B013C6B6E7ED89E51EC75 /* RadarChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665D8AE84BD96CC099B66A4E34D71DFE /* RadarChartRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		73720DC4CC8026ED314EC253E6489235 /* IAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB050D62EC368170C340BDE65688850 /* IAxisValueFormatter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7475078EDFC4C1606CF982F9C874B481 /* ComponentBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A862F90EF0C7E6C81B12485C6980 /* ComponentBase.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		773A2D16A7534658130E6AA26351230D /* AxisBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9127D6DCA43B013D88C23D9BDFBCF1 /* AxisBase.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7B532FCFEA055FD9AE1460DD8F9ABD92 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09D22784D3BD3CF6FAC579D2BE2414 /* Renderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7BA84CB0260FF9C5D67778924731BC2E /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E274144E275AB4BC93985C3FE4DD8E /* ButtonType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7BB02180C849BCADF62CD969ABBA5D49 /* AnimatedMoveViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2FA8380551470AE30CB793CE3A5FA /* AnimatedMoveViewJob.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7C68B00ABABD990A554A0F71AD19F2CD /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6307D87CF3A17D00D0CC956ACA52D3E3 /* PieChartView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7D791AED3E760F96D85FEDF9AB0DDF83 /* Pods-UIKitten Catalog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F6F83904BB11728495F4C8E6A8428274 /* Pods-UIKitten Catalog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DD5C784DF181FA2056B3641607BD26C /* UIKitten-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DE0607AE1272FC176A06F54CA1DE87 /* UIKitten-dummy.m */; };
 		7DE3E62D329F26A90F380826B7460AA4 /* FontAwesome.swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 71FF242DF90529A6B2C6E22D555E64F4 /* FontAwesome.swift.bundle */; };
 		7EAF1BE0303D28A56307613455883D96 /* ViewPortHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADCB4F86D4D8BF74BE81B3E308F42BF /* ViewPortHandler.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7FCFE332260A21B19203C10EB06A00BA /* ChevronDownShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37FF917AC94F52BCA22E068553DF460 /* ChevronDownShapeRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		810CD072257595EA9E98840F5ABFB298 /* RadarChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486ED64F2A94DABE733870FB33989EB2 /* RadarChartDataEntry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		81586F2517E2732B031C60DC0161367C /* IHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706EB31AC2A0E05050CC3C459C610B90 /* IHighlighter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		81A20DBFD2456FEAD86C29C04BDB2A58 /* ChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E65EDCC181C890DD66049A36BA4444 /* ChartDataProvider.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		83EE55BFA9C18CF279A5B04C58788CDD /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2794806E2C0E46B52FA3135AAE76DBB3 /* Style.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		841C2183261A1A7A2FD4B7D923AF6A14 /* ScatterChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C9488F0ACFEF2B0B951569A97B1AE /* ScatterChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		86BD35760A8C0C183B687C2F6FC9C843 /* BubbleChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F459E7835C65FB05A0749DCB302756C /* BubbleChartRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		87EE1349FBD850D6480D7D5678771D67 /* XAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D063B38B01A008ABD33C9FD275ED45 /* XAxis.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		89456B006D6338E3829E15DA16DD52EF /* HorizontalBarChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5069479BDB3F44FAE26CF4ACE20FBAD /* HorizontalBarChartRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		89F1043931E8937352508A302B529BC2 /* SubtitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995AF170018E6E9ECC45095B450B36F7 /* SubtitleCollectionViewCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8A439F8200BB76BC4C5A3B25B4F8315B /* UIKitten-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DE0607AE1272FC176A06F54CA1DE87 /* UIKitten-dummy.m */; };
 		8B10B43A1277949A5949A07629594D29 /* DefaultFillFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3A2AA5367292050F66FEF495DE2DC /* DefaultFillFormatter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8BB4E4D8028EA20022F36668FD72DBB6 /* AxisRendererBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCBC92DE0817A6A397C61C71E589ED /* AxisRendererBase.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8C711CF6B7C146133A09BC085B350D13 /* IScatterChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24683B768F26E407AA9C4CD38422BAC /* IScatterChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8CB3965973532E9179260125EF5D850E /* PieChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C49C3BA776E341B34BB8153D946473 /* PieChartData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8CC641C6826005C7B0EB1F844861AA46 /* LineScatterCandleRadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DAC00F5AD423E2470E3949B0A6796F /* LineScatterCandleRadarChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		908BFF4174D4809DD8E95000B1B1494A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CFC48F98CC356B44985B4927DCC80E /* ImageView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		93CBFD940BD0B22071BCD795A8A6D2BC /* Charts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 577B4237330612A0E64E96292CF72418 /* Charts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94DB0841EED8801484B579FC9F21D54B /* YAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B4255D07A879E81D8420285A0455E /* YAxis.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		94E8E1D735E9D6BB1DD9576C37F22E6A /* CandleChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D733149B7B74DBB8BC802FA6DD562D /* CandleChartDataProvider.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		95339264FDA04972C348E3C6F950096E /* ChartColorTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD0BA39F8686B6C2A5F5F08F9FCEFE /* ChartColorTemplates.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9594306BAF48A6F2CFC29BF735E4F01A /* Button+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E23F1D376EA166413EBA720E5A664 /* Button+Icon.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		96917EF9EB136148F8489CAB330C6FB3 /* BubbleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69546C10F41EAA943AF1B8109CAD1C43 /* BubbleChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9751ABF810D7EEC283D9AAB9748B09A1 /* BubbleChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F5141F0C12375B9CE2EBC6059B2820 /* BubbleChartDataProvider.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9AAC49CA65233F58322B07D8937B7385 /* BarChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31222631724A257C657514F6D085FE0E /* BarChartRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9B79BB01BAC6D08B46F2893C18A0100D /* IChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2309511151393EB84057999236E4BEF4 /* IChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9BEBB934C2E9D13E50D15A13A318CFDF /* DefaultAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D77A84369079DC3B677C66A03DF30B /* DefaultAxisValueFormatter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9DDC1FEE5688500E564F6A7E771CDD5D /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0907B370BF87CBDBD56545DF8430BD /* LineChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9FF27F8027C6664244CAD42A9CD33A61 /* IndexAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16425F7A1A685C63CE92F3017001E50F /* IndexAxisValueFormatter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A226F377E0D3AA44C721F4532C6CC0C1 /* IBarLineScatterCandleBubbleChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EDDB9344B33DAB13BE07F07FB94AD4 /* IBarLineScatterCandleBubbleChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A24795F8F7472BBDC086D4114A8727B5 /* LineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE47B79A9BED6D1B4B6697051154D /* LineChartData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A27773AAD499768C21B83238E5E78712 /* BubbleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F96C58B7EA1383DB6261686E1592D0 /* BubbleChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A65DC97AD4BB027E9891C7FD8EEB5CCC /* ChartDataEntryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FE77974F73A6DBD03EE3487BD8718 /* ChartDataEntryBase.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A7C416EC165C45A78A7A01EC061C82F0 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998F078262048E1B2FE2F6D82EDDFAB /* TextFieldType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A905ABB3874571E517174E851302908C /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BFED20AEFA6279819A54ECE088A027 /* FontAwesome_swift.framework */; };
 		A927B0CACA62866524A62E12A16682E2 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACEAF564EDDFD2C3156B5896354BFC4 /* Charts.framework */; };
-		AAC08547569DDF031A39192AC3B5479F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F8DAAADDD95D2D399B880061F21358 /* Item.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A9EFAC2080FB1F31599763A113CA6206 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648BB0AEF3DD80757FD88E467D041AD /* Print.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AAD5ACF23274B5877603F2F0ED2FCE07 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBFA372C3A46B3C28D1E783CF64037 /* Button.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		ABD54ACAE96BBBCF4AC81685CB61896B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B571411046E5D7D8271165AFBA15899 /* Enum.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AC8675A15663A0F417ED766D54122486 /* UIView+ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4129C1659B8640BFCF7C6F882114068 /* UIView+ListItem.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AC6C6CDA86C7B47E29F20F11A3327E17 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD37BA780964EEBA2E89636C1D9CE9 /* BaseCollectionViewCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AD289FB92000F10115670E85A219719B /* CrossShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C92FE48FA10DDCB73633A34E9BEE74 /* CrossShapeRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B0CD6D0F2A35E1D82F92F8AFEFBB4596 /* YAxisRendererHorizontalBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F3F730D91DA3B0C1714DA41A6E4B0F /* YAxisRendererHorizontalBarChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B11B82163A159E4C9959242FDC7645A8 /* PieChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0797BDD0F81D9F8A2A20A8CEB9380B /* PieChartRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B1464BA33AA09A6F265B11910C5C1460 /* CandleChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B08DB8A2289218E19CA5672D78E1934 /* CandleChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B173B760EEA1E68DEC28FC66CD56FC34 /* XAxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4FA0DFFDE96BBD65EBB0D59541608 /* XAxisRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B1B01B2ACFED74F308725C78EE9482F7 /* ImagePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8B688087818A3A1439923FE994D3E /* ImagePosition.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B1DBA1A3A2F28FADAC344BC065BA1D80 /* UIController+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767CD83BAF39D55A5EA10238F0DD56B /* UIController+Rotation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B27FE1565B8C4E7A2B2F276700A97706 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998F078262048E1B2FE2F6D82EDDFAB /* TextFieldType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B2B8316A5E15644B77CF0C8EC9464020 /* BubbleChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4577FF05C223E72BE5D73F678947E /* BubbleChartDataEntry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B32A15F4641C7A04CE25FA835A911B56 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F1D894E07E664BFCD8170D7755C42C /* Size.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B480A04C2D98852751186D7199BD00B5 /* MarkerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545B5DF8F019F5BFDD6C5918A26553A /* MarkerImage.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B4C81018E8560DC93059311883AFF328 /* LineChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6AF6CC754E67678DE10723782D99B1 /* LineChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B4CA1C1703826B8F5E3B425FA4736244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE921A5B36077F24CC3CF8B427CC41BD /* Foundation.framework */; };
 		B51BCB880F5A59DA7A10EC5BF7D99541 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B218B1486DB963F80ED1EA6E3AC13BF /* Animator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B60D81CB525980B707F144B3EEC79185 /* ScatterChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B8ED7BBC7FB4AEC79A8E809C41C31 /* ScatterChartView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B69241871F7BD61A7BFD559236F87F3B /* CombinedChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2977841CDC1B2B1D78CEFE31A504FB /* CombinedChartView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B6C76D09D7F2D6E98F81E953B756D848 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B88F69DA8188089EE456C38AFD7D26B /* TextField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B8C28F973660FCAAE9591870D6C48CE6 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1091F51F7B0A0FF5A6314C379CCB32 /* PasswordField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BA5CE2C1EF91289B6FEFF1B56F274148 /* BarLineScatterCandleBubbleChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E37ABC6D731A9E3BBF665284B4964 /* BarLineScatterCandleBubbleChartDataProvider.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BA81F75BB2390C57CE65343E66F89FD2 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B88F69DA8188089EE456C38AFD7D26B /* TextField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BB61417A186AFCD64E557A7F0E4297BB /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E274144E275AB4BC93985C3FE4DD8E /* ButtonType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BBF6A5549A9A5C8003CDA05AFEC9E8CF /* ChartAnimationEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E493C65C02574D447DC7356B116EFF3 /* ChartAnimationEasing.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BC89236602ED1878CE7AE8D42D930231 /* ScatterChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64AEA0E7F2BF66167BEF12C4C8B779E /* ScatterChartDataProvider.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BC89F432CE5E8204A51AE31D9697E1A7 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E20413E4F1BFA699DAD6691651E60BD /* UIColor+RGB.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BC94105A2530746137985AF28CA64151 /* CombinedChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2D82FD834EE5D904661F8FE448208C /* CombinedChartData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C0EAFCECC7372C795A24FFA298F8EBFF /* UIButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18186491F1451976253ADB299673A6F3 /* UIButton+Color.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C121B5EBCB61750E3EB87CB646A6AB4C /* YAxisRendererRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11549A7BD8E7DD7DC5784AB7B53D2D39 /* YAxisRendererRadarChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C1990B5BC89AF27BA54E2C11AD591198 /* FontAwesome.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E78CC7975B3B9649AA532A083971AD35 /* FontAwesome.swift-dummy.m */; };
 		C281C14D9F0F41C197F9442666A9E4BD /* ILineScatterCandleRadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB28892739F08125AAFE6235A2814043 /* ILineScatterCandleRadarChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -156,6 +160,7 @@
 		C33BE5675A99B2EAB170D3576B081154 /* IValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BACB3F9649A6AB4E5EBBC82F230DA /* IValueFormatter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C82442ED2A69A21FEA829F9DCF4ABE3C /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FED9752486E1D203F281A00E67729B /* Highlight.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C93BB96765719488A71EC85718185CF7 /* SquareShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685B9FFF623AD54B527992D17A9C464 /* SquareShapeRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CE27F0E2E92393FAB944CDFFC21E1CFA /* ScatterChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA08B212861262008699EC44ED6F0660 /* ScatterChart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CE5CA727E836CA840F73F3CCBC7C7091 /* IPieChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782463EB9C73C9EF7EDAC20DFB108A00 /* IPieChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CE83969BBAE6C9E1F8D80D9D1A688D43 /* BarChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF944B31BBB5BA65A09A535335371C34 /* BarChartDataProvider.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CF6CE545812EAFF36F5C8D3BFDF270DB /* ChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D0A7C00D19FEDB2934F1A39B139D0 /* ChartDataEntry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -166,6 +171,7 @@
 		D447D5A87E2351A2DA37DE4BFA8F4ADC /* LineRadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CB2CD170117BB8E48F0B4618A38FB /* LineRadarChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D49BA8C2E73E0287B6FCA4E9203E7205 /* ChartDataRendererBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCAA30EA8E513644F85BD95838407A4 /* ChartDataRendererBase.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D4AFAA58CFED3CD8BA528853D76DFDCD /* CombinedChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC3959B084D73BAD432DA9D804BE2B8 /* CombinedChartDataProvider.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D62705B03A5B31F54578B5EBFA610716 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14764A187F6545347F5D6C82EEE1676B /* Align.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D6C3C7A3C4C356969593D368295E2D96 /* LineChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF041389CE203858A7B1F3140608DC0B /* LineChartDataProvider.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D7D8342810E27083386FFD056E9281E1 /* XShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7117D183947B07F8759FA68B13A96 /* XShapeRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D9B67FDDF0E5A023B3B8B7D5457EE505 /* RadarHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649DC0217B965AFE226F2F535875B2 /* RadarHighlighter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -176,20 +182,18 @@
 		DF725FBBA3259DFF9F4E7C51089238E9 /* BarLineScatterCandleBubbleChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E97B83A9A04A1B771B617C0ECB105 /* BarLineScatterCandleBubbleChartData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E1E332E1E223DDB966D00BE21C95877B /* ChartHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB7E2D79CE2A850C358E0EAFDA559EF /* ChartHighlighter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E4583110949562FA69AD9F1670E6C2BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE921A5B36077F24CC3CF8B427CC41BD /* Foundation.framework */; };
+		E46482AF8BA4D0C9C63F4041F0C12C91 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6609BA1B39C881E3F6C99529B0B3F2E /* Colors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E6796DD021F9BD1E1CEA548673C3F021 /* Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4498C8B030DB92F4C326A9B2C3D45 /* Fill.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E9546F5DBA8F80EB229A26A5FCC9A63D /* BubbleChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CFDC824299886C11A8A49CF5BAE8C1 /* BubbleChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EAA82A1F15BDB4D0554522B2B61882B5 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C64B5417C35C3EE999810995F1F28 /* UIView+Border.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EB19F03016BDB2FDDFA6B3FA06CC66D1 /* BarLineScatterCandleBubbleRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0FC5D52E41E3F151F43ECDE83603C /* BarLineScatterCandleBubbleRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		ECB921E55D94EA014F94540E5E86B126 /* ILineChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2159442876B33BDEDA63CA25CDFCC4AD /* ILineChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EDE59817B41D10FE8628FC6503369D06 /* LineRadarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F730EB4829BCFA0940F68F97192BD /* LineRadarRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EE817D57B1220EA08C12D1A2EDFBF41E /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2794806E2C0E46B52FA3135AAE76DBB3 /* Style.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F0F9F9F6743BBFD1458BF3A6C340B639 /* PieChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99778DF013A49B1CD23E121E5E4A2D8C /* PieChartDataSet.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F3939B2035542CE8EC51BD7F6E931732 /* AnimatedZoomViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C28970B162280D78BBEBC7F6FB3CDF6 /* AnimatedZoomViewJob.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F49D64E7AA086B9F11BFE75F89FD89AA /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD37BA780964EEBA2E89636C1D9CE9 /* BaseCollectionViewCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F4D926B02ECAEC37BF2562A62DEFA96C /* UIButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18186491F1451976253ADB299673A6F3 /* UIButton+Color.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F550960F7454DD08813444B541A7FD20 /* CandleStickChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBC6E77D5FA087E249C07369FDFD5B9 /* CandleStickChartRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F73077E52EF8857FFAD7BA801D91062B /* IFillFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFCB344ED6D5F3801DB00A4B61BE073 /* IFillFormatter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F8C61E42C1BBB2DFA497FEC1921799AA /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17C9034569F920F3C878DA8B40C05E /* FontAwesomeView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F96B107875993F69369E3685B8A042C8 /* UsernameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E329DFE65C406ED42A4A4BAA9C23A /* UsernameField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FBCFBD262A22B228449B6380912F6314 /* BarHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18413661A48EBE7571177812B30FE6 /* BarHighlighter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FDD4F8FB5FA050E18BBBFF6EC26B6B46 /* CandleChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB8BA96B6BF5660C60419833BD9B84F /* CandleChartData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FE1B33E6DECF510793722F0D47EFD5E4 /* HorizontalBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A80C05A837073607BA2B57026A000B /* HorizontalBarChartView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -272,6 +276,7 @@
 		284CB2CD170117BB8E48F0B4618A38FB /* LineRadarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineRadarChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/LineRadarChartDataSet.swift; sourceTree = "<group>"; };
 		2AB8BA96B6BF5660C60419833BD9B84F /* CandleChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleChartData.swift; path = Source/Charts/Data/Implementations/Standard/CandleChartData.swift; sourceTree = "<group>"; };
 		2AFCB344ED6D5F3801DB00A4B61BE073 /* IFillFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IFillFormatter.swift; path = Source/Charts/Formatters/IFillFormatter.swift; sourceTree = "<group>"; };
+		2C674917B1C224E260E55E5287656858 /* PieChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 		2D12EC02CFC1B1841D50AC4F54054AF7 /* Transformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transformer.swift; path = Source/Charts/Utils/Transformer.swift; sourceTree = "<group>"; };
 		2D649DC0217B965AFE226F2F535875B2 /* RadarHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarHighlighter.swift; path = Source/Charts/Highlight/RadarHighlighter.swift; sourceTree = "<group>"; };
 		2DD4FA0DFFDE96BBD65EBB0D59541608 /* XAxisRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxisRenderer.swift; path = Source/Charts/Renderers/XAxisRenderer.swift; sourceTree = "<group>"; };
@@ -282,6 +287,8 @@
 		33D063B38B01A008ABD33C9FD275ED45 /* XAxis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxis.swift; path = Source/Charts/Components/XAxis.swift; sourceTree = "<group>"; };
 		35D733149B7B74DBB8BC802FA6DD562D /* CandleChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleChartDataProvider.swift; path = Source/Charts/Interfaces/CandleChartDataProvider.swift; sourceTree = "<group>"; };
 		36E274144E275AB4BC93985C3FE4DD8E /* ButtonType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
+		3743BC3C9988541206C60278F6D654C4 /* BarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		389B7F5387B18C88F52F67DB17CF3B91 /* RadarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RadarChart.swift; sourceTree = "<group>"; };
 		3A4F730EB4829BCFA0940F68F97192BD /* LineRadarRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineRadarRenderer.swift; path = Source/Charts/Renderers/LineRadarRenderer.swift; sourceTree = "<group>"; };
 		3B02D7CBEE6A2393AB99884718C43024 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		3B2D82FD834EE5D904661F8FE448208C /* CombinedChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedChartData.swift; path = Source/Charts/Data/Implementations/Standard/CombinedChartData.swift; sourceTree = "<group>"; };
@@ -289,7 +296,6 @@
 		42639875E11BBC3A9CE16D6D04ED48CF /* MarkerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkerView.swift; path = Source/Charts/Components/MarkerView.swift; sourceTree = "<group>"; };
 		42F3F730D91DA3B0C1714DA41A6E4B0F /* YAxisRendererHorizontalBarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YAxisRendererHorizontalBarChart.swift; path = Source/Charts/Renderers/YAxisRendererHorizontalBarChart.swift; sourceTree = "<group>"; };
 		4481BB277C0ABBC5C37958F9E4FDB613 /* ScatterChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartRenderer.swift; path = Source/Charts/Renderers/ScatterChartRenderer.swift; sourceTree = "<group>"; };
-		45935DD75DD03AF2815B0D7F52262632 /* BarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		486ED64F2A94DABE733870FB33989EB2 /* RadarChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/RadarChartDataEntry.swift; sourceTree = "<group>"; };
 		4A1334C7DEDFAF6EB8AE4A71ABD01B57 /* BubbleChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartView.swift; path = Source/Charts/Charts/BubbleChartView.swift; sourceTree = "<group>"; };
 		4ACEAF564EDDFD2C3156B5896354BFC4 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,6 +333,7 @@
 		66A103882B5FCEE406A183BBF58DEF6A /* Platform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.swift; path = Source/Charts/Utils/Platform.swift; sourceTree = "<group>"; };
 		67C4F9946003E49DDA0A9084E8F4564A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67DB4297381EDA3E1F72F9709C6401F8 /* IBarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IBarChartDataSet.swift; path = Source/Charts/Data/Interfaces/IBarChartDataSet.swift; sourceTree = "<group>"; };
+		69546C10F41EAA943AF1B8109CAD1C43 /* BubbleChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BubbleChart.swift; sourceTree = "<group>"; };
 		6B1091F51F7B0A0FF5A6314C379CCB32 /* PasswordField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		6C4D2FC07D13E32F6D7BEDBE5C364A9C /* Pods-UIKitten Catalog-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitten Catalog-resources.sh"; sourceTree = "<group>"; };
 		6F0B4255D07A879E81D8420285A0455E /* YAxis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YAxis.swift; path = Source/Charts/Components/YAxis.swift; sourceTree = "<group>"; };
@@ -394,6 +401,7 @@
 		A8ACF39720E6B564295C5ADD6B897A39 /* MoveViewJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoveViewJob.swift; path = Source/Charts/Jobs/MoveViewJob.swift; sourceTree = "<group>"; };
 		A98402F2C1B79B4A15B3FA750EC67406 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A998F078262048E1B2FE2F6D82EDDFAB /* TextFieldType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
+		AA08B212861262008699EC44ED6F0660 /* ScatterChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScatterChart.swift; sourceTree = "<group>"; };
 		AB18413661A48EBE7571177812B30FE6 /* BarHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarHighlighter.swift; path = Source/Charts/Highlight/BarHighlighter.swift; sourceTree = "<group>"; };
 		AEB050D62EC368170C340BDE65688850 /* IAxisValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IAxisValueFormatter.swift; path = Source/Charts/Formatters/IAxisValueFormatter.swift; sourceTree = "<group>"; };
 		AEBC6E77D5FA087E249C07369FDFD5B9 /* CandleStickChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleStickChartRenderer.swift; path = Source/Charts/Renderers/CandleStickChartRenderer.swift; sourceTree = "<group>"; };
@@ -428,6 +436,7 @@
 		D43C92291009A237F468A0576444C4C7 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FontAwesome_swift.framework; path = FontAwesome.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C49C3BA776E341B34BB8153D946473 /* PieChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartData.swift; path = Source/Charts/Data/Implementations/Standard/PieChartData.swift; sourceTree = "<group>"; };
 		DB09D22784D3BD3CF6FAC579D2BE2414 /* Renderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = Source/Charts/Renderers/Renderer.swift; sourceTree = "<group>"; };
+		DC0907B370BF87CBDBD56545DF8430BD /* LineChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		DC151E4B8F452CFFC62547DBEC968E47 /* TransformerHorizontalBarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformerHorizontalBarChart.swift; path = Source/Charts/Utils/TransformerHorizontalBarChart.swift; sourceTree = "<group>"; };
 		DD9127D6DCA43B013D88C23D9BDFBCF1 /* AxisBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AxisBase.swift; path = Source/Charts/Components/AxisBase.swift; sourceTree = "<group>"; };
 		DDF469C11DCA27C4D6D429442531F0F4 /* PieRadarChartViewBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieRadarChartViewBase.swift; path = Source/Charts/Charts/PieRadarChartViewBase.swift; sourceTree = "<group>"; };
@@ -444,7 +453,6 @@
 		EFCCBC92DE0817A6A397C61C71E589ED /* AxisRendererBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AxisRendererBase.swift; path = Source/Charts/Renderers/AxisRendererBase.swift; sourceTree = "<group>"; };
 		F0BD37BA780964EEBA2E89636C1D9CE9 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		F3F1D894E07E664BFCD8170D7755C42C /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
-		F4F96C58B7EA1383DB6261686E1592D0 /* BubbleChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BubbleChart.swift; sourceTree = "<group>"; };
 		F57D8D52390C771B0C3D3BEB7D980DFD /* Pods-UIKitten Catalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIKitten Catalog.debug.xcconfig"; sourceTree = "<group>"; };
 		F5B7117D183947B07F8759FA68B13A96 /* XShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/XShapeRenderer.swift; sourceTree = "<group>"; };
 		F6F83904BB11728495F4C8E6A8428274 /* Pods-UIKitten Catalog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UIKitten Catalog-umbrella.h"; sourceTree = "<group>"; };
@@ -581,9 +589,18 @@
 		6166626A316E8C9008F6BD1BE1D4C8E4 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				DC0CABE3CD6F018B6B08894140C393D3 /* UIKitten */,
+				663379869E8C23A2E45DAEAD8D16CDA8 /* UIKitten */,
 			);
 			name = Charts;
+			sourceTree = "<group>";
+		};
+		663379869E8C23A2E45DAEAD8D16CDA8 /* UIKitten */ = {
+			isa = PBXGroup;
+			children = (
+				71259CA79C04723B20B3EF4E863A0705 /* Charts */,
+			);
+			name = UIKitten;
+			path = UIKitten;
 			sourceTree = "<group>";
 		};
 		6883AE366FF8C6A1ADF3F5C15E4E9E88 /* Support Files */ = {
@@ -777,6 +794,20 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		71259CA79C04723B20B3EF4E863A0705 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				3743BC3C9988541206C60278F6D654C4 /* BarChart.swift */,
+				69546C10F41EAA943AF1B8109CAD1C43 /* BubbleChart.swift */,
+				DC0907B370BF87CBDBD56545DF8430BD /* LineChart.swift */,
+				2C674917B1C224E260E55E5287656858 /* PieChart.swift */,
+				389B7F5387B18C88F52F67DB17CF3B91 /* RadarChart.swift */,
+				AA08B212861262008699EC44ED6F0660 /* ScatterChart.swift */,
+			);
+			name = Charts;
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		777B2648D7A05D1D15D2E45926B814AB /* UIKitten */ = {
 			isa = PBXGroup;
 			children = (
@@ -907,25 +938,6 @@
 			path = "../Target Support Files/Charts";
 			sourceTree = "<group>";
 		};
-		DC0CABE3CD6F018B6B08894140C393D3 /* UIKitten */ = {
-			isa = PBXGroup;
-			children = (
-				E83181E7BDB3CE82E1736B341A996C3B /* Charts */,
-			);
-			name = UIKitten;
-			path = UIKitten;
-			sourceTree = "<group>";
-		};
-		E83181E7BDB3CE82E1736B341A996C3B /* Charts */ = {
-			isa = PBXGroup;
-			children = (
-				45935DD75DD03AF2815B0D7F52262632 /* BarChart.swift */,
-				F4F96C58B7EA1383DB6261686E1592D0 /* BubbleChart.swift */,
-			);
-			name = Charts;
-			path = Charts;
-			sourceTree = "<group>";
-		};
 		EC1356A24497664D59A499F4D8B4C405 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1043,7 +1055,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4DBBFBBDE38C17D6EC1E9F613E8F00A /* Build configuration list for PBXNativeTarget "UIKitten" */;
 			buildPhases = (
-				DFE9AA6EC80158D139B00D9958B573AF /* Sources */,
+				F5BFF1FEDEED6E897947F63050832A50 /* Sources */,
 				5D5834A95E12BA98442C5ABEF02184C3 /* Frameworks */,
 				C1ECD60495EE3512F9B91FE0A1E79F62 /* Resources */,
 				B21C38485D3A557195B25538DC4F372B /* Headers */,
@@ -1160,41 +1172,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFE9AA6EC80158D139B00D9958B573AF /* Sources */ = {
+		F5BFF1FEDEED6E897947F63050832A50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5576BA91D4AC373C9A1A57EE92D8ED63 /* Align.swift in Sources */,
-				4F2248C6E895F067DCF23EE6C29EB970 /* BarChart.swift in Sources */,
-				F49D64E7AA086B9F11BFE75F89FD89AA /* BaseCollectionViewCell.swift in Sources */,
-				A27773AAD499768C21B83238E5E78712 /* BubbleChart.swift in Sources */,
-				9594306BAF48A6F2CFC29BF735E4F01A /* Button+Icon.swift in Sources */,
-				6F137BA5B868231EAE5A2E4662872590 /* Button.swift in Sources */,
-				BB61417A186AFCD64E557A7F0E4297BB /* ButtonType.swift in Sources */,
-				27DF224BC863E4494FBB69BF644E9EBB /* Colors.swift in Sources */,
-				650370C2BD6FF9149B56E9CDBA7433A7 /* EmailField.swift in Sources */,
-				2F83B8D40628183BA3790F0FEC76B6A3 /* GroupedButtons.swift in Sources */,
-				B1B01B2ACFED74F308725C78EE9482F7 /* ImagePosition.swift in Sources */,
-				908BFF4174D4809DD8E95000B1B1494A /* ImageView.swift in Sources */,
-				AAC08547569DDF031A39192AC3B5479F /* Item.swift in Sources */,
-				55B22D291CF830C46E48F585806746D0 /* ListItem.swift in Sources */,
-				5962C194F073CE54D637D7E6CDB24D7A /* PasswordField.swift in Sources */,
-				17394908156737D73A468055D82E2E43 /* Print.swift in Sources */,
-				64BE467400BD505D143791031B357CCE /* Size.swift in Sources */,
-				EE817D57B1220EA08C12D1A2EDFBF41E /* Style.swift in Sources */,
-				89F1043931E8937352508A302B529BC2 /* SubtitleCollectionViewCell.swift in Sources */,
-				3322932009D32321F1CFAA9F40FFAB8F /* TableController.swift in Sources */,
-				BA81F75BB2390C57CE65343E66F89FD2 /* TextField.swift in Sources */,
-				A7C416EC165C45A78A7A01EC061C82F0 /* TextFieldType.swift in Sources */,
-				C0EAFCECC7372C795A24FFA298F8EBFF /* UIButton+Color.swift in Sources */,
-				3F008287779112A3FDB611D03FD15104 /* UIColor+RGB.swift in Sources */,
-				B1DBA1A3A2F28FADAC344BC065BA1D80 /* UIController+Rotation.swift in Sources */,
-				8A439F8200BB76BC4C5A3B25B4F8315B /* UIKitten-dummy.m in Sources */,
-				61163FF50571FD3ADD6AEB616D94828B /* UIView+Align.swift in Sources */,
-				EAA82A1F15BDB4D0554522B2B61882B5 /* UIView+Border.swift in Sources */,
-				AC8675A15663A0F417ED766D54122486 /* UIView+ListItem.swift in Sources */,
-				F96B107875993F69369E3685B8A042C8 /* UsernameField.swift in Sources */,
-				2AEDFCAC84712B96AEC4B6E4919673A3 /* Validation.swift in Sources */,
+				D62705B03A5B31F54578B5EBFA610716 /* Align.swift in Sources */,
+				2758BD9C88FFBB9F0A2FC2B86EDD193F /* BarChart.swift in Sources */,
+				AC6C6CDA86C7B47E29F20F11A3327E17 /* BaseCollectionViewCell.swift in Sources */,
+				96917EF9EB136148F8489CAB330C6FB3 /* BubbleChart.swift in Sources */,
+				63795E6633541CE3ED9A107447A56CD2 /* Button+Icon.swift in Sources */,
+				AAD5ACF23274B5877603F2F0ED2FCE07 /* Button.swift in Sources */,
+				7BA84CB0260FF9C5D67778924731BC2E /* ButtonType.swift in Sources */,
+				E46482AF8BA4D0C9C63F4041F0C12C91 /* Colors.swift in Sources */,
+				1B0576F34B86782E9A7208E361BC3A6D /* EmailField.swift in Sources */,
+				515B2A80DDA595569EC6FE6BBC9A359A /* GroupedButtons.swift in Sources */,
+				19EAD37C8BC1EFEE2AB6DCC53C3EAC02 /* ImagePosition.swift in Sources */,
+				2912C76DBD952457D64EC142506E562F /* ImageView.swift in Sources */,
+				02C68F0A34EB6512AE12232B26B6BC54 /* Item.swift in Sources */,
+				9DDC1FEE5688500E564F6A7E771CDD5D /* LineChart.swift in Sources */,
+				0A176BD06C530539256E21EE7FCF237A /* ListItem.swift in Sources */,
+				B8C28F973660FCAAE9591870D6C48CE6 /* PasswordField.swift in Sources */,
+				5B32830D01CED9505831ABF82BDD7EB9 /* PieChart.swift in Sources */,
+				A9EFAC2080FB1F31599763A113CA6206 /* Print.swift in Sources */,
+				23B469F4DF981B43265A36B9FDC37386 /* RadarChart.swift in Sources */,
+				CE27F0E2E92393FAB944CDFFC21E1CFA /* ScatterChart.swift in Sources */,
+				B32A15F4641C7A04CE25FA835A911B56 /* Size.swift in Sources */,
+				83EE55BFA9C18CF279A5B04C58788CDD /* Style.swift in Sources */,
+				6D50A07F81FF3D9A1F2FB281AC686847 /* SubtitleCollectionViewCell.swift in Sources */,
+				620035C7D60B55AED4CC3EA486085EBA /* TableController.swift in Sources */,
+				B6C76D09D7F2D6E98F81E953B756D848 /* TextField.swift in Sources */,
+				B27FE1565B8C4E7A2B2F276700A97706 /* TextFieldType.swift in Sources */,
+				F4D926B02ECAEC37BF2562A62DEFA96C /* UIButton+Color.swift in Sources */,
+				BC89F432CE5E8204A51AE31D9697E1A7 /* UIColor+RGB.swift in Sources */,
+				07832B8D65AC8983DE6CD9156B64A94E /* UIController+Rotation.swift in Sources */,
+				7DD5C784DF181FA2056B3641607BD26C /* UIKitten-dummy.m in Sources */,
+				368FEF44691AE5BF7F1AA2003D0176BA /* UIView+Align.swift in Sources */,
+				17EDD8AA2B18AAD69F12E4EA2869D992 /* UIView+Border.swift in Sources */,
+				1BD79885A34E70EE3FB1237524F04852 /* UIView+ListItem.swift in Sources */,
+				015E37B412D108590EF48BD812265991 /* UsernameField.swift in Sources */,
+				182DD20F10DFE95492B11DC4A885AA3F /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

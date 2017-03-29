@@ -13,6 +13,8 @@ class GroupedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        
         let firstButton = Button(icon: .arrowLeft).type(.danger)
         let secondButton = Button(title: "Hello!").type(.primary)
         let thirdButton = Button(icon: .arrowRight).type(.info)

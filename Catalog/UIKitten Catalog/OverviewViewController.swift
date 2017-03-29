@@ -12,18 +12,7 @@ class OverviewViewController: TableController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // TODO: architect a way to default to 100% of container if not specified otherwise
-        // TODO: architect a way to specify width and height in points
-
-        let imageView = ImageView(image: #imageLiteral(resourceName: "tableImage"))
-        
-        // Height is nil as it doesn't have an intrinsic size
-        let barView = BarChart(frame: CGRect(x: 0, y: 0, width: 260, height: 120))
-        let bubbleView = BubbleChart(frame: CGRect(x: 0, y: 0, width: 260, height: 120))
-        
         items = [
-            [bubbleView],
             [Item(title: "Image title with subtitle", subtitle: "This is so amazing I'm not even able to understand how it works. Wonderful!", image: #imageLiteral(resourceName: "tableImage"), action: {
                 cell, selected in
                 cell?.footerIsVisible = selected
@@ -33,8 +22,8 @@ class OverviewViewController: TableController {
              Button(icon: .arrowUp, title: "Up").align([.middle, .center]).style(.rounded).type(.danger),
              Button(icon: .arrowDown).align([.middle, .center]).style(.dropShadow).type(.info),
              Button(icon: .birthdayCake, title: "This is a\nbirthday cake.").align([.middle, .center]).type(.success)],
-            [imageView],
-            [barView]
+            [ImageView(image: #imageLiteral(resourceName: "tableImage"))],
+            [BarChart(frame: CGRect(x: 0, y: 0, width: 260, height: 120))]
         ]
     }
 }
