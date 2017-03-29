@@ -6,6 +6,8 @@
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
+import UIKit
+
 public class Item : ListItem {
     public init(title: String? = nil, subtitle: String? = nil, image: UIImage? = nil, view: UIView? = nil, action: ((_ cell: BaseCollectionViewCell?, _ selected: Bool) -> Void)? = nil) {
         _title = title

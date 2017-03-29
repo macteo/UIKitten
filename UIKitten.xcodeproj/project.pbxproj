@@ -58,15 +58,15 @@
 		952013441E7FC6B3001A36C5 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		952013471E7FC733001A36C5 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9520134B1E7FCDD4001A36C5 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		95494E671E73424D00D6AF3B /* EmailField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		95494E671E73424D00D6AF3B /* EmailField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailField.swift; path = ../Fontawesome/EmailField.swift; sourceTree = "<group>"; };
 		95494E691E73447400D6AF3B /* UIKitten.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UIKitten.xcassets; sourceTree = "<group>"; };
 		955565581E8120AB00AE456F /* UIView+Align.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Align.swift"; sourceTree = "<group>"; };
 		9556578B1E72BC5600D28D73 /* TextFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 		955A35A41E8A92B700A574A5 /* BubbleChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BubbleChart.swift; path = UIKitten/Charts/BubbleChart.swift; sourceTree = SOURCE_ROOT; };
 		955E71621E7972EC00369EFE /* ImagePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePosition.swift; sourceTree = "<group>"; };
 		955E71641E79731400369EFE /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		955E71661E79732E00369EFE /* PasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
-		955E71681E79734500369EFE /* UsernameField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsernameField.swift; sourceTree = "<group>"; };
+		955E71661E79732E00369EFE /* PasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordField.swift; path = ../Fontawesome/PasswordField.swift; sourceTree = "<group>"; };
+		955E71681E79734500369EFE /* UsernameField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsernameField.swift; path = ../Fontawesome/UsernameField.swift; sourceTree = "<group>"; };
 		955E716A1E7973D500369EFE /* GroupedButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedButtons.swift; sourceTree = "<group>"; };
 		9582B1551E716BEB001C7268 /* UIKitten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9582B1571E716BEB001C7268 /* UIKitten.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIKitten.h; path = ../UIKitten.h; sourceTree = "<group>"; };

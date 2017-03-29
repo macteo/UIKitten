@@ -6,6 +6,8 @@
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
+import CoreGraphics
+
 public struct Align: OptionSet {
     public let rawValue: Int
     public init(rawValue: Int) {

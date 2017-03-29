@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 public class Button: UIButton, Alignable {
 

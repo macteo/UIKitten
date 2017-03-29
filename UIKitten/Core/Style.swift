@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 public enum Style : String {
     case normal     = "normal"

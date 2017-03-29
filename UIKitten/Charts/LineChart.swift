@@ -6,7 +6,9 @@
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
+#if COCOAPODS
 import Charts
+#endif
 
 public class LineChart : LineChartView, Alignable {
     

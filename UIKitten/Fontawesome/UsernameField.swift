@@ -7,7 +7,9 @@
 //
 
 import UIKit
-import FontAwesome_swift
+#if COCOAPODS
+    import FontAwesome_swift
+#endif
 
 public class UsernameField: TextField {
     override func commonInit() {

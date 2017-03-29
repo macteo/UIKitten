@@ -7,7 +7,9 @@
 //
 
 import UIKit
+#if COCOAPODS
 import FontAwesome_swift
+#endif
 
 public class EmailField: TextField {
     override func commonInit() {

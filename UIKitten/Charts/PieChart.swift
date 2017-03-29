@@ -6,7 +6,10 @@
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
-import Charts
+#if COCOAPODS
+    import Charts
+#endif
+
 
 public class PieChart : PieChartView, Alignable {
     

@@ -6,7 +6,9 @@
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
-import Charts
+#if COCOAPODS
+    import Charts
+#endif
 
 public class RadarChart : RadarChartView, Alignable {
     
@@ -41,5 +43,3 @@ public class RadarChart : RadarChartView, Alignable {
         self.data = data
     }
 }
-
-

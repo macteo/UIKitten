@@ -6,7 +6,7 @@
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIColor {
     

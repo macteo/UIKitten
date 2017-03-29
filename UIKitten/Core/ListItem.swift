@@ -6,6 +6,8 @@
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
+import UIKit
+
 public protocol ListItem {
     func itemTitle() -> String?
     func itemSubtitle() -> String?
