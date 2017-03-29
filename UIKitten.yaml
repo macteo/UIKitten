@@ -1,0 +1,11 @@
+name: UIKitten
+identifier: com.dolomate.uikitten
+resources: Assets/playground/
+cover: icon.png
+deployment_target: ios10.0
+imports:
+ - UIKit
+chapters:
+  - name: UIKitten
+    edge_to_edge_live_view: false
+    live_view_mode: "VisibleByDefault"
