@@ -14,7 +14,13 @@ protocol BaseCollectionViewCellDelegate {
 
 open class BaseCollectionViewCell: UICollectionViewCell {
     
-    public var padding = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4) {
+    public var minHeight : CGFloat = 44 {
+        didSet {
+            minimumCellHeightConstraint?.constant = minHeight
+        }
+    }
+    
+    public var padding = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 4) {
         didSet {
             // Changing padding at runtime is a good idea?
         }
@@ -26,7 +32,13 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     var accessoryViewWidth : NSLayoutConstraint?
     var accessoryViewTrailingMargin : NSLayoutConstraint?
     var accessoryViewCenterYConstraint : NSLayoutConstraint?
-    let minimumCellHeight : CGFloat = 44
+    
+    var mainViewCenterYConstraint : NSLayoutConstraint?
+    
+    var separatorLeadingMargin : NSLayoutConstraint?
+    var separatorTrailingMargin : NSLayoutConstraint?
+    
+    var minimumCellHeightConstraint : NSLayoutConstraint?
     
     var containedView : UIView? {
         didSet {
@@ -38,6 +50,13 @@ open class BaseCollectionViewCell: UICollectionViewCell {
                     oldValue?.removeFromSuperview()
                 }
             }
+        }
+    }
+    
+    public var separatorInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0) {
+        didSet {
+            separatorLeadingMargin?.constant = separatorInset.left
+            separatorTrailingMargin?.constant = separatorInset.right
         }
     }
     
@@ -101,6 +120,9 @@ open class BaseCollectionViewCell: UICollectionViewCell {
             contentView.removeConstraint(contentViewWidth)
         }
         
+        minimumCellHeightConstraint = NSLayoutConstraint(item: contentView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: minHeight)
+        contentView.addConstraint(minimumCellHeightConstraint!)
+        
         footerView.accessibilityIdentifier = "CellFooter"
         contentView.accessibilityIdentifier = "CellContentView"
         accessibilityIdentifier = "BaseCollectionViewCell"
@@ -128,9 +150,19 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         }
         separator.accessibilityIdentifier = "CellSeparator"
         separator.frame = CGRect(x: padding.left, y: bounds.size.height - 1.0 / UIScreen.main.scale, width: bounds.size.width - padding.left, height: 1.0 / UIScreen.main.scale)
-        separator.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
+        separator.translatesAutoresizingMaskIntoConstraints = false
+        
         separator.backgroundColor = .defaultTableSelected
         contentView.addSubview(separator)
+        
+        separatorLeadingMargin = NSLayoutConstraint(item: separator, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: separatorInset.left)
+        contentView.addConstraint(separatorLeadingMargin!)
+        
+        separatorTrailingMargin = NSLayoutConstraint(item: separator, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: separatorInset.left)
+        contentView.addConstraint(separatorTrailingMargin!)
+        
+        contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: separatorInset.bottom))
+        separator.addConstraint(NSLayoutConstraint(item: separator, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 1.0 / UIScreen.main.scale))
         
         let accessoryImageView = UIImageView(frame: accessoryView.bounds)
         accessoryImageView.tintColor = tintColor
@@ -154,7 +186,12 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         
         contentView.addConstraint(NSLayoutConstraint(item: contentView, attribute: .leading, relatedBy: .equal, toItem: mainView, attribute: .leading, multiplier: 1, constant: -padding.left))
         contentView.addConstraint(NSLayoutConstraint(item: mainView, attribute: .trailing, relatedBy: .equal, toItem: accessoryView, attribute: .leading, multiplier: 1, constant: 0))
-        contentView.addConstraint(NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .equal, toItem: mainView, attribute: .top, multiplier: 1, constant: -padding.top))
+        contentView.addConstraint(NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .lessThanOrEqual, toItem: mainView, attribute: .top, multiplier: 1, constant: -padding.top))
+        
+        mainViewCenterYConstraint = NSLayoutConstraint(item: contentView, attribute: .centerY, relatedBy: .equal, toItem: mainView, attribute: .centerY, multiplier: 1, constant: 0)
+        mainViewCenterYConstraint!.priority = 1
+        
+        contentView.addConstraint(mainViewCenterYConstraint!)
         
         accessoryViewCenterYConstraint = NSLayoutConstraint(item: accessoryView, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 0)
         contentView.addConstraint(accessoryViewCenterYConstraint!)
@@ -163,7 +200,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
             customView.removeFromSuperview()
         }
         
-        customView.frame = CGRect(x: 0, y: minimumCellHeight, width: bounds.size.width, height: 0)
+        customView.frame = CGRect(x: 0, y: minHeight, width: bounds.size.width, height: 0)
         customView.translatesAutoresizingMaskIntoConstraints = false
         customView.backgroundColor = .clear
         contentView.addSubview(customView)
@@ -176,7 +213,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
             footerView.removeFromSuperview()
         }
         
-        footerView.frame = CGRect(x: 0, y: minimumCellHeight, width: bounds.size.width, height: 60)
+        footerView.frame = CGRect(x: 0, y: minHeight, width: bounds.size.width, height: 60)
         footerView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(footerView)
         

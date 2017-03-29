@@ -132,7 +132,7 @@ public class TextField: UITextField, Alignable {
         }
     }
     
-    public var align : Align = [.top, .left] {
+    public var align : Align? {
         didSet {
             // TODO: eventually support alignment when adding it as subview
         }
@@ -213,6 +213,9 @@ public class TextField: UITextField, Alignable {
         textColor = currentType.titleColor
         tintColor = currentType.borderColor
         
+        leftView?.subviews.first?.tintColor = currentType.borderColor
+        rightView?.subviews.first?.tintColor = currentType.borderColor
+        
         if let _ = font?.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
             font = UIFont.preferredFont(forTextStyle: size.textStyle)
         }
@@ -220,6 +223,10 @@ public class TextField: UITextField, Alignable {
     }
     
     @objc func onEditingChange(field: UITextField) {
+        guard field.text != "" else {
+            validationType = nil
+            return
+        }
         if let messages = validationMessages {
             if messages.count > 0 {
                 if isEditing {
@@ -233,6 +240,8 @@ public class TextField: UITextField, Alignable {
         } else {
             validationType = nil
         }
+        
+        // TODO: if no content is provided clear the validationType
         
         updateBorder()
     }

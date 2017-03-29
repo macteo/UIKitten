@@ -1,14 +1,14 @@
 //
-//  BarChart.swift
+//  PieChart.swift
 //  UIKitten
 //
-//  Created by Matteo Gavagnin on 26/03/2017.
+//  Created by Matteo Gavagnin on 29/03/2017.
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
 import Charts
 
-public class BarChart : BarChartView, Alignable {
+public class PieChart : PieChartView, Alignable {
     
     // MARK: Alignable protocol
     
@@ -28,25 +28,17 @@ public class BarChart : BarChartView, Alignable {
         super.init(coder: aDecoder)
         commonInit()
     }
-
+    
     func commonInit() {
-        setViewPortOffsets(left: 0, top: 0, right: 0, bottom: 0)
         backgroundColor = .clear
-        fitBars = false
-        xAxis.enabled = false
-        leftAxis.enabled = false
-        rightAxis.enabled = false
-        pinchZoomEnabled = false
-        doubleTapToZoomEnabled = false
-        dragEnabled = false
         legend.enabled = false
         chartDescription?.enabled = false
         
-        let dataSet = BarChartDataSet(values: [BarChartDataEntry(x: 0, y: 1), BarChartDataEntry(x: 1, y: 0.2), BarChartDataEntry(x: 2, y: 1.2), BarChartDataEntry(x: 3, y: 2)], label: "")
-        let data = BarChartData(dataSet: dataSet)
-        data.barWidth = 1.0
+        let dataSet = PieChartDataSet(values: [PieChartDataEntry(value: 1), PieChartDataEntry(value: 0.2), PieChartDataEntry(value: 1.2), PieChartDataEntry(value: 2)], label: "")
+        let data = PieChartData(dataSet: dataSet)
         data.setValueTextColor(.clear)
         
         self.data = data
     }
 }
+

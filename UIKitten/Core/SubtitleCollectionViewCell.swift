@@ -117,7 +117,7 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         mainView.addConstraint(subtitleHeight!)
         
         // TODO: support cell size like buttons
-        titleLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         subtitleLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
         
         if thumbnailView.superview != nil {
@@ -132,7 +132,7 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         thumbnailViewWidth = NSLayoutConstraint(item: thumbnailView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: thumbnailViewSize)
         mainView.addConstraint(thumbnailViewWidth!)
         
-        thumbnailViewLeadingMargin = NSLayoutConstraint(item: mainView, attribute: .leading, relatedBy: .equal, toItem: thumbnailView, attribute: .leading, multiplier: 1, constant: -padding.left)
+        thumbnailViewLeadingMargin = NSLayoutConstraint(item: mainView, attribute: .leading, relatedBy: .equal, toItem: thumbnailView, attribute: .leading, multiplier: 1, constant: 0)
         mainView.addConstraint(thumbnailViewLeadingMargin!)
         mainView.addConstraint(NSLayoutConstraint(item: thumbnailView, attribute: .height, relatedBy: .equal, toItem: thumbnailView, attribute: .width, multiplier: 1, constant: 1))
         
@@ -190,7 +190,6 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         titleLabel.preferredMaxLayoutWidth = titleWidth
         titleHeight.constant = ceil(expectedTitleHeight)
     }
-
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         if let titleStyle = titleLabel.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {

@@ -19,52 +19,52 @@ UIKitten includes an opinionated selection of dependencies to don't reinvent the
 ### Components
 
 #### Buttons
-  - [x] Dynamic Size
-  - [x] Colors
-  - [x] Multiline text
-  - [x] Styles
-  - [x] Sizes
-  - [x] Icons
-  - [x] Grouped (still some issues on animations)
+- [x] Dynamic Size
+- [x] Colors
+- [x] Multiline text
+- [x] Styles
+- [x] Sizes
+- [x] Icons
+- [x] Grouped (still some issues on animations)
 
 #### Forms
-  - [x] Text field design
-  - [x] Username field
-  - [x] Password field
-  - [x] Email field
-  - [x] Validations with regexes and error messages
-  - [x] Icons
-  - [ ] Styles
-  - [ ] Sizes
-  - [ ] Text area, autoresizable, markdown syntax highlight
-  - [ ] Toggle
-  - [ ] Color picker
-  - [ ] Time picker
-  - [ ] Date time picker
-  - [ ] Date picker
-  - [ ] Interval picker
-  - [ ] Select
-  - [ ] Date selection
-  - [ ] Photo selection
-  - [ ] Slider
+- [x] Text field design
+- [x] Username field
+- [x] Password field
+- [x] Email field
+- [x] Validations with regexes and error messages
+- [x] Icons
+- [ ] Styles
+- [ ] Sizes
+- [ ] Text area, autoresizable, markdown syntax highlight
+- [ ] Toggle
+- [ ] Color picker
+- [ ] Time picker
+- [ ] Date time picker
+- [ ] Date picker
+- [ ] Interval picker
+- [ ] Select
+- [ ] Date selection
+- [ ] Photo selection
+- [ ] Slider
 
 #### Charts
-  - [ ] Line.
-  - [ ] Multiline.
-  - [ ] Bars.
-  - [ ] Pie.
-  - [ ] Scatter.
-  - [ ] Animations.
+- [ ] Line (single, multiple, filled, bézier, timeline).
+- [ ] Bars (horizontal, vertical, stacked).
+- [ ] Pie (full, half).
+- [ ] Scatter.
+- [ ] Bubble.
+- [ ] Radar.
 
 #### Table Controller
 A modern `UITableViewController` replacement based on `UICollectionViewController` and auto layout.
 
+- [x] Simplified data source.
+- [ ] Dynamic footer expansion on tap.
 - [ ] Edit mode (reorder, delete).
 - [ ] Drag to reorder.
 - [ ] Delete button.
 - [ ] Swipe actions
-- [x] Dynamic footer expansion on tap.
-- [x] Simplified data source.
 
 #### Cells
 - [x] Title.
@@ -73,6 +73,8 @@ A modern `UITableViewController` replacement based on `UICollectionViewControlle
 - [x] Title, subtitle and image.
 - [x] Disclosure indicator.
 - [x] Footer.
+- [x] Contained view.
+- [x] Actions.
 
 #### Cards
 - [ ] Map.

@@ -168,7 +168,15 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
                 
         cell.desiredSize = CGSize(width: width, height: 44)
 
+        if var itemView = item.itemView() as? Alignable {
+            if itemView.align == nil {
+                itemView.align = [.top, .left]
+            }
+        }
+        
         cell.containedView = item.itemView()
+        
+        
         cell.layoutIfNeeded()
         
         return cell

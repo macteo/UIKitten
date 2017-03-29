@@ -20,10 +20,11 @@ public struct Align: OptionSet {
 }
 
 public protocol Alignable {
-    var align : Align { get }
-    var padding : Int { get }
-    var width : Width? { get }
-    var height : Height? { get }
+    var align : Align? { get set }
+    // TODO: move to UIEdgeInsets
+    var padding : Int { get set }
+    var width : Width? { get set }
+    var height : Height? { get set }
 }
 
 public enum Width {

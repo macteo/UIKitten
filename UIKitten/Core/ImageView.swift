@@ -14,7 +14,7 @@ open class ImageView: UIImageView, Alignable {
 
     // Alignable protocol
     public var padding : Int = 0
-    public var align : Align = [.top, .left]
+    public var align : Align? = [.top, .left]
 
     var heightConstraint : NSLayoutConstraint?
     

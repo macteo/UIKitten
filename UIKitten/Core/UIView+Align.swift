@@ -14,8 +14,11 @@ extension UIView {
         
         if let alignable = self as? Alignable {
             translatesAutoresizingMaskIntoConstraints = false
-            let align = alignable.align
+            
             let padding = CGFloat(alignable.padding)
+            
+            // TODO: support optional value so we don't do anything and le the autolayout do its job
+            guard let align = alignable.align else { return }
             
             if align.contains(.top) {
                 superview.addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: superview, attribute: .top, multiplier: 1, constant: padding))
@@ -54,8 +57,6 @@ extension UIView {
                 superview.addConstraint(NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: superview, attribute: .leading, multiplier: 1, constant: padding))
                 superview.addConstraint(NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: superview, attribute: .trailing, multiplier: 1, constant: -padding))
             }
-            
-            // TODO: support optional value so we don't do anything and le the autolayout do its job
             
             if let width = alignable.width {
                 switch width {
@@ -103,5 +104,5 @@ extension UIView {
             superview.addConstraint(NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: superview, attribute: .leading, multiplier: 1, constant: 0))
             superview.addConstraint(NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: superview, attribute: .trailing, multiplier: 1, constant: 0))
         }
-    }
+    }    
 }

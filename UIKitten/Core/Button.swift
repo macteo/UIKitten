@@ -309,7 +309,6 @@ public class Button: UIButton, Alignable {
     
     func commonInit() {
         type = .normal
-        align = [.top, .left]
         style = .normal
         size = .normal
         multiline = true
@@ -320,7 +319,7 @@ public class Button: UIButton, Alignable {
         titleLabel?.textAlignment = .center
         
         if #available(iOS 10, *) { } else {
-            // Only for iOS 8 and 9
+            // Only for iOS 9
             NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
         }
         
@@ -343,8 +342,17 @@ public class Button: UIButton, Alignable {
         
     public var action : ((Void) -> Void)?
     
-    public var align : Align = [.top, .left]
-    public var padding : Int = 0
+    public var align : Align? {
+        didSet {
+            layoutIfNeeded()
+        }
+    }
+    
+    public var padding : Int = 0 {
+        didSet {
+            layoutIfNeeded()
+        }
+    }
     
     public func tap(_ action: @escaping (Void) -> Void) -> Button {
         self.action = action
@@ -403,5 +411,10 @@ public class Button: UIButton, Alignable {
     public func imagePosition(_ position: ImagePosition) -> Button {
         self.imagePosition = position
         return self
+    }
+    
+    override public func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        configureAlignConstraints()
     }
 }
