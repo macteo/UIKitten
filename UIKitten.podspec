@@ -9,7 +9,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.source                = { git: 'https://github.com/macteo/uikitten.git', tag: "v#{s.version}"}
   s.requires_arc          = true
-  # s.frameworks            = [ 'Photos', 'CoreData' ]
   s.default_subspec       = 'Core'
 
   s.subspec 'Core' do |core|
@@ -20,13 +19,13 @@ Pod::Spec.new do |s|
 
   s.subspec 'Charts' do |charts|
     charts.dependency     'UIKitten/Core'
-    charts.dependency     'Charts'	
+    charts.dependency     'Charts'
     charts.source_files = 'UIKitten/Charts/**/*.swift'
   end
 
-  s.subspec 'Fontawesome' do |fontawesome|
+  s.subspec 'Icons' do |fontawesome|
     fontawesome.dependency     'UIKitten/Core'
-    fontawesome.source_files = 'UIKitten/Fontawesome/**/*.swift'	
-	fontawesome.dependency     'FontAwesome.swift'	
+    fontawesome.source_files = 'UIKitten/Icons/**/*.swift'
+    fontawesome.dependency     'FontAwesome.swift'
   end
 end

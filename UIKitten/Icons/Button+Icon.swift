@@ -6,7 +6,10 @@
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
-import FontAwesome_swift
+import UIKit
+#if COCOAPODS
+    import FontAwesome_swift
+#endif
 
 public extension Button {
     

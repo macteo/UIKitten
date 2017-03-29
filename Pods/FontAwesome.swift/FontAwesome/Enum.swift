@@ -21,6 +21,9 @@
 // THE SOFTWARE.
 
 /// An enumaration of FontAwesome icon names.
+
+import Foundation
+
 public enum FontAwesome: String {
     case fiveHundredPixels = "\u{f26e}"
     case adjust = "\u{f042}"

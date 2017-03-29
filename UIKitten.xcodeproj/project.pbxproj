@@ -49,7 +49,6 @@
 /* Begin PBXFileReference section */
 		15CCB65608FADAAF4D56F9EC /* Pods_Afflato_Catalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Afflato_Catalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ECCC53C869FB724FEAD5E2E /* Pods_Afflato.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Afflato.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		27C3032683786F46A6D50539 /* Pods-Afflato.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afflato.release.xcconfig"; path = "Pods/Target Support Files/Pods-Afflato/Pods-Afflato.release.xcconfig"; sourceTree = "<group>"; };
 		388DC3FDFDDD1DED8D7CFF0D /* Pods-UIKitten.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitten.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitten/Pods-UIKitten.release.xcconfig"; sourceTree = "<group>"; };
 		6F2C8B15BFFC4F0EE8DDFBD8 /* Pods-UIKitten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitten/Pods-UIKitten.debug.xcconfig"; sourceTree = "<group>"; };
 		9505F78B1E719B0C004D2476 /* UIButton+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Color.swift"; sourceTree = "<group>"; };
@@ -58,15 +57,15 @@
 		952013441E7FC6B3001A36C5 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		952013471E7FC733001A36C5 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9520134B1E7FCDD4001A36C5 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		95494E671E73424D00D6AF3B /* EmailField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailField.swift; path = ../Fontawesome/EmailField.swift; sourceTree = "<group>"; };
+		95494E671E73424D00D6AF3B /* EmailField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailField.swift; path = ../Icons/EmailField.swift; sourceTree = "<group>"; };
 		95494E691E73447400D6AF3B /* UIKitten.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UIKitten.xcassets; sourceTree = "<group>"; };
 		955565581E8120AB00AE456F /* UIView+Align.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Align.swift"; sourceTree = "<group>"; };
 		9556578B1E72BC5600D28D73 /* TextFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 		955A35A41E8A92B700A574A5 /* BubbleChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BubbleChart.swift; path = UIKitten/Charts/BubbleChart.swift; sourceTree = SOURCE_ROOT; };
 		955E71621E7972EC00369EFE /* ImagePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePosition.swift; sourceTree = "<group>"; };
 		955E71641E79731400369EFE /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		955E71661E79732E00369EFE /* PasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordField.swift; path = ../Fontawesome/PasswordField.swift; sourceTree = "<group>"; };
-		955E71681E79734500369EFE /* UsernameField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsernameField.swift; path = ../Fontawesome/UsernameField.swift; sourceTree = "<group>"; };
+		955E71661E79732E00369EFE /* PasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordField.swift; path = ../Icons/PasswordField.swift; sourceTree = "<group>"; };
+		955E71681E79734500369EFE /* UsernameField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsernameField.swift; path = ../Icons/UsernameField.swift; sourceTree = "<group>"; };
 		955E716A1E7973D500369EFE /* GroupedButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedButtons.swift; sourceTree = "<group>"; };
 		9582B1551E716BEB001C7268 /* UIKitten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9582B1571E716BEB001C7268 /* UIKitten.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIKitten.h; path = ../UIKitten.h; sourceTree = "<group>"; };
@@ -86,14 +85,13 @@
 		95C52E731E72A111001B87DC /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		95C52E751E72A123001B87DC /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		95D8352C1E7707360048869E /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
-		95E084D51E76BC84001DB6BA /* Button+Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Button+Icon.swift"; path = "../Fontawesome/Button+Icon.swift"; sourceTree = "<group>"; };
+		95E084D51E76BC84001DB6BA /* Button+Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Button+Icon.swift"; path = "../Icon/Button+Icon.swift"; sourceTree = "<group>"; };
 		95E084D71E76E910001DB6BA /* Align.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Align.swift; sourceTree = "<group>"; };
 		95E988711E8803E600DAAD21 /* BarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarChart.swift; path = UIKitten/Charts/BarChart.swift; sourceTree = SOURCE_ROOT; };
 		95FD128C1E83945600CF0FE7 /* UIView+ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ListItem.swift"; sourceTree = "<group>"; };
 		95FD128E1E8399EB00CF0FE7 /* UIController+Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIController+Rotation.swift"; sourceTree = "<group>"; };
 		95FD12901E839AB100CF0FE7 /* Print.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
 		B771B48E9331E5AD62EC9D57 /* Pods_UIKitten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0A6C8107F1BA5CD4ECF7F1F /* Pods-Afflato.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afflato.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Afflato/Pods-Afflato.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +109,6 @@
 		36779F2E6676244956278990 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E0A6C8107F1BA5CD4ECF7F1F /* Pods-Afflato.debug.xcconfig */,
-				27C3032683786F46A6D50539 /* Pods-Afflato.release.xcconfig */,
 				6F2C8B15BFFC4F0EE8DDFBD8 /* Pods-UIKitten.debug.xcconfig */,
 				388DC3FDFDDD1DED8D7CFF0D /* Pods-UIKitten.release.xcconfig */,
 			);

@@ -8,7 +8,7 @@
 
 import UIKit
 #if COCOAPODS
-import FontAwesome_swift
+    import FontAwesome_swift
 #endif
 
 public class EmailField: TextField {
