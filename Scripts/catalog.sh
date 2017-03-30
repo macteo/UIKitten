@@ -1,0 +1,2 @@
+cd ../Catalog
+pod install
