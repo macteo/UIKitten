@@ -241,8 +241,6 @@ public class TextField: UITextField, Alignable {
             validationType = nil
         }
         
-        // TODO: if no content is provided clear the validationType
-        
         updateBorder()
     }
     
