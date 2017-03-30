@@ -8,8 +8,13 @@
 
 import UIKit
 
-public class GroupedButtons : UIView {
+public class GroupedButtons : UIView, Alignable {
     fileprivate var heightConstraint : NSLayoutConstraint?
+    
+    public var width: Width?
+    public var height: Height?
+    public var align : Align?
+    public var padding : Int = 0
     
     public var type : ButtonType = .normal {
         didSet {
