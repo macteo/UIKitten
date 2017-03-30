@@ -15,7 +15,6 @@ class OverviewViewController: TableController {
         items = [
             [Item(title: "Image title with subtitle", subtitle: "This is so amazing I'm not even able to understand how it works. Wonderful!", image: #imageLiteral(resourceName: "tableImage"), action: {
                 cell, selected in
-                cell?.footerIsVisible = selected
             })],
             [Button(icon: .arrowRight, title: "Right").imagePosition(.right).align([.middle, .right]).type(.primary),
              Button(icon: .arrowLeft, title: "Left").align([.middle, .left]).type(.warning),

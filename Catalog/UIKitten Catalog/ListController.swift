@@ -17,7 +17,7 @@ class ListController: TableController {
         items = [
             [Item(title: "Image title with subtitle", subtitle: "This is so amazing I'm not even able to understand how it works. Wonderful!", image: #imageLiteral(resourceName: "tableImage"), action: {
                 cell, selected in
-                cell?.footerIsVisible = selected
+                
             })],
             [Item(title: "Hi")]
         ]
