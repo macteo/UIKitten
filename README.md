@@ -19,6 +19,9 @@ UIKitten includes an opinionated selection of dependencies to don't reinvent the
 ### Components
 
 #### Buttons
+
+<details><summary>Tap to view button details</summary><p>
+
 - [x] Dynamic Size
 - [x] Colors
 - [x] Multiline text
@@ -27,6 +30,8 @@ UIKitten includes an opinionated selection of dependencies to don't reinvent the
 - [x] Icons
 - [x] Grouped (still some issues on animations)
 
+</details>
+
 #### Forms
 - [x] Text field design
 - [x] Username field
@@ -34,7 +39,7 @@ UIKitten includes an opinionated selection of dependencies to don't reinvent the
 - [x] Email field
 - [x] Validations with regexes and error messages
 - [x] Icons
-- [ ] Styles
+- [ ] Styles (normal, rounded)
 - [ ] Sizes
 - [ ] Text area, autoresizable, markdown syntax highlight
 - [ ] Toggle
@@ -91,6 +96,11 @@ A modern `UITableViewController` replacement based on `UICollectionViewControlle
 - [ ] Profile.
 - [ ] Menu.
 - [ ] Timeline.
+
+#### UIAppearance
+
+- [ ] Coherent style through every standard controller based on theme colors.
+- [ ] Overridable theme colors.
 
 ### Simplified APIs
 
