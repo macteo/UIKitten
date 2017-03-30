@@ -36,17 +36,17 @@ class ViewController: UIViewController {
 
         let _ = Button(icon: .arrowRight, title: "Next".uppercased(), position: .left).type(.primary).align([.middle, .right]).add(to: view)
         
-        let _ = Button(title: "Anguria").align([.center, .bottom])
+        let anguria = Button(title: "Anguria").align([.center, .bottom])
                                         .padding(10)
                                         .style(.dropShadow)
-                                        .type(.danger)
+                                        .type(.info)
                                         .size(.large)
                                         .tap {
             
                                             let tableController = TableController()
                                             
                                             tableController.items = [
-                                                [Item(title: "Ciaone"), Item(title: "Merenda"), Item(title: "This title is way longer that usual, but the cell adapts itself so we can be sure that everything is in place")],
+                                                [Item(title: "Hello"), Item(title: "Dinner"), Item(title: "This title is way longer that usual, but the cell adapts itself so we can be sure that everything is in place")],
                                                 [Item(title: "Close", action: {
                                                     cell, selected in
                                                     if selected {
@@ -59,6 +59,19 @@ class ViewController: UIViewController {
                                             
                                             self.show(tableController, sender: nil)
         }.add(to: view)
+        
+        let counter = Counter(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        counter.value = 512
+        counter.valueString = "512.00 $"
+        counter.caption = "Sales"
+        let _ = counter.add(to: view)
+        
+        let badge = Badge(frame: CGRect(x: 0, y: 100, width: 100, height: 10))
+        let _ = badge.snap(to: anguria)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { 
+            badge.value = "!"
+        }
     }
 }
 

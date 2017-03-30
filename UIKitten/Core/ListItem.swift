@@ -11,6 +11,7 @@ import UIKit
 public protocol ListItem {
     func itemTitle() -> String?
     func itemSubtitle() -> String?
+    func itemValue() -> Int?
     func itemImage() -> UIImage?
     func itemImageUrl() -> URL?
     func itemAction() -> ((_ cell : Cell?, _ selected: Bool) -> Void)?

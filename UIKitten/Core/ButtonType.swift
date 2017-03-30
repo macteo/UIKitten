@@ -1,12 +1,11 @@
 //
-//  Type.swift
+//  ButtonType.swift
 //  UIKitten
 //
 //  Created by Matteo Gavagnin on 10/03/2017.
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 public enum ButtonType : String {

@@ -19,8 +19,9 @@ class ButtonsController: TableController {
         let warning = Button(icon: .exclamationTriangle, title: "Warning").type(.warning)
         let danger = Button(icon: .close, title: "Danger").type(.danger)
         let normalType = Button(icon: .adjust, title: "Normal")
+        let clean = Button(icon: .envelopeO, title: "Clean").type(.clean)
         
-        let types = [primary, info, success, warning, danger, normalType]
+        let types = [primary, info, success, warning, danger, normalType, clean]
         
         let extraSmall = Button(title: "Extra Small").align(.right).size(.extraSmall)
         let small = Button(title: "Small").align(.right).size(.small)
@@ -74,6 +75,8 @@ class ButtonsController: TableController {
 
         let grouped = [groupedButtons]
 
-        items = [types, sizes, alignment, lines, styles, actions, grouped]
+        let imageOnly = Button(icon: .camera).type(.clean).size(.small)
+        
+        items = [types, sizes, alignment, lines, styles, actions, grouped, [imageOnly]]
     }
 }

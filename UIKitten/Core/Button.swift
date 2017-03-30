@@ -83,6 +83,7 @@ public class Button: UIButton, Alignable {
             
             layer.borderColor = type.borderColor.cgColor
             layer.borderWidth = type.borderWidth
+            tintColor = type.titleColor
         }
     }
     

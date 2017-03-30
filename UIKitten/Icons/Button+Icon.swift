@@ -1,5 +1,5 @@
 //
-//  Button+Tap.swift
+//  Button+Icon.swift
 //  UIKitten
 //
 //  Created by Matteo Gavagnin on 13/03/2017.
@@ -29,18 +29,18 @@ public extension Button {
             semanticContentAttribute = .forceRightToLeft
         }
         
-        let normalImage = UIImage.fontAwesomeIcon(name: icon, textColor: type.titleColor, size: CGSize(width: defaultPointSize, height: defaultPointSize))
+        let normalImage = UIImage.fontAwesomeIcon(name: icon, textColor: type.titleColor, size: CGSize(width: defaultPointSize, height: defaultPointSize)).withRenderingMode(.alwaysTemplate)
         
         setImage(normalImage, for: .normal)
         
         if let darkerColor = type.titleColor.darker(value: 0.1) {
-            let selectedImage = UIImage.fontAwesomeIcon(name: icon, textColor: darkerColor, size: CGSize(width: defaultPointSize, height: defaultPointSize))
+            let selectedImage = UIImage.fontAwesomeIcon(name: icon, textColor: darkerColor, size: CGSize(width: defaultPointSize, height: defaultPointSize)).withRenderingMode(.alwaysTemplate)
             setImage(selectedImage, for: .selected)
             setImage(selectedImage, for: .highlighted)
         }
         
         if let lighterColor = type.titleColor.lighter(value: 0.2) {
-            let disabledImage = UIImage.fontAwesomeIcon(name: icon, textColor: lighterColor, size: CGSize(width: defaultPointSize, height: defaultPointSize))
+            let disabledImage = UIImage.fontAwesomeIcon(name: icon, textColor: lighterColor, size: CGSize(width: defaultPointSize, height: defaultPointSize)).withRenderingMode(.alwaysTemplate)
             setImage(disabledImage, for: .disabled)
         }
     }

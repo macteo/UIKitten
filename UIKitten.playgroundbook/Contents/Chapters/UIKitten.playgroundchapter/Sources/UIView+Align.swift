@@ -18,7 +18,6 @@ extension UIView {
             
             let padding = CGFloat(alignable.padding)
             
-            // TODO: support optional value so we don't do anything and le the autolayout do its job
             guard let align = alignable.align else { return }
             
             if align.contains(.top) {
@@ -32,6 +31,7 @@ extension UIView {
                 bottomConstraint.priority = 750
                 superview.addConstraint(bottomConstraint)
             } else if align.contains(.middle) {
+                // FIXME: middle 
                 superview.addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: superview, attribute: .top, multiplier: 1, constant: padding))
                 superview.addConstraint(NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: superview, attribute: .centerY, multiplier: 1, constant: 0))
                 let bottomConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: superview, attribute: .bottom, multiplier: 1, constant: -padding)

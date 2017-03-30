@@ -188,7 +188,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         selectedCellIndex = indexPath
         guard let item = item(indexPath) else { return }
         if let action = item.itemAction() {
-            guard let cell = collectionView.cellForItem(at: indexPath) as? BaseCollectionViewCell else {
+            guard let cell = collectionView.cellForItem(at: indexPath) as? Cell else {
                 action(nil, true)
                 return
             }
@@ -201,7 +201,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         selectedCellIndex = nil
         guard let item = item(indexPath) else { return }
         if let action = item.itemAction() {
-            guard let cell = collectionView.cellForItem(at: indexPath) as? BaseCollectionViewCell else {
+            guard let cell = collectionView.cellForItem(at: indexPath) as? Cell else {
                 action(nil, false)
                 return
             }

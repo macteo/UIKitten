@@ -17,6 +17,10 @@ extension UIView : ListItem {
         return nil
     }
     
+    public func itemValue() -> Int? {
+        return nil
+    }
+    
     public func itemImage() -> UIImage? {
         return nil
     }
@@ -24,7 +28,7 @@ extension UIView : ListItem {
     public func itemImageUrl() -> URL? {
         return nil
     }
-    
+
     public func itemAction() -> ((_ cell : Cell?, _ selected: Bool) -> Void)? {
         return nil
     }

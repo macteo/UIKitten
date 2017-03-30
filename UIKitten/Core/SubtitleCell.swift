@@ -1,5 +1,5 @@
 //
-//  SubtitleCollectionViewCell.swift
+//  SubtitleCell.swift
 //  UIKitten
 //
 //  Created by Matteo Gavagnin on 17/03/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SubtitleCollectionViewCell: BaseCollectionViewCell {
+public class SubtitleCell: BaseCell {
     let titleLabel = UILabel()
     var titleHeight : NSLayoutConstraint?
     var titleLeadingMargin : NSLayoutConstraint?

@@ -11,8 +11,10 @@ import UIKit
 public protocol ListItem {
     func itemTitle() -> String?
     func itemSubtitle() -> String?
+    func itemValue() -> Int?
     func itemImage() -> UIImage?
     func itemImageUrl() -> URL?
-    func itemAction() -> ((_ cell : BaseCollectionViewCell?, _ selected: Bool) -> Void)? // TODO: use a generic cell
+    func itemAction() -> ((_ cell : Cell?, _ selected: Bool) -> Void)?
     func itemView() -> UIView?
+    func cellType() -> CellType
 }

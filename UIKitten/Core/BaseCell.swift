@@ -1,5 +1,5 @@
 //
-//  BaseCollectionViewCell.swift
+//  BaseCell.swift
 //  UIKitten
 //
 //  Created by Matteo Gavagnin on 20/03/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class BaseCollectionViewCell: UICollectionViewCell, Cell {
+open class BaseCell: UICollectionViewCell, Cell {
     
     public var minHeight : CGFloat = 44 {
         didSet {
@@ -163,7 +163,7 @@ open class BaseCollectionViewCell: UICollectionViewCell, Cell {
         let accessoryImageView = UIImageView(frame: accessoryView.bounds)
         accessoryImageView.tintColor = tintColor
         
-        if let disclosureImage = UIImage(named: "disclosureIndicator", in: Bundle.init(for: SubtitleCollectionViewCell.self), compatibleWith: nil) {
+        if let disclosureImage = UIImage(named: "disclosureIndicator", in: Bundle.init(for: BaseCell.self), compatibleWith: nil) {
             let templateImage = disclosureImage.withRenderingMode(.alwaysTemplate)
             accessoryImageView.image = templateImage
         }

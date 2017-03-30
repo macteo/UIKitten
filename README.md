@@ -22,23 +22,24 @@ UIKitten includes an opinionated selection of dependencies to don't reinvent the
 
 <details><summary>Tap to view button details</summary><p>
 
-- [x] Dynamic Size
-- [x] Colors
-- [x] Multiline text
-- [x] Styles
-- [x] Sizes
-- [x] Icons
-- [x] Grouped (still some issues on animations)
+- [x] Dynamic Size.
+- [x] Colors (normal, success, warning, danger, success, primary, clean).
+- [x] Multiline text.
+- [x] Styles (normal, drop shadow, rounded, frosted glass).
+- [x] Sizes (large, normal, small, extra small).
+- [x] Icons (Fontawesome icons - left, right or lonely without title).
+- [x] Grouped (horizontal, vertical, proportional or constand size).
 
 </details>
 
 #### Forms
-- [x] Text field design
+- [x] Text field
 - [x] Username field
 - [x] Password field
 - [x] Email field
 - [x] Validations with regexes and error messages
 - [x] Icons
+- [x] Dynamic Size
 - [ ] Styles (normal, rounded)
 - [ ] Sizes
 - [ ] Text area, autoresizable, markdown syntax highlight
@@ -89,6 +90,15 @@ A modern `UITableViewController` replacement based on `UICollectionViewControlle
 - [ ] Header.
 - [ ] Footer.
 - [ ] Chart.
+- [x] Counter.
+
+#### Badges
+
+- [x] Rounded Label with insets
+- [ ] Colors (normal, success, warning, danger, success, primary, clean).
+- [x] Any `UIView` can have a badge snapped on the top trailing corner
+- [ ] Simple API to add and remove badges
+- [ ] Animate badge appear and disappear
 
 #### Sample view controller
 - [ ] Login form with validation.
@@ -101,6 +111,8 @@ A modern `UITableViewController` replacement based on `UICollectionViewControlle
 
 - [ ] Coherent style through every standard controller based on theme colors.
 - [ ] Overridable theme colors.
+
+#### Constraints, autoresizing masks and more
 
 ### Simplified APIs
 
