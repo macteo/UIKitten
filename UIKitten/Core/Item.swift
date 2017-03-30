@@ -9,7 +9,7 @@
 import UIKit
 
 public class Item : ListItem {
-    public init(title: String? = nil, subtitle: String? = nil, image: UIImage? = nil, view: UIView? = nil, action: ((_ cell: BaseCollectionViewCell?, _ selected: Bool) -> Void)? = nil) {
+    public init(title: String? = nil, subtitle: String? = nil, image: UIImage? = nil, view: UIView? = nil, action: ((_ cell: Cell?, _ selected: Bool) -> Void)? = nil) {
         _title = title
         _subtitle = subtitle
         _image = image
@@ -22,7 +22,7 @@ public class Item : ListItem {
     public var _image: UIImage? = nil
     public var _imageUrl: URL? = nil
     public var _view: UIView? = nil
-    public var _action : ((_ cell: BaseCollectionViewCell?, _ selected: Bool) -> Void)? = nil
+    public var _action : ((_ cell: Cell?, _ selected: Bool) -> Void)? = nil
     
     public func itemTitle() -> String? {
         return _title
@@ -32,7 +32,6 @@ public class Item : ListItem {
         return _subtitle
     }
     
-    
     public func itemImage() -> UIImage? {
         return _image
     }
@@ -41,11 +40,18 @@ public class Item : ListItem {
         return _imageUrl
     }
     
-    public func itemAction() -> ((_ cell : BaseCollectionViewCell?, _ selected: Bool) -> Void)? {
+    public func itemAction() -> ((_ cell : Cell?, _ selected: Bool) -> Void)? {
         return _action
     }
     
     public func itemView() -> UIView? {
         return _view
+    }
+    
+    public func cellType() -> CellType {
+        if itemTitle() == nil && itemSubtitle() == nil && itemImage() == nil {
+            return .base
+        }
+        return .view
     }
 }

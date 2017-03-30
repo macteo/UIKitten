@@ -8,11 +8,7 @@
 
 import UIKit
 
-protocol BaseCollectionViewCellDelegate {
-    func redraw(cell: BaseCollectionViewCell)
-}
-
-open class BaseCollectionViewCell: UICollectionViewCell {
+open class BaseCollectionViewCell: UICollectionViewCell, Cell {
     
     public var minHeight : CGFloat = 44 {
         didSet {
@@ -40,7 +36,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     
     var minimumCellHeightConstraint : NSLayoutConstraint?
     
-    var containedView : UIView? {
+    public var containedView : UIView? {
         didSet {
             if let containedView = containedView {
                     customView.addSubview(containedView)
@@ -60,7 +56,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    var delegate : BaseCollectionViewCellDelegate?
+    public var delegate : CellDelegate?
     
     var contentViewWidth : NSLayoutConstraint?
     
@@ -99,7 +95,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    override init(frame: CGRect) {
+    override public required init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
@@ -278,9 +274,9 @@ open class BaseCollectionViewCell: UICollectionViewCell {
     }
     
     //forces the system to do one layout pass
-    var isHeightCalculated: Bool = false
+    public var isHeightCalculated: Bool = false
     
-    var desiredSize = CGSize(width: 2048, height: 320) {
+    public var desiredSize = CGSize(width: 2048, height: 320) {
         didSet {
             // Limiting the cell width
             contentViewWidth?.constant = desiredSize.width
@@ -301,5 +297,25 @@ open class BaseCollectionViewCell: UICollectionViewCell {
             isHeightCalculated = true
         }
         return layoutAttributes
+    }
+    
+    public func populate(item: ListItem, width: CGFloat) {
+        if let _ = item.itemAction() {
+            accessoryViewIsVisible = true
+        } else {
+            accessoryViewIsVisible = false
+        }
+
+        desiredSize = CGSize(width: width, height: 44)
+        
+        if var itemView = item.itemView() as? Alignable {
+            if itemView.align == nil {
+                itemView.align = [.top, .left]
+            }
+        }
+        
+        containedView = item.itemView()
+        
+        layoutIfNeeded()
     }
 }

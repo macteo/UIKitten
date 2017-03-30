@@ -17,7 +17,6 @@ extension UIView : ListItem {
         return nil
     }
     
-    
     public func itemImage() -> UIImage? {
         return nil
     }
@@ -26,11 +25,15 @@ extension UIView : ListItem {
         return nil
     }
     
-    public func itemAction() -> ((_ cell : BaseCollectionViewCell?, _ selected: Bool) -> Void)? {
+    public func itemAction() -> ((_ cell : Cell?, _ selected: Bool) -> Void)? {
         return nil
     }
     
     public func itemView() -> UIView? {
         return self
+    }
+    
+    public func cellType() -> CellType {
+        return .view
     }
 }

@@ -8,11 +8,11 @@
 
 import UIKit
 
-open class TableController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, BaseCollectionViewCellDelegate {
+open class TableController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CellDelegate {
     // TODO: use a more solid approach
     var selectedCellIndex : IndexPath?
     
-    internal func redraw(cell: BaseCollectionViewCell) {
+    public func redraw(cell: Cell) {
         /*
          guard let _ = collectionView?.indexPath(for: cell) else { return }
          
@@ -31,6 +31,16 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
     
     public var items : [[ListItem]]? {
         didSet {
+            guard let items = items else {
+                collectionView?.reloadData()
+                return
+            }
+            for section in items {
+                for item in section {
+                    guard let cellType = item.cellType().cellClass as? UICollectionViewCell.Type else { continue }
+                    collectionView?.register(cellType, forCellWithReuseIdentifier: item.cellType().identifier)
+                }
+            }
             collectionView?.reloadData()
         }
     }
@@ -50,9 +60,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 0
-        
-        collectionView.register(SubtitleCollectionViewCell.self, forCellWithReuseIdentifier: "imageCell")
-        
+
         collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.allowsSelection = true
         collectionView.allowsMultipleSelection = false
@@ -99,20 +107,22 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         
         guard let item = item(indexPath) else { return UICollectionViewCell() }
         
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! SubtitleCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: item.cellType().identifier, for: indexPath) as! Cell
         var width = collectionView.bounds.size.width
         if let nextSize = nextSize {
             width = nextSize.width
         }
-        cell = populate(cell: cell, item: item, indexPath: indexPath, width: width)
+        cell.populate(item: item, width: width)
         
-        return cell
+        assert((cell as? UICollectionViewCell) != nil, "\(cell.self) must be a UICollectionViewCell subclass")
+        
+        return cell as! UICollectionViewCell
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let item = item(indexPath) else { return CGSize(width: 0, height: 0) }
         
-        var cell : SubtitleCollectionViewCell?
+        var cell : Cell?
         
         var width = collectionView.bounds.size.width
         if let nextSize = nextSize {
@@ -121,12 +131,11 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         
         var previousContainer : UIView?
         var cellIsAlreadyVisible = false
-        if let existingCell = collectionView.cellForItem(at: indexPath) as? SubtitleCollectionViewCell {
+        if let existingCell = collectionView.cellForItem(at: indexPath) as? Cell {
             cellIsAlreadyVisible = true
             cell = existingCell
         } else {
-            // TODO: use float max
-            cell = SubtitleCollectionViewCell(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: 2048))
+            cell = item.cellType().cellClass.init(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: 2048))
             
             if let container = item.itemView()?.superview {
                 previousContainer = container
@@ -136,7 +145,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         var tempCell = cell!
         
         if cellIsAlreadyVisible == false {
-            tempCell = populate(cell: tempCell, item: item, indexPath: indexPath, width: width)
+            tempCell.populate(item: item, width: width)
         } else {
             tempCell.desiredSize = CGSize(width: width, height: 44)
         }
@@ -153,40 +162,6 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         }
         
         return size
-    }
-    
-    func populate(cell: SubtitleCollectionViewCell, item: ListItem, indexPath: IndexPath, width: CGFloat) -> SubtitleCollectionViewCell {
-        cell.title = item.itemTitle()
-        cell.subtitle = item.itemSubtitle()
-        cell.thumbnail = item.itemImage()
-        cell.delegate = self
-        
-        if let _ = item.itemAction() {
-            cell.accessoryViewIsVisible = true
-        } else {
-            cell.accessoryViewIsVisible = false
-        }
-        
-        if indexPath == selectedCellIndex {
-            cell.isSelected = true
-        } else {
-            cell.isSelected = false
-        }
-        
-        cell.desiredSize = CGSize(width: width, height: 44)
-        
-        if var itemView = item.itemView() as? Alignable {
-            if itemView.align == nil {
-                itemView.align = [.top, .left]
-            }
-        }
-        
-        cell.containedView = item.itemView()
-        
-        
-        cell.layoutIfNeeded()
-        
-        return cell
     }
     
     override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

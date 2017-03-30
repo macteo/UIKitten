@@ -17,7 +17,7 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
     var subtitleHeight : NSLayoutConstraint?
     var subtitleLeadingMargin : NSLayoutConstraint?
 
-    override init(frame: CGRect) {
+    required public init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
@@ -116,7 +116,6 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         subtitleHeight?.priority = 750
         mainView.addConstraint(subtitleHeight!)
         
-        // TODO: support cell size like buttons
         titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         subtitleLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
         
@@ -223,5 +222,13 @@ public class SubtitleCollectionViewCell: BaseCollectionViewCell {
         subtitleLabel.text = nil
         titleHeight?.constant = 12
         subtitleHeight?.constant = 0
+    }
+    
+    override public func populate(item: ListItem, width: CGFloat) {
+        title = item.itemTitle()
+        subtitle = item.itemSubtitle()
+        thumbnail = item.itemImage()
+        
+        super.populate(item: item, width: width)
     }
 }
