@@ -32,13 +32,14 @@ class ButtonsController: TableController {
         let left = Button(icon: .handOLeft, title: "Left").align(.left).size(.extraSmall)
         let center = Button(icon: .arrowsH, title: "Center").align(.center).size(.extraSmall)
         let right = Button(icon: .handORight, title: "Right", position: .right).align(.right).size(.extraSmall)
+        // FIXME: this doesn't work anymore inside a cell
         let middle = Button(icon: .arrowsV, title: "Middle").align([.center, .middle]).size(.extraSmall)
         let top = Button(icon: .arrowUp, title: "Top").align([.center, .top]).size(.extraSmall)
         let bottom = Button(icon: .arrowDown, title: "Bottom").align([.center, .bottom]).size(.extraSmall)
         
         let alignment = [left, center, right, top, middle, bottom]
         
-        let multiline = Button(title: "Multiline buttons\nare also supported").type(.success).align([.middle, .center])
+        let multiline = Button(title: "Multiline buttons\nare also supported").type(.success).align([.top, .center])
         
         let lines = [multiline]
         
@@ -52,7 +53,7 @@ class ButtonsController: TableController {
         let action = Button(title: "Action").style(.rounded).type(.info).tap {
             let alert = UIAlertController(title: "Button Action", message: "Isn't UIKitten awesome?", preferredStyle: .alert)
             let yesAction = UIAlertAction(title: "YES!", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: { 
+                alert.dismiss(animated: true, completion: {
                     
                 })
             })
@@ -62,22 +63,17 @@ class ButtonsController: TableController {
         
         let actions = [action]
         
-        /*
         let firstButton = Button(icon: .arrowLeft).type(.danger)
         let secondButton = Button(title: "Grouped").type(.primary)
         let thirdButton = Button(icon: .arrowRight).type(.info)
 
         let groupedButtons = GroupedButtons(frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 36), buttons: [firstButton, secondButton, thirdButton], axis: .horizontal)
-        groupedButtons.autoresizingMask = [.flexibleWidth]
-        groupedButtons.distribution = .fillEqually
+        groupedButtons.width = .container(ratio: 1)
+        groupedButtons.distribution = .fillProportionally
         groupedButtons.spacing = 0
-        
-        let grouped = [groupedButtons]
-        
-        // TODO: add grouped again when the layou constraint issue will be solved
-        
-        */
 
-        items = [types, sizes, alignment, lines, styles, actions]
+        let grouped = [groupedButtons]
+
+        items = [types, sizes, alignment, lines, styles, actions, grouped]
     }
 }
