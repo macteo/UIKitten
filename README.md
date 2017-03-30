@@ -95,10 +95,10 @@ A modern `UITableViewController` replacement based on `UICollectionViewControlle
 #### Badges
 
 - [x] Rounded Label with insets
-- [ ] Colors (normal, success, warning, danger, success, primary, clean).
+- [x] Colors (normal, success, warning, danger, success, primary, clean).
 - [x] Any `UIView` can have a badge snapped on the top trailing corner
-- [ ] Simple API to add and remove badges
-- [ ] Animate badge appear and disappear
+- [x] Simple API to add and remove badges
+- [x] Animate badge appear and disappear
 
 #### Sample view controller
 - [ ] Login form with validation.
