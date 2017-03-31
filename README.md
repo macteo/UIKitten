@@ -70,7 +70,12 @@ A modern `UITableViewController` replacement based on `UICollectionViewControlle
 - [ ] Edit mode (reorder, delete).
 - [ ] Drag to reorder.
 - [ ] Delete button.
-- [ ] Swipe actions
+- [ ] Swipe actions.
+- [ ] Grouped view.
+- [ ] Section headers.
+- [ ] Section footers.
+- [x] Single column layout.
+- [x] Multiple columns layout.
 
 #### Cells
 - [x] Title.
@@ -135,9 +140,34 @@ to obtain this result
 
 In this repo you can find a subfolder called _Catalog_ that contains a separate project with a comprehensive collection of controls and sample code to learn how to use UIKitten.
 
-### Dependencies
+### Usage
+
+#### iOS Apps
+
+<details><summary>Tap to view button details</summary><p>
+
+##### Cocoapods
+
+###### Subspecs
+
+##### Carthage
+
+##### Dynamic framework
+
+##### Punic
+
+##### Manually
+
+</details>
+
+#### Swift Playgrounds
+
+#### Swift Playground Book for iPad 
+
+### Optional Dependencies
 
 * [FontAwesome.swift](https://github.com/thii/FontAwesome.swift) - Use Font Awesome in your Swift projects.
+* [charts](https://github.com/danielgindi/Charts) - Beautiful charts by Daniel Cohen Gindi.
 
 ### License
 

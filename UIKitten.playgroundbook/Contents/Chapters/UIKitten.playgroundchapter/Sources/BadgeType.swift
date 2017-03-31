@@ -1,14 +1,14 @@
 //
-//  ButtonType.swift
+//  BadgeType.swift
 //  UIKitten
 //
-//  Created by Matteo Gavagnin on 10/03/2017.
+//  Created by Matteo Gavagnin on 30/03/2017.
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
 import UIKit
 
-public enum ButtonType : String {
+public enum BadgeType : String {
     case normal     = "normal"
     case primary    = "primary"
     case info       = "info"
@@ -50,16 +50,18 @@ public enum ButtonType : String {
         case .normal, .clean:
             return .lightGrayFlat
         case .info, .warning, .danger, .success, .primary:
+            if let darkerColor = backgroundColor.darker(value: 0.1) {
+                return darkerColor
+            }
             return backgroundColor
         }
     }
     
     var borderWidth : CGFloat {
         switch self {
-        case .normal, .clean:
-            return 1
-        case .info, .warning, .danger, .success, .primary:
-            return 0
+        case .normal, .clean, .info, .warning, .danger, .success, .primary:
+            return 1.0 / UIScreen.main.scale
         }
     }
 }
+

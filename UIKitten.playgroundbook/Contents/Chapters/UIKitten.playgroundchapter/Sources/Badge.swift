@@ -19,10 +19,25 @@ public class Badge : Label, Alignable {
     
     // MARK: View Lifecycle
     
-    // TODO: change to style
-    public var color : UIColor? = .warning {
+    public var value: String? {
         didSet {
-            backgroundColor = color
+            if (oldValue == nil || oldValue == "") && (value != nil && value != "") {
+                text = value
+                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: UIViewAnimationOptions.beginFromCurrentState, animations: {
+                    self.transform = CGAffineTransform(scaleX: 1, y: 1)
+                }, completion: { (completed) in
+                    
+                })
+            }
+        }
+        willSet {
+            if (value != nil && value != "") && (newValue == nil || newValue == "") {
+                UIView.animate(withDuration: 0.25, animations: { 
+                    self.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+                }, completion: { (completed) in
+                    self.text = newValue
+                })
+            }
         }
     }
         
@@ -37,19 +52,38 @@ public class Badge : Label, Alignable {
     }
     
     func commonInit() {
-        // TODO: take from theme
+        text = nil
+        type = .danger
+        textAlignment = .center
+        
+        transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+        
         cornerRadius = bounds.size.height / 2
         layer.masksToBounds = true
         
         font = UIFont.preferredFont(forTextStyle: .caption2)
         
-        color = .warning
-        textColor = .white
-        
         // TODO: move to the Label class
         if #available(iOS 10, *) { } else {
             // Only for iOS 9
             NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
+        }
+    }
+    
+    public var type : BadgeType = .danger {
+        didSet {
+            backgroundColor = type.backgroundColor
+            textColor = type.titleColor
+            layer.borderColor = type.borderColor.cgColor
+            layer.borderWidth = type.borderWidth
+            tintColor = type.titleColor
+        }
+    }
+    
+    @IBInspectable public var typeString : String = "normal" {
+        didSet {
+            guard let typed = BadgeType(rawValue: typeString) else { return }
+            type = typed
         }
     }
     
@@ -91,6 +125,12 @@ public class Badge : Label, Alignable {
         adjSize.width += insets.left + insets.right
         adjSize.height += insets.top + insets.bottom
         
+        cornerRadius = adjSize.height / 2
+        
+        if adjSize.width < adjSize.height {
+            adjSize.width = adjSize.height
+        }
+        
         return adjSize
     }
     
@@ -99,13 +139,22 @@ public class Badge : Label, Alignable {
         contentSize.width += insets.left + insets.right
         contentSize.height += insets.top + insets.bottom
         
+        if contentSize.width < contentSize.height {
+            contentSize.width = contentSize.height
+        }
+        
         return contentSize
     }
     
     public func snap(to view: UIView) -> Badge {
         guard let superview = view.superview else { return self }
         superview.addSubview(self)
-        superview.addConstraint(NSLayoutConstraint(item: self, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0))
+        let xConstraint = NSLayoutConstraint(item: self, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0)
+        xConstraint.priority = 500
+        superview.addConstraint(xConstraint)
+        let trailingConstraint = NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: view, attribute: .trailing, multiplier: 1, constant: 10)
+        trailingConstraint.priority = 750
+        superview.addConstraint(trailingConstraint)
         superview.addConstraint(NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0))
         return self
     }

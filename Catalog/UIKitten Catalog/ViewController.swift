@@ -42,7 +42,7 @@ class ViewController: UIViewController {
                                         .type(.info)
                                         .size(.large)
                                         .tap {
-            
+                                            
                                             let tableController = TableController()
                                             
                                             tableController.items = [
@@ -60,17 +60,11 @@ class ViewController: UIViewController {
                                             self.show(tableController, sender: nil)
         }.add(to: view)
         
-        let counter = Counter(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        counter.value = 512
-        counter.valueString = "512.00 $"
-        counter.caption = "Sales"
-        let _ = counter.add(to: view)
-        
         let badge = Badge(frame: CGRect(x: 0, y: 100, width: 100, height: 10))
         let _ = badge.snap(to: anguria)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { 
-            badge.value = "!"
+            badge.value = "12"
         }
     }
 }
