@@ -12,7 +12,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
     // TODO: use a more solid approach
     var selectedCellIndex : IndexPath?
     
-    public var columns : Int = 1
+    open var columns : Int = 1
     
     public func redraw(cell: Cell) {
         /*
@@ -27,6 +27,9 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
          })
          */
     }
+    fileprivate var longPressGesture: UILongPressGestureRecognizer!
+    var initialTargetPosition = CGPoint(x: 0, y: 0)
+    var reordering : Bool = false
     
     let layout = UICollectionViewFlowLayout()
     lazy var collectionView : UICollectionView = {
@@ -45,8 +48,45 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         collectionView.allowsMultipleSelection = false
         collectionView.alwaysBounceVertical = true
 
+        self.longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(TableController.handleLongGesture(_:)))
+        collectionView.addGestureRecognizer(self.longPressGesture)
+        
         return collectionView
     }()
+    
+    func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
+        
+        switch(gesture.state) {
+            
+        case UIGestureRecognizerState.began:
+            reordering = true
+            guard let selectedIndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) else {
+                break
+            }
+            if let cell = collectionView.cellForItem(at: selectedIndexPath) {
+                let locationInCell = gesture.location(in: cell)
+                initialTargetPosition = CGPoint(x: locationInCell.x - cell.bounds.size.width / 2, y: locationInCell.y - cell.bounds.size.height / 2)
+            }
+            
+            collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
+        case UIGestureRecognizerState.changed:
+            let gestureLocation = gesture.location(in: gesture.view!)
+            let point = CGPoint(x: gestureLocation.x - initialTargetPosition.x, y: gestureLocation.y - initialTargetPosition.y)
+            collectionView.updateInteractiveMovementTargetPosition(point)
+        case UIGestureRecognizerState.ended:
+            reordering = false
+            collectionView.endInteractiveMovement()
+        default:
+            reordering = false
+            collectionView.cancelInteractiveMovement()
+        }
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        guard items != nil else { return }
+        let item = items![sourceIndexPath.section].remove(at: sourceIndexPath.item)
+        items![destinationIndexPath.section].insert(item, at: destinationIndexPath.item)
+    }
     
     public var items : [[ListItem]]? {
         didSet {
@@ -88,6 +128,15 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         layout.itemSize = CGSize(width: view.bounds.width / CGFloat(columns), height: view.bounds.height)
+        
+        deselectAll()
+    }
+    
+    func deselectAll() {
+        guard let indexPaths = collectionView.indexPathsForSelectedItems else { return }
+        for indexPath in indexPaths {
+            collectionView.deselectItem(at: indexPath, animated: true)
+        }
     }
     
     deinit {
@@ -145,14 +194,15 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
             cellIsAlreadyVisible = true
             cell = existingCell
         } else {
+            // FIXME: find a better way so we can render also the not visible cells during reordering mantaining good performances.
+            guard reordering == false else { return CGSize(width: 0, height: 0) }
             cell = item.cellType().cellClass.init(frame: CGRect(x: 0, y: 0, width: desiredCellWidth, height: 2048))
             
             if let container = item.itemView()?.superview {
                 previousContainer = container
             }
         }
-        
-        var tempCell = cell!
+        guard var tempCell = cell else { return CGSize(width: 0, height: 0) }
         
         if cellIsAlreadyVisible == false {
             tempCell.populate(item: item, width: desiredCellWidth)
@@ -161,7 +211,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         }
         
         let size = tempCell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriorityDefaultLow, verticalFittingPriority: UILayoutPriorityDefaultLow)
-        // TODO: remove those lines if possible
+
         if cellIsAlreadyVisible == false {
             if let container = previousContainer {
                 if let itemView = item.itemView() {

@@ -29,6 +29,8 @@ open class BaseCell: UICollectionViewCell, Cell {
     var accessoryViewTrailingMargin : NSLayoutConstraint?
     var accessoryViewCenterYConstraint : NSLayoutConstraint?
     
+    let selectedView = UIView()
+    
     var mainViewCenterYConstraint : NSLayoutConstraint?
     
     var separatorLeadingMargin : NSLayoutConstraint?
@@ -108,6 +110,10 @@ open class BaseCell: UICollectionViewCell, Cell {
     func commonInit() {
         tintColor = .tableGray
         
+        if selectedView.superview != nil {
+            selectedView.removeFromSuperview()
+        }
+        
         if accessoryView.superview != nil {
             accessoryView.removeFromSuperview()
         }
@@ -115,6 +121,18 @@ open class BaseCell: UICollectionViewCell, Cell {
         if let contentViewWidth = contentViewWidth  {
             contentView.removeConstraint(contentViewWidth)
         }
+        
+        selectedView.frame = CGRect(x: 0, y: -1, width: bounds.size.width, height: bounds.size.height + 1)
+        selectedView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(selectedView)
+        
+        addConstraint(NSLayoutConstraint(item: selectedView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: -1))
+        addConstraint(NSLayoutConstraint(item: selectedView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: selectedView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: selectedView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0))
+        sendSubview(toBack: selectedView)
+        
+        selectedView.backgroundColor = .clear
         
         minimumCellHeightConstraint = NSLayoutConstraint(item: contentView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: minHeight)
         contentView.addConstraint(minimumCellHeightConstraint!)
@@ -145,7 +163,7 @@ open class BaseCell: UICollectionViewCell, Cell {
             separator.removeFromSuperview()
         }
         separator.accessibilityIdentifier = "CellSeparator"
-        separator.frame = CGRect(x: padding.left, y: bounds.size.height - 1.0 / UIScreen.main.scale, width: bounds.size.width - padding.left, height: 1.0 / UIScreen.main.scale)
+        separator.frame = CGRect(x: padding.left, y: bounds.size.height, width: bounds.size.width - padding.left, height: 1.0 / UIScreen.main.scale)
         separator.translatesAutoresizingMaskIntoConstraints = false
         
         separator.backgroundColor = .defaultTableSelected
@@ -241,11 +259,13 @@ open class BaseCell: UICollectionViewCell, Cell {
         didSet {
             UIView.animate(withDuration: 0.15, animations: {
                 if self.isSelected {
-                    self.backgroundColor = .defaultTableSelected
+                    self.superview?.bringSubview(toFront: self)
+                    self.selectedView.backgroundColor = .defaultTableSelected
                     self.separator.backgroundColor = .clear
                     // self.footerIsVisible = true
                 } else {
-                    self.backgroundColor = .white
+                    self.superview?.sendSubview(toBack: self)
+                    self.selectedView.backgroundColor = .clear
                     self.separator.backgroundColor = .defaultTableSelected
                     // self.footerIsVisible = false
                 }
@@ -316,6 +336,6 @@ open class BaseCell: UICollectionViewCell, Cell {
         
         containedView = item.itemView()
         
-        layoutIfNeeded()
+        // layoutIfNeeded()
     }
 }

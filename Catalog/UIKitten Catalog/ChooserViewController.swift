@@ -12,23 +12,26 @@ class ChooserViewController: TableController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "UIKitten"
 
         let overview = forgeCell(title: "Overview")
         let charts = forgeCell(title: "Charts")
-        let buttons = forgeCell(title: "Buttons")
-        let textFields = forgeCell(title: "Text Fields")
+        let buttons = forgeCell(title: "Buttons", image: #imageLiteral(resourceName: "buttons"))
+        let textFields = forgeCell(title: "Text Fields", image: #imageLiteral(resourceName: "text-fields"))
         let layout = forgeCell(title: "Layout")
         let grouped = forgeCell(title: "Grouped Buttons")
         let list = forgeCell(title: "List")
         let cells = forgeCell(title: "Cells")
+        let cards = forgeCell(title: "Cards")
         
         items = [
-            [overview, charts, buttons, textFields, layout, grouped, list, cells]
+            [overview, charts, buttons, textFields, layout, grouped, list, cells, cards]
         ]
     }
     
-    func forgeCell(title: String) -> Item {
-        let cell = Item(title: title) { (cell, selected) in
+    func forgeCell(title: String, image: UIImage? = nil) -> Item {
+        let cell = Item(title: title, image: image) { (cell, selected) in
             guard selected else { return }
             var controller : UIViewController?
             switch title {
@@ -55,6 +58,9 @@ class ChooserViewController: TableController {
                 break
             case "Cells":
                 controller = CellsViewController()
+                break
+            case "Cards":
+                controller = CardsViewController()
                 break
             default:
                 break

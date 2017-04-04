@@ -77,6 +77,8 @@ public class SubtitleCell: BaseCell {
     override func commonInit() {
         super.commonInit()
         
+        thumbnailView.contentMode = .scaleAspectFit
+        
         if titleLabel.superview != nil {
             titleLabel.removeFromSuperview()
         }
