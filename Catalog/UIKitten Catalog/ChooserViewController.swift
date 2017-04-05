@@ -15,7 +15,7 @@ class ChooserViewController: TableController {
         
         navigationItem.title = "UIKitten"
 
-        let overview = forgeCell(title: "Overview")
+        let overview = forgeCell(title: "Overview", image: #imageLiteral(resourceName: "kitten"))
         let charts = forgeCell(title: "Charts")
         let buttons = forgeCell(title: "Buttons", image: #imageLiteral(resourceName: "buttons"))
         let textFields = forgeCell(title: "Text Fields", image: #imageLiteral(resourceName: "text-fields"))

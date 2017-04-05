@@ -93,7 +93,7 @@ open class BaseCell: UICollectionViewCell, Cell {
                 accessoryViewTrailingMargin?.constant = padding.right
             }
             
-            accessoryViewCenterYConstraint?.constant = (mainView.bounds.height + customView.bounds.height + padding.top + padding.bottom) / 2
+            accessoryViewCenterYConstraint?.constant = (mainView.bounds.height + customView.bounds.height + padding.top / 2) / 2
         }
     }
     
@@ -336,6 +336,6 @@ open class BaseCell: UICollectionViewCell, Cell {
         
         containedView = item.itemView()
         
-        // layoutIfNeeded()
+        layoutIfNeeded()
     }
 }

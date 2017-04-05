@@ -16,7 +16,7 @@ open class BaseCell: UICollectionViewCell, Cell {
         }
     }
     
-    public var padding = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 4) {
+    public var padding = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 4) {
         didSet {
             // Changing padding at runtime is a good idea?
         }
@@ -93,7 +93,7 @@ open class BaseCell: UICollectionViewCell, Cell {
                 accessoryViewTrailingMargin?.constant = padding.right
             }
             
-            accessoryViewCenterYConstraint?.constant = (mainView.bounds.height + customView.bounds.height + padding.top + padding.bottom) / 2
+            accessoryViewCenterYConstraint?.constant = (mainView.bounds.height + customView.bounds.height + padding.top / 2) / 2
         }
     }
     
@@ -336,6 +336,6 @@ open class BaseCell: UICollectionViewCell, Cell {
         
         containedView = item.itemView()
         
-        // layoutIfNeeded()
+        layoutIfNeeded()
     }
 }

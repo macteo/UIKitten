@@ -67,11 +67,11 @@ A modern `UITableViewController` replacement based on `UICollectionViewControlle
 
 - [x] Simplified data source.
 - [ ] Dynamic footer expansion on tap.
-- [ ] Edit mode (reorder, delete).
-- [ ] Drag to reorder.
+- [x] Drag to reorder (event between sections, very smooth).
+- [ ] Edit mode with drag to reorder
 - [ ] Delete button.
 - [ ] Swipe actions.
-- [ ] Grouped view.
+- [ ] Multi columns support.
 - [ ] Section headers.
 - [ ] Section footers.
 - [x] Single column layout.

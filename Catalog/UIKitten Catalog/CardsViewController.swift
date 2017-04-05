@@ -26,7 +26,7 @@ class CardsViewController: TableController {
         let counter = Item(title: "Sales", value: 935, image: UIImage.fontAwesomeIcon(name: .tags, textColor: .white, size: CGSize(width: 128, height: 128)).withRenderingMode(.alwaysTemplate))
         
         items = [
-            [Item(view: square), Item(view: gitlab), Item(view: github), Item(view: git), counter]
+            [Item(view: square), Item(view: gitlab)], [Item(view: github), Item(view: git), counter]
         ]
         
         if traitCollection.horizontalSizeClass == .regular {

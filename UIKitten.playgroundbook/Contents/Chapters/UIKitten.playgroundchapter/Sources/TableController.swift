@@ -28,8 +28,11 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
          */
     }
     fileprivate var longPressGesture: UILongPressGestureRecognizer!
-    var initialTargetPosition = CGPoint(x: 0, y: 0)
-    var reordering : Bool = false
+    fileprivate var initialTargetPosition = CGPoint(x: 0, y: 0)
+    fileprivate var reordering : Bool = false
+    
+    fileprivate var sizes = [Int : CGSize]()
+    fileprivate let sizePadding = 1_000_000_000
     
     let layout = UICollectionViewFlowLayout()
     lazy var collectionView : UICollectionView = {
@@ -53,6 +56,12 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         
         return collectionView
     }()
+    
+    public func reloadData() {
+         sizes.removeAll()
+         collectionView.reloadData()
+         layout.invalidateLayout()
+    }
     
     func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
         
@@ -84,8 +93,17 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
     
     public func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         guard items != nil else { return }
-        let item = items![sourceIndexPath.section].remove(at: sourceIndexPath.item)
-        items![destinationIndexPath.section].insert(item, at: destinationIndexPath.item)
+        
+        if reordering == false {
+            let item = items![sourceIndexPath.section].remove(at: sourceIndexPath.item)
+            items![destinationIndexPath.section].insert(item, at: destinationIndexPath.item)
+            return
+        }
+        
+        let itemSize = sizes[sizePosition(indexPath: sourceIndexPath)]
+        let destinationItemSize = sizes[sizePosition(indexPath: destinationIndexPath)]
+        sizes[sizePosition(indexPath: sourceIndexPath)] = destinationItemSize
+        sizes[sizePosition(indexPath: destinationIndexPath)] = itemSize
     }
     
     public var items : [[ListItem]]? {
@@ -100,8 +118,9 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
                     collectionView.register(cellType, forCellWithReuseIdentifier: item.cellType().identifier)
                 }
             }
-            collectionView.reloadData()
-            layout.invalidateLayout()
+            // sizes.removeAll()
+            // collectionView.reloadData()
+            // layout.invalidateLayout()
         }
     }
     
@@ -177,14 +196,38 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: item.cellType().identifier, for: indexPath) as! Cell
         cell.populate(item: item, width: desiredCellWidth)
-        
+
         assert((cell as? UICollectionViewCell) != nil, "\(cell.self) must be a UICollectionViewCell subclass")
         
         return cell as! UICollectionViewCell
     }
-
+    
+    fileprivate func sizePosition(indexPath: IndexPath) -> Int {
+        let sizeIndex = indexPath.section * sizePadding + indexPath.item
+        return sizeIndex
+    }
+    
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let item = item(indexPath) else { return CGSize(width: 0, height: 0) }
+        var _item : ListItem?
+        
+        if let __item = item(indexPath) {
+            _item = __item
+        } else if reordering == true {
+            var previousIndexPath = indexPath
+            previousIndexPath.item -= 1
+            if let __item = item(previousIndexPath) {
+                _item = __item
+            }
+        }
+        
+        guard let item = _item else {
+            return CGSize(width: desiredCellWidth, height: 44)
+        }
+        
+        
+        if let size = sizes[sizePosition(indexPath: indexPath)] {
+            return size
+        }
         
         var cell : Cell?
         
@@ -194,15 +237,15 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
             cellIsAlreadyVisible = true
             cell = existingCell
         } else {
-            // FIXME: find a better way so we can render also the not visible cells during reordering mantaining good performances.
-            guard reordering == false else { return CGSize(width: 0, height: 0) }
             cell = item.cellType().cellClass.init(frame: CGRect(x: 0, y: 0, width: desiredCellWidth, height: 2048))
             
             if let container = item.itemView()?.superview {
                 previousContainer = container
             }
         }
-        guard var tempCell = cell else { return CGSize(width: 0, height: 0) }
+        guard var tempCell = cell as? Cell else {
+            return CGSize(width: desiredCellWidth, height: 44)
+        }
         
         if cellIsAlreadyVisible == false {
             tempCell.populate(item: item, width: desiredCellWidth)
@@ -221,11 +264,15 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
             }
         }
         
+        sizes[sizePosition(indexPath: indexPath)] = size
+        
         return size
     }
     
     override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+        
+        sizes.removeAll()
         
         nextSize = size
         if let nextSizeWidthOffset = nextSizeWidthOffset {
@@ -238,8 +285,8 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         guard let items = items else { return nil }
         guard items.count > indexPath.section else { return nil }
         let itemsInSection = items[indexPath.section]
-        guard itemsInSection.count > indexPath.row else { return nil }
-        let item = itemsInSection[indexPath.row]
+        guard itemsInSection.count > indexPath.item else { return nil }
+        let item = itemsInSection[indexPath.item]
         return item
     }
     
@@ -271,3 +318,27 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         }
     }
 }
+
+extension UICollectionViewFlowLayout {
+    
+    open override func invalidationContext(forInteractivelyMovingItems targetIndexPaths: [IndexPath], withTargetPosition targetPosition: CGPoint, previousIndexPaths: [IndexPath], previousPosition: CGPoint) -> UICollectionViewLayoutInvalidationContext {
+        
+        let context = super.invalidationContext(forInteractivelyMovingItems: targetIndexPaths, withTargetPosition: targetPosition, previousIndexPaths: previousIndexPaths, previousPosition: previousPosition)
+        
+        guard let collectionView = collectionView else { return context }
+        collectionView.dataSource?.collectionView!(collectionView, moveItemAt: previousIndexPaths[0], to: targetIndexPaths[0])
+        
+        return context
+    }
+    
+    override open func invalidationContextForEndingInteractiveMovementOfItems(toFinalIndexPaths indexPaths: [IndexPath], previousIndexPaths: [IndexPath], movementCancelled: Bool) -> UICollectionViewLayoutInvalidationContext {
+
+        let context = super.invalidationContextForEndingInteractiveMovementOfItems(toFinalIndexPaths: indexPaths, previousIndexPaths: previousIndexPaths, movementCancelled: movementCancelled)
+        
+        guard let collectionView = collectionView else { return context }
+        collectionView.dataSource?.collectionView!(collectionView, moveItemAt: previousIndexPaths[0], to: indexPaths[0])
+        
+        return context
+    }
+}
+
