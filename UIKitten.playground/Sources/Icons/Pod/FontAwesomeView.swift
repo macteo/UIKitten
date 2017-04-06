@@ -1,0 +1,1 @@
+../../../../Pods/FontAwesome.swift/FontAwesome/FontAwesomeView.swift

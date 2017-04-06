@@ -1,1 +1,0 @@
-../../UIKitten/Core/Label.swift
