@@ -6,6 +6,8 @@
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
+import UIKit
+
 public class Badge : Label, Alignable {
     public var insets = UIEdgeInsets(top: 2, left: 4, bottom: 2, right: 4)
     
@@ -14,7 +16,7 @@ public class Badge : Label, Alignable {
     
     public var width: Width?
     public var height: Height?
-    public var padding : Int = 0
+    public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     public var align : Align?
     
     // MARK: View Lifecycle

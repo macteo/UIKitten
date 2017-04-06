@@ -350,7 +350,7 @@ public class Button: UIButton, Alignable {
         }
     }
     
-    public var padding : Int = 0 {
+    public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) {
         didSet {
             layoutIfNeeded()
         }
@@ -377,8 +377,8 @@ public class Button: UIButton, Alignable {
         return self
     }
     
-    public func padding(_ padding: Int) -> Button {
-        self.padding = padding
+    public func margin(top: CGFloat = 0, left: CGFloat = 0, bottom: CGFloat = 0, right: CGFloat = 0) -> Button {
+        self.margin = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
         return self
     }
     

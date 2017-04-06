@@ -12,8 +12,11 @@ class CardsViewController: TableController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        navigationItem.leftItemsSupplementBackButton = true
 
-        let gitlab = Button(icon: .gitlab, title: "GitLab\nWhat a pleasure\nto meet you", position: .left).align([.middle, .center]).padding(10)
+        let gitlab = Button(icon: .gitlab, title: "GitLab\nWhat a pleasure\nto meet you", position: .left).align([.middle, .center])
         let github = Button(icon: .github, title: "GitHub", position: .right).align([.right, .top])
         let git = Button(icon: .git, title: "Git").align([.left, .bottom])
         

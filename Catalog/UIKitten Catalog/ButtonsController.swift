@@ -13,6 +13,9 @@ class ButtonsController: TableController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        navigationItem.leftItemsSupplementBackButton = true
+        
         let primary = Button(icon: .diamond, title: "Primary").type(.primary)
         let info = Button(icon: .info, title: "Info").type(.info)
         let success = Button(icon: .check, title: "Success").type(.success)

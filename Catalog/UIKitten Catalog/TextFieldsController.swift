@@ -13,6 +13,9 @@ class TextFieldsController: TableController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        navigationItem.leftItemsSupplementBackButton = true
+        
         items = [
             [UsernameField(frame: CGRect(x: 0, y:0, width: 260, height: 22)).align([.center, .middle]),
              EmailField(frame: CGRect(x: 0, y:0, width: 260, height: 22)).align([.center, .middle]),

@@ -16,7 +16,7 @@ public class LineChart : LineChartView, Alignable {
     
     public var width: Width? = .container(ratio: 1)
     public var height: Height? = .width(ratio: 0.5)
-    public var padding : Int = 0
+    public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     public var align : Align? = [.top, .left]
     
     // MARK: View Lifecycle
@@ -43,13 +43,27 @@ public class LineChart : LineChartView, Alignable {
         legend.enabled = false
         chartDescription?.enabled = false
         
-        let dataSet = LineChartDataSet(values: [ChartDataEntry(x: 0, y: 1), ChartDataEntry(x: 1, y: 0.2), ChartDataEntry(x: 2, y: 1.2), ChartDataEntry(x: 3, y: 2)], label: "")
-        dataSet.mode = .cubicBezier
-        dataSet.cubicIntensity = 0.2
+        dataSet(values: [ChartDataEntry(x: 0, y: 1), ChartDataEntry(x: 1, y: 0.2), ChartDataEntry(x: 2, y: 1.2), ChartDataEntry(x: 3, y: 2)], colors: [.success, .warning, .info, .danger])
+    }
+    
+    public func dataSet(values: [ChartDataEntry], label: String? = nil, colors: [UIColor]? = nil, alpha: CGFloat = 1, mode: LineChartDataSet.Mode? = .linear, cubicIntensity: CGFloat = 0.2) {
+        let dataSet = LineChartDataSet(values: values, label: label)
+        
+        if let mode = mode {
+            dataSet.mode = mode
+            if mode == .cubicBezier || mode == .horizontalBezier {
+                dataSet.cubicIntensity = cubicIntensity
+            }
+        }
+        
+        if let colors = colors {
+            dataSet.setColors(colors, alpha: alpha)
+        }
+        
         let data = LineChartData(dataSet: dataSet)
         data.setValueTextColor(.clear)
-        
         self.data = data
     }
+
 }
 

@@ -17,7 +17,7 @@ public class BarChart : BarChartView, Alignable {
     
     public var width: Width? = .container(ratio: 1)
     public var height: Height? = .width(ratio: 0.5)
-    public var padding : Int = 0
+    public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     public var align : Align? = [.top, .left]
     
     // MARK: View Lifecycle
@@ -45,11 +45,18 @@ public class BarChart : BarChartView, Alignable {
         legend.enabled = false
         chartDescription?.enabled = false
         
-        let dataSet = BarChartDataSet(values: [BarChartDataEntry(x: 0, y: 1), BarChartDataEntry(x: 1, y: 0.2), BarChartDataEntry(x: 2, y: 1.2), BarChartDataEntry(x: 3, y: 2)], label: "")
+        dataSet(values: [BarChartDataEntry(x: 0, y: 1), BarChartDataEntry(x: 1, y: 0.2), BarChartDataEntry(x: 2, y: 1.2), BarChartDataEntry(x: 3, y: 2)], colors: [.success, .warning, .info, .danger])
+    }
+    
+    public func dataSet(values: [BarChartDataEntry], label: String? = nil, colors: [UIColor]? = nil, alpha: CGFloat = 1) {
+        let dataSet = BarChartDataSet(values: values, label: label)
+        if let colors = colors {
+            dataSet.setColors(colors, alpha: alpha)
+        }
+        
         let data = BarChartData(dataSet: dataSet)
         data.barWidth = 1.0
         data.setValueTextColor(.clear)
-        
         self.data = data
     }
 }

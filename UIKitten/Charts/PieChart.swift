@@ -17,7 +17,7 @@ public class PieChart : PieChartView, Alignable {
     
     public var width: Width? = .container(ratio: 1)
     public var height: Height? = .width(ratio: 0.5)
-    public var padding : Int = 0
+    public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     public var align : Align? = [.top, .left]
     
     // MARK: View Lifecycle
@@ -37,10 +37,20 @@ public class PieChart : PieChartView, Alignable {
         legend.enabled = false
         chartDescription?.enabled = false
         
-        let dataSet = PieChartDataSet(values: [PieChartDataEntry(value: 1), PieChartDataEntry(value: 0.2), PieChartDataEntry(value: 1.2), PieChartDataEntry(value: 2)], label: "")
+        dataSet(values: [PieChartDataEntry(value: 30), PieChartDataEntry(value: 50), PieChartDataEntry(value: 20), PieChartDataEntry(value: 10)], colors: [.success, .warning, .info, .danger])
+    }
+    
+    public func dataSet(values: [PieChartDataEntry], label: String? = nil, colors: [UIColor]? = nil, alpha: CGFloat = 1) {
+        let dataSet = PieChartDataSet(values: values, label: label)
+        if let colors = colors {
+            dataSet.setColors(colors, alpha: alpha)
+        }
+        dataSet.sliceSpace = 1
+        dataSet.selectionShift = 6
+        dataSet.automaticallyDisableSliceSpacing = true
+        
         let data = PieChartData(dataSet: dataSet)
         data.setValueTextColor(.clear)
-        
         self.data = data
     }
 }

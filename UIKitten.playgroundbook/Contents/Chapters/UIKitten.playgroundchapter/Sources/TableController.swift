@@ -269,6 +269,13 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         return size
     }
     
+    open override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransition(to: newCollection, with: coordinator)
+        sizes.removeAll()
+        collectionView.collectionViewLayout.invalidateLayout()
+        
+    }
+    
     override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         

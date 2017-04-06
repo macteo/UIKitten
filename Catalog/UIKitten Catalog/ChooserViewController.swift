@@ -8,14 +8,16 @@
 
 import UIKitten
 
-class ChooserViewController: TableController {
-
+class ChooserViewController: TableController, UISplitViewControllerDelegate {
+    private var collapseDetailViewController = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        splitViewController?.delegate = self
         
         navigationItem.title = "UIKitten"
 
-        let overview = forgeCell(title: "Overview", image: #imageLiteral(resourceName: "kitten"))
+        let overview = forgeCell(title: "Overview")
         let charts = forgeCell(title: "Charts")
         let buttons = forgeCell(title: "Buttons", image: #imageLiteral(resourceName: "buttons"))
         let textFields = forgeCell(title: "Text Fields", image: #imageLiteral(resourceName: "text-fields"))
@@ -65,11 +67,20 @@ class ChooserViewController: TableController {
             default:
                 break
             }
+            
             guard let c = controller else { return }
             c.navigationItem.title = title
-            self.show(c, sender: nil)
+            let navigationController = UINavigationController(rootViewController: c)
+            self.splitViewController?.showDetailViewController(navigationController, sender: nil)
+            self.collapseDetailViewController = false
+            // self.show(c, sender: nil)
         }
         return cell
     }
-
+    
+    // MARK: - UISplitViewControllerDelegate
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return collapseDetailViewController
+    }
 }

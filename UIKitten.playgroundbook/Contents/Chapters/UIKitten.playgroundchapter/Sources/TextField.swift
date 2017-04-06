@@ -18,11 +18,7 @@ public class TextField: UITextField, Alignable {
     var validations : [Validation]?
     var validationType : TextFieldType?
     
-    public var padding : Int = 4 {
-        didSet {
-            
-        }
-    }
+    public var margin = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
 
     public func align(_ align: Align) -> TextField {
         self.align = align

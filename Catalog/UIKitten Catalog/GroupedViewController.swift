@@ -13,10 +13,14 @@ class GroupedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        navigationItem.leftItemsSupplementBackButton = true
+        
         view.backgroundColor = .white
         
         let firstButton = Button(icon: .arrowLeft).type(.danger)
-        let secondButton = Button(title: "Hello!").type(.primary)
+        let secondButton = Button(title: "Horizontal").type(.primary)
         let thirdButton = Button(icon: .arrowRight).type(.info)
         
         let groupedButtons = GroupedButtons(frame: CGRect(x: 10, y: 100, width: view.bounds.size.width - 20, height: 20), buttons: [firstButton, secondButton], axis: .horizontal)
@@ -31,5 +35,15 @@ class GroupedViewController: UIViewController {
                 groupedButtons.remove(button: thirdButton)
             }
         }
+        
+        let upButton = Button(icon: .arrowUp).type(.primary)
+        let middleButton = Button(title: "Vertical").type(.normal)
+        let downButton = Button(icon: .arrowDown).type(.warning)
+        
+        let groupedVerticalButtons = GroupedButtons(frame: CGRect(x: 10, y: 200, width: view.bounds.size.width - 20, height: 20), buttons: [upButton, middleButton, downButton], axis: .vertical)
+        groupedVerticalButtons.autoresizingMask = [.flexibleWidth]
+        groupedVerticalButtons.distribution = .fillEqually
+        groupedVerticalButtons.spacing = 0
+        view.addSubview(groupedVerticalButtons)
     }
 }

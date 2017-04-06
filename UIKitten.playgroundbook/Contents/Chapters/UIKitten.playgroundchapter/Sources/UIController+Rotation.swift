@@ -14,6 +14,12 @@ extension UINavigationController {
     }
 }
 
+extension UISplitViewController {
+    override open var supportedInterfaceOrientations : UIInterfaceOrientationMask     {
+        return .all
+    }
+}
+
 extension UITabBarController {
     override open var supportedInterfaceOrientations : UIInterfaceOrientationMask     {
         return .all

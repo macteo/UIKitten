@@ -18,7 +18,7 @@
 		95949AF31E8BA4230027BB4A /* ChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95949AF21E8BA4230027BB4A /* ChooserViewController.swift */; };
 		959C83461E806D8C00EF4DC3 /* TextFieldsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C83451E806D8C00EF4DC3 /* TextFieldsController.swift */; };
 		95E084C41E76A098001DB6BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084C31E76A098001DB6BA /* AppDelegate.swift */; };
-		95E084C61E76A098001DB6BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084C51E76A098001DB6BA /* ViewController.swift */; };
+		95E084C61E76A098001DB6BA /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084C51E76A098001DB6BA /* LayoutViewController.swift */; };
 		95E084C91E76A098001DB6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E084C71E76A098001DB6BA /* Main.storyboard */; };
 		95E084CB1E76A098001DB6BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95E084CA1E76A098001DB6BA /* Assets.xcassets */; };
 		95E084CE1E76A098001DB6BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E084CC1E76A098001DB6BA /* LaunchScreen.storyboard */; };
@@ -40,7 +40,7 @@
 		95D835291E76EFA40048869E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		95E084C01E76A098001DB6BA /* UIKitten Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKitten Catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E084C31E76A098001DB6BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95E084C51E76A098001DB6BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95E084C51E76A098001DB6BA /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 		95E084C81E76A098001DB6BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95E084CA1E76A098001DB6BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95E084CD1E76A098001DB6BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			children = (
 				95E084C31E76A098001DB6BA /* AppDelegate.swift */,
 				95949AF21E8BA4230027BB4A /* ChooserViewController.swift */,
-				95E084C51E76A098001DB6BA /* ViewController.swift */,
+				95E084C51E76A098001DB6BA /* LayoutViewController.swift */,
 				955A35A61E8A958900A574A5 /* ChartsViewController.swift */,
 				9542134E1E857DBB005365CE /* OverviewViewController.swift */,
 				950B98521E7858CC00450F4F /* GroupedViewController.swift */,
@@ -246,7 +246,7 @@
 				95949AF31E8BA4230027BB4A /* ChooserViewController.swift in Sources */,
 				9520134A1E7FC8F0001A36C5 /* ListController.swift in Sources */,
 				959C83461E806D8C00EF4DC3 /* TextFieldsController.swift in Sources */,
-				95E084C61E76A098001DB6BA /* ViewController.swift in Sources */,
+				95E084C61E76A098001DB6BA /* LayoutViewController.swift in Sources */,
 				955A35A71E8A958900A574A5 /* ChartsViewController.swift in Sources */,
 				955565551E810D3E00AE456F /* CellsViewController.swift in Sources */,
 				9555655B1E812F2000AE456F /* ButtonsController.swift in Sources */,

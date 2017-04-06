@@ -13,7 +13,7 @@ open class ImageView: UIImageView, Alignable {
     public var height: Height?
 
     // Alignable protocol
-    public var padding : Int = 0
+    public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     public var align : Align? = [.top, .left]
 
     var heightConstraint : NSLayoutConstraint?

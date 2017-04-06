@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LayoutViewController.swift
 //  UIKitten Catalog
 //
 //  Created by Matteo Gavagnin on 09/03/2017.
@@ -10,7 +10,7 @@ import UIKit
 import UIKitten
 import FontAwesome_swift
 
-class ViewController: UIViewController {
+class LayoutViewController: UIViewController {
     @IBOutlet var warningButton: Button!
 
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -21,10 +21,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        navigationItem.leftItemsSupplementBackButton = true
 
         warningButton.setTitle("This is a long\nmultiline\nbutton", for: .normal)
         
-        let _ = Button(icon: .github).padding(20).tap {
+        
+        let _ = Button(icon: .github).align([.top, .left]).margin(top: 70, left: 20).tap {
             print("Tapped GitHub")
             guard let warningButton = self.warningButton else { return }
             if warningButton.type == .warning {
@@ -34,11 +38,11 @@ class ViewController: UIViewController {
             }
         }.add(to: view)
 
-        let _ = Button(icon: .arrowRight, title: "Next".uppercased(), position: .left).type(.primary).align([.middle, .right]).add(to: view)
+        let _ = Button(icon: .arrowRight, title: "Next".uppercased(), position: .left).margin(right: 20).type(.primary).align([.middle, .right]).add(to: view)
         
-        let anguria = Button(title: "Anguria").align([.center, .bottom])
-                                        .padding(10)
+        let anguria = Button(title: "Watermelon").align([.center, .bottom])
                                         .style(.dropShadow)
+                                        .margin(bottom: 10)
                                         .type(.info)
                                         .size(.large)
                                         .tap {
