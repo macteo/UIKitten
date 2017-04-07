@@ -1,1 +1,0 @@
-../../../UIKitten/Icons/Counter+Icon.swift

@@ -1,4 +1,4 @@
-//: **Overview**: how do you draw a Bézier curve?
+//: **Overview**
 
 //#-hidden-code
 import UIKit
@@ -26,6 +26,7 @@ let item = Item(title: "Awesome cell", subtitle: "With great subtitle, very long
 })
 
 table.items = [[item, danger]]
+table.reloadData()
 
 //#-end-editable-code
 

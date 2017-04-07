@@ -2,7 +2,7 @@
 import UIKit
 //#-end-hidden-code
 
-//: **Overview**: how do you draw a Bézier curve?
+//: **Overview**
 //#-hidden-code
 import UIKit
 import PlaygroundSupport
@@ -29,6 +29,7 @@ let item = Item(title: "Awesome cell", subtitle: "With great subtitle, very long
 })
 
 table.items = [[item, danger]]
+table.reloadData()
 
 //#-end-editable-code
 
