@@ -243,7 +243,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
                 previousContainer = container
             }
         }
-        guard var tempCell = cell as? Cell else {
+        guard var tempCell = cell else {
             return CGSize(width: desiredCellWidth, height: 44)
         }
         

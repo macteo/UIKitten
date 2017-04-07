@@ -3,6 +3,6 @@
     <pages>
         <page name='1 Overview'/>
         <page name='2 Counter'/>
-        <page name='3 Pie Chart'/>
+        <page name='3 Pie'/>
     </pages>
 </playground>

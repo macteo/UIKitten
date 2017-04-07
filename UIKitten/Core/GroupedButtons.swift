@@ -174,10 +174,10 @@ public class GroupedButtons : UIView, Alignable {
         
         if spacing == 0 {
             layer.borderColor = type.borderColor.cgColor
-            cornerRadius = Style.normal.cornerRadius(height: bounds.size.height)
+            layer.cornerRadius = Style.normal.cornerRadius(height: bounds.size.height)
         } else {
             layer.borderColor = UIColor.clear.cgColor
-            cornerRadius = 0
+            layer.cornerRadius = 0
         }
         
         if heightConstraint == nil {

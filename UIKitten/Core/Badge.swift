@@ -60,7 +60,7 @@ public class Badge : Label, Alignable {
         
         transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
         
-        cornerRadius = bounds.size.height / 2
+        layer.cornerRadius = bounds.size.height / 2
         layer.masksToBounds = true
         
         font = UIFont.preferredFont(forTextStyle: .caption2)
@@ -91,7 +91,7 @@ public class Badge : Label, Alignable {
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        cornerRadius = bounds.size.height / 2
+        layer.cornerRadius = bounds.size.height / 2
     }
     
     // TODO: move to the Label class
@@ -127,7 +127,7 @@ public class Badge : Label, Alignable {
         adjSize.width += insets.left + insets.right
         adjSize.height += insets.top + insets.bottom
         
-        cornerRadius = adjSize.height / 2
+        layer.cornerRadius = adjSize.height / 2
         
         if adjSize.width < adjSize.height {
             adjSize.width = adjSize.height

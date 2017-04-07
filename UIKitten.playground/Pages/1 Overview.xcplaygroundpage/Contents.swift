@@ -15,12 +15,10 @@ table.view.frame = CGRect(x: 0, y: 0, width: 320, height: 320)
 //#-editable-code
 
 let button = Button(title: "Hello World")
-button.padding = 10
 button.type = .success
 button.align = [.right]
 
 let danger = Button(title: "Danger")
-danger.padding = 0
 danger.type = .danger
 danger.align = [.right]
 

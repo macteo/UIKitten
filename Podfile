@@ -6,5 +6,5 @@ target 'UIKitten' do
   use_frameworks!
 
   pod 'FontAwesome.swift'
-  pod 'Charts'
+  pod 'Charts', git: 'https://github.com/macteo/Charts.git' # Until #2235 is merged https://github.com/danielgindi/Charts/pull/2335
 end

@@ -10,7 +10,6 @@ import PlaygroundSupport
 
 //#-end-hidden-code
 
-
 let controller = UIViewController()
 controller.view.backgroundColor = .white
 
@@ -21,16 +20,11 @@ controller.view.frame = CGRect(x: 0, y: 0, width: 320, height: 320)
 //#-editable-code
 
 let counter = Counter(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+counter.image = UIImage.fontAwesomeIcon(name: .shoppingCart, textColor: .white, size: CGSize(width: 50, height: 50))
 counter.value = 946
 counter.caption = "Sales"
 
 controller.view.addSubview(counter)
-
-let addressBook = UIImage.fontAwesomeIcon(name: .addressBook, textColor: .gray, size: CGSize(width: 20, height: 20))
-
-let imageView = UIImageView(image: addressBook)
-
-controller.view.addSubview(imageView)
 
 //#-end-editable-code
 

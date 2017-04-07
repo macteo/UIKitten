@@ -26,7 +26,6 @@
 		955E71691E79734500369EFE /* UsernameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E71681E79734500369EFE /* UsernameField.swift */; };
 		955E716B1E7973D500369EFE /* GroupedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E716A1E7973D500369EFE /* GroupedButtons.swift */; };
 		9582B1591E716BEB001C7268 /* UIKitten.h in Headers */ = {isa = PBXBuildFile; fileRef = 9582B1571E716BEB001C7268 /* UIKitten.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9582B1671E716D1E001C7268 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582B1661E716D1E001C7268 /* UIView+Border.swift */; };
 		9582B1691E716D5B001C7268 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582B1681E716D5B001C7268 /* UIColor+RGB.swift */; };
 		9582B16C1E717261001C7268 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582B16B1E717261001C7268 /* Button.swift */; };
 		95949AF51E8BBA5B0027BB4A /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95949AF41E8BBA5B0027BB4A /* LineChart.swift */; };
@@ -81,7 +80,6 @@
 		9582B1551E716BEB001C7268 /* UIKitten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9582B1571E716BEB001C7268 /* UIKitten.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIKitten.h; path = ../UIKitten.h; sourceTree = "<group>"; };
 		9582B1581E716BEB001C7268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
-		9582B1661E716D1E001C7268 /* UIView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		9582B1681E716D5B001C7268 /* UIColor+RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
 		9582B16B1E717261001C7268 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		95949AF41E8BBA5B0027BB4A /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChart.swift; path = UIKitten/Charts/LineChart.swift; sourceTree = SOURCE_ROOT; };
@@ -250,7 +248,6 @@
 				95FD128E1E8399EB00CF0FE7 /* UIController+Rotation.swift */,
 				9505F78B1E719B0C004D2476 /* UIButton+Color.swift */,
 				9582B1681E716D5B001C7268 /* UIColor+RGB.swift */,
-				9582B1661E716D1E001C7268 /* UIView+Border.swift */,
 				955565581E8120AB00AE456F /* UIView+Align.swift */,
 				95FD128C1E83945600CF0FE7 /* UIView+ListItem.swift */,
 				95BB5F2E1E8D3FAA004C33D7 /* Label.swift */,
@@ -445,7 +442,6 @@
 				95E084D81E76E910001DB6BA /* Align.swift in Sources */,
 				95BB5F2D1E8D3DAC004C33D7 /* Counter.swift in Sources */,
 				955E71691E79734500369EFE /* UsernameField.swift in Sources */,
-				9582B1671E716D1E001C7268 /* UIView+Border.swift in Sources */,
 				952013451E7FC6B3001A36C5 /* ListItem.swift in Sources */,
 				950094611E8D2B1700C8998F /* Cell.swift in Sources */,
 				95BB5F341E8D6946004C33D7 /* Badge.swift in Sources */,

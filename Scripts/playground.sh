@@ -5,7 +5,16 @@ mkdir Core
 cd Core
 ln -s ../../../UIKitten/Core/*.swift .
 cd ../
-rm -R Icons
+rm -Rf Charts
+mkdir Charts
+cd Charts
+ln -s ../../../UIKitten/Charts/*.swift .
+mkdir Pod
+cd Pod
+cp -Rp ../../../../Pods/Charts/Source/Charts/* .
+# ln -s ../../../../Pods/Charts/Source/Charts/* .
+cd ../../
+rm -Rf Icons
 mkdir Icons
 cd Icons
 ln -s ../../../UIKitten/Icons/*.swift .

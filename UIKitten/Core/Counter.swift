@@ -97,7 +97,7 @@ public class Counter : UIView, Alignable {
     
     func commonInit() {
         // TODO: take from theme
-        cornerRadius = 4
+        layer.cornerRadius = 4
         layer.masksToBounds = true
         
         let imageRatio : CGFloat = 0.5

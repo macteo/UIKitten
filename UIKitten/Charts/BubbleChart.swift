@@ -6,10 +6,11 @@
 //  Copyright © 2017 Dolomate. All rights reserved.
 //
 
+import UIKit
+
 #if COCOAPODS
     import Charts
 #endif
-
 
 public class BubbleChart : BubbleChartView, Alignable {
 

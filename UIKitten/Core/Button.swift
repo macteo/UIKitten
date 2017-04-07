@@ -240,7 +240,7 @@ public class Button: UIButton, Alignable {
         }
     }
     
-    override var cornerRadius: CGFloat {
+    var cornerRadius: CGFloat {
         set {
             addBottomBorder()
             guard let bottomBorder = bottomBorder else { return }

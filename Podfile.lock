@@ -5,13 +5,22 @@ PODS:
   - FontAwesome.swift (1.1.1)
 
 DEPENDENCIES:
-  - Charts
+  - Charts (from `https://github.com/macteo/Charts.git`)
   - FontAwesome.swift
 
+EXTERNAL SOURCES:
+  Charts:
+    :git: https://github.com/macteo/Charts.git
+
+CHECKOUT OPTIONS:
+  Charts:
+    :commit: 409cebfb8bde357617a122829acf218c5b4e7ed9
+    :git: https://github.com/macteo/Charts.git
+
 SPEC CHECKSUMS:
-  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  Charts: e955b9a241a14a8971d70143002c8ab1610d26b6
   FontAwesome.swift: f4ff5a9199dc3b510eba5bb377e834f159aef358
 
-PODFILE CHECKSUM: 49a2b254ee116ab3daa94f2a1302bd0c280beef2
+PODFILE CHECKSUM: aab9ec5bd0e4ada8808386a5ff69398852e58394
 
 COCOAPODS: 1.2.0
