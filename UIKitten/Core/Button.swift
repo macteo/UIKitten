@@ -13,6 +13,8 @@ public class Button: UIButton, Alignable {
 
     public var width: Width?
     public var height: Height?
+    public var vertical : Vertical?
+    public var horizontal : Horizontal?
     
     var bottomBorder : UIView?
     let glassEffect = UIBlurEffect(style: .light)

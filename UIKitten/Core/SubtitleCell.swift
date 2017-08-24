@@ -17,7 +17,7 @@ public class SubtitleCell: BaseCell {
     var subtitleHeight : NSLayoutConstraint?
     var subtitleLeadingMargin : NSLayoutConstraint?
 
-    required public init(frame: CGRect) {
+    public required init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }

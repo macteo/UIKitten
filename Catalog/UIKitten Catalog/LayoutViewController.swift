@@ -38,8 +38,12 @@ class LayoutViewController: UIViewController {
             }
         }.add(to: view)
 
-        let _ = Button(icon: .arrowRight, title: "Next".uppercased(), position: .left).margin(right: 20).type(.primary).align([.middle, .right]).add(to: view)
+        let nextButton = Button(icon: .arrowRight, title: "Next".uppercased(), position: .left).margin(right: 20).type(.primary).align([.middle, .right]).add(to: view)
         
+        let vertical = Vertical.below(view: nextButton)
+        let _ = Label(text: "Hello World, a great long and beatiful world").vertical(vertical).align([.top, .left]).margin(top: 4, left: 0).add(to: view)
+        
+        // TODO: fixme the badge
         let anguria = Button(title: "Watermelon").align([.center, .bottom])
                                         .style(.dropShadow)
                                         .margin(bottom: 10)
@@ -64,12 +68,12 @@ class LayoutViewController: UIViewController {
                                             self.show(tableController, sender: nil)
         }.add(to: view)
         
-        let badge = Badge(frame: CGRect(x: 0, y: 100, width: 100, height: 10))
-        let _ = badge.snap(to: anguria)
+        // let badge = Badge(frame: CGRect(x: 0, y: 100, width: 100, height: 10))
+        // let _ = badge.snap(to: anguria)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { 
-            badge.value = "12"
-        }
+        // DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//             badge.value = "12"
+//         }
     }
 }
 

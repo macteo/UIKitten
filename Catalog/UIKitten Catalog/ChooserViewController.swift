@@ -26,9 +26,10 @@ class ChooserViewController: TableController, UISplitViewControllerDelegate {
         let list = forgeCell(title: "List")
         let cells = forgeCell(title: "Cells")
         let cards = forgeCell(title: "Cards")
+        let map = forgeCell(title: "Map")
         
         items = [
-            [overview, charts, buttons, textFields, layout, grouped, list, cells, cards]
+            [overview, charts, buttons, textFields, layout, grouped, list, cells, cards, map]
         ]
     }
     
@@ -63,6 +64,9 @@ class ChooserViewController: TableController, UISplitViewControllerDelegate {
                 break
             case "Cards":
                 controller = CardsViewController()
+                break
+            case "Map":
+                controller = MapViewController()
                 break
             default:
                 break

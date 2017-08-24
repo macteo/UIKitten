@@ -8,7 +8,34 @@
 
 import UIKit
 
-public class Label : UILabel {
+public class Label : UILabel, Alignable {
+    public var width: Width?
+    public var height: Height?
+    
+    public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) {
+        didSet {
+            layoutIfNeeded()
+        }
+    }
+    
+    public var align : Align? = [.top, .left] {
+        didSet {
+            layoutIfNeeded()
+        }
+    }
+    
+    public var horizontal : Horizontal? {
+        didSet {
+            layoutIfNeeded()
+        }
+    }
+    
+    public var vertical : Vertical? {
+        didSet {
+            layoutIfNeeded()
+        }
+    }
+    
     public var contentAlign: Align = .center
     
     public override func drawText(in rect: CGRect) {
@@ -21,5 +48,81 @@ public class Label : UILabel {
             eRect.size.height = height
         }
         super.drawText(in: eRect)
+    }
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    public convenience init(text: String) {
+        self.init(frame: CGRect(x: 0, y: 0, width: 100, height: 22))
+        self.text = text
+        commonInit()
+    }
+    
+    func commonInit() {
+        numberOfLines = 0
+        if #available(iOS 10, *) { } else {
+            // Only for iOS 9
+            NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    func contentSizeDidChange(notification: Notification) {
+        traitCollectionDidChange(nil)
+    }
+    
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        // TODO: adapt the font size
+        /*
+        if let textStyle = titleLabel?.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
+            titleLabel?.font = UIFont.preferredFont(forTextStyle: textStyle)
+        }
+         */
+    }
+    
+    public func text(_ text: String) -> Label {
+        self.text = text
+        return self
+    }
+    
+    public func add(to view: UIView) -> Label {
+        view.addSubview(self)
+        return self
+    }
+    
+    public func align(_ align: Align) -> Label {
+        self.align = align
+        return self
+    }
+    
+    public func horizontal(_ horizontal: Horizontal) -> Label {
+        self.horizontal = horizontal
+        return self
+    }
+    
+    public func vertical(_ vertical: Vertical) -> Label {
+        self.vertical = vertical
+        return self
+    }
+    
+    public func margin(top: CGFloat = 0, left: CGFloat = 0, bottom: CGFloat = 0, right: CGFloat = 0) -> Label {
+        self.margin = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
+        return self
+    }
+    
+    override public func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        configureAlignConstraints()
     }
 }

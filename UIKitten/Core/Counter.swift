@@ -16,6 +16,8 @@ public class Counter : UIView, Alignable {
     public var height: Height? = .width(ratio: 0.25)
     public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     public var align : Align? = [.middle, .center]
+    public var vertical : Vertical?
+    public var horizontal : Horizontal?
     
     // MARK: View Lifecycle
     

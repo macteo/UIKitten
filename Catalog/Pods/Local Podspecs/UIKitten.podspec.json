@@ -31,7 +31,8 @@
         "FontAwesome.swift": [
 
         ]
-      }
+      },
+      "frameworks": "MapKit"
     },
     {
       "name": "Charts",

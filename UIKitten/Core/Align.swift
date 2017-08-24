@@ -27,6 +27,8 @@ public protocol Alignable {
     var margin : UIEdgeInsets { get set }
     var width : Width? { get set }
     var height : Height? { get set }
+    var vertical : Vertical? { get set }
+    var horizontal : Horizontal? { get set }
 }
 
 public enum Width {
@@ -39,4 +41,50 @@ public enum Height {
     case absolute(points: CGFloat)
     case container(ratio: CGFloat)
     case width(ratio: CGFloat)
+}
+
+public enum Vertical {
+    case above(view: UIView)
+    case below(view: UIView)
+    
+    var top : UIView? {
+        switch self {
+        case .below(let view):
+            return view
+        default:
+            return nil
+        }
+    }
+    
+    var bottom : UIView? {
+        switch self {
+        case .above(let view):
+            return view
+        default:
+            return nil
+        }
+    }
+}
+
+public enum Horizontal {
+    case leading(view: UIView)
+    case trailing(view: UIView)
+    
+    var left : UIView? {
+        switch self {
+        case .leading(let view):
+            return view
+        default:
+            return nil
+        }
+    }
+    
+    var right : UIView? {
+        switch self {
+        case .trailing(let view):
+            return view
+        default:
+            return nil
+        }
+    }
 }

@@ -17,6 +17,8 @@
 		955A35A71E8A958900A574A5 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A35A61E8A958900A574A5 /* ChartsViewController.swift */; };
 		95949AF31E8BA4230027BB4A /* ChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95949AF21E8BA4230027BB4A /* ChooserViewController.swift */; };
 		959C83461E806D8C00EF4DC3 /* TextFieldsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C83451E806D8C00EF4DC3 /* TextFieldsController.swift */; };
+		95C5632A1E97CBAE00B52CDB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C563291E97CBAE00B52CDB /* MapViewController.swift */; };
+		95C563371E97F54600B52CDB /* half-marathon.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 95C563361E97F54600B52CDB /* half-marathon.gpx */; };
 		95E084C41E76A098001DB6BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084C31E76A098001DB6BA /* AppDelegate.swift */; };
 		95E084C61E76A098001DB6BA /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E084C51E76A098001DB6BA /* LayoutViewController.swift */; };
 		95E084C91E76A098001DB6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E084C71E76A098001DB6BA /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 		95949AF21E8BA4230027BB4A /* ChooserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooserViewController.swift; sourceTree = "<group>"; };
 		959C83451E806D8C00EF4DC3 /* TextFieldsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsController.swift; sourceTree = "<group>"; };
 		95BB5F281E8D3900004C33D7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		95C563291E97CBAE00B52CDB /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		95C563361E97F54600B52CDB /* half-marathon.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "half-marathon.gpx"; sourceTree = "<group>"; };
 		95D835291E76EFA40048869E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		95E084C01E76A098001DB6BA /* UIKitten Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKitten Catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E084C31E76A098001DB6BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				959C83451E806D8C00EF4DC3 /* TextFieldsController.swift */,
 				955565541E810D3E00AE456F /* CellsViewController.swift */,
 				95311C191E93A5B3001B0349 /* CardsViewController.swift */,
+				95C563291E97CBAE00B52CDB /* MapViewController.swift */,
+				95C563361E97F54600B52CDB /* half-marathon.gpx */,
 				95E084C71E76A098001DB6BA /* Main.storyboard */,
 				95E084CC1E76A098001DB6BA /* LaunchScreen.storyboard */,
 				95E084CA1E76A098001DB6BA /* Assets.xcassets */,
@@ -182,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C563371E97F54600B52CDB /* half-marathon.gpx in Resources */,
 				95E084CE1E76A098001DB6BA /* LaunchScreen.storyboard in Resources */,
 				95E084CB1E76A098001DB6BA /* Assets.xcassets in Resources */,
 				95E084C91E76A098001DB6BA /* Main.storyboard in Resources */,
@@ -197,13 +204,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UIKitten Catalog-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B1973ACD612F3A91CA50C57C /* [CP] Copy Pods Resources */ = {
@@ -227,9 +237,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitten Catalog/Pods-UIKitten Catalog-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/UIKitten/UIKitten.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIKitten.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -250,6 +267,7 @@
 				955A35A71E8A958900A574A5 /* ChartsViewController.swift in Sources */,
 				955565551E810D3E00AE456F /* CellsViewController.swift in Sources */,
 				9555655B1E812F2000AE456F /* ButtonsController.swift in Sources */,
+				95C5632A1E97CBAE00B52CDB /* MapViewController.swift in Sources */,
 				95311C1A1E93A5B3001B0349 /* CardsViewController.swift in Sources */,
 				9542134F1E857DBB005365CE /* OverviewViewController.swift in Sources */,
 				95E084C41E76A098001DB6BA /* AppDelegate.swift in Sources */,

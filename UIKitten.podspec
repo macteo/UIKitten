@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
     core.source_files  = 'UIKitten/Core/**/*.swift'
     core.resources     = [ 'UIKitten/Core/**/*.xcassets', 'UIKitten/Core/*.storyboard']
     core.dependency      'FontAwesome.swift'
+    core.framework     = 'MapKit'
   end
 
   s.subspec 'Charts' do |charts|

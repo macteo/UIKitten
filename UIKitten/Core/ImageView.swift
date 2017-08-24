@@ -11,7 +11,9 @@ import UIKit
 open class ImageView: UIImageView, Alignable {
     public var width: Width?
     public var height: Height?
-
+    public var vertical : Vertical?
+    public var horizontal : Horizontal?
+    
     // Alignable protocol
     public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     public var align : Align? = [.top, .left]

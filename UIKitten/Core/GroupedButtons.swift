@@ -15,6 +15,8 @@ public class GroupedButtons : UIView, Alignable {
     public var height: Height?
     public var align : Align?
     public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    public var vertical : Vertical?
+    public var horizontal : Horizontal?
     
     public var type : ButtonType = .normal {
         didSet {

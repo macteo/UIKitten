@@ -8,16 +8,8 @@
 
 import UIKit
 
-public class Badge : Label, Alignable {
+public class Badge : Label {
     public var insets = UIEdgeInsets(top: 2, left: 4, bottom: 2, right: 4)
-    
-    // TODO: move to the Label class
-    // MARK: Alignable protocol
-    
-    public var width: Width?
-    public var height: Height?
-    public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    public var align : Align?
     
     // MARK: View Lifecycle
     
@@ -53,7 +45,8 @@ public class Badge : Label, Alignable {
         commonInit()
     }
     
-    func commonInit() {
+    override func commonInit() {
+        super.commonInit()
         text = nil
         type = .danger
         textAlignment = .center
@@ -95,7 +88,7 @@ public class Badge : Label, Alignable {
     }
     
     // TODO: move to the Label class
-    func contentSizeDidChange(notification: Notification) {
+    override func contentSizeDidChange(notification: Notification) {
         traitCollectionDidChange(nil)
     }
     
@@ -104,12 +97,6 @@ public class Badge : Label, Alignable {
         if let valueStyle = font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
             font = UIFont.preferredFont(forTextStyle: valueStyle)
         }
-    }
-    
-    // TODO: move to the Label class
-    public func add(to view: UIView) -> UIView {
-        view.addSubview(self)
-        return self
     }
     
     // TODO: move to the Label class

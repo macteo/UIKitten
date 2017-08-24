@@ -12,7 +12,9 @@ public class TextField: UITextField, Alignable {
 
     public var width: Width? = .container(ratio: 0.8)
     public var height: Height?
-
+    public var vertical : Vertical?
+    public var horizontal : Horizontal?
+    
     let imagePadding = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 0)
     
     var validations : [Validation]?

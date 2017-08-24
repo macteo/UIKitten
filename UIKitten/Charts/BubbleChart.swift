@@ -20,6 +20,8 @@ public class BubbleChart : BubbleChartView, Alignable {
     public var height: Height? = .width(ratio: 0.5)
     public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     public var align : Align? = [.top, .left]
+    public var vertical : Vertical?
+    public var horizontal : Horizontal?
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
