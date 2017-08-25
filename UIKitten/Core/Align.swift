@@ -20,6 +20,14 @@ public struct Align: OptionSet {
     public static let left     = Align(rawValue: 1 << 3)
     public static let center   = Align(rawValue: 1 << 4)
     public static let right    = Align(rawValue: 1 << 5)
+    
+    // There should be other options:
+    /*
+     - before(view: Any) (on the left)
+     - after(view: Any) (on the right)
+     - above(view: Any)
+     - below(view: Any)
+     */
 }
 
 public protocol Alignable {

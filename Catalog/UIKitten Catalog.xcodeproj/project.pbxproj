@@ -11,6 +11,7 @@
 		950B98531E7858CC00450F4F /* GroupedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B98521E7858CC00450F4F /* GroupedViewController.swift */; };
 		9520134A1E7FC8F0001A36C5 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952013491E7FC8F0001A36C5 /* ListController.swift */; };
 		95311C1A1E93A5B3001B0349 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95311C191E93A5B3001B0349 /* CardsViewController.swift */; };
+		953A449E1F5054EF00713B7C /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A449D1F5054EF00713B7C /* LabelViewController.swift */; };
 		9542134F1E857DBB005365CE /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542134E1E857DBB005365CE /* OverviewViewController.swift */; };
 		955565551E810D3E00AE456F /* CellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955565541E810D3E00AE456F /* CellsViewController.swift */; };
 		9555655B1E812F2000AE456F /* ButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9555655A1E812F2000AE456F /* ButtonsController.swift */; };
@@ -32,6 +33,7 @@
 		950B98521E7858CC00450F4F /* GroupedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedViewController.swift; sourceTree = "<group>"; };
 		952013491E7FC8F0001A36C5 /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		95311C191E93A5B3001B0349 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		953A449D1F5054EF00713B7C /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
 		9542134E1E857DBB005365CE /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		955565541E810D3E00AE456F /* CellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellsViewController.swift; sourceTree = "<group>"; };
 		9555655A1E812F2000AE456F /* ButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				95E084C31E76A098001DB6BA /* AppDelegate.swift */,
 				95949AF21E8BA4230027BB4A /* ChooserViewController.swift */,
 				95E084C51E76A098001DB6BA /* LayoutViewController.swift */,
+				953A449D1F5054EF00713B7C /* LabelViewController.swift */,
 				955A35A61E8A958900A574A5 /* ChartsViewController.swift */,
 				9542134E1E857DBB005365CE /* OverviewViewController.swift */,
 				950B98521E7858CC00450F4F /* GroupedViewController.swift */,
@@ -265,6 +268,7 @@
 				959C83461E806D8C00EF4DC3 /* TextFieldsController.swift in Sources */,
 				95E084C61E76A098001DB6BA /* LayoutViewController.swift in Sources */,
 				955A35A71E8A958900A574A5 /* ChartsViewController.swift in Sources */,
+				953A449E1F5054EF00713B7C /* LabelViewController.swift in Sources */,
 				955565551E810D3E00AE456F /* CellsViewController.swift in Sources */,
 				9555655B1E812F2000AE456F /* ButtonsController.swift in Sources */,
 				95C5632A1E97CBAE00B52CDB /* MapViewController.swift in Sources */,

@@ -34,7 +34,7 @@ public class Badge : Label {
             }
         }
     }
-        
+    
     override public required init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

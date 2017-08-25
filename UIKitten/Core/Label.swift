@@ -67,6 +67,7 @@ public class Label : UILabel, Alignable {
     }
     
     func commonInit() {
+        backgroundColor = UIColor.green.withAlphaComponent(0.25)
         numberOfLines = 0
         if #available(iOS 10, *) { } else {
             // Only for iOS 9
@@ -83,6 +84,7 @@ public class Label : UILabel, Alignable {
     }
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        // layoutIfNeeded()
         // TODO: adapt the font size
         /*
         if let textStyle = titleLabel?.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
@@ -113,6 +115,26 @@ public class Label : UILabel, Alignable {
     
     public func vertical(_ vertical: Vertical) -> Label {
         self.vertical = vertical
+        return self
+    }
+    
+    public func below(_ view: UIView) -> Label {
+        self.vertical = Vertical.below(view: view)
+        return self
+    }
+    
+    public func above(_ view: UIView) -> Label {
+        self.vertical = Vertical.above(view: view)
+        return self
+    }
+    
+    public func leading(_ view: UIView) -> Label {
+        self.horizontal = Horizontal.leading(view: view)
+        return self
+    }
+    
+    public func trailing(_ view: UIView) -> Label {
+        self.horizontal = Horizontal.trailing(view: view)
         return self
     }
     

@@ -26,11 +26,21 @@ extension UIView {
                 } else {
                     superview.addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: superview, attribute: .top, multiplier: 1, constant: margin.top))
                 }
-                let bottomConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: superview, attribute: .bottom, multiplier: 1, constant: -margin.bottom)
-                bottomConstraint.priority = 750
-                superview.addConstraint(bottomConstraint)
+                if let vertical = alignable.vertical, let bottom = vertical.bottom {
+                    let bottomConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: bottom, attribute: .top, multiplier: 1, constant: -margin.bottom)
+                    bottomConstraint.priority = 750
+                    superview.addConstraint(bottomConstraint)
+                } else {
+                    let bottomConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: superview, attribute: .bottom, multiplier: 1, constant: -margin.bottom)
+                    bottomConstraint.priority = 750
+                    superview.addConstraint(bottomConstraint)
+                }
             } else if align.contains(.bottom) {
-                superview.addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: superview, attribute: .top, multiplier: 1, constant: margin.top))
+                if let vertical = alignable.vertical, let top = vertical.top {
+                    superview.addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: top, attribute: .bottom, multiplier: 1, constant: margin.top))
+                } else {
+                    superview.addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: superview, attribute: .top, multiplier: 1, constant: margin.top))
+                }
                 if let vertical = alignable.vertical, let bottom = vertical.bottom {
                     let bottomConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: bottom, attribute: .top, multiplier: 1, constant: -margin.bottom)
                     bottomConstraint.priority = 750

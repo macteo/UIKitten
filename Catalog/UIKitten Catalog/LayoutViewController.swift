@@ -40,11 +40,10 @@ class LayoutViewController: UIViewController {
 
         let nextButton = Button(icon: .arrowRight, title: "Next".uppercased(), position: .left).margin(right: 20).type(.primary).align([.middle, .right]).add(to: view)
         
-        let vertical = Vertical.below(view: nextButton)
-        let _ = Label(text: "Hello World, a great long and beatiful world").vertical(vertical).align([.top, .left]).margin(top: 4, left: 0).add(to: view)
+        let _ = Label(text: "Hello World, a great long and beatiful world thta it's not what I intended, however it seems pretty solid.\nHello World, a great long and beatiful world thta it's not what I intended, however it seems pretty solid.\nHello World, a great long and beatiful world thta it's not what I intended, however it seems pretty solid.\nHello World, a great long and beatiful world thta it's not what I intended, however it seems pretty solid.\nHello World, a great long and beatiful world thta it's not what I intended, however it seems pretty solid.\nHello World, a great long and beatiful world thta it's not what I intended, however it seems pretty solid.\nHello World, a great long and beatiful world thta it's not what I intended, however it seems pretty solid.\n").below(nextButton).align([.top, .left]).margin(top: 4, left: 0).add(to: view)
         
         // TODO: fixme the badge
-        let anguria = Button(title: "Watermelon").align([.center, .bottom])
+        let _ = Button(title: "Watermelon").align([.center, .bottom])
                                         .style(.dropShadow)
                                         .margin(bottom: 10)
                                         .type(.info)
