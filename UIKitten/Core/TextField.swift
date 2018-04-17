@@ -159,12 +159,12 @@ public class TextField: UITextField, Alignable {
         NotificationCenter.default.removeObserver(self)
     }
     
-    func contentSizeDidChange(notification: Notification) {
+    @objc func contentSizeDidChange(notification: Notification) {
         traitCollectionDidChange(nil)
     }
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if let textStyle = font?.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
+        if let textStyle = font?.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
             font = UIFont.preferredFont(forTextStyle: textStyle)
         }
     }
@@ -212,7 +212,7 @@ public class TextField: UITextField, Alignable {
         leftView?.subviews.first?.tintColor = currentType.borderColor
         rightView?.subviews.first?.tintColor = currentType.borderColor
         
-        if let _ = font?.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
+        if let _ = font?.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
             font = UIFont.preferredFont(forTextStyle: size.textStyle)
         }
         frame.size.height = size.height

@@ -105,7 +105,7 @@ public class SubtitleCell: BaseCell {
         mainView.addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .trailing, relatedBy: .equal, toItem: mainView, attribute: .trailing, multiplier: 1, constant: 0))
         
         titleHeight = NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 12)
-        titleHeight?.priority = 750
+        titleHeight?.priority = .defaultHigh
         mainView.addConstraint(titleHeight!)
         
         mainView.addConstraint(NSLayoutConstraint(item: mainView, attribute: .bottom, relatedBy: .equal, toItem: subtitleLabel, attribute: .bottom, multiplier: 1, constant: 0))
@@ -115,7 +115,7 @@ public class SubtitleCell: BaseCell {
         mainView.addConstraint(subtitleLeadingMargin!)
         
         subtitleHeight = NSLayoutConstraint(item: subtitleLabel, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0)
-        subtitleHeight?.priority = 750
+        subtitleHeight?.priority = .defaultHigh
         mainView.addConstraint(subtitleHeight!)
         
         titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
@@ -151,7 +151,7 @@ public class SubtitleCell: BaseCell {
         footerView.addConstraint(NSLayoutConstraint(item: footerView, attribute: .leading, relatedBy: .equal, toItem: emptyOrangeView, attribute: .leading, multiplier: 1, constant: 0))
         footerView.addConstraint(NSLayoutConstraint(item: footerView, attribute: .trailing, relatedBy: .equal, toItem: emptyOrangeView, attribute: .trailing, multiplier: 1, constant: 0))
         let emptyHeight = NSLayoutConstraint(item: emptyOrangeView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
-        emptyHeight.priority = 650
+        emptyHeight.priority = UILayoutPriority(rawValue: 650)
         footerView.addConstraint(emptyHeight)
         
         thumbnailViewSize = 0
@@ -177,7 +177,7 @@ public class SubtitleCell: BaseCell {
         subtitleLabel.preferredMaxLayoutWidth = width
         
         let expectedHeight = subtitleLabel.sizeThatFits(CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)).height
-        subtitleHeight.priority = 750
+        subtitleHeight.priority = .defaultHigh
         subtitleHeight.constant = ceil(expectedHeight)
         
         // Calculate title height
@@ -186,18 +186,18 @@ public class SubtitleCell: BaseCell {
         let titleWidth : CGFloat = floor(desiredSize.width - padding.left - padding.right - accessoryViewWidth.constant + titleLeadingMargin.constant + thumbnailViewLeadingMargin.constant - thumbnailViewWidth.constant)
         
         let expectedTitleHeight = titleLabel.sizeThatFits(CGSize(width: titleWidth, height: CGFloat.greatestFiniteMagnitude)).height
-        titleHeight.priority = 750
+        titleHeight.priority = .defaultHigh
         
         titleLabel.preferredMaxLayoutWidth = titleWidth
         titleHeight.constant = ceil(expectedTitleHeight)
     }
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if let titleStyle = titleLabel.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
+        if let titleStyle = titleLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
             titleLabel.font = UIFont.preferredFont(forTextStyle: titleStyle)
         }
         
-        if let subtitleStyle = subtitleLabel.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
+        if let subtitleStyle = subtitleLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
             subtitleLabel.font = UIFont.preferredFont(forTextStyle: subtitleStyle)
         }
         

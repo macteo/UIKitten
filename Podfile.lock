@@ -1,26 +1,22 @@
 PODS:
-  - Charts (3.0.2):
-    - Charts/Core (= 3.0.2)
-  - Charts/Core (3.0.2)
-  - FontAwesome.swift (1.1.1)
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
+  - FontAwesome.swift (1.3.2)
 
 DEPENDENCIES:
-  - Charts (from `https://github.com/macteo/Charts.git`)
+  - Charts (~> 3.1.1)
   - FontAwesome.swift
 
-EXTERNAL SOURCES:
-  Charts:
-    :git: https://github.com/macteo/Charts.git
-
-CHECKOUT OPTIONS:
-  Charts:
-    :commit: 409cebfb8bde357617a122829acf218c5b4e7ed9
-    :git: https://github.com/macteo/Charts.git
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Charts
+    - FontAwesome.swift
 
 SPEC CHECKSUMS:
-  Charts: e955b9a241a14a8971d70143002c8ab1610d26b6
-  FontAwesome.swift: f4ff5a9199dc3b510eba5bb377e834f159aef358
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
+  FontAwesome.swift: b4e4c8ccbbecb12f9b592bc533ff237af3706667
 
-PODFILE CHECKSUM: aab9ec5bd0e4ada8808386a5ff69398852e58394
+PODFILE CHECKSUM: a664974ce61a2f3c0819f1aefbea40dc7604f8a4
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.0

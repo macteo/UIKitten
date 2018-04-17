@@ -23,7 +23,7 @@ extension UIColor {
     }
     
     public class var lightGrayFlat : UIColor {
-        return UIColor(colorLiteralRed: 150/255, green: 160/255, blue: 180/255, alpha: 0.3)
+        return UIColor(red: 150/255, green: 160/255, blue: 180/255, alpha: 0.3)
     }
     
     public class var tableGray : UIColor {

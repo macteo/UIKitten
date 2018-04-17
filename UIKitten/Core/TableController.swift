@@ -63,7 +63,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
          layout.invalidateLayout()
     }
     
-    func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
+    @objc func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
         
         switch(gesture.state) {
             
@@ -162,7 +162,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         NotificationCenter.default.removeObserver(self)
     }
     
-    func contentSizeDidChange(notification: Notification) {
+    @objc func contentSizeDidChange(notification: Notification) {
         traitCollectionDidChange(nil)
     }
     
@@ -253,7 +253,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
             tempCell.desiredSize = CGSize(width: desiredCellWidth, height: 44)
         }
         
-        let size = tempCell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriorityDefaultLow, verticalFittingPriority: UILayoutPriorityDefaultLow)
+        let size = tempCell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriority.defaultLow, verticalFittingPriority: UILayoutPriority.defaultLow)
 
         if cellIsAlreadyVisible == false {
             if let container = previousContainer {
