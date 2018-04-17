@@ -143,7 +143,7 @@ open class BaseCell: UICollectionViewCell, Cell {
         customView.accessibilityIdentifier = "CellCustomView"
         
         contentViewWidth = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: desiredSize.width)
-        contentViewWidth?.priority = 750
+        contentViewWidth?.priority = .defaultHigh
         contentView.addConstraint(contentViewWidth!)
         
         accessoryView.frame = CGRect(x: bounds.size.width - accessoryViewSize - padding.right, y: (bounds.size.height - accessoryViewSize) / 2, width: accessoryViewSize, height: accessoryViewSize)
@@ -203,7 +203,7 @@ open class BaseCell: UICollectionViewCell, Cell {
         contentView.addConstraint(NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .lessThanOrEqual, toItem: mainView, attribute: .top, multiplier: 1, constant: -padding.top))
         
         mainViewCenterYConstraint = NSLayoutConstraint(item: contentView, attribute: .centerY, relatedBy: .equal, toItem: mainView, attribute: .centerY, multiplier: 1, constant: 0)
-        mainViewCenterYConstraint!.priority = 1
+        mainViewCenterYConstraint!.priority = UILayoutPriority(rawValue: 1)
         
         contentView.addConstraint(mainViewCenterYConstraint!)
         
@@ -277,7 +277,7 @@ open class BaseCell: UICollectionViewCell, Cell {
         NotificationCenter.default.removeObserver(self)
     }
     
-    func contentSizeDidChange(notification: Notification) {
+    @objc func contentSizeDidChange(notification: Notification) {
         traitCollectionDidChange(nil)
     }
     

@@ -95,13 +95,13 @@ public class Badge : Label, Alignable {
     }
     
     // TODO: move to the Label class
-    func contentSizeDidChange(notification: Notification) {
+    @objc func contentSizeDidChange(notification: Notification) {
         traitCollectionDidChange(nil)
     }
     
     // TODO: move to the Label class
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if let valueStyle = font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
+        if let valueStyle = font.fontDescriptor.object(forKey: UIFontDescriptor.AttributeName.textStyle) as? UIFontTextStyle {
             font = UIFont.preferredFont(forTextStyle: valueStyle)
         }
     }
@@ -152,10 +152,10 @@ public class Badge : Label, Alignable {
         guard let superview = view.superview else { return self }
         superview.addSubview(self)
         let xConstraint = NSLayoutConstraint(item: self, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0)
-        xConstraint.priority = 500
+        xConstraint.priority = UILayoutPriority(rawValue: 500)
         superview.addConstraint(xConstraint)
         let trailingConstraint = NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: view, attribute: .trailing, multiplier: 1, constant: 10)
-        trailingConstraint.priority = 750
+        trailingConstraint.priority = UILayoutPriority(rawValue: 750)
         superview.addConstraint(trailingConstraint)
         superview.addConstraint(NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0))
         return self

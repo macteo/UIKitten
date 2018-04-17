@@ -29,7 +29,7 @@ public class Button: UIButton, Alignable {
     }
     
     func updateTitleValues() {
-        if let _ = titleLabel?.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
+        if let _ = titleLabel?.font.fontDescriptor.object(forKey: .textStyle) {
             titleLabel?.font = UIFont.preferredFont(forTextStyle: size.textStyle)
         }
         
@@ -192,7 +192,7 @@ public class Button: UIButton, Alignable {
             heightConstraint?.constant = frame.size.height
         } else {
             heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: frame.size.height)
-            heightConstraint?.priority = 750
+            heightConstraint?.priority = .defaultHigh
             addConstraint(heightConstraint!)
         }
         
@@ -262,7 +262,7 @@ public class Button: UIButton, Alignable {
         }
     }
     
-    override func setBackgroundColor(_ color: UIColor, forState: UIControlState) {
+    @objc override func setBackgroundColor(_ color: UIColor, forState: UIControlState) {
         super.setBackgroundColor(color, forState: forState)
         if forState == .normal {
             bottomBorder?.layer.borderColor = color.darker(value: 0.1)?.cgColor
@@ -303,7 +303,7 @@ public class Button: UIButton, Alignable {
             heightConstraint?.constant = intrinsicSize.height
         } else {
             heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: intrinsicSize.height)
-            heightConstraint?.priority = 750
+            heightConstraint?.priority = .defaultHigh
             addConstraint(heightConstraint!)
         }
         return intrinsicSize
@@ -332,17 +332,17 @@ public class Button: UIButton, Alignable {
         NotificationCenter.default.removeObserver(self)
     }
     
-    func contentSizeDidChange(notification: Notification) {
+    @objc func contentSizeDidChange(notification: Notification) {
         traitCollectionDidChange(nil)
     }
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if let textStyle = titleLabel?.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
+        if let textStyle = titleLabel?.font.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
              titleLabel?.font = UIFont.preferredFont(forTextStyle: textStyle)
         }
     }
         
-    public var action : ((Void) -> Void)?
+    public var action : (() -> Void)?
     
     public var align : Align? {
         didSet {
@@ -356,12 +356,12 @@ public class Button: UIButton, Alignable {
         }
     }
     
-    public func tap(_ action: @escaping (Void) -> Void) -> Button {
+    public func tap(_ action: @escaping () -> Void) -> Button {
         self.action = action
         return self
     }
     
-    func touchUpInside(_ button: UIButton) {
+    @objc func touchUpInside(_ button: UIButton) {
         if let action = action {
             action()
         }

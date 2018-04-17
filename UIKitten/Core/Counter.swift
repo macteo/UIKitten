@@ -171,16 +171,16 @@ public class Counter : UIView, Alignable {
         }
     }
     
-    func contentSizeDidChange(notification: Notification) {
+    @objc func contentSizeDidChange(notification: Notification) {
         traitCollectionDidChange(nil)
     }
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if let valueStyle = valueLabel.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
+        if let valueStyle = valueLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
             valueLabel.font = UIFont.preferredFont(forTextStyle: valueStyle)
         }
         
-        if let captionStyle = captionLabel.font.fontDescriptor.object(forKey: UIFontDescriptorTextStyleAttribute) as? UIFontTextStyle {
+        if let captionStyle = captionLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
             captionLabel.font = UIFont.preferredFont(forTextStyle: captionStyle)
         }
     }
