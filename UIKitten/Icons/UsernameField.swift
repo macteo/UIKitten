@@ -21,7 +21,7 @@ public class UsernameField: TextField {
         autocapitalizationType = .none
         spellCheckingType = .no
         
-        leftImage = UIImage.fontAwesomeIcon(name: .user, textColor: tintColor, size: imageSize).withRenderingMode(.alwaysTemplate)
+        leftImage = UIImage.fontAwesomeIcon(name: .user, style: .regular, textColor: tintColor, size: imageSize).withRenderingMode(.alwaysTemplate)
         placeholder = NSLocalizedString("Username", comment: "Username placeholder")
     }
 }

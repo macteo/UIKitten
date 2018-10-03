@@ -20,7 +20,7 @@ public class EmailField: TextField {
         autocapitalizationType = .none
         spellCheckingType = .no
         
-        leftImage = UIImage.fontAwesomeIcon(name: .envelopeO, textColor: tintColor, size: imageSize).withRenderingMode(.alwaysTemplate)
+        leftImage = UIImage.fontAwesomeIcon(name: .envelope, style: .regular, textColor: tintColor, size: imageSize).withRenderingMode(.alwaysTemplate)
         
         placeholder = NSLocalizedString("Email", comment: "Email placeholder")
         let emailRegex = Validation(regex: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}", message: NSLocalizedString("Please insert a valid email address", comment: "Email validation format error"))
