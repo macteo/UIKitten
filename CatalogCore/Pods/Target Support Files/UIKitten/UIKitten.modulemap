@@ -1,0 +1,6 @@
+framework module UIKitten {
+  umbrella header "UIKitten-umbrella.h"
+
+  export *
+  module * { export * }
+}

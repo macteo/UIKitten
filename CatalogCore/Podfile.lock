@@ -1,0 +1,18 @@
+PODS:
+  - UIKitten (0.1.0):
+    - UIKitten/Core (= 0.1.0)
+  - UIKitten/Core (0.1.0)
+
+DEPENDENCIES:
+  - UIKitten (from `../`)
+
+EXTERNAL SOURCES:
+  UIKitten:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UIKitten: 14c66d29f55de71055c499efade4c0bf19bf077b
+
+PODFILE CHECKSUM: 534e60e4415add3d5ca6f1d2b068a3b39ea3f939
+
+COCOAPODS: 1.5.3

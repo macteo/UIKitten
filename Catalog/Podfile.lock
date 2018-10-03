@@ -8,8 +8,7 @@ PODS:
   - UIKitten/Charts (0.1.0):
     - Charts
     - UIKitten/Core
-  - UIKitten/Core (0.1.0):
-    - FontAwesome.swift
+  - UIKitten/Core (0.1.0)
   - UIKitten/Icons (0.1.0):
     - FontAwesome.swift
     - UIKitten/Core
@@ -31,7 +30,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Charts: 680c8328bd5e90cb14f67e00d2176f3113d19141
   FontAwesome.swift: 17b93524b9f61136a8566344517b8556ed584e87
-  UIKitten: 3dbbaeb288249cf5aedfc6db5c88ac46a23ce742
+  UIKitten: 14c66d29f55de71055c499efade4c0bf19bf077b
 
 PODFILE CHECKSUM: 011f8263e39ea9f777399aefb3adb355505d8f66
 
