@@ -23,9 +23,9 @@ class ChartsViewController: TableController {
         let lineView = LineChart(frame: CGRect(x: 0, y: 0, width: 260, height: 120))
         let pieView = PieChart(frame: CGRect(x: 0, y: 0, width: 260, height: 120))
         
-        let cart = UIImage.fontAwesomeIcon(name: .shoppingCart, textColor: .white, size: CGSize(width: 30, height: 30))
-        let money = UIImage.fontAwesomeIcon(name: .money, textColor: .white, size: CGSize(width: 30, height: 30))
-        let car = UIImage.fontAwesomeIcon(name: .car, textColor: .white, size: CGSize(width: 30, height: 30))
+        let cart = UIImage.fontAwesomeIcon(name: .shoppingCart, style: .regular, textColor: .white, size: CGSize(width: 30, height: 30))
+        let money = UIImage.fontAwesomeIcon(name: .moneyBill, style: .regular, textColor: .white, size: CGSize(width: 30, height: 30))
+        let car = UIImage.fontAwesomeIcon(name: .car, style: .regular, textColor: .white, size: CGSize(width: 30, height: 30))
         
         pieView.dataSet(values: [PieChartDataEntry(value: 30, icon: cart), PieChartDataEntry(value: 40, icon: money), PieChartDataEntry(value: 30, icon: car), PieChartDataEntry(value: 10)], colors: [.success, .warning, .info, .danger], alpha: 0.8)
         

@@ -25,7 +25,7 @@ public class Badge : Label, Alignable {
         didSet {
             if (oldValue == nil || oldValue == "") && (value != nil && value != "") {
                 text = value
-                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: UIViewAnimationOptions.beginFromCurrentState, animations: {
+                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: UIView.AnimationOptions.beginFromCurrentState, animations: {
                     self.transform = CGAffineTransform(scaleX: 1, y: 1)
                 }, completion: { (completed) in
                     
@@ -68,7 +68,7 @@ public class Badge : Label, Alignable {
         // TODO: move to the Label class
         if #available(iOS 10, *) { } else {
             // Only for iOS 9
-            NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
         }
     }
     
@@ -101,7 +101,7 @@ public class Badge : Label, Alignable {
     
     // TODO: move to the Label class
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if let valueStyle = font.fontDescriptor.object(forKey: UIFontDescriptor.AttributeName.textStyle) as? UIFontTextStyle {
+        if let valueStyle = font.fontDescriptor.object(forKey: UIFontDescriptor.AttributeName.textStyle) as? UIFont.TextStyle {
             font = UIFont.preferredFont(forTextStyle: valueStyle)
         }
     }
@@ -119,7 +119,7 @@ public class Badge : Label, Alignable {
     }
     
     public override func drawText(in rect: CGRect) {
-        super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
+        super.drawText(in: rect.insetBy(dx: insets.left, dy: insets.top))
     }
     
     override public func sizeThatFits(_ size: CGSize) -> CGSize {

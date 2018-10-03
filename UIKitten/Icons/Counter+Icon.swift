@@ -20,7 +20,7 @@ public extension Counter {
         let defaultPointSize : CGFloat = 128
         
         // TODO: grab type from theme so the color is correct
-        let normalImage = UIImage.fontAwesomeIcon(name: icon, textColor: .white, size: CGSize(width: defaultPointSize, height: defaultPointSize)).withRenderingMode(.alwaysTemplate)
+        let normalImage = UIImage.fontAwesomeIcon(name: icon, style: .regular, textColor: .white, size: CGSize(width: defaultPointSize, height: defaultPointSize)).withRenderingMode(.alwaysTemplate)
         
         image = normalImage
     }

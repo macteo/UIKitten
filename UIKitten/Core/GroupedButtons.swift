@@ -16,7 +16,7 @@ public class GroupedButtons : UIView, Alignable {
     public var align : Align?
     public var margin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     
-    public var type : ButtonType = .normal {
+    public var type : ButtonKittenType = .normal {
         didSet {
             layoutIfNeeded()
         }
@@ -24,7 +24,7 @@ public class GroupedButtons : UIView, Alignable {
     
     @IBInspectable public var typeString : String = "normal" {
         didSet {
-            guard let typed = ButtonType(rawValue: typeString) else { return }
+            guard let typed = ButtonKittenType(rawValue: typeString) else { return }
             type = typed
         }
     }
@@ -32,14 +32,14 @@ public class GroupedButtons : UIView, Alignable {
     fileprivate var buttons : [Button]?
     fileprivate let stackView = UIStackView()
     
-    public var distribution : UIStackViewDistribution = .fillEqually {
+    public var distribution : UIStackView.Distribution = .fillEqually {
         didSet {
             stackView.distribution = distribution
             layoutIfNeeded()
         }
     }
     
-    public var axis : UILayoutConstraintAxis = .vertical {
+    public var axis : NSLayoutConstraint.Axis = .vertical {
         didSet {
             stackView.axis = axis
             
@@ -79,7 +79,7 @@ public class GroupedButtons : UIView, Alignable {
         commonInit()
     }
     
-    public init(frame: CGRect, buttons: [Button], axis: UILayoutConstraintAxis = .horizontal) {
+    public init(frame: CGRect, buttons: [Button], axis: NSLayoutConstraint.Axis = .horizontal) {
         super.init(frame: frame)
         self.buttons = buttons
         self.axis = axis

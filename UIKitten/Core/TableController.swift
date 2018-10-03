@@ -67,7 +67,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
         
         switch(gesture.state) {
             
-        case UIGestureRecognizerState.began:
+        case .began:
             reordering = true
             guard let selectedIndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) else {
                 break
@@ -78,11 +78,11 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
             }
             
             collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
-        case UIGestureRecognizerState.changed:
+        case .changed:
             let gestureLocation = gesture.location(in: gesture.view!)
             let point = CGPoint(x: gestureLocation.x - initialTargetPosition.x, y: gestureLocation.y - initialTargetPosition.y)
             collectionView.updateInteractiveMovementTargetPosition(point)
-        case UIGestureRecognizerState.ended:
+        case .ended:
             reordering = false
             collectionView.endInteractiveMovement()
         default:
@@ -135,7 +135,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
 
         if #available(iOS 10, *) { } else {
             // Only for iOS and 9
-            NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
         }
     }
     
@@ -253,7 +253,7 @@ open class TableController : UIViewController, UICollectionViewDataSource, UICol
             tempCell.desiredSize = CGSize(width: desiredCellWidth, height: 44)
         }
         
-        let size = tempCell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriority.defaultLow, verticalFittingPriority: UILayoutPriority.defaultLow)
+        let size = tempCell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize, withHorizontalFittingPriority:UILayoutPriority.defaultLow, verticalFittingPriority: UILayoutPriority.defaultLow)
 
         if cellIsAlreadyVisible == false {
             if let container = previousContainer {

@@ -29,7 +29,7 @@ public enum Size : String {
         }
     }
     
-    var textStyle : UIFontTextStyle {
+    var textStyle : UIFont.TextStyle {
         switch self {
         case .large:
             return .headline

@@ -22,7 +22,7 @@ public class PasswordField: TextField {
         spellCheckingType = .no
         clearsOnBeginEditing = true
         
-        leftImage = UIImage.fontAwesomeIcon(name: .key, textColor: tintColor, size: imageSize).withRenderingMode(.alwaysTemplate)
+        leftImage = UIImage.fontAwesomeIcon(name: .key, style: .regular, textColor: tintColor, size: imageSize).withRenderingMode(.alwaysTemplate)
         placeholder = NSLocalizedString("Password", comment: "Password placeholder")
     }
 }

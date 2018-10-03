@@ -16,13 +16,13 @@ class ButtonsController: TableController {
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         navigationItem.leftItemsSupplementBackButton = true
         
-        let primary = Button(icon: .diamond, title: "Primary").type(.primary)
+        let primary = Button(icon: .amazonPay, title: "Primary").type(.primary)
         let info = Button(icon: .info, title: "Info").type(.info)
         let success = Button(icon: .check, title: "Success").type(.success)
         let warning = Button(icon: .exclamationTriangle, title: "Warning").type(.warning)
-        let danger = Button(icon: .close, title: "Danger").type(.danger)
+        let danger = Button(icon: .ambulance, title: "Danger").type(.danger)
         let normalType = Button(icon: .adjust, title: "Normal")
-        let clean = Button(icon: .envelopeO, title: "Clean").type(.clean)
+        let clean = Button(icon: .envelopeOpen, title: "Clean").type(.clean)
         
         let types = [primary, info, success, warning, danger, normalType, clean]
         
@@ -33,11 +33,11 @@ class ButtonsController: TableController {
         
         let sizes = [extraSmall, small, normalSize, large]
         
-        let left = Button(icon: .handOLeft, title: "Left").align(.left).size(.extraSmall)
-        let center = Button(icon: .arrowsH, title: "Center").align(.center).size(.extraSmall)
-        let right = Button(icon: .handORight, title: "Right", position: .right).align(.right).size(.extraSmall)
+        let left = Button(icon: .adjust, title: "Left").align(.left).size(.extraSmall)
+        let center = Button(icon: .accusoft, title: "Center").align(.center).size(.extraSmall)
+        let right = Button(icon: .adversal, title: "Right", position: .right).align(.right).size(.extraSmall)
         // FIXME: this doesn't work anymore inside a cell
-        let middle = Button(icon: .arrowsV, title: "Middle").align([.center, .middle]).size(.extraSmall)
+        let middle = Button(icon: .handPaper, title: "Middle").align([.center, .middle]).size(.extraSmall)
         let top = Button(icon: .arrowUp, title: "Top").align([.center, .top]).size(.extraSmall)
         let bottom = Button(icon: .arrowDown, title: "Bottom").align([.center, .bottom]).size(.extraSmall)
         

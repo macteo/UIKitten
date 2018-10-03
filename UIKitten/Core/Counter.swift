@@ -167,7 +167,7 @@ public class Counter : UIView, Alignable {
         
         if #available(iOS 10, *) { } else {
             // Only for iOS 9
-            NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
         }
     }
     
@@ -176,11 +176,11 @@ public class Counter : UIView, Alignable {
     }
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if let valueStyle = valueLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
+        if let valueStyle = valueLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFont.TextStyle {
             valueLabel.font = UIFont.preferredFont(forTextStyle: valueStyle)
         }
         
-        if let captionStyle = captionLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
+        if let captionStyle = captionLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFont.TextStyle {
             captionLabel.font = UIFont.preferredFont(forTextStyle: captionStyle)
         }
     }

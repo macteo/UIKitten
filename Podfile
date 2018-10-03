@@ -6,5 +6,5 @@ target 'UIKitten' do
   use_frameworks!
 
   pod 'FontAwesome.swift'
-  pod 'Charts', '~> 3.1.1'
+  pod 'Charts', '~> 3.2.0'
 end
