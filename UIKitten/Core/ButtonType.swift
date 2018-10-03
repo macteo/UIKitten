@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum ButtonType : String {
+public enum ButtonKittenType : String {
     case normal     = "normal"
     case primary    = "primary"
     case info       = "info"

@@ -130,7 +130,7 @@ open class BaseCell: UICollectionViewCell, Cell {
         addConstraint(NSLayoutConstraint(item: selectedView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: selectedView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: selectedView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0))
-        sendSubview(toBack: selectedView)
+        sendSubviewToBack(selectedView)
         
         selectedView.backgroundColor = .clear
         
@@ -251,7 +251,7 @@ open class BaseCell: UICollectionViewCell, Cell {
         
         if #available(iOS 10, *) { } else {
             // Needed only on iOS 9
-            NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
         }
     }
     
@@ -259,12 +259,12 @@ open class BaseCell: UICollectionViewCell, Cell {
         didSet {
             UIView.animate(withDuration: 0.15, animations: {
                 if self.isSelected {
-                    self.superview?.bringSubview(toFront: self)
+                    self.superview?.bringSubviewToFront(self)
                     self.selectedView.backgroundColor = .defaultTableSelected
                     self.separator.backgroundColor = .clear
                     // self.footerIsVisible = true
                 } else {
-                    self.superview?.sendSubview(toBack: self)
+                    self.superview?.sendSubviewToBack(self)
                     self.selectedView.backgroundColor = .clear
                     self.separator.backgroundColor = .defaultTableSelected
                     // self.footerIsVisible = false

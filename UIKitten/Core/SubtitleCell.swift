@@ -193,11 +193,11 @@ public class SubtitleCell: BaseCell {
     }
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if let titleStyle = titleLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
+        if let titleStyle = titleLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFont.TextStyle {
             titleLabel.font = UIFont.preferredFont(forTextStyle: titleStyle)
         }
         
-        if let subtitleStyle = subtitleLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
+        if let subtitleStyle = subtitleLabel.font.fontDescriptor.object(forKey: .textStyle) as? UIFont.TextStyle {
             subtitleLabel.font = UIFont.preferredFont(forTextStyle: subtitleStyle)
         }
         

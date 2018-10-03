@@ -42,7 +42,7 @@ public class Button: UIButton, Alignable {
         updateFrameToFitTitle()
     }
     
-    public override func setImage(_ image: UIImage?, for state: UIControlState) {
+    public override func setImage(_ image: UIImage?, for state: UIControl.State) {
         super.setImage(image, for: state)
         updateFrameToFitTitle()
     }
@@ -53,7 +53,7 @@ public class Button: UIButton, Alignable {
         }
     }
     
-    public var type : ButtonType = .normal {
+    public var type : ButtonKittenType = .normal {
         didSet {
             if glassBackground != nil {
                 setBackgroundColor(type.backgroundColor.withAlphaComponent(0.5), forState: .normal)
@@ -89,7 +89,7 @@ public class Button: UIButton, Alignable {
     
     @IBInspectable public var typeString : String = "normal" {
         didSet {
-            guard let typed = ButtonType(rawValue: typeString) else { return }
+            guard let typed = ButtonKittenType(rawValue: typeString) else { return }
             type = typed
         }
     }
@@ -105,7 +105,7 @@ public class Button: UIButton, Alignable {
                     glassBackground.autoresizingMask = [.flexibleWidth, .flexibleHeight]
                     glassBackground.backgroundColor = .clear
                     addSubview(glassBackground)
-                    sendSubview(toBack: glassBackground)
+                    sendSubviewToBack(glassBackground)
                 }
             } else {
                 glassBackground?.removeFromSuperview()
@@ -146,7 +146,7 @@ public class Button: UIButton, Alignable {
         }
     }
 
-    public override var buttonType: UIButtonType {
+    public override var buttonType: UIButton.ButtonType {
         return .custom
     }
     
@@ -160,7 +160,7 @@ public class Button: UIButton, Alignable {
         return self
     }
     
-    public func type(_ type: ButtonType) -> Button {
+    public func type(_ type: ButtonKittenType) -> Button {
         self.type = type
         return self
     }
@@ -170,7 +170,7 @@ public class Button: UIButton, Alignable {
         return self
     }
     
-    public override func setTitle(_ title: String?, for state: UIControlState) {
+    public override func setTitle(_ title: String?, for state: UIControl.State) {
         super.setTitle(title, for: state)
         updateFrameToFitTitle()
     }
@@ -262,7 +262,7 @@ public class Button: UIButton, Alignable {
         }
     }
     
-    @objc override func setBackgroundColor(_ color: UIColor, forState: UIControlState) {
+    @objc override func setBackgroundColor(_ color: UIColor, forState: UIControl.State) {
         super.setBackgroundColor(color, forState: forState)
         if forState == .normal {
             bottomBorder?.layer.borderColor = color.darker(value: 0.1)?.cgColor
@@ -322,7 +322,7 @@ public class Button: UIButton, Alignable {
         
         if #available(iOS 10, *) { } else {
             // Only for iOS 9
-            NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(self.contentSizeDidChange(notification:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
         }
         
         addTarget(self, action: #selector(touchUpInside(_:)), for: .touchUpInside)
@@ -337,7 +337,7 @@ public class Button: UIButton, Alignable {
     }
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if let textStyle = titleLabel?.font.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
+        if let textStyle = titleLabel?.font.fontDescriptor.object(forKey: .textStyle) as? UIFont.TextStyle {
              titleLabel?.font = UIFont.preferredFont(forTextStyle: textStyle)
         }
     }

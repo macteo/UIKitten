@@ -150,7 +150,7 @@ public class TextField: UITextField, Alignable {
         
         updateBorder()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(notification:)), name: Notification.Name.UIContentSizeCategoryDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(notification:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
         
         addTarget(self, action: #selector(onEditingChange(field:)), for: .editingChanged)
     }
@@ -164,7 +164,7 @@ public class TextField: UITextField, Alignable {
     }
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if let textStyle = font?.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
+        if let textStyle = font?.fontDescriptor.object(forKey: .textStyle) as? UIFont.TextStyle {
             font = UIFont.preferredFont(forTextStyle: textStyle)
         }
     }
@@ -202,7 +202,7 @@ public class TextField: UITextField, Alignable {
         let borderAnimationGroup = CAAnimationGroup()
         borderAnimationGroup.animations = [borderColorAnimation, borderWidthAnimation, cornerRadiusAnimation]
         borderAnimationGroup.duration = 0.25
-        borderAnimationGroup.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        borderAnimationGroup.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         layer.add(borderAnimationGroup, forKey: "border width and color, corner radius")
         
@@ -212,7 +212,7 @@ public class TextField: UITextField, Alignable {
         leftView?.subviews.first?.tintColor = currentType.borderColor
         rightView?.subviews.first?.tintColor = currentType.borderColor
         
-        if let _ = font?.fontDescriptor.object(forKey: .textStyle) as? UIFontTextStyle {
+        if let _ = font?.fontDescriptor.object(forKey: .textStyle) as? UIFont.TextStyle {
             font = UIFont.preferredFont(forTextStyle: size.textStyle)
         }
         frame.size.height = size.height
